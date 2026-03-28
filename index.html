@@ -523,7 +523,23 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
 .edital-subtopico:last-child{border-bottom:none;}
 .edital-subtopico-name{font-size:12px;color:var(--muted);flex:1;}
 .edital-subtopico-stats{font-size:11px;font-family:var(--fm);white-space:nowrap;}
-/* ── IA MENTORA ── */
+/* ── TRIAGEM ── */
+.triagem-mat-group{margin-bottom:18px;}
+.triagem-mat-header{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg3);border:1px solid var(--border);border-radius:8px 8px 0 0;cursor:pointer;user-select:none;}
+.triagem-mat-header:hover{background:var(--border);}
+.triagem-mat-nome{font-weight:700;font-size:13px;flex:1;}
+.triagem-mat-count{font-size:11px;font-family:var(--fm);color:var(--muted);}
+.triagem-mat-body{border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;overflow:hidden;}
+.triagem-q-item{padding:14px 16px;border-bottom:1px solid var(--border);background:var(--bg2);transition:background .15s;}
+.triagem-q-item:last-child{border-bottom:none;}
+.triagem-q-item.aprovada{opacity:.4;background:var(--bg3);}
+.triagem-q-enunciado{font-size:13px;color:var(--text);line-height:1.5;margin-bottom:10px;}
+.triagem-q-alts{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.8;}
+.triagem-q-controles{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.triagem-q-controles select{font-size:12px;padding:5px 8px;flex:1;min-width:120px;}
+.triagem-q-gab{font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;background:var(--green-l);color:var(--green);border:1px solid rgba(34,201,122,.25);}
+.triagem-empty{text-align:center;padding:30px;color:var(--muted);font-size:13px;}
+</style>
 .mentora-card{background:linear-gradient(135deg,rgba(79,124,255,.08),rgba(168,85,247,.08));border:1px solid rgba(79,124,255,.25);border-radius:var(--r);padding:16px 18px;margin-bottom:14px;position:relative;overflow:hidden;}
 .mentora-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--blue),var(--purple));}
 .mentora-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
@@ -698,6 +714,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
 
   <div class="admin-tabs">
     <button class="at active" onclick="adminTab(this,'atp-q')">❓ Questões</button>
+    <button class="at" onclick="adminTab(this,'atp-triagem');renderTriagem()">📥 Triagem <span id="triagem-badge" style="display:none;background:var(--red);color:#fff;font-size:9px;padding:1px 5px;border-radius:10px;margin-left:3px">0</span></button>
     <button class="at" onclick="adminTab(this,'atp-mat')">📚 Matérias</button>
     <button class="at" onclick="adminTab(this,'atp-conc')">🏆 Concursos</button>
     <button class="at" onclick="adminTab(this,'atp-cfg')">⚙️ Config</button>
@@ -747,6 +764,23 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
     </div>
     <div class="sec-label">Questões (<span id="q-count">0</span>)</div>
     <div id="q-admin-list"></div>
+  </div>
+
+  <!-- Triagem -->
+  <div class="atp" id="atp-triagem">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+      <div>
+        <div style="font-weight:700;font-size:15px">📥 Fila de Triagem</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">Questões importadas aguardando classificação por tópico</div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button type="button" class="btn btn-ghost btn-sm" onclick="limparTriagemAprovadas()">🗑 Limpar aprovadas</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="aprovarTodas()">✅ Aprovar todas visíveis</button>
+      </div>
+    </div>
+    <div id="triagem-list">
+      <div class="triagem-empty">Nenhuma questão na fila.<br>Use "Importar PDF" no Config para adicionar questões em massa.</div>
+    </div>
   </div>
 
   <!-- Matérias -->
@@ -967,7 +1001,8 @@ var concursos = [];
 var materias  = [];
 var questions = [];
 var topicos   = []; // {id, materiaId, concursoId, nome, subtopicos:[{id,nome}]}
-var kanbanCards = []; // {id, titulo, materiaId, concursoId, status, prazo, metaQ, notas, revisaoAutoId}
+var kanbanCards = []; // {id, titulo, materiaId, concursoId, status, prazo, metaQ, notas}
+var filaPendente = []; // {id, tipo, text, options, correct, veCorrect, explanation, banca, ano, nivel, matSugerida, status:'pendente'|'aprovada'}
 var config    = {meta:50,sessaoQtd:20,diasAcerto1:3,diasAcerto2:7,diasErro:1,diasDuvida:2};
 var historico = {};
 var nextQId   = 1;
@@ -1020,18 +1055,19 @@ async function syncAll() {
   setSyncSt('💾 Salvando...');
   try {
     await Promise.all([
-      cloudSave('concursos', concursos),
-      cloudSave('materias',  materias),
-      cloudSave('questions', questions),
-      cloudSave('topicos',   topicos),
-      cloudSave('kanbanCards', kanbanCards),
-      cloudSave('config',    config),
-      cloudSave('historico', historico),
-      cloudSave('nextQId',   nextQId),
-      cloudSave('nextMId',   nextMId),
-      cloudSave('nextCId',   nextCId),
-      cloudSave('nextTId',   nextTId),
-      cloudSave('nextKId',   nextKId),
+      cloudSave('concursos',    concursos),
+      cloudSave('materias',     materias),
+      cloudSave('questions',    questions),
+      cloudSave('topicos',      topicos),
+      cloudSave('kanbanCards',  kanbanCards),
+      cloudSave('filaPendente', filaPendente),
+      cloudSave('config',       config),
+      cloudSave('historico',    historico),
+      cloudSave('nextQId',      nextQId),
+      cloudSave('nextMId',      nextMId),
+      cloudSave('nextCId',      nextCId),
+      cloudSave('nextTId',      nextTId),
+      cloudSave('nextKId',      nextKId),
     ]);
     setSyncSt('✅ Sincronizado');
   } catch(e) {
@@ -1042,24 +1078,25 @@ async function syncAll() {
 async function loadAll() {
   if(!currentUser) return;
   setSyncSt('🔄 Carregando...');
-  concursos    = await cloudLoad('concursos', []);
-  materias     = await cloudLoad('materias',  []);
-  questions    = await cloudLoad('questions', []);
-  topicos      = await cloudLoad('topicos',   []);
-  kanbanCards  = await cloudLoad('kanbanCards', []);
-  config       = await cloudLoad('config',    {meta:50,sessaoQtd:20,diasAcerto1:3,diasAcerto2:7,diasErro:1,diasDuvida:2});
-  historico    = await cloudLoad('historico', {});
-  nextQId      = await cloudLoad('nextQId',   1);
-  nextMId      = await cloudLoad('nextMId',   1);
-  nextCId      = await cloudLoad('nextCId',   1);
-  nextTId      = await cloudLoad('nextTId',   1);
-  nextKId      = await cloudLoad('nextKId',   1);
+  concursos     = await cloudLoad('concursos',    []);
+  materias      = await cloudLoad('materias',     []);
+  questions     = await cloudLoad('questions',    []);
+  topicos       = await cloudLoad('topicos',      []);
+  kanbanCards   = await cloudLoad('kanbanCards',  []);
+  filaPendente  = await cloudLoad('filaPendente', []);
+  config        = await cloudLoad('config',       {meta:50,sessaoQtd:20,diasAcerto1:3,diasAcerto2:7,diasErro:1,diasDuvida:2});
+  historico     = await cloudLoad('historico',    {});
+  nextQId       = await cloudLoad('nextQId',      1);
+  nextMId       = await cloudLoad('nextMId',      1);
+  nextCId       = await cloudLoad('nextCId',      1);
+  nextTId       = await cloudLoad('nextTId',      1);
+  nextKId       = await cloudLoad('nextKId',      1);
   setSyncSt('✅ Sincronizado');
 }
 
 function save() {
   try {
-    localStorage.setItem('mc3_data', JSON.stringify({concursos,materias,questions,topicos,kanbanCards,config,historico,nextQId,nextMId,nextCId,nextTId,nextKId}));
+    localStorage.setItem('mc3_data', JSON.stringify({concursos,materias,questions,topicos,kanbanCards,filaPendente,config,historico,nextQId,nextMId,nextCId,nextTId,nextKId}));
   } catch(e){}
   syncAll().catch(()=>{});
 }
@@ -1067,18 +1104,19 @@ function save() {
 function loadLocal() {
   try {
     var d = JSON.parse(localStorage.getItem('mc3_data')||'{}');
-    if(d.concursos)   concursos   = d.concursos;
-    if(d.materias)    materias    = d.materias;
-    if(d.questions)   questions   = d.questions;
-    if(d.topicos)     topicos     = d.topicos;
-    if(d.kanbanCards) kanbanCards = d.kanbanCards;
-    if(d.config)      config      = d.config;
-    if(d.historico)   historico   = d.historico;
-    if(d.nextQId)     nextQId     = d.nextQId;
-    if(d.nextMId)     nextMId     = d.nextMId;
-    if(d.nextCId)     nextCId     = d.nextCId;
-    if(d.nextTId)     nextTId     = d.nextTId;
-    if(d.nextKId)     nextKId     = d.nextKId;
+    if(d.concursos)     concursos     = d.concursos;
+    if(d.materias)      materias      = d.materias;
+    if(d.questions)     questions     = d.questions;
+    if(d.topicos)       topicos       = d.topicos;
+    if(d.kanbanCards)   kanbanCards   = d.kanbanCards;
+    if(d.filaPendente)  filaPendente  = d.filaPendente;
+    if(d.config)        config        = d.config;
+    if(d.historico)     historico     = d.historico;
+    if(d.nextQId)       nextQId       = d.nextQId;
+    if(d.nextMId)       nextMId       = d.nextMId;
+    if(d.nextCId)       nextCId       = d.nextCId;
+    if(d.nextTId)       nextTId       = d.nextTId;
+    if(d.nextKId)       nextKId       = d.nextKId;
   } catch(e){}
 }
 
@@ -1922,6 +1960,7 @@ function resetAllData(){
 // ═══════════════════════════════════════
 function renderAdmin(){
   renderQAdminList(); renderMatAdmin(); renderTopicoAdmin(); renderConcAdmin(); loadConfigUI(); syncSelectsMaterias();
+  atualizarBadgeTriagem();
   var el=document.getElementById('super-admin-info');
   if(el&&isSuperAdmin) el.innerHTML=`<div class="super-admin-bar">⭐ Super Admin — você gerencia todos os dados do app.</div>`;
   else if(el) el.innerHTML='';
@@ -2580,6 +2619,242 @@ function importarEditalFiscal() {
   log('🎉 CONCLUÍDO! Matérias: '+mats+' | Tópicos: '+tops+' | Subtópicos: '+subs);
   syncSelectsMaterias();
   toast('✅ Edital importado! Vá em Edital para ver.');
+}
+
+// ═══════════════════════════════════════
+// TRIAGEM
+// ═══════════════════════════════════════
+function atualizarBadgeTriagem() {
+  var pendentes = filaPendente.filter(function(q){ return q.status==='pendente' && q.concursoId===currentConcursoId; }).length;
+  var badge = document.getElementById('triagem-badge');
+  if(!badge) return;
+  if(pendentes>0){ badge.style.display='inline'; badge.textContent=pendentes; }
+  else { badge.style.display='none'; }
+}
+
+function renderTriagem() {
+  atualizarBadgeTriagem();
+  var list = document.getElementById('triagem-list');
+  if(!list) return;
+  var mats = materiasDoConcurso();
+  var fila = filaPendente.filter(function(q){ return q.concursoId===currentConcursoId; });
+
+  if(!fila.length) {
+    list.innerHTML='<div class="triagem-empty">📭 Fila vazia!<br><span style="font-size:11px">Importe um PDF no Config para adicionar questões em massa.</span></div>';
+    return;
+  }
+
+  // Agrupar por matéria sugerida
+  var grupos = {};
+  var semMat = [];
+  fila.forEach(function(q) {
+    if(q.matSugerida) {
+      if(!grupos[q.matSugerida]) grupos[q.matSugerida]=[];
+      grupos[q.matSugerida].push(q);
+    } else {
+      semMat.push(q);
+    }
+  });
+  // Adiciona grupo sem matéria
+  if(semMat.length) grupos['__sem__'] = semMat;
+
+  var matOpts = '<option value="">-- Selecione --</option>'+mats.map(function(m){return'<option value="'+m.id+'">'+m.icon+' '+m.name+'</option>';}).join('');
+  var nivelOpts = '<option value="facil">Fácil</option><option value="medio" selected>Médio</option><option value="dificil">Difícil</option>';
+
+  var html = '';
+  Object.keys(grupos).forEach(function(matKey) {
+    var grupo = grupos[matKey];
+    var matNome = matKey==='__sem__' ? '❓ Sem matéria definida' : (mats.find(function(m){return m.id===matKey;})||{name:matKey,icon:'📚'});
+    var matLabel = matKey==='__sem__' ? '❓ Sem matéria definida' : (matNome.icon||'📚')+' '+matNome.name;
+    var pendentes = grupo.filter(function(q){return q.status==='pendente';}).length;
+    var total = grupo.length;
+
+    html += '<div class="triagem-mat-group" id="tg-'+matKey+'">';
+    html += '<div class="triagem-mat-header" onclick="toggleTriagemGrupo(\''+matKey+'\')">';
+    html += '<span style="font-size:16px">'+(matKey==='__sem__'?'❓':(matNome.icon||'📚'))+'</span>';
+    html += '<span class="triagem-mat-nome">'+(matKey==='__sem__'?'Sem matéria definida':matNome.name)+'</span>';
+    html += '<span class="triagem-mat-count">'+pendentes+' pendentes / '+total+' total</span>';
+    html += '<span style="color:var(--muted);font-size:12px" id="tg-arrow-'+matKey+'">▼</span>';
+    html += '</div>';
+    html += '<div class="triagem-mat-body" id="tg-body-'+matKey+'">';
+
+    grupo.forEach(function(q) {
+      var tops = q.matSugerida ? topicos.filter(function(t){return t.concursoId===currentConcursoId&&t.materiaId===q.matSugerida;}) : [];
+      var topOpts = '<option value="">-- Nenhum --</option>'+tops.map(function(t){return'<option value="'+t.id+'">'+t.nome+'</option>';}).join('');
+      var isAbcd = q.tipo==='abcd';
+      var gabLabel = isAbcd ? 'ABCD'[q.correct||0] : (q.veCorrect==1?'CERTO':'ERRADO');
+
+      html += '<div class="triagem-q-item'+(q.status==='aprovada'?' aprovada':'')+'" id="tqi-'+q.id+'">';
+
+      // Status badge
+      if(q.status==='aprovada') {
+        html += '<div style="font-size:11px;color:var(--green);font-weight:700;margin-bottom:6px">✅ Aprovada e enviada ao banco</div>';
+      }
+
+      // Banca/ano
+      html += '<div style="font-size:10px;color:var(--muted);margin-bottom:6px;font-family:var(--fm)">';
+      html += (q.banca||'Banca não identificada')+(q.ano?' · '+q.ano:'')+'</div>';
+
+      // Enunciado
+      html += '<div class="triagem-q-enunciado">'+q.text+'</div>';
+
+      // Alternativas
+      if(isAbcd && q.options && q.options.length) {
+        html += '<div class="triagem-q-alts">';
+        (q.options||[]).forEach(function(o,i){ if(o) html += 'ABCD'[i]+') '+o+'<br>'; });
+        html += '</div>';
+      }
+
+      // Gabarito badge
+      html += '<div style="margin-bottom:10px"><span class="triagem-q-gab">Gabarito: '+gabLabel+'</span></div>';
+
+      if(q.status!=='aprovada') {
+        // Controles de classificação
+        html += '<div class="triagem-q-controles">';
+        html += '<select id="tm-'+q.id+'" onchange="onTriagemMat(\''+q.id+'\',this.value)" style="flex:1">'+matOpts+'</select>';
+        html += '<select id="tt-'+q.id+'" style="flex:1"><option value="">-- Tópico --</option>'+topOpts+'</select>';
+        html += '<select id="tn-'+q.id+'" style="max-width:90px">'+nivelOpts+'</select>';
+        html += '</div>';
+        html += '<div style="display:flex;gap:6px;margin-top:8px">';
+        html += '<button type="button" class="btn btn-green btn-sm" onclick="aprovarTriagem(\''+q.id+'\')">✅ Aprovar</button>';
+        html += '<button type="button" class="btn btn-red btn-sm" onclick="rejeitarTriagem(\''+q.id+'\')">🗑 Rejeitar</button>';
+        html += '</div>';
+        // Pre-select mat if sugerida
+        if(q.matSugerida) {
+          html += '<script>setTimeout(function(){var el=document.getElementById("tm-'+q.id+'");if(el)el.value="'+q.matSugerida+'";},100);<\/script>';
+        }
+      }
+      html += '</div>'; // triagem-q-item
+    });
+
+    html += '</div>'; // triagem-mat-body
+    html += '</div>'; // triagem-mat-group
+  });
+
+  list.innerHTML = html;
+}
+
+function toggleTriagemGrupo(matKey) {
+  var body  = document.getElementById('tg-body-'+matKey);
+  var arrow = document.getElementById('tg-arrow-'+matKey);
+  if(!body) return;
+  var isOpen = body.style.display !== 'none';
+  body.style.display  = isOpen ? 'none' : '';
+  if(arrow) arrow.textContent = isOpen ? '▶' : '▼';
+}
+
+function onTriagemMat(qId, matId) {
+  // Atualiza tópicos disponíveis quando muda a matéria
+  var tops = matId ? topicos.filter(function(t){return t.concursoId===currentConcursoId&&t.materiaId===matId;}) : [];
+  var topOpts = '<option value="">-- Nenhum --</option>'+tops.map(function(t){return'<option value="'+t.id+'">'+t.nome+'</option>';}).join('');
+  var topEl = document.getElementById('tt-'+qId);
+  if(topEl) topEl.innerHTML = topOpts;
+  // Atualiza matSugerida na fila
+  var q = filaPendente.find(function(x){return x.id===qId;});
+  if(q) q.matSugerida = matId;
+}
+
+function aprovarTriagem(qId) {
+  var q = filaPendente.find(function(x){return x.id===qId;});
+  if(!q) return;
+  var matId  = document.getElementById('tm-'+qId)?.value || q.matSugerida || '';
+  var topId  = document.getElementById('tt-'+qId)?.value || '';
+  var nivel  = document.getElementById('tn-'+qId)?.value || 'medio';
+  if(!matId) { toast('⚠️ Selecione a matéria antes de aprovar!'); return; }
+
+  // Adiciona ao banco de questões
+  var novaQ = {
+    id: nextQId, status:'nova', prioridade:3,
+    vezesRespondida:0, vezesAcertada:0, proximaRevisao:TODAY(),
+    tipo: q.tipo, text: q.text,
+    options: q.options||[], correct: q.correct||0,
+    veCorrect: q.veCorrect!=null?q.veCorrect:1,
+    explanation: q.explanation||'',
+    materia: matId, topico: topId, concursoId: currentConcursoId,
+    banca: q.banca||'', ano: q.ano||'', nivel: nivel,
+    assunto: q.assunto||''
+  };
+  questions.push(novaQ);
+  nextQId++;
+  q.status = 'aprovada';
+  save();
+
+  // Atualiza visual
+  var el = document.getElementById('tqi-'+qId);
+  if(el) el.classList.add('aprovada');
+  atualizarBadgeTriagem();
+  toast('✅ Questão aprovada e enviada ao banco!');
+}
+
+function rejeitarTriagem(qId) {
+  if(!confirm('Rejeitar e remover esta questão da fila?')) return;
+  filaPendente = filaPendente.filter(function(x){return x.id!==qId;});
+  save();
+  renderTriagem();
+  toast('Questão removida da fila');
+}
+
+function aprovarTodas() {
+  var pendentes = filaPendente.filter(function(q){return q.status==='pendente'&&q.concursoId===currentConcursoId;});
+  if(!pendentes.length){ toast('Nenhuma pendente para aprovar'); return; }
+  var aprovadas = 0;
+  pendentes.forEach(function(q){
+    var matEl = document.getElementById('tm-'+q.id);
+    var matId = (matEl&&matEl.value) ? matEl.value : q.matSugerida||'';
+    if(!matId) return; // pula sem matéria
+    var topEl = document.getElementById('tt-'+q.id);
+    var topId = topEl?topEl.value:'';
+    var nivEl = document.getElementById('tn-'+q.id);
+    var nivel = nivEl?nivEl.value:'medio';
+    questions.push({
+      id:nextQId, status:'nova', prioridade:3,
+      vezesRespondida:0, vezesAcertada:0, proximaRevisao:TODAY(),
+      tipo:q.tipo, text:q.text, options:q.options||[], correct:q.correct||0,
+      veCorrect:q.veCorrect!=null?q.veCorrect:1, explanation:q.explanation||'',
+      materia:matId, topico:topId, concursoId:currentConcursoId,
+      banca:q.banca||'', ano:q.ano||'', nivel:nivel, assunto:q.assunto||''
+    });
+    nextQId++; q.status='aprovada'; aprovadas++;
+  });
+  save(); renderTriagem();
+  toast('✅ '+aprovadas+' questões aprovadas!');
+}
+
+function limparTriagemAprovadas() {
+  var antes = filaPendente.length;
+  filaPendente = filaPendente.filter(function(q){return q.status!=='aprovada'||q.concursoId!==currentConcursoId;});
+  var removidas = antes - filaPendente.length;
+  if(!removidas){ toast('Nenhuma aprovada para limpar'); return; }
+  save(); renderTriagem();
+  toast('🗑 '+removidas+' aprovadas removidas da fila');
+}
+
+// Função pública para importar questões na fila (usada pelo script de importação)
+function adicionarNaFila(questoes) {
+  if(!currentConcursoId){ toast('⚠️ Selecione um concurso primeiro!'); return 0; }
+  var nextFilaId = Date.now();
+  var adicionadas = 0;
+  questoes.forEach(function(q) {
+    filaPendente.push({
+      id: 'fila_'+(nextFilaId++),
+      concursoId: currentConcursoId,
+      status: 'pendente',
+      tipo: q.tipo||'abcd',
+      text: q.text||'',
+      options: q.options||[],
+      correct: q.correct!=null?q.correct:0,
+      veCorrect: q.veCorrect!=null?q.veCorrect:1,
+      explanation: q.explanation||'',
+      banca: q.banca||'',
+      ano: q.ano||'',
+      nivel: q.nivel||'medio',
+      assunto: q.assunto||'',
+      matSugerida: q.matSugerida||'',
+    });
+    adicionadas++;
+  });
+  save(); atualizarBadgeTriagem();
+  return adicionadas;
 }
 
 function loginOffline(){
