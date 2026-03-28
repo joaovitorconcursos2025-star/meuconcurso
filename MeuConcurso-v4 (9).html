@@ -1,0 +1,2614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Concurso</title>
+<meta name="theme-color" content="#0a0a0f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Meu Concurso">
+<link rel="manifest" id="pwa-manifest">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0a0a0f; --bg2:#111118; --bg3:#18181f;
+  --border:#252530; --border2:#2e2e3d;
+  --text:#e8e6f0; --muted:#6b6880;
+  --blue:#4f7cff; --blue-l:rgba(79,124,255,.12);
+  --green:#22c97a; --green-l:rgba(34,201,122,.12);
+  --red:#ff4d6a; --red-l:rgba(255,77,106,.12);
+  --amber:#ffb830; --amber-l:rgba(255,184,48,.12);
+  --purple:#a855f7; --purple-l:rgba(168,85,247,.12);
+  --r:10px;
+  --ff:'Inter',sans-serif; --fd:'Syne',sans-serif; --fm:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+body{font-family:var(--ff);background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;}
+::-webkit-scrollbar{width:4px;} ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+
+/* ── HEADER ── */
+header{background:var(--bg2);border-bottom:1px solid var(--border);height:52px;display:flex;align-items:center;padding:0 16px;gap:10px;position:sticky;top:0;z-index:100;}
+.logo{font-family:var(--fd);font-size:17px;font-weight:800;color:var(--text);white-space:nowrap;flex-shrink:0;}
+.logo span{color:var(--blue);}
+.concurso-badge{background:var(--blue-l);border:1px solid rgba(79,124,255,.25);color:var(--blue);font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap;cursor:pointer;display:none;}
+.concurso-badge:hover{background:rgba(79,124,255,.2);}
+nav{display:flex;gap:2px;flex:1;overflow-x:auto;scrollbar-width:none;}
+nav::-webkit-scrollbar{display:none;}
+.nb{padding:5px 11px;border:none;background:transparent;color:var(--muted);font-family:var(--ff);font-size:12px;font-weight:500;cursor:pointer;border-radius:6px;transition:all .15s;white-space:nowrap;}
+.nb:hover{background:var(--bg3);color:var(--text);}
+.nb.active{background:var(--blue-l);color:var(--blue);}
+#sync-st{font-size:11px;color:var(--muted);font-family:var(--fm);white-space:nowrap;flex-shrink:0;}
+#auth-area{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+
+/* ── MAIN ── */
+main{flex:1;padding:20px 16px;max-width:960px;margin:0 auto;width:100%;}
+.sec{display:none;animation:fu .25s ease;}
+.sec.active{display:block;}
+@keyframes fu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.page-title{font-family:var(--fd);font-size:22px;font-weight:800;margin-bottom:2px;letter-spacing:-.3px;}
+.page-sub{font-size:12px;color:var(--muted);margin-bottom:20px;}
+.sec-label{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;}
+
+/* ── CARDS ── */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:18px;}
+.card+.card{margin-top:12px;}
+
+/* ── BUTTONS ── */
+.btn{padding:9px 18px;border-radius:8px;font-family:var(--ff);font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .15s;display:inline-flex;align-items:center;gap:7px;}
+.btn-primary{background:var(--blue);color:#fff;} .btn-primary:hover{background:#3d6be8;}
+.btn-ghost{background:var(--bg3);border:1px solid var(--border);color:var(--text);}
+.btn-green{background:var(--green-l);border:1px solid rgba(34,201,122,.25);color:var(--green);}
+.btn-red{background:var(--red-l);border:1px solid rgba(255,77,106,.25);color:var(--red);}
+.btn-amber{background:var(--amber-l);border:1px solid rgba(255,184,48,.25);color:var(--amber);}
+.btn-sm{padding:6px 12px;font-size:12px;}
+.btn:disabled{opacity:.3;cursor:not-allowed;}
+
+/* ── INPUTS ── */
+input,textarea,select{font-family:var(--ff);font-size:13px;color:var(--text);background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:9px 12px;outline:none;transition:border-color .15s;width:100%;}
+input:focus,textarea:focus,select:focus{border-color:var(--blue);}
+select option{background:var(--bg3);}
+label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bottom:5px;letter-spacing:.3px;text-transform:uppercase;}
+.fg{margin-bottom:12px;}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.fr3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+
+/* ── TAGS ── */
+.tag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:.5px;text-transform:uppercase;display:inline-block;}
+.tag-nova{background:var(--blue-l);color:var(--blue);}
+.tag-acerto{background:var(--green-l);color:var(--green);}
+.tag-erro{background:var(--red-l);color:var(--red);}
+.tag-duvida{background:var(--amber-l);color:var(--amber);}
+.tag-facil{background:var(--green-l);color:var(--green);}
+.tag-medio{background:var(--amber-l);color:var(--amber);}
+.tag-dificil{background:var(--red-l);color:var(--red);}
+
+/* ── CHIPS ── */
+.chip{padding:4px 12px;border:1px solid var(--border);border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;background:var(--bg2);color:var(--muted);transition:all .15s;}
+.chip:hover{border-color:var(--blue);color:var(--blue);}
+.chip.active{background:var(--blue);border-color:var(--blue);color:#fff;}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
+
+/* ══════════════════════════
+   TELA DE CONCURSOS
+══════════════════════════ */
+.concursos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:24px;}
+.concurso-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:22px 18px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
+.concurso-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue);}
+.concurso-card:hover{transform:translateY(-2px);border-color:var(--border2);box-shadow:0 8px 24px rgba(0,0,0,.3);}
+.cc-icon{font-size:32px;margin-bottom:10px;}
+.cc-name{font-family:var(--fd);font-size:15px;font-weight:800;margin-bottom:4px;}
+.cc-stats{font-size:11px;color:var(--muted);}
+.cc-add{border:2px dashed var(--border);background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:120px;}
+.cc-add:hover{border-color:var(--blue);color:var(--blue);}
+.cc-add-icon{font-size:24px;color:var(--muted);}
+.cc-add-label{font-size:13px;font-weight:600;color:var(--muted);}
+
+/* ══════════════════════════
+   DASHBOARD
+══════════════════════════ */
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;position:relative;overflow:hidden;}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.sc-blue::before{background:var(--blue);}
+.sc-green::before{background:var(--green);}
+.sc-red::before{background:var(--red);}
+.sc-amber::before{background:var(--amber);}
+.stat-val{font-family:var(--fd);font-size:30px;font-weight:800;line-height:1;margin-bottom:4px;}
+.stat-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.stat-sub{font-size:11px;color:var(--muted);margin-top:3px;}
+
+.meta-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;margin-bottom:14px;}
+.meta-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.meta-bar{height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;}
+.meta-fill{height:100%;background:var(--blue);border-radius:4px;transition:width .6s;}
+.meta-fill.done{background:var(--green);}
+
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.qa-btn{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:16px;cursor:pointer;transition:all .2s;text-align:left;font-family:var(--ff);}
+.qa-btn:hover{border-color:var(--blue);transform:translateY(-1px);}
+.qa-icon{font-size:20px;margin-bottom:6px;display:block;}
+.qa-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;}
+.qa-sub{font-size:11px;color:var(--muted);}
+
+.chart-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:16px 18px;margin-bottom:14px;}
+.chart-bars{display:flex;align-items:flex-end;gap:4px;height:70px;}
+.cbar-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;}
+.cbar{width:100%;background:var(--blue-l);border-radius:3px 3px 0 0;border:1px solid rgba(79,124,255,.2);transition:height .4s;min-height:2px;cursor:pointer;}
+.cbar:hover{background:var(--blue);}
+.cbar-lbl{font-size:9px;color:var(--muted);font-family:var(--fm);}
+
+/* ══════════════════════════
+   RESPONDER
+══════════════════════════ */
+.mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;}
+.mode-card{background:var(--bg2);border:2px solid var(--border);border-radius:var(--r);padding:16px;cursor:pointer;transition:all .2s;text-align:center;}
+.mode-card:hover{border-color:var(--blue);}
+.mode-card.selected{border-color:var(--blue);background:var(--blue-l);}
+.mode-icon{font-size:24px;margin-bottom:6px;}
+.mode-title{font-size:13px;font-weight:700;}
+.mode-desc{font-size:11px;color:var(--muted);margin-top:3px;}
+
+.q-session{display:none;}
+.q-session.active{display:block;}
+.q-topbar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);margin-bottom:16px;}
+.q-prog{flex:1;height:5px;background:var(--bg3);border-radius:3px;overflow:hidden;}
+.q-prog-fill{height:100%;background:var(--blue);border-radius:3px;transition:width .3s;}
+.q-counter{font-family:var(--fm);font-size:12px;color:var(--muted);white-space:nowrap;}
+.q-score{display:flex;gap:10px;}
+.q-score span{font-family:var(--fm);font-size:12px;font-weight:600;}
+
+.q-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:22px;margin-bottom:14px;}
+.q-meta{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;align-items:center;}
+.q-text{font-size:15px;line-height:1.7;margin-bottom:18px;}
+.erro-ant{background:var(--red-l);border:1px solid rgba(255,77,106,.2);border-radius:8px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:var(--red);}
+.erro-ant strong{display:block;margin-bottom:3px;font-size:11px;text-transform:uppercase;letter-spacing:.5px;}
+
+.opts{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+.opt{display:flex;align-items:flex-start;gap:11px;padding:13px 15px;border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .15s;font-size:14px;line-height:1.5;background:var(--bg3);}
+.opt:hover{border-color:var(--blue);background:var(--blue-l);}
+.opt.correct{border-color:var(--green);background:var(--green-l);}
+.opt.wrong{border-color:var(--red);background:var(--red-l);}
+.opt.disabled{cursor:default;}
+.opt-ltr{width:24px;height:24px;border:1.5px solid var(--border2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;color:var(--muted);font-family:var(--fm);}
+.opt.correct .opt-ltr{border-color:var(--green);color:var(--green);}
+.opt.wrong .opt-ltr{border-color:var(--red);color:var(--red);}
+
+.ve-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.ve-btn{padding:18px;border-radius:10px;font-family:var(--fd);font-size:18px;font-weight:800;cursor:pointer;border:2px solid;transition:all .15s;}
+.ve-certo{border-color:rgba(34,201,122,.3);color:var(--green);background:var(--green-l);}
+.ve-certo:hover{background:rgba(34,201,122,.25);border-color:var(--green);transform:translateY(-2px);}
+.ve-errado{border-color:rgba(255,77,106,.3);color:var(--red);background:var(--red-l);}
+.ve-errado:hover{background:rgba(255,77,106,.25);border-color:var(--red);transform:translateY(-2px);}
+
+.fb-box{display:none;padding:14px;border-radius:8px;margin-bottom:12px;font-size:13px;line-height:1.6;}
+.fb-box.show{display:block;}
+.fb-box.ok{background:var(--green-l);border:1px solid rgba(34,201,122,.25);color:var(--green);}
+.fb-box.fail{background:var(--red-l);border:1px solid rgba(255,77,106,.25);color:var(--red);}
+.fb-box.doubt{background:var(--amber-l);border:1px solid rgba(255,184,48,.25);color:var(--amber);}
+.motivo-wrap{margin-top:10px;display:none;}
+.motivo-wrap.show{display:block;}
+.motivo-wrap textarea{font-size:12px;min-height:56px;resize:none;margin-top:5px;}
+.q-acts{display:flex;gap:8px;flex-wrap:wrap;}
+
+.resultado-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:36px;text-align:center;max-width:420px;margin:0 auto;}
+.res-pct{font-family:var(--fd);font-size:64px;font-weight:800;color:var(--blue);line-height:1;margin:10px 0 6px;}
+.res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0;}
+.res-item{background:var(--bg3);border-radius:8px;padding:12px 8px;}
+.res-val{font-family:var(--fd);font-size:22px;font-weight:800;margin-bottom:2px;}
+.res-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600;}
+
+/* ══════════════════════════
+   BANCO / ERROS
+══════════════════════════ */
+.q-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px;margin-bottom:8px;transition:border-color .15s;}
+.q-item:hover{border-color:var(--border2);}
+.q-item.erro-item{border-left:3px solid var(--red);}
+.q-item-meta{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap;align-items:center;}
+.q-item-text{font-size:13px;color:var(--text);line-height:1.5;margin-bottom:8px;}
+.q-item-footer{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted);flex-wrap:wrap;}
+.q-item-acts{display:flex;gap:5px;margin-left:auto;}
+.motivo-box{background:var(--red-l);border:1px solid rgba(255,77,106,.2);border-radius:6px;padding:8px 12px;font-size:12px;color:var(--red);margin-top:8px;}
+
+/* ══════════════════════════
+   ADMIN
+══════════════════════════ */
+.admin-tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);margin-bottom:18px;}
+.at{padding:8px 16px;border:none;background:transparent;font-family:var(--ff);font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;}
+.at:hover{color:var(--text);}
+.at.active{color:var(--blue);border-bottom-color:var(--blue);}
+.atp{display:none;}
+.atp.active{display:block;animation:fu .2s;}
+
+.q-adm-row{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;}
+.q-adm-body{flex:1;font-size:12px;line-height:1.5;}
+.q-adm-acts{display:flex;gap:5px;flex-shrink:0;}
+
+.tipo-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px;}
+.tipo-btn{padding:10px;border-radius:8px;border:2px solid var(--border);background:var(--bg3);color:var(--muted);font-family:var(--ff);font-size:13px;font-weight:700;cursor:pointer;transition:all .15s;}
+.tipo-btn.selected-abcd{border-color:var(--blue);background:var(--blue-l);color:var(--blue);}
+.tipo-btn.selected-ve{border-color:var(--green);background:var(--green-l);color:var(--green);}
+
+/* ══════════════════════════
+   SUPER ADMIN
+══════════════════════════ */
+.super-admin-bar{background:rgba(255,184,48,.08);border:1px solid rgba(255,184,48,.2);border-radius:var(--r);padding:10px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--amber);}
+
+/* ══════════════════════════
+   OVERLAY / MODAL
+══════════════════════════ */
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(4px);}
+.overlay.show{display:flex;}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:14px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,.5);}
+.modal-h{padding:18px 20px 0;display:flex;align-items:center;justify-content:space-between;}
+.modal-title{font-family:var(--fd);font-size:18px;font-weight:800;}
+.modal-x{width:30px;height:30px;border:none;background:var(--bg3);border-radius:50%;cursor:pointer;font-size:14px;color:var(--muted);display:flex;align-items:center;justify-content:center;}
+.modal-b{padding:18px 20px 22px;}
+
+/* LOGIN */
+.login-screen{position:fixed;inset:0;background:var(--bg);z-index:300;display:flex;align-items:center;justify-content:center;padding:24px;}
+.login-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:40px 32px;text-align:center;max-width:360px;width:100%;}
+.login-logo{font-family:var(--fd);font-size:32px;font-weight:800;margin-bottom:6px;}
+.login-logo span{color:var(--blue);}
+.login-desc{font-size:13px;color:var(--muted);margin-bottom:28px;line-height:1.6;}
+.google-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:13px;border:1.5px solid var(--border2);border-radius:10px;background:var(--bg3);cursor:pointer;font-family:var(--ff);font-size:14px;font-weight:600;color:var(--text);transition:all .15s;margin-bottom:12px;}
+.google-btn:hover{border-color:var(--blue);background:var(--blue-l);}
+.offline-btn{background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;font-family:var(--ff);text-decoration:underline;}
+
+/* MISC */
+.empty{text-align:center;padding:40px 20px;color:var(--muted);}
+.empty-icon{font-size:36px;margin-bottom:10px;}
+.toast-el{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--text);color:var(--bg);padding:9px 20px;border-radius:30px;font-size:12px;font-weight:700;transition:transform .3s;z-index:999;pointer-events:none;white-space:nowrap;}
+.offline-bar{display:none;position:fixed;top:52px;left:0;right:0;background:var(--amber);color:#000;text-align:center;padding:6px;font-size:12px;font-weight:700;z-index:99;}
+
+@media(max-width:480px){
+  .dash-grid,.res-grid{grid-template-columns:1fr 1fr;}
+  .fr2,.fr3{grid-template-columns:1fr;}
+  .quick-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* ══════════════════════════
+   RESPONSIVO COMPLETO
+══════════════════════════ */
+
+/* Tablet S6 Lite e similares (820px) */
+@media(max-width:860px) and (min-width:481px){
+  header{height:auto;min-height:52px;flex-wrap:wrap;padding:8px 12px;gap:6px;}
+  .logo{font-size:15px;}
+  nav{order:3;width:100%;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;}
+  nav::-webkit-scrollbar{display:none;}
+  .nb{font-size:11px;padding:5px 10px;white-space:nowrap;}
+  .concurso-badge{font-size:10px;padding:2px 8px;}
+
+  main{padding:16px 14px;}
+  .page-title{font-size:19px;}
+
+  .dash-grid{grid-template-columns:1fr 1fr;gap:10px;}
+  .stat-val{font-size:26px;}
+  .quick-grid{grid-template-columns:1fr 1fr;gap:10px;}
+
+  .kanban-board{grid-template-columns:1fr 1fr;gap:10px;}
+  .concursos-grid{grid-template-columns:1fr 1fr 1fr;gap:10px;}
+
+  .fr2{grid-template-columns:1fr 1fr;}
+  .fr3{grid-template-columns:1fr 1fr;}
+
+  .mode-grid{grid-template-columns:1fr 1fr;}
+  .ve-btns{grid-template-columns:1fr 1fr;}
+
+  .admin-tabs{overflow-x:auto;scrollbar-width:none;}
+  .admin-tabs::-webkit-scrollbar{display:none;}
+  .at{white-space:nowrap;}
+
+  .edital-mat-stats{font-size:10px;}
+  .modal{max-width:600px;}
+}
+  /* Header */
+  header{height:auto;min-height:52px;flex-wrap:wrap;padding:8px 12px;gap:6px;}
+  .logo{font-size:15px;}
+  .concurso-badge{font-size:10px;padding:2px 8px;}
+  nav{order:3;width:100%;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;}
+  nav::-webkit-scrollbar{display:none;}
+  .nb{font-size:11px;padding:4px 9px;white-space:nowrap;}
+  #sync-st{font-size:10px;}
+  #auth-area img{width:22px;height:22px;}
+
+  /* Main */
+  main{padding:14px 12px;}
+  .page-title{font-size:18px;}
+
+  /* Dashboard */
+  .dash-grid{grid-template-columns:1fr 1fr;gap:8px;}
+  .stat-val{font-size:24px;}
+  .quick-grid{grid-template-columns:1fr 1fr;gap:8px;}
+  .qa-btn{padding:12px;}
+  .qa-icon{font-size:16px;}
+  .qa-title{font-size:12px;}
+  .qa-sub{font-size:10px;}
+
+  /* Mentora */
+  .mentora-card{padding:14px 14px 14px 18px;}
+  .mentora-avatar{width:30px;height:30px;font-size:15px;}
+  .mentora-msg{font-size:12px;}
+
+  /* Forms */
+  .fr2,.fr3{grid-template-columns:1fr;}
+  .fr2.keep-2{grid-template-columns:1fr 1fr;}
+
+  /* Kanban */
+  .kanban-board{grid-template-columns:1fr 1fr;gap:8px;}
+  .kanban-col-title{font-size:10px;}
+  .kc-titulo{font-size:12px;}
+
+  /* Edital */
+  .edital-mat-stats{display:none;}
+  .edital-header{flex-wrap:wrap;gap:8px;}
+  .edital-header input{min-width:0;width:100%;}
+
+  /* Resultado */
+  .res-grid{grid-template-columns:repeat(2,1fr);}
+  .res-pct{font-size:48px;}
+
+  /* Concursos */
+  .concursos-grid{grid-template-columns:1fr 1fr;gap:10px;}
+  .cc-name{font-size:13px;}
+
+  /* Admin tabs */
+  .admin-tabs{overflow-x:auto;scrollbar-width:none;}
+  .admin-tabs::-webkit-scrollbar{display:none;}
+  .at{font-size:11px;padding:6px 12px;white-space:nowrap;}
+
+  /* Tipo btns */
+  .tipo-btns{grid-template-columns:1fr;}
+}
+
+/* Celular (até 480px) */
+@media(max-width:480px){
+  /* Header compacto */
+  header{padding:6px 10px;gap:4px;}
+  .logo{font-size:14px;}
+  nav{gap:1px;}
+  .nb{font-size:10px;padding:4px 7px;}
+
+  /* Main */
+  main{padding:12px 10px;}
+  .page-title{font-size:16px;}
+  .page-sub{font-size:11px;}
+
+  /* Dashboard stats empilhados */
+  .dash-grid{grid-template-columns:1fr 1fr;gap:6px;}
+  .stat-card{padding:12px 14px;}
+  .stat-val{font-size:22px;}
+  .stat-label{font-size:9px;}
+  .stat-sub{font-size:10px;}
+
+  /* Meta */
+  .meta-wrap{padding:12px 14px;}
+
+  /* Quick actions */
+  .quick-grid{grid-template-columns:1fr 1fr;gap:6px;}
+  .qa-btn{padding:10px 8px;}
+  .qa-icon{font-size:14px;margin-bottom:3px;}
+  .qa-title{font-size:11px;}
+  .qa-sub{font-size:9px;}
+
+  /* Mentora */
+  .mentora-card{padding:12px 12px 12px 16px;}
+  .mentora-avatar{width:28px;height:28px;font-size:13px;flex-shrink:0;}
+  .mentora-nome{font-size:10px;}
+  .mentora-msg{font-size:12px;line-height:1.5;}
+  .mentora-acoes{gap:5px;}
+  .mentora-acoes .btn{font-size:11px;padding:5px 10px;}
+
+  /* Kanban — 1 coluna no celular */
+  .kanban-board{grid-template-columns:1fr;gap:10px;}
+  .kanban-col{max-height:none;}
+  .kanban-cards{max-height:300px;}
+  .planner-header{flex-wrap:wrap;}
+  .countdown-badge{padding:8px 14px;}
+  .countdown-num{font-size:22px;}
+
+  /* Questão */
+  .q-card{padding:16px;}
+  .q-text{font-size:14px;}
+  .opt{padding:10px 12px;font-size:13px;}
+  .ve-btn{padding:14px;font-size:16px;}
+  .q-meta{gap:4px;}
+
+  /* Resultado */
+  .resultado-card{padding:24px 16px;}
+  .res-pct{font-size:40px;}
+  .res-grid{grid-template-columns:repeat(2,1fr);gap:6px;}
+  .res-item{padding:10px 6px;}
+  .res-val{font-size:18px;}
+
+  /* Concursos */
+  .concursos-grid{grid-template-columns:1fr;gap:8px;}
+  .concurso-card{padding:16px 14px;}
+  .cc-icon{font-size:24px;margin-bottom:6px;}
+
+  /* Admin */
+  .admin-tabs{gap:0;}
+  .at{font-size:10px;padding:6px 8px;}
+  .card{padding:14px;}
+
+  /* Banco/Erros chips */
+  .chips{gap:4px;}
+  .chip{font-size:10px;padding:3px 9px;}
+
+  /* Modal */
+  .modal{border-radius:12px 12px 0 0;position:fixed;bottom:0;max-height:85vh;}
+  .overlay{padding:0;align-items:flex-end;}
+
+  /* Edital */
+  .edital-mat-header{padding:12px;}
+  .edital-topico{padding:8px 12px 8px 28px;}
+  .edital-subtopico{padding:6px 12px 6px 44px;}
+
+  /* Modo responder setup */
+  .mode-grid{grid-template-columns:1fr 1fr;gap:8px;}
+  .mode-icon{font-size:18px;}
+  .mode-title{font-size:12px;}
+  .mode-desc{font-size:10px;}
+}
+/* ══════════════════════════
+   PLANNER KANBAN
+══════════════════════════ */
+.planner-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
+.countdown-badge{background:var(--blue-l);border:1px solid rgba(79,124,255,.25);border-radius:10px;padding:10px 16px;text-align:center;flex-shrink:0;}
+.countdown-num{font-family:var(--fd);font-size:28px;font-weight:800;color:var(--blue);line-height:1;}
+.countdown-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.countdown-badge.urgente{background:var(--red-l);border-color:rgba(255,77,106,.25);}
+.countdown-badge.urgente .countdown-num{color:var(--red);}
+
+.kanban-board{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;min-height:500px;}
+@media(max-width:700px){.kanban-board{grid-template-columns:1fr 1fr;}}
+@media(max-width:400px){.kanban-board{grid-template-columns:1fr;}}
+
+.kanban-col{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);display:flex;flex-direction:column;overflow:hidden;}
+.kanban-col-header{padding:12px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.kanban-col-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+.kanban-col-count{font-size:11px;font-family:var(--fm);color:var(--muted);margin-left:auto;}
+.kanban-col.col-todo .kanban-col-header{border-top:3px solid var(--muted);}
+.kanban-col.col-doing .kanban-col-header{border-top:3px solid var(--blue);}
+.kanban-col.col-review .kanban-col-header{border-top:3px solid var(--amber);}
+.kanban-col.col-done .kanban-col-header{border-top:3px solid var(--green);}
+
+.kanban-cards{padding:10px;flex:1;display:flex;flex-direction:column;gap:8px;overflow-y:auto;max-height:600px;}
+.kanban-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;cursor:pointer;transition:all .15s;position:relative;}
+.kanban-card:hover{border-color:var(--border2);transform:translateY(-1px);}
+.kanban-card.atrasado{border-left:3px solid var(--red);}
+.kanban-card.revisao-auto{border-left:3px solid var(--amber);}
+.kc-titulo{font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px;}
+.kc-materia{font-size:11px;color:var(--muted);}
+.kc-footer{display:flex;align-items:center;gap:6px;margin-top:8px;flex-wrap:wrap;}
+.kc-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;}
+.kc-alerta{font-size:10px;color:var(--red);font-weight:700;}
+.kc-revisao{font-size:10px;color:var(--amber);font-weight:700;}
+.kc-progresso{font-size:10px;color:var(--muted);font-family:var(--fm);}
+
+.kanban-add-btn{margin:8px 10px 10px;padding:8px;border:1.5px dashed var(--border);border-radius:8px;background:transparent;color:var(--muted);font-size:12px;font-weight:600;cursor:pointer;width:calc(100% - 20px);transition:all .15s;font-family:var(--ff);}
+.kanban-add-btn:hover{border-color:var(--blue);color:var(--blue);}
+
+/* ══════════════════════════
+   EDITAL VERTICALIZADO
+══════════════════════════ */
+.edital-header{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
+.edital-search{flex:1;max-width:300px;}
+
+.edital-materia{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;overflow:hidden;}
+.edital-mat-header{padding:14px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .15s;}
+.edital-mat-header:hover{background:var(--bg3);}
+.edital-mat-icon{font-size:18px;flex-shrink:0;}
+.edital-mat-name{font-weight:700;font-size:14px;flex:1;}
+.edital-mat-stats{font-size:11px;color:var(--muted);font-family:var(--fm);}
+.edital-mat-arrow{color:var(--muted);transition:transform .2s;font-size:12px;}
+.edital-mat-arrow.open{transform:rotate(90deg);}
+.edital-mat-bar{height:4px;background:var(--bg3);}
+.edital-mat-bar-fill{height:100%;background:var(--blue);transition:width .5s;}
+
+.edital-topicos{display:none;border-top:1px solid var(--border);}
+.edital-topicos.open{display:block;}
+
+.edital-topico{padding:10px 16px 10px 36px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;}
+.edital-topico:last-child{border-bottom:none;}
+.edital-topico:hover{background:var(--bg3);}
+.edital-topico-row{display:flex;align-items:center;gap:8px;}
+.edital-topico-name{font-size:13px;color:var(--text);flex:1;}
+.edital-topico-stats{font-size:11px;color:var(--muted);font-family:var(--fm);white-space:nowrap;}
+.edital-topico-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;}
+
+.edital-subtopicos{display:none;background:var(--bg);}
+.edital-subtopicos.open{display:block;}
+.edital-subtopico{padding:8px 16px 8px 56px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.edital-subtopico:last-child{border-bottom:none;}
+.edital-subtopico-name{font-size:12px;color:var(--muted);flex:1;}
+.edital-subtopico-stats{font-size:11px;font-family:var(--fm);white-space:nowrap;}
+/* ── IA MENTORA ── */
+.mentora-card{background:linear-gradient(135deg,rgba(79,124,255,.08),rgba(168,85,247,.08));border:1px solid rgba(79,124,255,.25);border-radius:var(--r);padding:16px 18px;margin-bottom:14px;position:relative;overflow:hidden;}
+.mentora-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--blue),var(--purple));}
+.mentora-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.mentora-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--purple));display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.mentora-nome{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;}
+.mentora-msg{font-size:13px;color:var(--text);line-height:1.6;}
+.mentora-msg strong{color:var(--blue);}
+.mentora-acoes{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+
+/* ── KANBAN DROPDOWN ── */
+.kc-status-wrap{position:relative;margin-top:8px;}
+.kc-status-select{width:100%;padding:5px 10px;border-radius:6px;border:1px solid var(--border);background:var(--bg2);color:var(--muted);font-family:var(--ff);font-size:11px;font-weight:600;cursor:pointer;appearance:none;-webkit-appearance:none;}
+.kc-status-select:focus{outline:none;border-color:var(--blue);}
+.kc-status-select option{background:var(--bg2);}
+</style>
+</head>
+<body>
+
+<div class="offline-bar" id="offline-bar">📡 Offline — dados locais disponíveis</div>
+
+<!-- LOGIN -->
+<div class="login-screen" id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">🎯 Meu<span>Concurso</span></div>
+    <p class="login-desc">Sistema inteligente de revisão espaçada.<br>Cada usuário tem seus próprios dados.</p>
+    <button class="google-btn" onclick="loginGoogle()">
+      <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15.1 16.1 19.2 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.7 7.4 6.3 14.7z"/><path fill="#FBBC05" d="M24 46c5.5 0 10.5-1.9 14.3-5l-6.6-5.4C29.7 37.3 27 38 24 38c-6 0-10.6-3.1-11.8-7.5l-7 5.4C8.8 42.5 15.9 46 24 46z"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.3-2.3 4.2-4.3 5.6l6.6 5.4C42.2 36.1 45 30.5 45 24c0-1.3-.2-2.7-.5-4z"/></svg>
+      Entrar com Google
+    </button>
+    <button class="offline-btn" onclick="loginOffline()">Usar sem conta (dados só neste dispositivo)</button>
+  </div>
+</div>
+
+<header>
+  <div class="logo">🎯 Meu<span>Concurso</span></div>
+  <div class="concurso-badge" id="concurso-badge" onclick="voltarConcursos()">← Trocar concurso</div>
+  <nav id="main-nav" style="display:none">
+    <button class="nb active" onclick="goTo('dashboard',this)">Dashboard</button>
+    <button class="nb" onclick="goTo('responder',this)">Responder</button>
+    <button class="nb" onclick="goTo('banco',this)">Banco</button>
+    <button class="nb" onclick="goTo('erros',this)">Erros</button>
+    <button class="nb" onclick="goTo('planner',this)">📅 Planner</button>
+    <button class="nb" onclick="goTo('edital',this)">📋 Edital</button>
+    <button class="nb" onclick="goTo('admin',this)">Admin</button>
+  </nav>
+  <span id="sync-st"></span>
+  <div id="auth-area"></div>
+</header>
+
+<main>
+
+<!-- ══ CONCURSOS ══ -->
+<div class="sec active" id="sec-concursos">
+  <div class="page-title" id="cg-greeting">Olá! 👋</div>
+  <div class="page-sub">Selecione ou crie um concurso para estudar</div>
+  <div id="super-admin-bar-wrap"></div>
+  <div class="concursos-grid" id="concursos-grid"></div>
+</div>
+
+<!-- ══ DASHBOARD ══ -->
+<div class="sec" id="sec-dashboard">
+  <div class="page-title" id="dash-greeting">Dashboard</div>
+  <div class="page-sub" id="dash-sub">Carregando...</div>
+
+  <!-- IA Mentora -->
+  <div class="mentora-card" id="mentora-card">
+    <div class="mentora-header">
+      <div class="mentora-avatar">🎯</div>
+      <div>
+        <div class="mentora-nome">Mentora IA</div>
+        <div style="font-size:10px;color:var(--muted)" id="mentora-data"></div>
+      </div>
+    </div>
+    <div class="mentora-msg" id="mentora-msg">Carregando análise...</div>
+    <div class="mentora-acoes" id="mentora-acoes"></div>
+  </div>
+  <div class="meta-wrap" id="meta-wrap">
+    <div class="meta-row">
+      <div><div style="font-size:13px;font-weight:700">Meta diária</div><div style="font-size:11px;color:var(--muted)" id="meta-sub">0/50</div></div>
+      <div style="font-family:var(--fm);font-size:18px;font-weight:700" id="meta-pct">0%</div>
+    </div>
+    <div class="meta-bar"><div class="meta-fill" id="meta-fill" style="width:0%"></div></div>
+  </div>
+  <div class="dash-grid" id="dash-stats"></div>
+  <div class="chart-wrap" style="margin-top:12px">
+    <div class="sec-label">Acertos — últimos 7 dias</div>
+    <div class="chart-bars" id="chart-bars"></div>
+  </div>
+  <div class="quick-grid" style="margin-top:12px">
+    <button class="qa-btn" onclick="goTo('responder',document.querySelectorAll('.nb')[1])"><span class="qa-icon">⚡</span><div class="qa-title">Responder agora</div><div class="qa-sub" id="qa-pend">...</div></button>
+    <button class="qa-btn" onclick="goTo('erros',document.querySelectorAll('.nb')[3])"><span class="qa-icon">🔴</span><div class="qa-title">Revisar erros</div><div class="qa-sub" id="qa-erros">0 questões</div></button>
+    <button class="qa-btn" onclick="startSession('prova_abcd')"><span class="qa-icon">📋</span><div class="qa-title">Prova ABCD</div><div class="qa-sub">Simulado completo</div></button>
+    <button class="qa-btn" onclick="startSession('prova_ve')"><span class="qa-icon">✅</span><div class="qa-title">Certo ou Errado</div><div class="qa-sub">Revisão rápida</div></button>
+  </div>
+</div>
+
+<!-- ══ RESPONDER ══ -->
+<div class="sec" id="sec-responder">
+  <div id="resp-setup">
+    <div class="page-title">Responder</div>
+    <div class="page-sub">O sistema prioriza erros e revisões pendentes</div>
+    <div style="max-width:440px;margin:0 auto">
+      <div class="sec-label">Modo</div>
+      <div class="mode-grid" style="margin-bottom:14px">
+        <div class="mode-card selected" id="mode-revisao" onclick="selMode('revisao')"><div class="mode-icon">🧠</div><div class="mode-title">Revisão Inteligente</div><div class="mode-desc">Prioriza erros e pendentes</div></div>
+        <div class="mode-card" id="mode-prova_abcd" onclick="selMode('prova_abcd')"><div class="mode-icon">📋</div><div class="mode-title">Prova ABCD</div><div class="mode-desc">4 alternativas</div></div>
+        <div class="mode-card" id="mode-prova_ve" onclick="selMode('prova_ve')"><div class="mode-icon">✅</div><div class="mode-title">Certo ou Errado</div><div class="mode-desc">Afirmativas</div></div>
+        <div class="mode-card" id="mode-somente_erros" onclick="selMode('somente_erros')"><div class="mode-icon">🔴</div><div class="mode-title">Somente Erros</div><div class="mode-desc">Foca no que errou</div></div>
+      </div>
+      <div class="card" style="margin-bottom:14px">
+        <div class="fr3">
+          <div class="fg"><label>Qtd</label><select id="cfg-qtd"><option value="10">10</option><option value="20" selected>20</option><option value="30">30</option><option value="50">50</option></select></div>
+          <div class="fg"><label>Matéria</label><select id="cfg-mat"><option value="">Todas</option></select></div>
+          <div class="fg"><label>Nível</label><select id="cfg-niv"><option value="">Todos</option><option value="facil">Fácil</option><option value="medio">Médio</option><option value="dificil">Difícil</option></select></div>
+        </div>
+      </div>
+      <button class="btn btn-primary" style="width:100%;padding:13px;font-size:15px" onclick="startSession()">⚡ Iniciar Sessão</button>
+    </div>
+  </div>
+  <div class="q-session" id="q-session">
+    <div class="q-topbar">
+      <div class="q-prog"><div class="q-prog-fill" id="sess-prog"></div></div>
+      <div class="q-counter" id="sess-count">1/20</div>
+      <div class="q-score"><span style="color:var(--green)" id="sess-corr">✓ 0</span><span style="color:var(--red)" id="sess-err">✗ 0</span></div>
+      <button class="btn btn-ghost btn-sm" onclick="endSession()">Encerrar</button>
+    </div>
+    <div id="q-display"></div>
+  </div>
+  <div id="q-resultado" style="display:none">
+    <div class="resultado-card">
+      <div class="sec-label">Resultado</div>
+      <div class="res-pct" id="res-pct">0%</div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:4px" id="res-verdict"></div>
+      <div class="res-grid">
+        <div class="res-item"><div class="res-val" id="res-total">0</div><div class="res-lbl">Total</div></div>
+        <div class="res-item"><div class="res-val" style="color:var(--green)" id="res-corr">0</div><div class="res-lbl">Acertos</div></div>
+        <div class="res-item"><div class="res-val" style="color:var(--red)" id="res-erros">0</div><div class="res-lbl">Erros</div></div>
+        <div class="res-item"><div class="res-val" style="color:var(--blue)" id="res-liq">0</div><div class="res-lbl">Líquido</div></div>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:center">
+        <button class="btn btn-primary" onclick="startSession()">Nova Sessão</button>
+        <button class="btn btn-ghost" onclick="goTo('dashboard',document.querySelectorAll('.nb')[0])">Dashboard</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BANCO ══ -->
+<div class="sec" id="sec-banco">
+  <div class="page-title">Banco de Questões</div>
+  <div class="page-sub" id="banco-sub">0 questões</div>
+  <div class="chips" id="banco-chips"></div>
+  <div id="banco-list"></div>
+</div>
+
+<!-- ══ ERROS ══ -->
+<div class="sec" id="sec-erros">
+  <div class="page-title">Fila de Erros</div>
+  <div class="page-sub">Questões que precisam de atenção</div>
+  <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center">
+    <div class="chips" id="erro-chips" style="margin-bottom:0;flex:1"></div>
+    <button class="btn btn-primary btn-sm" onclick="startSession('somente_erros')">Revisar tudo</button>
+  </div>
+  <div id="erros-list"></div>
+</div>
+
+<!-- ══ ADMIN ══ -->
+<div class="sec" id="sec-admin">
+  <div class="page-title">Admin</div>
+  <div class="page-sub" id="admin-sub">Gerencie seu concurso</div>
+  <div id="super-admin-info"></div>
+
+  <div class="admin-tabs">
+    <button class="at active" onclick="adminTab(this,'atp-q')">❓ Questões</button>
+    <button class="at" onclick="adminTab(this,'atp-mat')">📚 Matérias</button>
+    <button class="at" onclick="adminTab(this,'atp-conc')">🏆 Concursos</button>
+    <button class="at" onclick="adminTab(this,'atp-cfg')">⚙️ Config</button>
+  </div>
+
+  <!-- Questões -->
+  <div class="atp active" id="atp-q">
+    <div class="card" style="margin-bottom:14px">
+      <div style="font-weight:700;font-size:14px;margin-bottom:14px" id="qf-title">➕ Nova Questão</div>
+      <div class="fg">
+        <label>Tipo de questão</label>
+        <div class="tipo-btns">
+          <button type="button" id="tipo-abcd" class="tipo-btn selected-abcd" onclick="setTipo('abcd')">📋 Múltipla Escolha (A B C D)</button>
+          <button type="button" id="tipo-ve" class="tipo-btn" onclick="setTipo('ve')">✅ Certo ou Errado</button>
+        </div>
+      </div>
+      <div class="fg"><label>Enunciado *</label><textarea id="qf-text" rows="3" placeholder="Digite a questão completa..."></textarea></div>
+      <div class="fr2">
+        <div class="fg"><label>Matéria *</label><select id="qf-mat" onchange="syncSelectsTopicos()"><option value="">-- Selecione --</option></select></div>
+        <div class="fg"><label>Tópico</label><select id="qf-topico" onchange="onTopicoChange()"><option value="">-- Nenhum --</option></select></div>
+      </div>
+      <div class="fr2">
+        <div class="fg"><label>Subtópico</label><select id="qf-subtopico"><option value="">-- Nenhum --</option></select></div>
+        <div class="fg"><label>Assunto</label><input id="qf-assunto" type="text" placeholder="Resumo rápido"></div>
+      </div>
+      <div class="fr3">
+        <div class="fg"><label>Nível</label><select id="qf-nivel"><option value="facil">Fácil</option><option value="medio" selected>Médio</option><option value="dificil">Difícil</option></select></div>
+        <div class="fg"><label>Banca</label><input id="qf-banca" type="text" placeholder="CESPE"></div>
+        <div class="fg"><label>Ano</label><input id="qf-ano" type="text" placeholder="2024"></div>
+      </div>
+      <div id="bloco-abcd">
+        <div class="sec-label" style="margin-top:4px">Alternativas</div>
+        <div class="fg"><label>A)</label><input id="qf-opt-0" type="text" placeholder="Alternativa A"></div>
+        <div class="fg"><label>B)</label><input id="qf-opt-1" type="text" placeholder="Alternativa B"></div>
+        <div class="fg"><label>C)</label><input id="qf-opt-2" type="text" placeholder="Alternativa C"></div>
+        <div class="fg"><label>D)</label><input id="qf-opt-3" type="text" placeholder="Alternativa D"></div>
+        <div class="fg"><label>Gabarito *</label><select id="qf-correct"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select></div>
+      </div>
+      <div id="bloco-ve" style="display:none">
+        <div class="fg"><label>A afirmativa é *</label><select id="qf-ve-correct"><option value="1">✅ CERTO</option><option value="0">❌ ERRADO</option></select></div>
+      </div>
+      <div class="fg"><label>Explicação do gabarito</label><textarea id="qf-expl" rows="2" placeholder="Explique a resposta correta..."></textarea></div>
+      <div style="display:flex;gap:8px">
+        <button type="button" class="btn btn-primary" onclick="saveQuestion()">💾 Salvar Questão</button>
+        <button type="button" class="btn btn-ghost" onclick="clearQForm()">Limpar</button>
+      </div>
+    </div>
+    <div class="sec-label">Questões (<span id="q-count">0</span>)</div>
+    <div id="q-admin-list"></div>
+  </div>
+
+  <!-- Matérias -->
+  <div class="atp" id="atp-mat">
+    <div class="card" style="margin-bottom:14px">
+      <div style="font-weight:700;font-size:14px;margin-bottom:14px" id="mf-title">➕ Nova Matéria</div>
+      <div class="fr2">
+        <div class="fg"><label>Nome *</label><input id="mf-name" type="text" placeholder="Ex: Direito Penal"></div>
+        <div class="fg"><label>Ícone</label><input id="mf-icon" type="text" placeholder="📖" maxlength="4"></div>
+      </div>
+      <div class="fg"><label>Descrição</label><input id="mf-desc" type="text" placeholder="Breve descrição"></div>
+      <div style="display:flex;gap:8px">
+        <button type="button" class="btn btn-primary" onclick="saveMateria()">💾 Salvar Matéria</button>
+        <button type="button" class="btn btn-ghost" onclick="clearMForm()">Limpar</button>
+      </div>
+    </div>
+    <div class="sec-label">Matérias (<span id="mat-count">0</span>)</div>
+    <div id="mat-admin-list"></div>
+
+    <!-- Tópicos -->
+    <div style="margin-top:20px">
+      <div class="sec-label">Tópicos do Edital</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6">Cadastre os tópicos e subtópicos do edital. Eles aparecerão no Edital Verticalizado e poderão ser vinculados às questões.</p>
+      <div class="card" style="margin-bottom:14px">
+        <div style="font-weight:700;font-size:14px;margin-bottom:14px" id="tf-title">➕ Novo Tópico</div>
+        <div class="fr2">
+          <div class="fg"><label>Matéria *</label><select id="tf-mat"><option value="">-- Selecione --</option></select></div>
+          <div class="fg"><label>Nome do tópico *</label><input id="tf-nome" type="text" placeholder="Ex: Concordância Verbal"></div>
+        </div>
+        <div class="fg">
+          <label>Subtópicos (um por linha)</label>
+          <textarea id="tf-subtopicos" rows="3" placeholder="Ex:&#10;Concordância nominal&#10;Concordância verbal&#10;Casos especiais"></textarea>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button type="button" class="btn btn-primary" onclick="saveTopico()">💾 Salvar Tópico</button>
+          <button type="button" class="btn btn-ghost" onclick="clearTForm()">Limpar</button>
+        </div>
+      </div>
+      <div class="sec-label">Tópicos cadastrados (<span id="top-count">0</span>)</div>
+      <div id="topico-admin-list"></div>
+    </div>
+  </div>
+
+  <!-- Concursos -->
+  <div class="atp" id="atp-conc">
+    <div class="card" style="margin-bottom:14px">
+      <div style="font-weight:700;font-size:14px;margin-bottom:14px" id="cf-title">➕ Novo Concurso</div>
+      <div class="fr2">
+        <div class="fg"><label>Nome *</label><input id="cf-name" type="text" placeholder="Ex: TJGO, PMGO, OAB..."></div>
+        <div class="fg"><label>Ícone</label><input id="cf-icon" type="text" placeholder="🏛" maxlength="4"></div>
+      </div>
+      <div class="fg"><label>Descrição</label><input id="cf-desc" type="text" placeholder="Ex: Tribunal de Justiça de Goiás"></div>
+      <div class="fg"><label>📅 Data prevista da prova</label><input id="cf-data" type="date"></div>
+      <div style="display:flex;gap:8px">
+        <button type="button" class="btn btn-primary" onclick="saveConcurso()">💾 Salvar Concurso</button>
+        <button type="button" class="btn btn-ghost" onclick="clearCForm()">Limpar</button>
+      </div>
+    </div>
+    <div class="sec-label">Concursos (<span id="conc-count">0</span>)</div>
+    <div id="conc-admin-list"></div>
+  </div>
+
+  <!-- Config -->
+  <div class="atp" id="atp-cfg">
+    <div class="card" style="margin-bottom:12px">
+      <div style="font-weight:700;font-size:14px;margin-bottom:14px">⚙️ Configurações de Estudo</div>
+      <div class="fr2">
+        <div class="fg"><label>Meta diária (questões)</label><input type="number" id="cfg-meta" min="5" max="200"></div>
+        <div class="fg"><label>Questões por sessão</label><input type="number" id="cfg-sessao-qtd" min="5" max="100"></div>
+      </div>
+      <div class="fr2">
+        <div class="fg"><label>Dias após ACERTO (1ª vez)</label><input type="number" id="cfg-acerto1" min="1" max="30"></div>
+        <div class="fg"><label>Dias após ACERTO (repetido)</label><input type="number" id="cfg-acerto2" min="1" max="60"></div>
+      </div>
+      <div class="fr2">
+        <div class="fg"><label>Dias após ERRO</label><input type="number" id="cfg-erro" min="1" max="7"></div>
+        <div class="fg"><label>Dias após DÚVIDA</label><input type="number" id="cfg-duvida" min="1" max="14"></div>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="saveConfig()">💾 Salvar</button>
+    </div>
+    <div class="card" style="margin-bottom:12px">
+      <div style="font-weight:700;font-size:14px;margin-bottom:6px">📋 Importar Edital Verticalizado</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6">Importa automaticamente as matérias e tópicos do edital do <strong style="color:var(--text)">Fiscal de Serviços Urbanos — Senador Canedo</strong> para o concurso atual.</div>
+      <button type="button" class="btn btn-green" onclick="importarEditalFiscal()">📥 Importar Edital Fiscal Canedo</button>
+      <div id="import-log" style="display:none;margin-top:10px;background:var(--bg3);border-radius:8px;padding:12px;font-size:12px;font-family:var(--fm);color:var(--green);max-height:150px;overflow-y:auto;line-height:1.8"></div>
+    </div>
+    <div class="card">
+      <div style="font-weight:700;font-size:14px;margin-bottom:12px">🗄️ Backup</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button type="button" class="btn btn-ghost btn-sm" onclick="exportData()">📤 Exportar JSON</button>
+        <button type="button" class="btn btn-ghost btn-sm" onclick="document.getElementById('imp-file').click()">📥 Importar JSON</button>
+        <input type="file" id="imp-file" accept=".json" style="display:none" onchange="importData(this)">
+        <button type="button" class="btn btn-red btn-sm" onclick="resetAllData()">🗑 Resetar tudo</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PLANNER ══ -->
+<div class="sec" id="sec-planner">
+  <div class="page-title">📅 Planner de Estudos</div>
+  <div class="page-sub">Organize seus tópicos — revisões agendadas aparecem automaticamente</div>
+  <div class="planner-header">
+    <div class="countdown-badge" id="countdown-badge">
+      <div class="countdown-num" id="countdown-num">—</div>
+      <div class="countdown-label">dias para o concurso</div>
+    </div>
+    <div style="flex:1">
+      <div style="font-size:13px;font-weight:600;margin-bottom:4px" id="planner-nome">Selecione um concurso</div>
+      <div style="font-size:12px;color:var(--muted)" id="planner-data-info">Configure a data do concurso no Admin → Concursos</div>
+    </div>
+    <button class="btn btn-primary btn-sm" onclick="goTo('admin',document.querySelectorAll('.nb')[6]);setTimeout(()=>adminTab(document.querySelectorAll('.at')[2],'atp-conc'),100)">⚙️ Data do concurso</button>
+  </div>
+  <div id="planner-alertas" style="margin-bottom:14px"></div>
+  <div class="kanban-board">
+    <div class="kanban-col col-todo">
+      <div class="kanban-col-header"><span style="color:var(--muted)">○</span><span class="kanban-col-title" style="color:var(--muted)">A Fazer</span><span class="kanban-col-count" id="count-todo">0</span></div>
+      <div class="kanban-cards" id="cards-todo"></div>
+      <button class="kanban-add-btn" onclick="openAddCard('todo')">+ Adicionar tópico</button>
+    </div>
+    <div class="kanban-col col-doing">
+      <div class="kanban-col-header"><span style="color:var(--blue)">◐</span><span class="kanban-col-title" style="color:var(--blue)">Estudando</span><span class="kanban-col-count" id="count-doing">0</span></div>
+      <div class="kanban-cards" id="cards-doing"></div>
+      <button class="kanban-add-btn" onclick="openAddCard('doing')">+ Adicionar tópico</button>
+    </div>
+    <div class="kanban-col col-review">
+      <div class="kanban-col-header"><span style="color:var(--amber)">↻</span><span class="kanban-col-title" style="color:var(--amber)">Revisando</span><span class="kanban-col-count" id="count-review">0</span></div>
+      <div class="kanban-cards" id="cards-review"></div>
+      <button class="kanban-add-btn" onclick="openAddCard('review')">+ Adicionar tópico</button>
+    </div>
+    <div class="kanban-col col-done">
+      <div class="kanban-col-header"><span style="color:var(--green)">✓</span><span class="kanban-col-title" style="color:var(--green)">Concluído</span><span class="kanban-col-count" id="count-done">0</span></div>
+      <div class="kanban-cards" id="cards-done"></div>
+      <button class="kanban-add-btn" onclick="openAddCard('done')">+ Adicionar tópico</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ EDITAL ══ -->
+<div class="sec" id="sec-edital">
+  <div class="page-title">📋 Edital Verticalizado</div>
+  <div class="page-sub">Progresso por matéria, tópico e subtópico. Clique para expandir.</div>
+  <div class="edital-header">
+    <input type="text" placeholder="🔍 Buscar matéria ou tópico..." oninput="filtrarEdital(this.value)" style="flex:1;max-width:300px">
+    <button class="btn btn-ghost btn-sm" onclick="toggleExpandAll()">Expandir tudo</button>
+    <button class="btn btn-primary btn-sm" onclick="goTo('admin',document.querySelectorAll('.nb')[6]);setTimeout(()=>adminTab(document.querySelectorAll('.at')[1],'atp-mat'),100)">+ Gerenciar matérias</button>
+  </div>
+  <div id="edital-list"></div>
+</div>
+
+</main>
+
+<!-- Modal Kanban Card -->
+<div class="overlay" id="card-ov">
+  <div class="modal" style="max-width:480px">
+    <div class="modal-h">
+      <div class="modal-title" id="card-modal-title">Novo Tópico</div>
+      <button class="modal-x" onclick="closeOv('card-ov')">✕</button>
+    </div>
+    <div class="modal-b">
+      <div class="fg"><label>Título *</label><input id="card-titulo" type="text" placeholder="Ex: Concordância Verbal, Atos Administrativos..."></div>
+      <div class="fr2">
+        <div class="fg"><label>Matéria</label><select id="card-materia"><option value="">Nenhuma</option></select></div>
+        <div class="fg"><label>Prazo</label><input id="card-prazo" type="date"></div>
+      </div>
+      <div class="fg"><label>Meta de questões</label><input id="card-meta-q" type="number" placeholder="Ex: 50" min="0"></div>
+      <div class="fg"><label>Notas</label><textarea id="card-notas" rows="2" placeholder="Anotações sobre este tópico..."></textarea></div>
+      <div style="display:flex;gap:8px;margin-top:4px;flex-wrap:wrap">
+        <button type="button" class="btn btn-primary" onclick="saveKanbanCard()">💾 Salvar</button>
+        <button type="button" class="btn btn-ghost" onclick="closeOv('card-ov')">Cancelar</button>
+        <button type="button" class="btn btn-red btn-sm" id="btn-del-card" onclick="deleteKanbanCard()" style="display:none;margin-left:auto">🗑 Excluir</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-el" id="toast"></div>
+
+<!-- Modal detalhe questão -->
+<div class="overlay" id="q-detail-ov">
+  <div class="modal">
+    <div class="modal-h"><div class="modal-title">Detalhes</div><button class="modal-x" onclick="closeOv('q-detail-ov')">✕</button></div>
+    <div class="modal-b" id="q-detail-body"></div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script>
+// ═══════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════
+// Email do super-admin (só você)
+var SUPER_ADMIN_EMAIL = 'joaovitorconcursos2025@gmail.com'; // TROQUE PELO SEU EMAIL
+
+var fbConfig = {
+  apiKey:"AIzaSyCbMPaCxEJM-OEwOHOQeJksrsCECM4KQeE",
+  authDomain:"meu-concurso-6b21f.firebaseapp.com",
+  projectId:"meu-concurso-6b21f",
+  storageBucket:"meu-concurso-6b21f.firebasestorage.app",
+  messagingSenderId:"5109953251055",
+  appId:"1:5109953251055:web:c97dd65f958d06184ffb1a"
+};
+firebase.initializeApp(fbConfig);
+var db   = firebase.firestore();
+var auth = firebase.auth();
+
+// ═══════════════════════════════════════
+// ESTADO GLOBAL
+// ═══════════════════════════════════════
+var currentUser  = null;
+var isSuperAdmin = false;
+var currentConcursoId = null; // concurso selecionado
+
+// Dados do usuário atual
+var concursos = [];
+var materias  = [];
+var questions = [];
+var topicos   = []; // {id, materiaId, concursoId, nome, subtopicos:[{id,nome}]}
+var kanbanCards = []; // {id, titulo, materiaId, concursoId, status, prazo, metaQ, notas, revisaoAutoId}
+var config    = {meta:50,sessaoQtd:20,diasAcerto1:3,diasAcerto2:7,diasErro:1,diasDuvida:2};
+var historico = {};
+var nextQId   = 1;
+var nextMId   = 1;
+var nextCId   = 1;
+var nextTId   = 1;
+var nextKId   = 1;
+
+// Estado UI
+var currentMode  = 'revisao';
+var session      = null;
+var editingQId   = null;
+var editingMId   = null;
+var editingCId   = null;
+var editingKId   = null;
+var editingKStatus = 'todo';
+var qfTipo       = 'abcd';
+var bancoFilter  = '';
+var erroFilter   = '';
+var editalExpandAll = false;
+
+// ═══════════════════════════════════════
+// FIREBASE — por usuário
+// ═══════════════════════════════════════
+function userRef() {
+  if(!currentUser) return null;
+  return db.collection('usuarios').doc(currentUser.uid);
+}
+
+async function cloudSave(key, val) {
+  if(!currentUser) return;
+  try {
+    await userRef().collection('dados').doc(key).set({v:val, t:Date.now()});
+  } catch(e) {
+    console.error('[save] '+key, e.code);
+    throw e;
+  }
+}
+
+async function cloudLoad(key, def) {
+  if(!currentUser) return def;
+  try {
+    var d = await userRef().collection('dados').doc(key).get();
+    return d.exists ? d.data().v : def;
+  } catch(e) { return def; }
+}
+
+async function syncAll() {
+  if(!currentUser) return;
+  setSyncSt('💾 Salvando...');
+  try {
+    await Promise.all([
+      cloudSave('concursos', concursos),
+      cloudSave('materias',  materias),
+      cloudSave('questions', questions),
+      cloudSave('topicos',   topicos),
+      cloudSave('kanbanCards', kanbanCards),
+      cloudSave('config',    config),
+      cloudSave('historico', historico),
+      cloudSave('nextQId',   nextQId),
+      cloudSave('nextMId',   nextMId),
+      cloudSave('nextCId',   nextCId),
+      cloudSave('nextTId',   nextTId),
+      cloudSave('nextKId',   nextKId),
+    ]);
+    setSyncSt('✅ Sincronizado');
+  } catch(e) {
+    setSyncSt('⚠️ Erro — salvo local');
+  }
+}
+
+async function loadAll() {
+  if(!currentUser) return;
+  setSyncSt('🔄 Carregando...');
+  concursos    = await cloudLoad('concursos', []);
+  materias     = await cloudLoad('materias',  []);
+  questions    = await cloudLoad('questions', []);
+  topicos      = await cloudLoad('topicos',   []);
+  kanbanCards  = await cloudLoad('kanbanCards', []);
+  config       = await cloudLoad('config',    {meta:50,sessaoQtd:20,diasAcerto1:3,diasAcerto2:7,diasErro:1,diasDuvida:2});
+  historico    = await cloudLoad('historico', {});
+  nextQId      = await cloudLoad('nextQId',   1);
+  nextMId      = await cloudLoad('nextMId',   1);
+  nextCId      = await cloudLoad('nextCId',   1);
+  nextTId      = await cloudLoad('nextTId',   1);
+  nextKId      = await cloudLoad('nextKId',   1);
+  setSyncSt('✅ Sincronizado');
+}
+
+function save() {
+  try {
+    localStorage.setItem('mc3_data', JSON.stringify({concursos,materias,questions,topicos,kanbanCards,config,historico,nextQId,nextMId,nextCId,nextTId,nextKId}));
+  } catch(e){}
+  syncAll().catch(()=>{});
+}
+
+function loadLocal() {
+  try {
+    var d = JSON.parse(localStorage.getItem('mc3_data')||'{}');
+    if(d.concursos)   concursos   = d.concursos;
+    if(d.materias)    materias    = d.materias;
+    if(d.questions)   questions   = d.questions;
+    if(d.topicos)     topicos     = d.topicos;
+    if(d.kanbanCards) kanbanCards = d.kanbanCards;
+    if(d.config)      config      = d.config;
+    if(d.historico)   historico   = d.historico;
+    if(d.nextQId)     nextQId     = d.nextQId;
+    if(d.nextMId)     nextMId     = d.nextMId;
+    if(d.nextCId)     nextCId     = d.nextCId;
+    if(d.nextTId)     nextTId     = d.nextTId;
+    if(d.nextKId)     nextKId     = d.nextKId;
+  } catch(e){}
+}
+
+function setSyncSt(msg) {
+  var el=document.getElementById('sync-st');
+  if(el){el.textContent=msg;clearTimeout(el._t);el._t=setTimeout(()=>el.textContent='',3000);}
+}
+
+// ═══════════════════════════════════════
+// HELPERS
+// ═══════════════════════════════════════
+var TODAY     = () => new Date().toISOString().slice(0,10);
+var DAYS_ADD  = (n) => { var d=new Date(); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); };
+
+function calcPrioridade(q) {
+  return {erro:1,duvida:2,nova:3,acerto:4}[q.status]||3;
+}
+
+function aplicarRevisao(q, resultado) {
+  var hoje = TODAY();
+  q.vezesRespondida = (q.vezesRespondida||0) + 1;
+  q.ultimaResposta  = hoje;
+  if(resultado==='acerto') {
+    q.status='acerto'; q.vezesAcertada=(q.vezesAcertada||0)+1;
+    q.proximaRevisao = DAYS_ADD(q.vezesAcertada<=1 ? config.diasAcerto1 : config.diasAcerto2);
+  } else if(resultado==='erro') {
+    q.status='erro'; q.proximaRevisao=DAYS_ADD(config.diasErro);
+  } else {
+    q.status='duvida'; q.proximaRevisao=DAYS_ADD(config.diasDuvida);
+  }
+  q.prioridade=calcPrioridade(q);
+  if(!historico[hoje]) historico[hoje]={respondidas:0,acertos:0};
+  historico[hoje].respondidas++;
+  if(resultado==='acerto') historico[hoje].acertos++;
+}
+
+function materiasDoConcurso() {
+  return materias.filter(m => m.concursoId === currentConcursoId);
+}
+
+function questionsDoConcurso() {
+  return questions.filter(q => q.concursoId === currentConcursoId);
+}
+
+// ═══════════════════════════════════════
+// TELA DE CONCURSOS
+// ═══════════════════════════════════════
+function renderConcursos() {
+  var h = new Date().getHours();
+  var gr = h<12?'Bom dia':h<18?'Boa tarde':'Boa noite';
+  var nome = currentUser ? currentUser.displayName?.split(' ')[0]||'Concurseiro' : 'Concurseiro';
+  document.getElementById('cg-greeting').textContent = gr+', '+nome+'! 👋';
+
+  // Super admin bar
+  var saWrap = document.getElementById('super-admin-bar-wrap');
+  if(isSuperAdmin) {
+    saWrap.innerHTML = `<div class="super-admin-bar">⭐ Você é o Super Admin — pode gerenciar todos os concursos e usuários.</div>`;
+  } else {
+    saWrap.innerHTML = '';
+  }
+
+  var grid = document.getElementById('concursos-grid');
+  if(!concursos.length) {
+    grid.innerHTML = `
+      <div class="concurso-card cc-add" onclick="promptNovoConcurso()">
+        <div class="cc-add-icon">➕</div>
+        <div class="cc-add-label">Criar primeiro concurso</div>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = concursos.map(c => {
+    var qs = questions.filter(q => q.concursoId===c.id);
+    var mats = materias.filter(m => m.concursoId===c.id);
+    var erros = qs.filter(q => q.status==='erro').length;
+    return `<div class="concurso-card" onclick="selecionarConcurso('${c.id}')">
+      <div class="cc-icon">${c.icon||'🏆'}</div>
+      <div class="cc-name">${c.name}</div>
+      <div class="cc-stats">${mats.length} matérias · ${qs.length} questões</div>
+      ${erros ? `<div style="font-size:11px;color:var(--red);margin-top:4px">🔴 ${erros} erros para revisar</div>` : ''}
+    </div>`;
+  }).join('') + `
+    <div class="concurso-card cc-add" onclick="promptNovoConcurso()">
+      <div class="cc-add-icon">➕</div>
+      <div class="cc-add-label">Novo concurso</div>
+    </div>`;
+}
+
+function selecionarConcurso(id) {
+  currentConcursoId = id;
+  var c = concursos.find(x=>x.id===id);
+  document.getElementById('concurso-badge').style.display = 'flex';
+  document.getElementById('concurso-badge').textContent = '← '+c.name;
+  document.getElementById('main-nav').style.display = 'flex';
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.getElementById('sec-dashboard').classList.add('active');
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.nb')[0].classList.add('active');
+  syncSelectsMaterias();
+  renderDash();
+}
+
+function voltarConcursos() {
+  currentConcursoId = null;
+  document.getElementById('concurso-badge').style.display = 'none';
+  document.getElementById('main-nav').style.display = 'none';
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.getElementById('sec-concursos').classList.add('active');
+  renderConcursos();
+}
+
+function promptNovoConcurso() {
+  // Vai direto para o admin, aba de concursos
+  if(!currentConcursoId) {
+    // Cria um concurso temporário para acessar o admin
+    currentConcursoId = '__new__';
+  }
+  document.getElementById('main-nav').style.display='flex';
+  goTo('admin', document.querySelectorAll('.nb')[4]);
+  adminTab(document.querySelectorAll('.at')[2], 'atp-conc');
+}
+
+// ═══════════════════════════════════════
+// DASHBOARD
+// ═══════════════════════════════════════
+function renderDash() {
+  var c = concursos.find(x=>x.id===currentConcursoId);
+  var now = new Date();
+  var h = now.getHours();
+  var gr = h<12?'Bom dia':h<18?'Boa tarde':'Boa noite';
+  document.getElementById('dash-greeting').textContent = gr+' 👋';
+  document.getElementById('dash-sub').textContent = c ? 'Estudando para: '+c.name : 'Selecione um concurso';
+
+  var hoje = TODAY();
+  var hist = historico[hoje]||{respondidas:0,acertos:0};
+  var meta = config.meta||50;
+  var pct  = Math.min(100,Math.round((hist.respondidas/meta)*100));
+  var qs   = questionsDoConcurso();
+  var erros= qs.filter(q=>q.status==='erro').length;
+  var pend = qs.filter(q=>q.proximaRevisao<=hoje).length;
+  var taxa = calcTaxa(qs);
+
+  // ── IA MENTORA ──
+  renderMentora(c, hoje, hist, meta, pct, qs, erros, pend, taxa);
+
+  document.getElementById('meta-sub').textContent  = hist.respondidas+'/'+meta+' questões';
+  document.getElementById('meta-pct').textContent  = pct+'%';
+  var mf = document.getElementById('meta-fill');
+  mf.style.width=pct+'%'; mf.className='meta-fill'+(pct>=100?' done':'');
+
+  document.getElementById('dash-stats').innerHTML = [
+    {val:taxa+'%', label:'Taxa de acerto',  sub:qs.filter(q=>q.vezesRespondida>0).length+' respondidas', cls:'sc-blue'},
+    {val:pend,     label:'Para revisar hoje',sub:'questões pendentes',cls:'sc-amber'},
+    {val:erros,    label:'Erros ativos',    sub:'prioridade máxima',  cls:'sc-red'},
+    {val:hist.respondidas,label:'Hoje',     sub:'de '+meta+' na meta',cls:'sc-green'},
+  ].map(s=>`<div class="stat-card ${s.cls}"><div class="stat-val">${s.val}</div><div class="stat-label">${s.label}</div><div class="stat-sub">${s.sub}</div></div>`).join('');
+
+  // Gráfico
+  var days=[];
+  for(var i=6;i>=0;i--){var d=new Date();d.setDate(d.getDate()-i);days.push(d.toISOString().slice(0,10));}
+  var maxA=Math.max(...days.map(d=>(historico[d]||{acertos:0}).acertos),1);
+  document.getElementById('chart-bars').innerHTML=days.map(d=>{
+    var hd=historico[d]||{acertos:0};
+    var h2=Math.round((hd.acertos/maxA)*100);
+    return `<div class="cbar-col"><div class="cbar" style="height:${Math.max(3,h2*.65)}px;${d===hoje?'background:var(--blue);':''}"></div><div class="cbar-lbl">${d.slice(8)}</div></div>`;
+  }).join('');
+
+  document.getElementById('qa-pend').textContent  = pend ? pend+' pendentes' : 'Em dia! 🎉';
+  document.getElementById('qa-erros').textContent = erros+' questões';
+}
+
+function renderMentora(c, hoje, hist, meta, pct, qs, erros, pend, taxa) {
+  var dataEl  = document.getElementById('mentora-data');
+  var msgEl   = document.getElementById('mentora-msg');
+  var acoesEl = document.getElementById('mentora-acoes');
+  if(!msgEl) return;
+
+  // Data de hoje formatada
+  var dataHoje = new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'long',year:'numeric'});
+  if(dataEl) dataEl.textContent = dataHoje.charAt(0).toUpperCase()+dataHoje.slice(1);
+
+  // Dias para a prova
+  var diasProva = null;
+  if(c && c.dataProva) {
+    var partes = c.dataProva.split('-');
+    var prova  = new Date(parseInt(partes[0]),parseInt(partes[1])-1,parseInt(partes[2]));
+    var hj     = new Date(); hj.setHours(0,0,0,0);
+    diasProva  = Math.round((prova-hj)/(1000*60*60*24));
+  }
+
+  // Últimos 3 dias de atividade
+  var ultimos3 = [1,2,3].map(function(n){
+    var d=new Date(); d.setDate(d.getDate()-n);
+    return historico[d.toISOString().slice(0,10)]||{respondidas:0};
+  });
+  var inativo = ultimos3.every(function(d){return d.respondidas===0;});
+  var diasSemEstudo = 0;
+  for(var i=1;i<=7;i++){
+    var dd=new Date(); dd.setDate(dd.getDate()-i);
+    if((historico[dd.toISOString().slice(0,10)]||{respondidas:0}).respondidas===0) diasSemEstudo++;
+    else break;
+  }
+
+  // Monta a mensagem da mentora
+  var msg = '';
+  var acoes = [];
+
+  if(!c) {
+    msg = 'Selecione um concurso para começar. Vou acompanhar seu progresso e te manter no caminho certo! 💪';
+  } else if(diasProva !== null && diasProva <= 0) {
+    msg = 'A prova para <strong>'+c.name+'</strong> já passou. Adicione um novo concurso ou atualize a data.';
+  } else if(qs.length === 0) {
+    msg = 'Você ainda não tem questões cadastradas para <strong>'+c.name+'</strong>. Vá ao Admin e adicione as primeiras questões — quanto antes começar, melhor! 📚';
+    acoes.push({label:'➕ Adicionar questões', fn:'goTo(\'admin\',document.querySelectorAll(\'.nb\')[6])'});
+  } else if(diasSemEstudo >= 3) {
+    msg = '⚠️ Faz <strong>'+diasSemEstudo+' dias</strong> sem estudar!'+
+      (diasProva!==null?' Sua prova é em <strong>'+diasProva+' dias</strong>.':'')+
+      ' Cada dia parado é um passo para trás. Vamos responder pelo menos '+Math.ceil(meta/2)+' questões hoje?';
+    acoes.push({label:'⚡ Responder agora', fn:'goTo(\'responder\',document.querySelectorAll(\'.nb\')[1])'});
+  } else if(pct >= 100) {
+    msg = '🎉 Meta diária batida! Você respondeu <strong>'+hist.respondidas+' questões</strong> hoje.'+
+      (taxa >= 70 ? ' Taxa de acerto de '+taxa+'% — excelente!' : ' Foque nos erros para melhorar a taxa de '+taxa+'%.')+
+      (diasProva!==null?' Faltam <strong>'+diasProva+' dias</strong> para a prova.':'');
+    if(erros>0) acoes.push({label:'🔴 Revisar erros ('+erros+')', fn:'goTo(\'erros\',document.querySelectorAll(\'.nb\')[4])'});
+  } else if(pend > 0) {
+    msg = 'Você tem <strong>'+pend+' questão(ões) para revisar hoje</strong> pelo sistema de repetição espaçada.'+
+      (erros>0?' Além de <strong>'+erros+' erros</strong> ativos.':'')+
+      (diasProva!==null?' Faltam <strong>'+diasProva+' dias</strong> para a prova.':'')+
+      ' Não pule a revisão — ela é o que grava de verdade!';
+    acoes.push({label:'🧠 Revisar agora', fn:'goTo(\'responder\',document.querySelectorAll(\'.nb\')[1])'});
+  } else if(taxa < 50 && qs.filter(function(q){return q.vezesRespondida>0;}).length > 10) {
+    msg = 'Sua taxa de acerto está em <strong>'+taxa+'%</strong> — abaixo da média de corte. '+
+      'Foque em revisar os <strong>'+erros+' erros ativos</strong> antes de avançar para novos conteúdos.'+
+      (diasProva!==null?' Você tem '+diasProva+' dias para virar esse jogo!':'');
+    acoes.push({label:'🔴 Ver erros', fn:'goTo(\'erros\',document.querySelectorAll(\'.nb\')[4])'});
+    acoes.push({label:'📋 Edital', fn:'goTo(\'edital\',document.querySelectorAll(\'.nb\')[5])'});
+  } else {
+    var faltam = meta - hist.respondidas;
+    msg = (diasProva!==null?'Faltam <strong>'+diasProva+' dias</strong> para a prova. ':'') +
+      'Hoje você fez <strong>'+hist.respondidas+' de '+meta+'</strong> questões ('+pct+'%).'+
+      (faltam>0?' Faltam mais <strong>'+faltam+'</strong> para bater a meta.':'')+
+      (taxa>=70?' Taxa de acerto: <strong>'+taxa+'%</strong> 🔥':' Taxa de acerto: <strong>'+taxa+'%</strong> — pode melhorar!');
+    acoes.push({label:'⚡ Continuar estudando', fn:'goTo(\'responder\',document.querySelectorAll(\'.nb\')[1])'});
+  }
+
+  msgEl.innerHTML = msg;
+  acoesEl.innerHTML = acoes.map(function(a){
+    return '<button type="button" class="btn btn-sm" onclick="'+a.fn+'" style="background:var(--blue-l);border:1px solid rgba(79,124,255,.25);color:var(--blue);font-size:12px">'+a.label+'</button>';
+  }).join('');
+}
+
+function calcTaxa(qs) {
+  var resp=qs.filter(q=>q.vezesRespondida>0);
+  if(!resp.length) return 0;
+  var ac=resp.reduce((a,q)=>a+(q.vezesAcertada||0),0);
+  var tot=resp.reduce((a,q)=>a+(q.vezesRespondida||0),0);
+  return Math.round((ac/tot)*100);
+}
+
+// ═══════════════════════════════════════
+// MOTOR DE QUESTÕES
+// ═══════════════════════════════════════
+function selecionarQuestoes(modo, qtd, matFilter, nivFilter) {
+  var pool = questionsDoConcurso();
+  if(matFilter) pool=pool.filter(q=>q.materia===matFilter);
+  if(nivFilter) pool=pool.filter(q=>q.nivel===nivFilter);
+
+  if(modo==='somente_erros') {
+    pool=pool.filter(q=>q.status==='erro'||q.status==='duvida');
+  } else if(modo==='revisao') {
+    var hoje=TODAY();
+    var pend=pool.filter(q=>q.proximaRevisao<=hoje);
+    pend.sort((a,b)=>{
+      if(a.prioridade!==b.prioridade) return a.prioridade-b.prioridade;
+      return (a.proximaRevisao||'')<(b.proximaRevisao||'') ? -1 : 1;
+    });
+    if(pend.length>=qtd) return pend.slice(0,qtd);
+    var novas=pool.filter(q=>q.status==='nova'&&!pend.includes(q));
+    return [...pend,...novas].slice(0,qtd);
+  }
+  return pool.sort(()=>Math.random()-.5).slice(0,qtd);
+}
+
+// ═══════════════════════════════════════
+// SESSÃO
+// ═══════════════════════════════════════
+function selMode(m) {
+  currentMode=m;
+  document.querySelectorAll('.mode-card').forEach(c=>c.classList.remove('selected'));
+  var el=document.getElementById('mode-'+m);
+  if(el) el.classList.add('selected');
+}
+
+function startSession(modeOv) {
+  var mode=modeOv||currentMode;
+  var qtd =parseInt(document.getElementById('cfg-qtd')?.value||20);
+  var mat =document.getElementById('cfg-mat')?.value||'';
+  var niv =document.getElementById('cfg-niv')?.value||'';
+  var qs  =selecionarQuestoes(mode,qtd,mat,niv);
+  if(!qs.length){toast('Nenhuma questão disponível com esses filtros');return;}
+  session={qs,mode,cur:0,corr:0,erros:0};
+  goTo('responder',document.querySelectorAll('.nb')[1]);
+  document.getElementById('resp-setup').style.display='none';
+  document.getElementById('q-session').classList.add('active');
+  document.getElementById('q-resultado').style.display='none';
+  renderSessQ();
+}
+
+function renderSessQ() {
+  if(!session) return;
+  var q=session.qs[session.cur];
+  var total=session.qs.length;
+  document.getElementById('sess-prog').style.width=((session.cur/total)*100)+'%';
+  document.getElementById('sess-count').textContent=(session.cur+1)+'/'+total;
+  document.getElementById('sess-corr').textContent='✓ '+session.corr;
+  document.getElementById('sess-err').textContent='✗ '+session.erros;
+
+  var m=materias.find(x=>x.id===q.materia);
+  var erroAnt=q.status==='erro'&&q.motivoErro;
+  var isVE=q.tipo==='ve'||(!q.options||q.options.filter(o=>o).length===0);
+
+  document.getElementById('q-display').innerHTML=`
+    <div class="q-card">
+      <div class="q-meta">
+        <span class="tag tag-${q.nivel||'medio'}">${q.nivel||'médio'}</span>
+        ${m?`<span class="tag" style="background:var(--bg3);color:var(--muted)">${m.icon||'📚'} ${m.name}</span>`:''}
+        ${q.assunto?`<span style="font-size:11px;color:var(--muted)">${q.assunto}</span>`:''}
+        <span style="font-size:10px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:2px 7px;border-radius:4px;font-weight:700;margin-left:auto">${isVE?'C/E':'ABCD'}</span>
+        <span class="tag tag-${q.status||'nova'}">${q.status||'nova'}</span>
+      </div>
+      ${erroAnt?`<div class="erro-ant"><strong>⚠️ Você errou antes:</strong> ${q.motivoErro}</div>`:''}
+      <div class="q-text">${q.text}</div>
+      ${isVE?`
+        <div class="ve-btns">
+          <button class="ve-btn ve-certo" onclick="respVE(1)">✅ CERTO</button>
+          <button class="ve-btn ve-errado" onclick="respVE(0)">❌ ERRADO</button>
+        </div>`:`
+        <div class="opts" id="opts-wrap">
+          ${(q.options||[]).filter(o=>o).map((o,i)=>`
+            <div class="opt" id="opt-${i}" onclick="respABCD(${i})">
+              <div class="opt-ltr">${'ABCD'[i]}</div><div>${o}</div>
+            </div>`).join('')}
+        </div>`}
+      <div class="fb-box" id="fb"></div>
+      <div class="motivo-wrap" id="motivo-wrap">
+        <label>Por que errou? (opcional)</label>
+        <textarea id="motivo-input" placeholder="Ex: Confundi conceito X com Y..."></textarea>
+      </div>
+      <div class="q-acts" id="q-acts" style="display:none">
+        <button class="btn btn-ghost btn-sm" onclick="marcarDuvida()">🤔 Dúvida</button>
+        <button class="btn btn-primary btn-sm" id="btn-prox" onclick="proximaQ()">Próxima →</button>
+      </div>
+    </div>`;
+}
+
+function respABCD(chosen) {
+  if(!session) return;
+  var q=session.qs[session.cur];
+  var ok=chosen===q.correct;
+  document.querySelectorAll('.opt').forEach((el,i)=>{
+    el.classList.add('disabled'); el.onclick=null;
+    if(i===q.correct) el.classList.add('correct');
+    else if(i===chosen) el.classList.add('wrong');
+  });
+  showFeedback(q, ok?'acerto':'erro');
+}
+
+function respVE(chosen) {
+  if(!session) return;
+  var q=session.qs[session.cur];
+  var ok=chosen===q.veCorrect;
+  document.querySelectorAll('.ve-btn').forEach(b=>{b.style.opacity='.4';b.onclick=null;});
+  var btn=chosen===1?document.querySelector('.ve-certo'):document.querySelector('.ve-errado');
+  if(btn) btn.style.opacity='1';
+  showFeedback(q, ok?'acerto':'erro');
+}
+
+function showFeedback(q, resultado) {
+  var fb=document.getElementById('fb');
+  var acts=document.getElementById('q-acts');
+  var mw=document.getElementById('motivo-wrap');
+  var msg='', cls='';
+  if(resultado==='acerto') {
+    cls='ok'; msg='✓ Correto!'+(q.explanation?'<br><span style="font-size:12px;opacity:.8">'+q.explanation+'</span>':'');
+    session.corr++;
+  } else {
+    cls='fail';
+    var gab=q.tipo==='ve'?(q.veCorrect==1?'CERTO':'ERRADO'):('ABCD'[q.correct]+' — '+(q.options[q.correct]||''));
+    msg='✗ Incorreto. Gabarito: <strong>'+gab+'</strong>'+(q.explanation?'<br><span style="font-size:12px;opacity:.8">'+q.explanation+'</span>':'');
+    session.erros++;
+    if(mw) mw.classList.add('show');
+  }
+  fb.className='fb-box show '+cls; fb.innerHTML=msg;
+  if(acts) acts.style.display='flex';
+  aplicarRevisao(q, resultado);
+  save();
+}
+
+function marcarDuvida() {
+  if(!session) return;
+  var q=session.qs[session.cur];
+  q.status='duvida'; q.prioridade=2; q.proximaRevisao=DAYS_ADD(config.diasDuvida);
+  if(session.corr>0) session.corr--;
+  var fb=document.getElementById('fb');
+  fb.className='fb-box show doubt'; fb.innerHTML='🤔 Marcado como dúvida — revisão em '+config.diasDuvida+' dias.';
+  save();
+}
+
+function proximaQ() {
+  if(!session) return;
+  var mi=document.getElementById('motivo-input');
+  if(mi&&mi.value.trim()) { session.qs[session.cur].motivoErro=mi.value.trim(); save(); }
+  session.cur++;
+  if(session.cur>=session.qs.length){showResultado();return;}
+  renderSessQ();
+}
+
+function endSession() {
+  if(!session) return;
+  if(!confirm('Encerrar sessão?')) return;
+  showResultado();
+}
+
+function showResultado() {
+  var corr=session.corr, erros=session.erros;
+  var total=session.qs.length, blank=total-corr-erros;
+  var pct=Math.round((corr/total)*100);
+  document.getElementById('q-session').classList.remove('active');
+  document.getElementById('q-resultado').style.display='block';
+  document.getElementById('res-pct').textContent=pct+'%';
+  document.getElementById('res-verdict').textContent=pct>=70?'🎉 Aprovado na média!':pct>=50?'📈 Continue praticando!':'💪 Foque nos erros!';
+  document.getElementById('res-total').textContent=total;
+  document.getElementById('res-corr').textContent=corr;
+  document.getElementById('res-erros').textContent=erros;
+  document.getElementById('res-liq').textContent=corr-erros;
+  session=null; renderDash();
+}
+
+// ═══════════════════════════════════════
+// BANCO
+// ═══════════════════════════════════════
+function renderBanco() {
+  var qs=questionsDoConcurso();
+  var mats=materiasDoConcurso();
+  var filtered=bancoFilter ? qs.filter(q=>q.materia===bancoFilter) : qs;
+  document.getElementById('banco-sub').textContent=filtered.length+' questão(ões)';
+  var chips=document.getElementById('banco-chips');
+  chips.innerHTML=`<div class="chip ${!bancoFilter?'active':''}" onclick="setBancoF('')">Todas</div>`+
+    mats.map(m=>`<div class="chip ${bancoFilter===m.id?'active':''}" onclick="setBancoF('${m.id}')">${m.icon||'📚'} ${m.name}</div>`).join('');
+  if(!filtered.length){document.getElementById('banco-list').innerHTML='<div class="empty"><div class="empty-icon">📭</div><p>Nenhuma questão. Adicione no Admin.</p></div>';return;}
+  document.getElementById('banco-list').innerHTML=filtered.map(q=>{
+    var m=materias.find(x=>x.id===q.materia);
+    var isVE=q.tipo==='ve';
+    return `<div class="q-item">
+      <div class="q-item-meta">
+        <span style="font-size:10px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:2px 7px;border-radius:4px;font-weight:700">${isVE?'C/E':'ABCD'}</span>
+        <span class="tag tag-${q.nivel||'medio'}">${q.nivel||'médio'}</span>
+        <span class="tag tag-${q.status||'nova'}">${q.status||'nova'}</span>
+        ${m?`<span class="tag" style="background:var(--bg3);color:var(--muted)">${m.icon||'📚'} ${m.name}</span>`:''}
+      </div>
+      <div class="q-item-text">${q.text}</div>
+      <div class="q-item-footer">
+        <span>📊 ${q.vezesRespondida||0}×</span>
+        <span style="color:var(--green)">✓ ${q.vezesAcertada||0}</span>
+        <span>📅 ${q.proximaRevisao||'—'}</span>
+        <div class="q-item-acts">
+          <button class="btn btn-ghost btn-sm" onclick="editQuestion(${q.id})">✏️</button>
+          <button class="btn btn-red btn-sm" onclick="deleteQuestion(${q.id})">🗑</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+function setBancoF(id){bancoFilter=id;renderBanco();}
+
+// ═══════════════════════════════════════
+// ERROS
+// ═══════════════════════════════════════
+function renderErros() {
+  var qs=questionsDoConcurso();
+  var mats=materiasDoConcurso();
+  var erros=erroFilter ? qs.filter(q=>(q.status==='erro'||q.status==='duvida')&&q.materia===erroFilter) : qs.filter(q=>q.status==='erro'||q.status==='duvida');
+  erros.sort((a,b)=>(a.prioridade||3)-(b.prioridade||3));
+  var chips=document.getElementById('erro-chips');
+  var matUsadas=[...new Set(qs.filter(q=>q.status==='erro'||q.status==='duvida').map(q=>q.materia))];
+  chips.innerHTML=`<div class="chip ${!erroFilter?'active':''}" onclick="setErroF('')">Todas (${qs.filter(q=>q.status==='erro'||q.status==='duvida').length})</div>`+
+    matUsadas.map(id=>{var m=materias.find(x=>x.id===id);return`<div class="chip ${erroFilter===id?'active':''}" onclick="setErroF('${id}')">${m?m.icon+' '+m.name:id}</div>`;}).join('');
+  if(!erros.length){document.getElementById('erros-list').innerHTML='<div class="empty"><div class="empty-icon">🎉</div><p>Nenhum erro ativo!</p></div>';return;}
+  document.getElementById('erros-list').innerHTML=erros.map(q=>{
+    var m=materias.find(x=>x.id===q.materia);
+    return `<div class="q-item erro-item">
+      <div class="q-item-meta">
+        <span class="tag tag-${q.status}">${q.status}</span>
+        <span class="tag tag-${q.nivel||'medio'}">${q.nivel||'médio'}</span>
+        ${m?`<span class="tag" style="background:var(--bg3);color:var(--muted)">${m.icon||'📚'} ${m.name}</span>`:''}
+        <span style="font-size:11px;color:var(--muted);margin-left:auto">📅 ${q.proximaRevisao||'—'}</span>
+      </div>
+      <div class="q-item-text">${q.text}</div>
+      ${q.motivoErro?`<div class="motivo-box">💬 <strong>Motivo:</strong> ${q.motivoErro}</div>`:''}
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+        <button class="btn btn-red btn-sm" onclick="revirarAgora(${q.id})">Revisar agora</button>
+        <button class="btn btn-ghost btn-sm" onclick="resetQ(${q.id})">Resetar status</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+function setErroF(id){erroFilter=id;renderErros();}
+
+function revirarAgora(id) {
+  var q=questions.find(x=>x.id===id);
+  if(!q) return;
+  session={qs:[q],mode:'revisao',cur:0,corr:0,erros:0};
+  goTo('responder',document.querySelectorAll('.nb')[1]);
+  document.getElementById('resp-setup').style.display='none';
+  document.getElementById('q-session').classList.add('active');
+  document.getElementById('q-resultado').style.display='none';
+  renderSessQ();
+}
+
+function resetQ(id) {
+  var q=questions.find(x=>x.id===id);
+  if(!q) return;
+  q.status='nova'; q.prioridade=3; q.motivoErro='';
+  q.vezesRespondida=0; q.vezesAcertada=0; q.proximaRevisao=TODAY();
+  save(); renderErros(); toast('Questão resetada');
+}
+
+// ═══════════════════════════════════════
+// ADMIN — CONCURSOS
+// ═══════════════════════════════════════
+function saveConcurso() {
+  try {
+    var name=document.getElementById('cf-name').value.trim();
+    if(!name){toast('⚠️ Digite o nome do concurso');return;}
+    var icon=document.getElementById('cf-icon').value.trim()||'🏆';
+    var desc=document.getElementById('cf-desc').value.trim();
+    var dataProva=document.getElementById('cf-data').value||'';
+    if(editingCId!=null) {
+      var idx=concursos.findIndex(c=>c.id===editingCId);
+      if(idx>=0) concursos[idx]={...concursos[idx],name,icon,desc,dataProva};
+      editingCId=null; document.getElementById('cf-title').textContent='➕ Novo Concurso';
+    } else {
+      var id='conc_'+nextCId; nextCId++;
+      concursos.push({id,name,icon,desc,dataProva});
+    }
+    save(); clearCForm(); renderConcAdmin();
+    renderConcursos();
+    toast('✅ Concurso salvo! Total: '+concursos.length);
+  } catch(e){toast('❌ Erro: '+e.message);}
+}
+function editConcurso(id){
+  var c=concursos.find(x=>x.id===id);
+  if(!c) return;
+  editingCId=id;
+  document.getElementById('cf-title').textContent='✏️ Editando Concurso';
+  document.getElementById('cf-name').value=c.name||'';
+  document.getElementById('cf-icon').value=c.icon||'';
+  document.getElementById('cf-desc').value=c.desc||'';
+  document.getElementById('cf-data').value=c.dataProva||'';
+  adminTab(document.querySelectorAll('.at')[2],'atp-conc');
+  toast('Concurso carregado');
+}
+function deleteConcurso(id){
+  var c=concursos.find(x=>x.id===id);
+  if(!c) return;
+  var qCount=questions.filter(q=>q.concursoId===id).length;
+  if(!confirm('Excluir "'+c.name+'"?'+(qCount?' Tem '+qCount+' questão(ões).':''))) return;
+  concursos=concursos.filter(x=>x.id!==id);
+  save(); renderConcAdmin(); renderConcursos(); toast('Concurso excluído');
+}
+function clearCForm(){
+  editingCId=null;
+  document.getElementById('cf-title').textContent='➕ Novo Concurso';
+  ['cf-name','cf-icon','cf-desc','cf-data'].forEach(id=>{var el=document.getElementById(id);if(el)el.value='';});
+}
+function renderConcAdmin(){
+  var el=document.getElementById('conc-count');
+  if(el) el.textContent=concursos.length;
+  var list=document.getElementById('conc-admin-list');
+  if(!list) return;
+  if(!concursos.length){list.innerHTML='<div style="color:var(--muted);font-size:13px;padding:12px">Nenhum concurso. Crie acima.</div>';return;}
+  list.innerHTML=concursos.map(c=>{
+    var qc=questions.filter(q=>q.concursoId===c.id).length;
+    var mc=materias.filter(m=>m.concursoId===c.id).length;
+    return `<div class="q-adm-row">
+      <div style="font-size:22px;width:36px;text-align:center;flex-shrink:0">${c.icon||'🏆'}</div>
+      <div class="q-adm-body"><strong>${c.name}</strong><div style="font-size:11px;color:var(--muted);margin-top:2px">${c.desc||'—'} · ${mc} matérias · ${qc} questões</div></div>
+      <div class="q-adm-acts">
+        <button type="button" class="btn btn-ghost btn-sm" onclick="editConcurso('${c.id}')">✏️</button>
+        <button type="button" class="btn btn-red btn-sm" onclick="deleteConcurso('${c.id}')">🗑</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════
+// ADMIN — MATÉRIAS
+// ═══════════════════════════════════════
+function saveMateria() {
+  try {
+    var name=document.getElementById('mf-name').value.trim();
+    if(!name){toast('⚠️ Digite o nome da matéria');return;}
+    var icon=document.getElementById('mf-icon').value.trim()||'📚';
+    var desc=document.getElementById('mf-desc').value.trim();
+    if(editingMId!=null) {
+      var idx=materias.findIndex(m=>m.id===editingMId);
+      if(idx>=0) materias[idx]={...materias[idx],name,icon,desc};
+      editingMId=null; document.getElementById('mf-title').textContent='➕ Nova Matéria';
+    } else {
+      var id='mat_'+nextMId; nextMId++;
+      materias.push({id,name,icon,desc,concursoId:currentConcursoId});
+    }
+    save(); clearMForm(); renderMatAdmin(); syncSelectsMaterias();
+    toast('✅ Matéria salva! Total: '+materias.length);
+  } catch(e){toast('❌ Erro: '+e.message);}
+}
+function editMateria(id){
+  var m=materias.find(x=>x.id===id); if(!m) return;
+  editingMId=id;
+  document.getElementById('mf-title').textContent='✏️ Editando Matéria';
+  document.getElementById('mf-name').value=m.name||'';
+  document.getElementById('mf-icon').value=m.icon||'';
+  document.getElementById('mf-desc').value=m.desc||'';
+  adminTab(document.querySelectorAll('.at')[1],'atp-mat');
+  toast('Matéria carregada');
+}
+function deleteMateria(id){
+  var m=materias.find(x=>x.id===id); if(!m) return;
+  var qc=questions.filter(q=>q.materia===id).length;
+  if(!confirm('Excluir "'+m.name+'"?'+(qc?' Tem '+qc+' questão(ões).':''))) return;
+  materias=materias.filter(x=>x.id!==id);
+  save(); renderMatAdmin(); syncSelectsMaterias(); toast('Matéria excluída');
+}
+function clearMForm(){
+  editingMId=null;
+  document.getElementById('mf-title').textContent='➕ Nova Matéria';
+  ['mf-name','mf-icon','mf-desc'].forEach(id=>{var el=document.getElementById(id);if(el)el.value='';});
+}
+function renderMatAdmin(){
+  var el=document.getElementById('mat-count'); if(el) el.textContent=materiasDoConcurso().length;
+  var list=document.getElementById('mat-admin-list'); if(!list) return;
+  var mats=materiasDoConcurso();
+  if(!mats.length){list.innerHTML='<div style="color:var(--muted);font-size:13px;padding:12px">Nenhuma matéria. Crie acima.</div>';return;}
+  list.innerHTML=mats.map(m=>{
+    var qc=questions.filter(q=>q.materia===m.id).length;
+    return `<div class="q-adm-row">
+      <div style="font-size:22px;width:36px;text-align:center;flex-shrink:0">${m.icon||'📚'}</div>
+      <div class="q-adm-body"><strong>${m.name}</strong><div style="font-size:11px;color:var(--muted);margin-top:2px">${m.desc||'—'} · ${qc} questões</div></div>
+      <div class="q-adm-acts">
+        <button type="button" class="btn btn-ghost btn-sm" onclick="editMateria('${m.id}')">✏️</button>
+        <button type="button" class="btn btn-red btn-sm" onclick="deleteMateria('${m.id}')">🗑</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════
+// ADMIN — QUESTÕES
+// ═══════════════════════════════════════
+function setTipo(tipo) {
+  qfTipo=tipo;
+  var ba=document.getElementById('tipo-abcd');
+  var bv=document.getElementById('tipo-ve');
+  var da=document.getElementById('bloco-abcd');
+  var dv=document.getElementById('bloco-ve');
+  if(tipo==='abcd'){
+    ba.className='tipo-btn selected-abcd'; bv.className='tipo-btn';
+    da.style.display='block'; dv.style.display='none';
+  } else {
+    bv.className='tipo-btn selected-ve'; ba.className='tipo-btn';
+    dv.style.display='block'; da.style.display='none';
+  }
+}
+
+function saveQuestion() {
+  try {
+    var text=document.getElementById('qf-text').value.trim();
+    if(!text){toast('⚠️ Digite o enunciado');return;}
+    var mat=document.getElementById('qf-mat').value;
+    if(!mat){toast('⚠️ Selecione uma matéria');return;}
+    var q={
+      tipo:qfTipo, text, materia:mat, concursoId:currentConcursoId,
+      topico:document.getElementById('qf-topico')?.value||'',
+      subtopico:document.getElementById('qf-subtopico')?.value.trim()||'',
+      assunto:document.getElementById('qf-assunto').value.trim(),
+      nivel:document.getElementById('qf-nivel').value,
+      banca:document.getElementById('qf-banca').value.trim(),
+      ano:document.getElementById('qf-ano').value.trim(),
+      explanation:document.getElementById('qf-expl').value.trim(),
+    };
+    if(qfTipo==='abcd'){
+      var opts=[0,1,2,3].map(i=>document.getElementById('qf-opt-'+i).value.trim());
+      if(!opts[0]||!opts[1]){toast('⚠️ Preencha ao menos A e B');return;}
+      q.options=opts; q.correct=parseInt(document.getElementById('qf-correct').value); q.veCorrect=1;
+    } else {
+      q.options=[]; q.correct=0; q.veCorrect=parseInt(document.getElementById('qf-ve-correct').value);
+    }
+    if(editingQId!=null){
+      var idx=questions.findIndex(x=>x.id===editingQId);
+      if(idx>=0) questions[idx]={...questions[idx],...q};
+      editingQId=null; document.getElementById('qf-title').textContent='➕ Nova Questão';
+    } else {
+      questions.push({id:nextQId,status:'nova',prioridade:3,vezesRespondida:0,vezesAcertada:0,proximaRevisao:TODAY(),...q});
+      nextQId++;
+    }
+    save(); clearQForm(); renderQAdminList(); syncSelectsMaterias();
+    toast('✅ Questão salva! Total: '+questionsDoConcurso().length);
+  } catch(e){console.error(e);toast('❌ Erro: '+e.message);}
+}
+
+function editQuestion(id){
+  var q=questions.find(x=>x.id===id); if(!q) return;
+  editingQId=id;
+  document.getElementById('qf-title').textContent='✏️ Editando Questão';
+  document.getElementById('qf-text').value=q.text||'';
+  document.getElementById('qf-assunto').value=q.assunto||'';
+  document.getElementById('qf-nivel').value=q.nivel||'medio';
+  document.getElementById('qf-banca').value=q.banca||'';
+  document.getElementById('qf-ano').value=q.ano||'';
+  document.getElementById('qf-expl').value=q.explanation||'';
+  document.getElementById('qf-mat').value=q.materia||'';
+  syncSelectsTopicos();
+  setTimeout(()=>{
+    var tel=document.getElementById('qf-topico'); if(tel) tel.value=q.topico||'';
+    var sel=document.getElementById('qf-subtopico'); if(sel) sel.value=q.subtopico||'';
+  },50);
+  setTipo(q.tipo||(q.options&&q.options.length>0?'abcd':'ve'));
+  if(q.tipo==='abcd'||(q.options&&q.options.length>0)){
+    (q.options||[]).forEach((o,i)=>{var el=document.getElementById('qf-opt-'+i);if(el)el.value=o||'';});
+    document.getElementById('qf-correct').value=q.correct||0;
+  } else {
+    document.getElementById('qf-ve-correct').value=q.veCorrect!=null?q.veCorrect:1;
+  }
+  goTo('admin',document.querySelectorAll('.nb')[6]);
+  adminTab(document.querySelectorAll('.at')[0],'atp-q');
+  toast('Questão carregada');
+}
+
+function deleteQuestion(id){
+  if(!confirm('Excluir esta questão?')) return;
+  questions=questions.filter(q=>q.id!==id);
+  save(); renderQAdminList(); renderBanco(); toast('Excluída');
+}
+
+function clearQForm(){
+  editingQId=null;
+  document.getElementById('qf-title').textContent='➕ Nova Questão';
+  ['qf-text','qf-assunto','qf-banca','qf-ano','qf-expl'].forEach(id=>{var el=document.getElementById(id);if(el)el.value='';});
+  [0,1,2,3].forEach(i=>{var el=document.getElementById('qf-opt-'+i);if(el)el.value='';});
+  var tel=document.getElementById('qf-topico'); if(tel) tel.value='';
+  var sel=document.getElementById('qf-subtopico'); if(sel) sel.value='';
+  document.getElementById('qf-nivel').value='medio';
+  document.getElementById('qf-correct').value='0';
+  setTipo('abcd');
+}
+
+function renderQAdminList(){
+  var el=document.getElementById('q-count'); if(el) el.textContent=questionsDoConcurso().length;
+  var list=document.getElementById('q-admin-list'); if(!list) return;
+  var qs=questionsDoConcurso();
+  if(!qs.length){list.innerHTML='<div class="empty"><div class="empty-icon">📭</div><p>Nenhuma questão ainda.</p></div>';return;}
+  list.innerHTML=qs.map(q=>{
+    var m=materias.find(x=>x.id===q.materia);
+    var isVE=q.tipo==='ve';
+    return `<div class="q-adm-row">
+      <div class="q-adm-body">
+        <div style="display:flex;gap:5px;margin-bottom:5px;flex-wrap:wrap">
+          <span style="font-size:10px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:2px 7px;border-radius:4px;font-weight:700">${isVE?'C/E':'ABCD'}</span>
+          <span class="tag tag-${q.nivel||'medio'}">${q.nivel||'médio'}</span>
+          <span class="tag tag-${q.status||'nova'}">${q.status||'nova'}</span>
+          ${m?`<span class="tag" style="background:var(--bg3);color:var(--muted)">${m.icon||'📚'} ${m.name}</span>`:''}
+        </div>
+        <div style="color:var(--text);font-size:13px">${q.text}</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px">
+          ${isVE?(q.veCorrect==1?'Gabarito: CERTO':'Gabarito: ERRADO'):'Gabarito: '+'ABCD'[q.correct||0]}
+          ${q.banca?' · '+q.banca:''} ${q.ano||''}
+        </div>
+      </div>
+      <div class="q-adm-acts">
+        <button type="button" class="btn btn-ghost btn-sm" onclick="editQuestion(${q.id})">✏️</button>
+        <button type="button" class="btn btn-red btn-sm" onclick="deleteQuestion(${q.id})">🗑</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════
+function saveConfig(){
+  try{
+    config={
+      meta:parseInt(document.getElementById('cfg-meta').value)||50,
+      sessaoQtd:parseInt(document.getElementById('cfg-sessao-qtd').value)||20,
+      diasAcerto1:parseInt(document.getElementById('cfg-acerto1').value)||3,
+      diasAcerto2:parseInt(document.getElementById('cfg-acerto2').value)||7,
+      diasErro:parseInt(document.getElementById('cfg-erro').value)||1,
+      diasDuvida:parseInt(document.getElementById('cfg-duvida').value)||2,
+    };
+    save(); toast('✅ Configurações salvas!');
+  }catch(e){toast('❌ Erro: '+e.message);}
+}
+function loadConfigUI(){
+  var set=(id,v)=>{var el=document.getElementById(id);if(el)el.value=v;};
+  set('cfg-meta',config.meta||50); set('cfg-sessao-qtd',config.sessaoQtd||20);
+  set('cfg-acerto1',config.diasAcerto1||3); set('cfg-acerto2',config.diasAcerto2||7);
+  set('cfg-erro',config.diasErro||1); set('cfg-duvida',config.diasDuvida||2);
+}
+function exportData(){
+  var data=JSON.stringify({concursos,materias,questions,config,historico},null,2);
+  var blob=new Blob([data],{type:'application/json'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='meuconcurso-backup-'+TODAY()+'.json'; a.click(); toast('📤 Exportado!');
+}
+function importData(input){
+  var file=input.files[0]; if(!file) return;
+  var reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      var d=JSON.parse(e.target.result);
+      if(d.concursos) concursos=d.concursos;
+      if(d.materias)  materias=d.materias;
+      if(d.questions) questions=d.questions;
+      if(d.config)    config=d.config;
+      if(d.historico) historico=d.historico;
+      save(); renderAdmin(); renderDash(); toast('✅ Importado!');
+    }catch(err){toast('Erro ao importar');}
+  };
+  reader.readAsText(file);
+}
+function resetAllData(){
+  if(!confirm('Apagar TODOS os dados?')) return;
+  if(!confirm('Última confirmação!')) return;
+  concursos=[];materias=[];questions=[];historico={};nextQId=1;nextMId=1;nextCId=1;
+  config={meta:50,sessaoQtd:20,diasAcerto1:3,diasAcerto2:7,diasErro:1,diasDuvida:2};
+  save(); renderAdmin(); renderConcursos(); voltarConcursos(); toast('Resetado');
+}
+
+// ═══════════════════════════════════════
+// ADMIN RENDER
+// ═══════════════════════════════════════
+function renderAdmin(){
+  renderQAdminList(); renderMatAdmin(); renderTopicoAdmin(); renderConcAdmin(); loadConfigUI(); syncSelectsMaterias();
+  var el=document.getElementById('super-admin-info');
+  if(el&&isSuperAdmin) el.innerHTML=`<div class="super-admin-bar">⭐ Super Admin — você gerencia todos os dados do app.</div>`;
+  else if(el) el.innerHTML='';
+  var sub=document.getElementById('admin-sub');
+  var c=concursos.find(x=>x.id===currentConcursoId);
+  if(sub) sub.textContent=c?'Concurso: '+c.name:'Gerencie seu concurso';
+}
+
+// ═══════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════
+function syncSelectsMaterias(){
+  var mats=materiasDoConcurso();
+  var opts=mats.map(m=>`<option value="${m.id}">${m.icon||'📚'} ${m.name}</option>`).join('');
+  ['qf-mat','cfg-mat','tf-mat'].forEach(id=>{
+    var el=document.getElementById(id); if(!el) return;
+    var v=el.value;
+    el.innerHTML=(id==='cfg-mat'?'<option value="">Todas</option>':'<option value="">-- Selecione --</option>')+opts;
+    el.value=v||'';
+  });
+  syncSelectsTopicos();
+}
+
+function goTo(id, btn) {
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  if(btn) btn.classList.add('active');
+  if(id==='responder'&&!session){
+    document.getElementById('resp-setup').style.display='block';
+    document.getElementById('q-session').classList.remove('active');
+    document.getElementById('q-resultado').style.display='none';
+  }
+  var renders={dashboard:renderDash,banco:renderBanco,erros:renderErros,admin:renderAdmin,planner:renderPlanner,edital:renderEdital};
+  if(renders[id]) renders[id]();
+}
+
+function adminTab(el,panelId){
+  document.querySelectorAll('.at').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.atp').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+
+function closeOv(id){document.getElementById(id).classList.remove('show');}
+document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('show');}));
+
+function toast(msg){
+  var el=document.getElementById('toast');
+  el.textContent=msg; el.style.transform='translateX(-50%) translateY(0)';
+  clearTimeout(el._t); el._t=setTimeout(()=>el.style.transform='translateX(-50%) translateY(80px)',2500);
+}
+
+// Atalhos teclado
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA') return;
+  if(!session) return;
+  var map={'1':0,'2':1,'3':2,'4':3,'a':0,'b':1,'c':2,'d':3};
+  var k=e.key.toLowerCase();
+  if(map[k]!==undefined){var btn=document.querySelectorAll('.opt:not(.disabled)');if(btn[map[k]])btn[map[k]].click();}
+  if(k==='c'){var b=document.querySelector('.ve-certo');if(b)b.click();}
+  if(k==='e'){var b=document.querySelector('.ve-errado');if(b)b.click();}
+  if(k==='enter'||k===' '){var b=document.getElementById('btn-prox');if(b&&document.getElementById('q-acts').style.display!=='none')b.click();}
+});
+
+// ═══════════════════════════════════════
+// AUTH
+// ═══════════════════════════════════════
+auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).catch(()=>{});
+
+async function loginGoogle(){
+  var btnEl=document.querySelector('.google-btn');
+  if(btnEl){btnEl.disabled=true;btnEl.innerHTML='⏳ Entrando...';}
+  var provider=new firebase.auth.GoogleAuthProvider();
+  provider.setCustomParameters({prompt:'select_account'});
+  try{
+    var result=await auth.signInWithPopup(provider);
+    if(result.user) handleLogin(result.user);
+  }catch(e){
+    if(e.code==='auth/popup-blocked'||e.code==='auth/popup-closed-by-user'){
+      try{await auth.signInWithRedirect(provider);}catch(e2){toast('Erro: '+e2.message);}
+    } else if(e.code!=='auth/cancelled-popup-request'){
+      toast('Erro: '+e.message);
+    }
+    if(btnEl){btnEl.disabled=false;btnEl.innerHTML='<svg width="18" height="18" viewBox="0 0 48 48"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></svg> Entrar com Google';}
+  }
+}
+
+function logout(){
+  if(!confirm('Sair da conta?')) return;
+  auth.signOut().then(()=>{
+    currentUser=null; isSuperAdmin=false; currentConcursoId=null;
+    concursos=[];materias=[];questions=[];historico={};
+    document.getElementById('login-screen').style.display='flex';
+    document.getElementById('main-nav').style.display='none';
+    document.getElementById('concurso-badge').style.display='none';
+    renderAuthArea(null);
+  });
+}
+
+function renderAuthArea(user){
+  var a=document.getElementById('auth-area'); if(!a) return;
+  if(user){
+    a.innerHTML=`<img src="${user.photoURL||''}" style="width:26px;height:26px;border-radius:50%;border:2px solid var(--blue)" onerror="this.style.display='none'">
+    ${isSuperAdmin?'<span style="font-size:10px;color:var(--amber);font-weight:700">⭐</span>':''}
+    <button onclick="logout()" style="background:var(--bg3);border:1px solid var(--border);color:var(--muted);font-size:11px;padding:4px 9px;border-radius:6px;cursor:pointer;font-family:var(--ff);font-weight:600">Sair</button>`;
+  } else {
+    a.innerHTML=`<button onclick="loginGoogle()" style="background:var(--blue-l);border:1px solid rgba(79,124,255,.3);color:var(--blue);font-size:11px;padding:5px 11px;border-radius:6px;cursor:pointer;font-family:var(--ff);font-weight:600">🔑 Entrar</button>`;
+  }
+}
+
+async function handleLogin(user){
+  currentUser = user;
+  isSuperAdmin = (user.email === SUPER_ADMIN_EMAIL);
+  document.getElementById('login-screen').style.display = 'none';
+  renderAuthArea(user);
+  await loadAll();
+  renderConcursos();
+}
+
+auth.getRedirectResult().then(function(result){
+  if(result&&result.user) handleLogin(result.user);
+}).catch(function(e){if(e.code!=='auth/no-auth-event')console.error('[redirect]',e.code);});
+
+auth.onAuthStateChanged(function(user){
+  if(user && !currentUser) {
+    handleLogin(user);
+  } else if(!user && currentUser) {
+    currentUser=null;
+    renderAuthArea(null);
+  }
+});
+
+// ═══════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════
+// initApp — só para modo offline, PWA já roda no final do script
+
+// TÓPICOS DO EDITAL
+// ═══════════════════════════════════════
+var editingTId = null;
+
+function saveTopico() {
+  try {
+    var mat  = document.getElementById('tf-mat').value;
+    var nome = document.getElementById('tf-nome').value.trim();
+    if(!mat)  { toast('⚠️ Selecione a matéria'); return; }
+    if(!nome) { toast('⚠️ Digite o nome do tópico'); return; }
+    var subRaw = document.getElementById('tf-subtopicos').value;
+    var subtopicos = subRaw.split('\n').map(s=>s.trim()).filter(s=>s).map((s,i)=>({id:'sub_'+(nextTId+i+100),nome:s}));
+
+    if(editingTId != null) {
+      var idx = topicos.findIndex(t=>t.id===editingTId);
+      if(idx>=0) topicos[idx]={...topicos[idx],materiaId:mat,concursoId:currentConcursoId,nome,subtopicos};
+      editingTId=null; document.getElementById('tf-title').textContent='➕ Novo Tópico';
+    } else {
+      topicos.push({id:'top_'+nextTId,materiaId:mat,concursoId:currentConcursoId,nome,subtopicos});
+      nextTId++;
+    }
+    save(); clearTForm(); renderTopicoAdmin(); syncSelectsTopicos();
+    toast('✅ Tópico salvo!');
+  } catch(e) { toast('❌ Erro: '+e.message); }
+}
+
+function editTopico(id) {
+  var t=topicos.find(x=>x.id===id); if(!t) return;
+  editingTId=id;
+  document.getElementById('tf-title').textContent='✏️ Editando Tópico';
+  document.getElementById('tf-mat').value=t.materiaId||'';
+  document.getElementById('tf-nome').value=t.nome||'';
+  document.getElementById('tf-subtopicos').value=(t.subtopicos||[]).map(s=>s.nome).join('\n');
+  toast('Tópico carregado');
+}
+
+function deleteTopico(id) {
+  if(!confirm('Excluir este tópico?')) return;
+  topicos=topicos.filter(t=>t.id!==id);
+  save(); renderTopicoAdmin(); syncSelectsTopicos(); toast('Tópico excluído');
+}
+
+function clearTForm() {
+  editingTId=null;
+  document.getElementById('tf-title').textContent='➕ Novo Tópico';
+  ['tf-nome','tf-subtopicos'].forEach(id=>{var el=document.getElementById(id);if(el)el.value='';});
+  var el=document.getElementById('tf-mat'); if(el) el.value='';
+}
+
+function renderTopicoAdmin() {
+  var el=document.getElementById('top-count'); if(el) el.textContent=topicosDoConcurso().length;
+  var list=document.getElementById('topico-admin-list'); if(!list) return;
+  var tops=topicosDoConcurso();
+  if(!tops.length){list.innerHTML='<div style="color:var(--muted);font-size:13px;padding:12px">Nenhum tópico ainda.</div>';return;}
+  list.innerHTML=tops.map(t=>{
+    var m=materias.find(x=>x.id===t.materiaId);
+    return `<div class="q-adm-row">
+      <div class="q-adm-body">
+        <strong style="font-size:13px">${t.nome}</strong>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px">${m?m.icon+' '+m.name:'—'} · ${(t.subtopicos||[]).length} subtópicos</div>
+        ${(t.subtopicos||[]).length?`<div style="font-size:11px;color:var(--muted);margin-top:4px">${(t.subtopicos||[]).map(s=>'• '+s.nome).join(' · ')}</div>`:''}
+      </div>
+      <div class="q-adm-acts">
+        <button type="button" class="btn btn-ghost btn-sm" onclick="editTopico('${t.id}')">✏️</button>
+        <button type="button" class="btn btn-red btn-sm" onclick="deleteTopico('${t.id}')">🗑</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function topicosDoConcurso() {
+  return topicos.filter(t=>t.concursoId===currentConcursoId);
+}
+
+function syncSelectsTopicos() {
+  var mats = materiasDoConcurso();
+  var matOpts = mats.map(m=>`<option value="${m.id}">${m.icon||'📚'} ${m.name}</option>`).join('');
+  // tf-mat (admin tópico)
+  var tfMat = document.getElementById('tf-mat');
+  if(tfMat) { var v=tfMat.value; tfMat.innerHTML='<option value="">-- Selecione --</option>'+matOpts; tfMat.value=v||''; }
+  // qf-topico (form questão) — depende da matéria selecionada
+  syncQfTopico();
+}
+
+function syncQfTopico() {
+  var matId  = document.getElementById('qf-mat')?.value||'';
+  var topicoId = document.getElementById('qf-topico')?.value||'';
+  var tops   = topicos.filter(t=>t.concursoId===currentConcursoId&&(!matId||t.materiaId===matId));
+  var telTop = document.getElementById('qf-topico');
+  if(telTop) {
+    var vTop=telTop.value;
+    telTop.innerHTML='<option value="">-- Nenhum --</option>'+tops.map(t=>`<option value="${t.id}">${t.nome}</option>`).join('');
+    telTop.value=vTop||'';
+    topicoId=telTop.value;
+  }
+  // Populate subtópicos based on selected tópico
+  var telSub=document.getElementById('qf-subtopico');
+  if(telSub) {
+    var vSub=telSub.value;
+    var top=topicos.find(t=>t.id===topicoId);
+    var subs=top?top.subtopicos||[]:[];
+    telSub.innerHTML='<option value="">-- Nenhum --</option>'+subs.map(s=>`<option value="${s.id}">${s.nome}</option>`).join('');
+    telSub.value=vSub||'';
+  }
+}
+
+// Called when tópico changes in question form
+function onTopicoChange() {
+  syncQfTopico();
+}
+
+// ═══════════════════════════════════════
+// PLANNER KANBAN
+// ═══════════════════════════════════════
+function kanbanDoConcurso() {
+  return kanbanCards.filter(c=>c.concursoId===currentConcursoId);
+}
+
+function renderPlanner() {
+  var c = concursos.find(function(x){return x.id===currentConcursoId;});
+  var nomeEl   = document.getElementById('planner-nome');
+  var dataEl   = document.getElementById('planner-data-info');
+  var cntBadge = document.getElementById('countdown-badge');
+  var cntNum   = document.getElementById('countdown-num');
+  var hoje2    = TODAY();
+
+  if(c) {
+    if(nomeEl) nomeEl.textContent = (c.icon||'🏆')+' '+c.name;
+    if(c.dataProva) {
+      var partes = c.dataProva.split('-');
+      var prova  = new Date(parseInt(partes[0]),parseInt(partes[1])-1,parseInt(partes[2]));
+      var hj     = new Date(); hj.setHours(0,0,0,0);
+      var diff   = Math.round((prova-hj)/(1000*60*60*24));
+      if(cntNum) cntNum.textContent = diff>0?diff:(diff===0?'Hoje!':'Passou');
+      if(dataEl) dataEl.textContent = 'Prova: '+prova.toLocaleDateString('pt-BR')+(diff>0?' ('+diff+' dias)':'');
+      if(cntBadge) cntBadge.className='countdown-badge'+(diff<=30?' urgente':'');
+    } else {
+      if(cntNum) cntNum.textContent='—';
+      if(dataEl) dataEl.textContent='Configure a data da prova em Admin → Concursos';
+    }
+  } else {
+    if(nomeEl) nomeEl.textContent='Selecione um concurso';
+    if(cntNum) cntNum.textContent='—';
+  }
+
+  var cards = kanbanCards.filter(function(k){return k.concursoId===currentConcursoId;});
+  var qs    = questionsDoConcurso();
+  var alertas=[];
+  cards.forEach(function(card){
+    if(card.status!=='done' && card.prazo && card.prazo<hoje2) {
+      alertas.push({tipo:'danger',msg:'<strong>'+card.titulo+'</strong> está atrasado!'});
+    }
+  });
+  var revisoesPend=qs.filter(function(q){return q.status==='erro'||q.status==='duvida';});
+  if(revisoesPend.length>0) alertas.push({tipo:'info',msg:'🔄 <strong>'+revisoesPend.length+'</strong> questão(ões) aguardam revisão espaçada.'});
+
+  var alertasEl=document.getElementById('planner-alertas');
+  if(alertasEl) alertasEl.innerHTML=alertas.map(function(a){
+    var bg=a.tipo==='danger'?'var(--red-l)':'var(--blue-l)';
+    var cor=a.tipo==='danger'?'var(--red)':'var(--blue)';
+    var brd=a.tipo==='danger'?'rgba(255,77,106,.2)':'rgba(79,124,255,.2)';
+    return '<div style="background:'+bg+';border:1px solid '+brd+';border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:13px;color:'+cor+'">'+a.msg+'</div>';
+  }).join('');
+
+  var autoCards=revisoesPend.slice(0,3).map(function(q){
+    var m=materias.find(function(x){return x.id===q.materia;});
+    return {id:'auto_'+q.id,titulo:q.text.slice(0,55)+(q.text.length>55?'...':''),materiaId:q.materia,status:'review',isAuto:true,matNome:m?m.icon+' '+m.name:''};
+  });
+
+  var colNames={todo:'A Fazer',doing:'Estudando',review:'Revisando',done:'Concluído'};
+  ['todo','doing','review','done'].forEach(function(col){
+    var colCards=cards.filter(function(c){return c.status===col;});
+    if(col==='review') colCards=autoCards.concat(colCards);
+    var countEl=document.getElementById('count-'+col);
+    var cardsEl=document.getElementById('cards-'+col);
+    if(countEl) countEl.textContent=colCards.length;
+    if(!cardsEl) return;
+    if(!colCards.length){
+      cardsEl.innerHTML='<div style="text-align:center;padding:20px;color:var(--muted);font-size:12px">Nenhum card aqui</div>';
+      return;
+    }
+    cardsEl.innerHTML=colCards.map(function(card){
+      var m=materias.find(function(x){return x.id===card.materiaId;});
+      var isAtrasado=card.prazo&&card.prazo<hoje2&&col!=='done';
+      var _onclick = card.isAuto ? 'goToErros()' : 'openEditCard(\'' + card.id + '\''+')';
+      var statusOpts=['todo','doing','review','done'].map(function(s){
+        return '<option value="'+s+'"'+(s===col?' selected':'')+'>'+colNames[s]+'</option>';
+      }).join('');
+      return '<div class="kanban-card '+(isAtrasado?'atrasado':'')+' '+(card.isAuto?'revisao-auto':'')+'" onclick="'+_onclick+'">'+
+        (card.isAuto?'<div style="font-size:10px;color:var(--amber);font-weight:700;margin-bottom:4px">↻ REVISÃO AUTOMÁTICA</div>':'')+
+        '<div class="kc-titulo">'+card.titulo+'</div>'+
+        ((m||card.matNome)?'<div class="kc-materia">'+(m?m.icon+' '+m.name:card.matNome)+'</div>':'')+
+        '<div class="kc-footer">'+
+          (card.prazo?'<span class="kc-badge" style="background:var(--bg2);color:var(--muted)">📅 '+new Date(card.prazo+'T12:00:00').toLocaleDateString('pt-BR')+'</span>':'')+
+          (isAtrasado?'<span class="kc-alerta">⚠ ATRASADO</span>':'')+
+          (card.metaQ?'<span class="kc-badge" style="background:var(--blue-l);color:var(--blue)">Meta: '+card.metaQ+'q</span>':'')+
+        '</div>'+
+        (!card.isAuto?'<div class="kc-status-wrap" onclick="event.stopPropagation()"><select class="kc-status-select" data-id="'+card.id+'" onchange="moverCard(this.dataset.id,this.value)">'+statusOpts+'</select></div>':'')+
+      '</div>';
+    }).join('');
+  });
+
+  var mats=materiasDoConcurso();
+  var cardMatEl=document.getElementById('card-materia');
+  if(cardMatEl) cardMatEl.innerHTML='<option value="">Nenhuma</option>'+mats.map(function(m){return '<option value="'+m.id+'">'+(m.icon||'📚')+' '+m.name+'</option>';}).join('');
+}
+
+function goToErros() {
+  goTo('erros', document.querySelectorAll('.nb')[4]);
+}
+
+function moverCard(id, novoStatus) {
+  var card=kanbanCards.find(function(c){return c.id===id;});
+  if(!card) return;
+  card.status=novoStatus;
+  save(); renderPlanner();
+  var nomes={todo:'A Fazer',doing:'Estudando',review:'Revisando',done:'Concluído'};
+  toast('Movido para '+nomes[novoStatus]);
+}
+
+function openAddCard(status) {
+  editingKId=null; editingKStatus=status;
+  var nomes={todo:'A Fazer',doing:'Estudando',review:'Revisando',done:'Concluído'};
+  var titleEl=document.getElementById('card-modal-title');
+  if(titleEl) titleEl.textContent='Novo Tópico — '+nomes[status];
+  ['card-titulo','card-notas','card-meta-q','card-prazo'].forEach(function(id){
+    var el=document.getElementById(id); if(el) el.value='';
+  });
+  var cme=document.getElementById('card-materia'); if(cme) cme.value='';
+  var db=document.getElementById('btn-del-card'); if(db) db.style.display='none';
+  var ov=document.getElementById('card-ov'); if(ov) ov.classList.add('show');
+}
+
+function openEditCard(id) {
+  var card=kanbanCards.find(function(c){return c.id===id;});
+  if(!card) return;
+  editingKId=id;
+  var titleEl=document.getElementById('card-modal-title');
+  if(titleEl) titleEl.textContent='Editar Tópico';
+  var f=function(elId,val){var el=document.getElementById(elId);if(el)el.value=val||'';};
+  f('card-titulo',card.titulo); f('card-materia',card.materiaId);
+  f('card-prazo',card.prazo); f('card-meta-q',card.metaQ); f('card-notas',card.notas);
+  var db=document.getElementById('btn-del-card'); if(db) db.style.display='';
+  var ov=document.getElementById('card-ov'); if(ov) ov.classList.add('show');
+}
+
+function saveKanbanCard() {
+  try {
+    var tituloEl=document.getElementById('card-titulo');
+    var titulo=tituloEl?tituloEl.value.trim():'';
+    if(!titulo){toast('⚠️ Digite o título do tópico');return;}
+    var g=function(id){var el=document.getElementById(id);return el?el.value:'';};
+    var card={
+      titulo:titulo, concursoId:currentConcursoId,
+      materiaId:g('card-materia'),
+      prazo:g('card-prazo'),
+      metaQ:parseInt(g('card-meta-q'))||0,
+      notas:g('card-notas').trim(),
+    };
+    if(editingKId!=null) {
+      var idx=kanbanCards.findIndex(function(c){return c.id===editingKId;});
+      if(idx>=0) { var merged={}; Object.assign(merged,kanbanCards[idx],card); kanbanCards[idx]=merged; }
+    } else {
+      var newCard={id:'k_'+nextKId, status:editingKStatus};
+      Object.assign(newCard,card);
+      kanbanCards.push(newCard);
+      nextKId++;
+    }
+    save(); closeOv('card-ov'); renderPlanner(); toast('✅ Card salvo!');
+  } catch(e){ console.error(e); toast('❌ Erro: '+e.message); }
+}
+
+function deleteKanbanCard() {
+  if(!editingKId||!confirm('Excluir este card?')) return;
+  kanbanCards=kanbanCards.filter(function(c){return c.id!==editingKId;});
+  save(); closeOv('card-ov'); renderPlanner(); toast('Card excluído');
+}
+
+// ═══════════════════════════════════════
+// EDITAL VERTICALIZADO
+// ═══════════════════════════════════════
+var editalFiltro='';
+
+function renderEdital() {
+  var mats=materiasDoConcurso();
+  var list=document.getElementById('edital-list'); if(!list) return;
+  var qs=questionsDoConcurso();
+
+  if(!mats.length){
+    list.innerHTML='<div class="empty"><div class="empty-icon">📋</div><p>Nenhuma matéria cadastrada.<br>Adicione matérias e tópicos no Admin.</p></div>';
+    return;
+  }
+
+  var html='';
+  mats.forEach((mat,mi)=>{
+    var tops=topicos.filter(t=>t.concursoId===currentConcursoId&&t.materiaId===mat.id);
+    // Filtro
+    if(editalFiltro) {
+      var fLow=editalFiltro.toLowerCase();
+      if(!mat.name.toLowerCase().includes(fLow)&&!tops.some(t=>t.nome.toLowerCase().includes(fLow))) return;
+    }
+    var qsMat=qs.filter(q=>q.materia===mat.id);
+    var totalMat=qsMat.length;
+    var acertosMat=qsMat.reduce((a,q)=>a+(q.vezesAcertada||0),0);
+    var pctMat=totalMat>0?Math.round((qsMat.filter(q=>q.status==='acerto').length/totalMat)*100):0;
+
+    html+=`<div class="edital-materia" id="emat-${mi}">
+      <div class="edital-mat-header" onclick="toggleMatEdital(${mi})">
+        <div class="edital-mat-icon">${mat.icon||'📚'}</div>
+        <div class="edital-mat-name">${mat.name}</div>
+        <div class="edital-mat-stats">${tops.length} tópico(s) · ${totalMat} questões · ${pctMat}% acerto</div>
+        <div class="edital-mat-arrow" id="arrow-mat-${mi}">▶</div>
+      </div>
+      <div class="edital-mat-bar"><div class="edital-mat-bar-fill" style="width:${pctMat}%"></div></div>
+      <div class="edital-topicos ${editalExpandAll?'open':''}" id="etops-${mi}">`;
+
+    if(!tops.length) {
+      html+=`<div class="edital-topico" style="color:var(--muted);font-size:12px;padding:12px 16px">
+        Nenhum tópico cadastrado. <button type="button" onclick="goTo('admin',document.querySelectorAll('.nb')[6]);setTimeout(()=>adminTab(document.querySelectorAll('.at')[1],'atp-mat'),100)" style="background:none;border:none;color:var(--blue);cursor:pointer;font-family:var(--ff);font-size:12px;text-decoration:underline">Adicionar tópicos</button>
+      </div>`;
+    }
+
+    tops.forEach((top,ti)=>{
+      if(editalFiltro&&!mat.name.toLowerCase().includes(editalFiltro.toLowerCase())&&!top.nome.toLowerCase().includes(editalFiltro.toLowerCase())) return;
+      var qsTop=qs.filter(q=>q.topico===top.id);
+      var totalTop=qsTop.length;
+      var pctTop=totalTop>0?Math.round((qsTop.filter(q=>q.status==='acerto').length/totalTop)*100):0;
+      var statusColor=totalTop===0?'var(--muted)':pctTop>=70?'var(--green)':pctTop>=40?'var(--amber)':'var(--red)';
+
+      html+=`<div class="edital-topico" id="etop-${mi}-${ti}">
+        <div class="edital-topico-row" onclick="toggleTopEdital(${mi},${ti})">
+          ${(top.subtopicos||[]).length?'<span style="color:var(--muted);font-size:10px;flex-shrink:0">▶</span>':'<span style="width:12px;flex-shrink:0"></span>'}
+          <div class="edital-topico-name">${top.nome}</div>
+          <div class="edital-topico-stats" style="color:${statusColor}">${totalTop}q ${totalTop>0?pctTop+'%':''}</div>
+          ${totalTop===0?`<span class="edital-topico-badge" style="background:var(--bg3);color:var(--muted)">sem questões</span>`:
+          pctTop>=70?`<span class="edital-topico-badge" style="background:var(--green-l);color:var(--green)">✓ ok</span>`:
+          pctTop>=40?`<span class="edital-topico-badge" style="background:var(--amber-l);color:var(--amber)">revisar</span>`:
+          `<span class="edital-topico-badge" style="background:var(--red-l);color:var(--red)">⚠ fraco</span>`}
+        </div>`;
+
+      if((top.subtopicos||[]).length) {
+        html+=`<div class="edital-subtopicos ${editalExpandAll?'open':''}" id="esubs-${mi}-${ti}">`;
+        top.subtopicos.forEach(sub=>{
+          // Match by subtopico id OR by subtopico name (for backwards compat)
+          var qsSub=qs.filter(q=>q.subtopico===sub.id||q.subtopico===sub.nome);
+          var pctSub=qsSub.length>0?Math.round((qsSub.filter(q=>q.status==='acerto').length/qsSub.length)*100):0;
+          var subColor=qsSub.length===0?'var(--muted)':pctSub>=70?'var(--green)':pctSub>=40?'var(--amber)':'var(--red)';
+          html+=`<div class="edital-subtopico">
+            <span style="color:var(--muted);font-size:11px">◦</span>
+            <div class="edital-subtopico-name">${sub.nome}</div>
+            <div class="edital-subtopico-stats" style="color:${subColor};font-weight:600">
+              ${qsSub.length}q${qsSub.length>0?' · '+pctSub+'%':''}
+            </div>
+          </div>`;
+        });
+        html+=`</div>`;
+      }
+      html+=`</div>`;
+    });
+
+    html+=`</div></div>`;
+  });
+  list.innerHTML=html||'<div class="empty"><div class="empty-icon">🔍</div><p>Nenhum resultado encontrado.</p></div>';
+
+  // Aplicar estado expand
+  if(editalExpandAll) {
+    document.querySelectorAll('.edital-mat-arrow').forEach(a=>a.classList.add('open'));
+  }
+}
+
+function toggleMatEdital(mi) {
+  var tops=document.getElementById('etops-'+mi);
+  var arrow=document.getElementById('arrow-mat-'+mi);
+  if(!tops) return;
+  tops.classList.toggle('open');
+  if(arrow) arrow.classList.toggle('open');
+}
+
+function toggleTopEdital(mi,ti) {
+  var subs=document.getElementById('esubs-'+mi+'-'+ti);
+  if(!subs) return;
+  subs.classList.toggle('open');
+}
+
+function toggleExpandAll() {
+  editalExpandAll=!editalExpandAll;
+  renderEdital();
+}
+
+function filtrarEdital(val) {
+  editalFiltro=val.toLowerCase();
+  renderEdital();
+}
+
+// ═══════════════════════════════════════
+// INIT + OFFLINE
+// ═══════════════════════════════════════
+function importarEditalFiscal() {
+  if(!currentConcursoId) { toast('⚠️ Selecione um concurso primeiro!'); return; }
+  var logEl = document.getElementById('import-log');
+  logEl.style.display='block'; logEl.innerHTML='';
+  function log(msg){ logEl.innerHTML+=msg+'<br>'; logEl.scrollTop=logEl.scrollHeight; }
+
+  var EDITAL=[
+    {mat:{nome:'Língua Portuguesa',icon:'📝',desc:'10 questões — Comuns'},topicos:[
+      {nome:'Gêneros e tipologias textuais',subs:['Características dos gêneros','Funcionalidades dos gêneros']},
+      {nome:'Interpretação textual',subs:['Diferentes gêneros','Tipologias textuais']},
+      {nome:'Gramática normativa',subs:[]},
+      {nome:'Mecanismos de produção de sentidos',subs:['Polissemia','Ambiguidade','Citação','Inferência','Pressuposto']},
+      {nome:'Organização e fatores de textualidade',subs:['Coesão','Coerência','Intertextualidade','Informatividade','Intencionalidade','Aceitabilidade','Situacionalidade']},
+      {nome:'Progressão temática',subs:[]},
+      {nome:'Tipologias textuais',subs:['Descritiva','Narrativa','Argumentativa','Injuntiva','Dialogal']},
+      {nome:'Elementos de sequenciação textual',subs:['Referenciação','Substituição','Repetição','Conectores']},
+      {nome:'Tipos de argumento',subs:[]},
+      {nome:'Classificação gramatical',subs:[]},
+      {nome:'Morfologia',subs:[]},
+      {nome:'Análise morfossintática',subs:[]},
+      {nome:'Fenômenos linguísticos',subs:[]},
+      {nome:'Concordância verbal e nominal',subs:[]},
+      {nome:'Regência verbal e nominal',subs:[]},
+      {nome:'Colocação pronominal',subs:[]},
+      {nome:'Pontuação',subs:[]},
+      {nome:'Figuras de linguagem',subs:[]},
+      {nome:'Interpretação de documentos legais',subs:[]},
+      {nome:'Acordo Ortográfico de 1990',subs:[]},
+    ]},
+    {mat:{nome:'Raciocínio Lógico-Matemático',icon:'🔢',desc:'5 questões — Comuns'},topicos:[
+      {nome:'Lógica e raciocínio lógico',subs:[]},
+      {nome:'Lógica de argumentação',subs:[]},
+      {nome:'Proposição lógica',subs:['Proposições simples','Proposições compostas']},
+      {nome:'Operadores lógicos',subs:[]},
+      {nome:'Tabela verdade',subs:[]},
+      {nome:'Tautologia, contradição e contingência',subs:[]},
+      {nome:'Equivalências e negações',subs:[]},
+      {nome:'Conjuntos e operações',subs:['Conjuntos','Subconjuntos','Operações básicas']},
+      {nome:'Estatística',subs:['Tabelas','Gráficos','Média','Moda','Mediana']},
+      {nome:'Grandezas proporcionais',subs:['Razão e proporção','Regra de três']},
+      {nome:'Porcentagem',subs:[]},
+      {nome:'Juros simples e compostos',subs:[]},
+    ]},
+    {mat:{nome:'Noções de Informática',icon:'💻',desc:'5 questões — Comuns'},topicos:[
+      {nome:'Sistema Operacional Windows',subs:['Conceitos básicos','Área de trabalho','Pastas e arquivos','Operações com arquivos','Atalhos de teclado','Gerenciador de tarefas']},
+      {nome:'Microsoft Word',subs:['Formatação de texto','Cabeçalho e rodapé','Tabelas','Mala direta']},
+      {nome:'Microsoft Excel',subs:['Fórmulas básicas','Gráficos','Planilhas']},
+      {nome:'Microsoft PowerPoint',subs:['Criação de slides','Transições','Animações']},
+      {nome:'Painel de Controle e configurações',subs:['Solução de problemas']},
+      {nome:'Backup e impressão',subs:['Procedimentos de backup','Gerenciamento de impressão']},
+      {nome:'Instalação e configuração de programas',subs:[]},
+      {nome:'Compactação e extração de arquivos ZIP',subs:[]},
+      {nome:'Aplicativos de comunicação',subs:['WhatsApp','Google Drive','Zoom','Teams']},
+      {nome:'Navegadores e busca na web',subs:[]},
+      {nome:'Correio eletrônico corporativo',subs:[]},
+    ]},
+    {mat:{nome:'Legislação Aplicada ao Setor Público',icon:'⚖️',desc:'10 questões — Comuns'},topicos:[
+      {nome:'CF/88 — Administração Pública (Cap. VII)',subs:['Seção I','Seção II']},
+      {nome:'Ética no Setor Público',subs:[]},
+      {nome:'Noções de Direito Administrativo',subs:['Princípios da Adm. Pública','Poderes administrativos','Atos administrativos','Processo administrativo','Controle e responsabilização']},
+      {nome:'Lei de Licitações — Lei nº 14.133/2021',subs:[]},
+      {nome:'Parcerias públicas — Lei nº 13.019/2014',subs:[]},
+      {nome:'Improbidade Administrativa — Lei nº 8.429/1992',subs:[]},
+      {nome:'PPA, LDO e LOA',subs:['Plano Plurianual','Lei de Diretrizes Orçamentárias','Lei Orçamentária Anual']},
+      {nome:'Controle interno e externo — CF Art. 70 a 75',subs:[]},
+      {nome:'Acesso à Informação — Lei nº 12.527/2011',subs:[]},
+      {nome:'LGPD — Lei nº 13.709/2018',subs:[]},
+      {nome:'Lei Orgânica de Senador Canedo — Lei nº 01/1990',subs:[]},
+      {nome:'Servidores de Senador Canedo — Lei nº 1.488/2010',subs:[]},
+    ]},
+    {mat:{nome:'Fiscal de Serviços Urbanos',icon:'🏗️',desc:'20 questões — Específicos'},topicos:[
+      {nome:'Legislação urbana e de posturas',subs:[]},
+      {nome:'Código de Obras — Lei nº 123/1990',subs:[]},
+      {nome:'Normas sobre zoneamento urbano',subs:[]},
+      {nome:'Noções de Construção Civil',subs:['Leitura de projetos','Técnicas construtivas']},
+      {nome:'Parcelamento do solo',subs:['Loteamento','Desmembramento','Fracionamento de lotes']},
+      {nome:'Zoneamento — Lei nº 1.379/2008',subs:['Uso do solo','Ocupação do solo']},
+      {nome:'Código de Posturas — Lei nº 1.596/2011',subs:[]},
+      {nome:'Parcelamento do solo urbano — Lei nº 1.377/2008',subs:[]},
+      {nome:'Acessibilidade',subs:['Deficientes','Idosos','Gestantes','Crianças de colo']},
+      {nome:'Ocupação de imóveis públicos',subs:['Com construção','Sem construção']},
+      {nome:'Ocupação de imóveis particulares',subs:['Com construção','Sem construção']},
+      {nome:'Autorizações e licenças urbanísticas',subs:[]},
+      {nome:'Alvará de localização',subs:[]},
+      {nome:'Licença para edificar',subs:['Conceito','Procedimentos','Alteração de projeto']},
+      {nome:'Habite-se',subs:['Conceito','Funcionalidades']},
+      {nome:'Irregularidades em edificações',subs:[]},
+      {nome:'Licença para reforma e reconstrução',subs:[]},
+      {nome:'Licença para demolições',subs:[]},
+      {nome:'Normas de fiscalização de obras',subs:['Construções','Demolições','Reformas']},
+      {nome:'Controle sobre uso e ordenamento do solo',subs:[]},
+      {nome:'Sinalização de vias e obras públicas',subs:[]},
+      {nome:'Patrimônio histórico',subs:[]},
+      {nome:'Procedimentos de fiscalização',subs:['Autos de infração','Notificações','Embargos','Interdições']},
+      {nome:'Vistoria e fiscalização de obras',subs:[]},
+      {nome:'Loteamentos Fechados — Lei nº 1.822/2014',subs:[]},
+      {nome:'Poder de polícia',subs:['Conceito e competência','Fundamentos e atributos','Ciclo de polícia','Direitos fundamentais']},
+    ]},
+  ];
+
+  var sid=9000, mats=0, tops=0, subs=0;
+  EDITAL.forEach(function(item){
+    var me=materias.find(function(m){return m.concursoId===currentConcursoId&&m.name===item.mat.nome;});
+    var mid;
+    if(me){ mid=me.id; log('⏭ '+item.mat.nome+' (já existe)'); }
+    else{
+      mid='mat_'+nextMId; nextMId++;
+      materias.push({id:mid,name:item.mat.nome,icon:item.mat.icon,desc:item.mat.desc,concursoId:currentConcursoId});
+      mats++; log('✅ '+item.mat.icon+' '+item.mat.nome);
+    }
+    item.topicos.forEach(function(top){
+      if(topicos.find(function(t){return t.concursoId===currentConcursoId&&t.materiaId===mid&&t.nome===top.nome;})) return;
+      var st=top.subs.map(function(s){subs++;return{id:'sub_'+(sid++),nome:s};});
+      topicos.push({id:'top_'+nextTId,nome:top.nome,materiaId:mid,concursoId:currentConcursoId,subtopicos:st});
+      nextTId++; tops++;
+    });
+  });
+
+  save();
+  log('');
+  log('🎉 CONCLUÍDO! Matérias: '+mats+' | Tópicos: '+tops+' | Subtópicos: '+subs);
+  syncSelectsMaterias();
+  toast('✅ Edital importado! Vá em Edital para ver.');
+}
+
+function loginOffline(){
+  document.getElementById('login-screen').style.display='none';
+  loadLocal();
+  renderConcursos();
+}
+
+window.addEventListener('online', function(){
+  var ob=document.getElementById('offline-bar');
+  if(ob) ob.style.display='none';
+  if(currentUser) syncAll().catch(function(){});
+});
+window.addEventListener('offline', function(){
+  var ob=document.getElementById('offline-bar');
+  if(ob) ob.style.display='block';
+});
+
+// PWA manifest
+try {
+  var _m={name:"Meu Concurso",short_name:"MeuConcurso",start_url:"./",display:"standalone",background_color:"#0a0a0f",theme_color:"#0a0a0f",icons:[{src:"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='80' fill='%230a0a0f'/><text y='380' x='60' font-size='380'>🎯</text></svg>",sizes:"512x512",type:"image/svg+xml"}]};
+  var _mb=new Blob([JSON.stringify(_m)],{type:'application/json'});
+  var _mel=document.getElementById('pwa-manifest');
+  if(_mel) _mel.href=URL.createObjectURL(_mb);
+  if('serviceWorker' in navigator){
+    var _sw="const C='mc4';self.addEventListener('install',e=>{self.skipWaiting();});self.addEventListener('activate',e=>{self.clients.claim();});self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)));});";
+    navigator.serviceWorker.register(URL.createObjectURL(new Blob([_sw],{type:'application/javascript'}))).catch(function(){});
+  }
+} catch(e){}
+</script>
+</body>
+</html>
