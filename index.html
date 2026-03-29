@@ -2712,8 +2712,9 @@ function renderTriagem() {
       if(q.status!=='aprovada') {
         // Controles de classificação
         html += '<div class="triagem-q-controles">';
-        html += '<select id="tm-'+q.id+'" onchange="onTriagemMat(\''+q.id+'\',this.value)" style="flex:1">'+matOpts+'</select>';
-        html += '<select id="tt-'+q.id+'" style="flex:1"><option value="">-- Tópico --</option>'+topOpts+'</select>';
+        html += '<select id="tm-'+q.id+'" onchange="onTriagemMat(\''+q.id+'\',this.value)" style="flex:1.5">'+matOpts+'</select>';
+        html += '<select id="tt-'+q.id+'" onchange="onTriagemTop(\''+q.id+'\',this.value)" style="flex:1.5"><option value="">-- Tópico --</option>'+topOpts+'</select>';
+        html += '<select id="ts-'+q.id+'" style="flex:1.5"><option value="">-- Subtópico --</option></select>';
         html += '<select id="tn-'+q.id+'" style="max-width:90px">'+nivelOpts+'</select>';
         html += '</div>';
         html += '<div style="display:flex;gap:6px;margin-top:8px">';
@@ -2722,7 +2723,7 @@ function renderTriagem() {
         html += '</div>';
         // Pre-select mat if sugerida
         if(q.matSugerida) {
-          html += '<script>setTimeout(function(){var el=document.getElementById("tm-'+q.id+'");if(el)el.value="'+q.matSugerida+'";},100);<\/script>';
+          html += '<script>setTimeout(function(){var el=document.getElementById("tm-'+q.id+'");if(el)el.value="'+q.matSugerida+'";onTriagemMat("'+q.id+'","'+q.matSugerida+'");},100);<\/script>';
         }
       }
       html += '</div>'; // triagem-q-item
@@ -2745,14 +2746,23 @@ function toggleTriagemGrupo(matKey) {
 }
 
 function onTriagemMat(qId, matId) {
-  // Atualiza tópicos disponíveis quando muda a matéria
   var tops = matId ? topicos.filter(function(t){return t.concursoId===currentConcursoId&&t.materiaId===matId;}) : [];
   var topOpts = '<option value="">-- Nenhum --</option>'+tops.map(function(t){return'<option value="'+t.id+'">'+t.nome+'</option>';}).join('');
   var topEl = document.getElementById('tt-'+qId);
   if(topEl) topEl.innerHTML = topOpts;
-  // Atualiza matSugerida na fila
+  // Limpa subtópico
+  var subEl = document.getElementById('ts-'+qId);
+  if(subEl) subEl.innerHTML = '<option value="">-- Subtópico --</option>';
   var q = filaPendente.find(function(x){return x.id===qId;});
   if(q) q.matSugerida = matId;
+}
+
+function onTriagemTop(qId, topId) {
+  var top = topicos.find(function(t){return t.id===topId;});
+  var subs = (top&&top.subtopicos)||[];
+  var subOpts = '<option value="">-- Nenhum --</option>'+subs.map(function(s){return'<option value="'+s.id+'">'+s.nome+'</option>';}).join('');
+  var subEl = document.getElementById('ts-'+qId);
+  if(subEl) subEl.innerHTML = subOpts;
 }
 
 function aprovarTriagem(qId) {
@@ -2760,10 +2770,10 @@ function aprovarTriagem(qId) {
   if(!q) return;
   var matId  = document.getElementById('tm-'+qId)?.value || q.matSugerida || '';
   var topId  = document.getElementById('tt-'+qId)?.value || '';
+  var subId  = document.getElementById('ts-'+qId)?.value || '';
   var nivel  = document.getElementById('tn-'+qId)?.value || 'medio';
   if(!matId) { toast('⚠️ Selecione a matéria antes de aprovar!'); return; }
 
-  // Adiciona ao banco de questões
   var novaQ = {
     id: nextQId, status:'nova', prioridade:3,
     vezesRespondida:0, vezesAcertada:0, proximaRevisao:TODAY(),
@@ -2771,7 +2781,8 @@ function aprovarTriagem(qId) {
     options: q.options||[], correct: q.correct||0,
     veCorrect: q.veCorrect!=null?q.veCorrect:1,
     explanation: q.explanation||'',
-    materia: matId, topico: topId, concursoId: currentConcursoId,
+    materia: matId, topico: topId, subtopico: subId,
+    concursoId: currentConcursoId,
     banca: q.banca||'', ano: q.ano||'', nivel: nivel,
     assunto: q.assunto||''
   };
@@ -2780,11 +2791,10 @@ function aprovarTriagem(qId) {
   q.status = 'aprovada';
   save();
 
-  // Atualiza visual
   var el = document.getElementById('tqi-'+qId);
   if(el) el.classList.add('aprovada');
   atualizarBadgeTriagem();
-  toast('✅ Questão aprovada e enviada ao banco!');
+  toast('✅ Questão aprovada!');
 }
 
 function rejeitarTriagem(qId) {
@@ -2805,6 +2815,8 @@ function aprovarTodas() {
     if(!matId) return; // pula sem matéria
     var topEl = document.getElementById('tt-'+q.id);
     var topId = topEl?topEl.value:'';
+    var subEl = document.getElementById('ts-'+q.id);
+    var subId = subEl?subEl.value:'';
     var nivEl = document.getElementById('tn-'+q.id);
     var nivel = nivEl?nivEl.value:'medio';
     questions.push({
@@ -2812,7 +2824,7 @@ function aprovarTodas() {
       vezesRespondida:0, vezesAcertada:0, proximaRevisao:TODAY(),
       tipo:q.tipo, text:q.text, options:q.options||[], correct:q.correct||0,
       veCorrect:q.veCorrect!=null?q.veCorrect:1, explanation:q.explanation||'',
-      materia:matId, topico:topId, concursoId:currentConcursoId,
+      materia:matId, topico:topId, subtopico:subId, concursoId:currentConcursoId,
       banca:q.banca||'', ano:q.ano||'', nivel:nivel, assunto:q.assunto||''
     });
     nextQId++; q.status='aprovada'; aprovadas++;
