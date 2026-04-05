@@ -656,11 +656,19 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
       <div class="card" style="margin-bottom:14px">
         <div class="fr3">
           <div class="fg"><label>Qtd</label><select id="cfg-qtd"><option value="10">10</option><option value="20" selected>20</option><option value="30">30</option><option value="50">50</option></select></div>
-          <div class="fg"><label>Matéria</label><select id="cfg-mat"><option value="">Todas</option></select></div>
+          <div class="fg"><label>Matéria</label><select id="cfg-mat" onchange="syncFiltroTopico()"><option value="">Todas</option></select></div>
           <div class="fg"><label>Nível</label><select id="cfg-niv"><option value="">Todos</option><option value="facil">Fácil</option><option value="medio">Médio</option><option value="dificil">Difícil</option></select></div>
         </div>
+        <div class="fr3" style="margin-top:8px">
+          <div class="fg"><label>Tópico</label><select id="cfg-top" onchange="syncFiltroSubtopico()"><option value="">Todos</option></select></div>
+          <div class="fg"><label>Subtópico</label><select id="cfg-sub"><option value="">Todos</option></select></div>
+          <div class="fg"></div>
+        </div>
       </div>
-      <button class="btn btn-primary" style="width:100%;padding:13px;font-size:15px" onclick="startSession()">⚡ Iniciar Sessão</button>
+      <div style="display:flex;gap:10px;margin-bottom:0">
+        <button class="btn btn-primary" style="flex:1;padding:13px;font-size:15px" onclick="startSession()">⚡ Iniciar Sessão</button>
+        <button class="btn btn-ghost" style="padding:13px;font-size:13px;white-space:nowrap" onclick="startSimuladoOficial()" title="Monta prova com os pesos reais do edital">🎯 Simulado Oficial</button>
+      </div>
     </div>
   </div>
   <div class="q-session" id="q-session">
@@ -1383,10 +1391,12 @@ function calcTaxa(qs) {
 // ═══════════════════════════════════════
 // MOTOR DE QUESTÕES
 // ═══════════════════════════════════════
-function selecionarQuestoes(modo, qtd, matFilter, nivFilter) {
+function selecionarQuestoes(modo, qtd, matFilter, nivFilter, topFilter, subFilter) {
   var pool = questionsDoConcurso();
   if(matFilter) pool=pool.filter(q=>q.materia===matFilter);
   if(nivFilter) pool=pool.filter(q=>q.nivel===nivFilter);
+  if(topFilter) pool=pool.filter(q=>q.topico===topFilter);
+  if(subFilter) pool=pool.filter(q=>q.subtopico===subFilter);
 
   if(modo==='somente_erros') {
     pool=pool.filter(q=>q.status==='erro'||q.status==='duvida');
@@ -1404,6 +1414,74 @@ function selecionarQuestoes(modo, qtd, matFilter, nivFilter) {
   return pool.sort(()=>Math.random()-.5).slice(0,qtd);
 }
 
+function syncFiltroTopico() {
+  var matId = document.getElementById('cfg-mat')?.value||'';
+  var tops = matId ? topicos.filter(t=>t.concursoId===currentConcursoId&&t.materiaId===matId) : [];
+  var el = document.getElementById('cfg-top');
+  if(!el) return;
+  el.innerHTML = '<option value="">Todos</option>'+tops.map(t=>'<option value="'+t.id+'">'+t.nome+'</option>').join('');
+  var subEl = document.getElementById('cfg-sub');
+  if(subEl) subEl.innerHTML = '<option value="">Todos</option>';
+}
+
+function syncFiltroSubtopico() {
+  var topId = document.getElementById('cfg-top')?.value||'';
+  var top = topicos.find(t=>t.id===topId);
+  var subs = (top&&top.subtopicos)||[];
+  var el = document.getElementById('cfg-sub');
+  if(!el) return;
+  el.innerHTML = '<option value="">Todos</option>'+subs.map(s=>'<option value="'+s.id+'">'+s.nome+'</option>').join('');
+}
+
+function startSimuladoOficial() {
+  var pool = questionsDoConcurso();
+  if(!pool.length){ toast('Nenhuma questão cadastrada!'); return; }
+
+  // Monta prova respeitando pesos do edital Fiscal Senador Canedo
+  var mats = materiasDoConcurso();
+  function getMat(keyword) {
+    return mats.find(m=>m.name.toLowerCase().includes(keyword.toLowerCase()));
+  }
+  var matFiscal  = getMat('fiscal') || getMat('serviços urbanos') || getMat('urban');
+  var matLeg     = getMat('legisla') || getMat('lei');
+  var matPort    = getMat('portugu') || getMat('língua');
+  var matRlm     = getMat('racioc') || getMat('lógica') || getMat('matem');
+  var matInfo    = getMat('informat') || getMat('tecnolog');
+
+  var blocos = [
+    { mat: matFiscal,  qtd: 20, label: 'Fiscal de Serviços Urbanos' },
+    { mat: matLeg,     qtd: 10, label: 'Legislação Aplicada' },
+    { mat: matPort,    qtd: 10, label: 'Língua Portuguesa' },
+    { mat: matRlm,     qtd: 5,  label: 'Raciocínio Lógico-Matemático' },
+    { mat: matInfo,    qtd: 5,  label: 'Informática' },
+  ];
+
+  var qs = [];
+  var aviso = [];
+  blocos.forEach(function(b) {
+    var p = b.mat ? pool.filter(q=>q.materia===b.mat.id) : [];
+    p = p.sort(()=>Math.random()-.5);
+    var pegou = p.slice(0, b.qtd);
+    if(pegou.length < b.qtd) aviso.push(b.label+': '+pegou.length+'/'+b.qtd);
+    qs = qs.concat(pegou);
+  });
+
+  if(!qs.length){ toast('Sem questões suficientes para o simulado!'); return; }
+
+  // Embaralha mantendo proporção
+  qs = qs.sort(()=>Math.random()-.5);
+
+  if(aviso.length) toast('⚠️ Questões insuficientes em: '+aviso.join(', '));
+
+  session = {qs, mode:'prova_abcd', cur:0, corr:0, erros:0, simuladoOficial:true};
+  goTo('responder', document.querySelectorAll('.nb')[1]);
+  document.getElementById('resp-setup').style.display='none';
+  document.getElementById('q-session').classList.add('active');
+  document.getElementById('q-resultado').style.display='none';
+  renderSessQ();
+  toast('🎯 Simulado Oficial — '+qs.length+' questões');
+}
+
 // ═══════════════════════════════════════
 // SESSÃO
 // ═══════════════════════════════════════
@@ -1419,7 +1497,9 @@ function startSession(modeOv) {
   var qtd =parseInt(document.getElementById('cfg-qtd')?.value||20);
   var mat =document.getElementById('cfg-mat')?.value||'';
   var niv =document.getElementById('cfg-niv')?.value||'';
-  var qs  =selecionarQuestoes(mode,qtd,mat,niv);
+  var top =document.getElementById('cfg-top')?.value||'';
+  var sub =document.getElementById('cfg-sub')?.value||'';
+  var qs  =selecionarQuestoes(mode,qtd,mat,niv,top,sub);
   if(!qs.length){toast('Nenhuma questão disponível com esses filtros');return;}
   session={qs,mode,cur:0,corr:0,erros:0};
   goTo('responder',document.querySelectorAll('.nb')[1]);
@@ -1986,6 +2066,7 @@ function syncSelectsMaterias(){
     el.value=v||'';
   });
   syncSelectsTopicos();
+  syncFiltroTopico();
 }
 
 function goTo(id, btn) {
