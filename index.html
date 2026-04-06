@@ -525,6 +525,21 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
 .edital-subtopico:last-child{border-bottom:none;}
 .edital-subtopico-name{font-size:12px;color:var(--muted);flex:1;}
 .edital-subtopico-stats{font-size:11px;font-family:var(--fm);white-space:nowrap;}
+/* ── PLANNER REVISÕES ── */
+.rev-section{margin-bottom:18px;}
+.rev-section-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:8px;padding:0 2px;}
+.rev-table{width:100%;border-collapse:collapse;background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.rev-table th{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;padding:8px 14px;text-align:left;background:var(--bg3);border-bottom:1px solid var(--border);}
+.rev-table td{font-size:13px;padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.rev-table tr:last-child td{border-bottom:none;}
+.rev-table tr:hover td{background:var(--bg3);}
+.rev-row-atrasado td:first-child{border-left:3px solid var(--red);}
+.rev-row-hoje td:first-child{border-left:3px solid var(--amber);}
+.rev-row-ok td:first-child{border-left:3px solid var(--green);}
+.rev-status-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;white-space:nowrap;}
+.rev-btn{font-size:11px;padding:4px 12px;border-radius:6px;background:var(--blue-l);color:var(--blue);border:1px solid rgba(79,124,255,.2);cursor:pointer;font-family:var(--ff);font-weight:600;white-space:nowrap;}
+.rev-btn:hover{background:var(--blue);color:#fff;}
+.rev-empty{text-align:center;padding:30px;color:var(--muted);font-size:13px;}
 /* ── PLANO DO DIA ── */
 .plano-item{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;cursor:pointer;transition:background .15s;}
 .plano-item:hover{background:var(--bg3);}
@@ -931,28 +946,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
     <button class="btn btn-primary btn-sm" onclick="goTo('admin',document.querySelectorAll('.nb')[6]);setTimeout(()=>adminTab(document.querySelectorAll('.at')[2],'atp-conc'),100)">⚙️ Data do concurso</button>
   </div>
   <div id="planner-alertas" style="margin-bottom:14px"></div>
-  <div class="kanban-board">
-    <div class="kanban-col col-todo">
-      <div class="kanban-col-header"><span style="color:var(--muted)">○</span><span class="kanban-col-title" style="color:var(--muted)">A Fazer</span><span class="kanban-col-count" id="count-todo">0</span></div>
-      <div class="kanban-cards" id="cards-todo"></div>
-      <button class="kanban-add-btn" onclick="openAddCard('todo')">+ Adicionar tópico</button>
-    </div>
-    <div class="kanban-col col-doing">
-      <div class="kanban-col-header"><span style="color:var(--blue)">◐</span><span class="kanban-col-title" style="color:var(--blue)">Estudando</span><span class="kanban-col-count" id="count-doing">0</span></div>
-      <div class="kanban-cards" id="cards-doing"></div>
-      <button class="kanban-add-btn" onclick="openAddCard('doing')">+ Adicionar tópico</button>
-    </div>
-    <div class="kanban-col col-review">
-      <div class="kanban-col-header"><span style="color:var(--amber)">↻</span><span class="kanban-col-title" style="color:var(--amber)">Revisando</span><span class="kanban-col-count" id="count-review">0</span></div>
-      <div class="kanban-cards" id="cards-review"></div>
-      <button class="kanban-add-btn" onclick="openAddCard('review')">+ Adicionar tópico</button>
-    </div>
-    <div class="kanban-col col-done">
-      <div class="kanban-col-header"><span style="color:var(--green)">✓</span><span class="kanban-col-title" style="color:var(--green)">Concluído</span><span class="kanban-col-count" id="count-done">0</span></div>
-      <div class="kanban-cards" id="cards-done"></div>
-      <button class="kanban-add-btn" onclick="openAddCard('done')">+ Adicionar tópico</button>
-    </div>
-  </div>
+  <div id="planner-revisoes"></div>
 </div>
 
 <!-- ══ EDITAL ══ -->
@@ -2406,7 +2400,7 @@ function renderPlanner() {
   var dataEl   = document.getElementById('planner-data-info');
   var cntBadge = document.getElementById('countdown-badge');
   var cntNum   = document.getElementById('countdown-num');
-  var hoje2    = TODAY();
+  var hoje     = TODAY();
 
   if(c) {
     if(nomeEl) nomeEl.textContent = (c.icon||'🏆')+' '+c.name;
@@ -2422,72 +2416,101 @@ function renderPlanner() {
       if(cntNum) cntNum.textContent='—';
       if(dataEl) dataEl.textContent='Configure a data da prova em Admin → Concursos';
     }
-  } else {
-    if(nomeEl) nomeEl.textContent='Selecione um concurso';
-    if(cntNum) cntNum.textContent='—';
   }
 
-  var cards = kanbanCards.filter(function(k){return k.concursoId===currentConcursoId;});
-  var qs    = questionsDoConcurso();
-  var alertas=[];
-  cards.forEach(function(card){
-    if(card.status!=='done' && card.prazo && card.prazo<hoje2) {
-      alertas.push({tipo:'danger',msg:'<strong>'+card.titulo+'</strong> está atrasado!'});
+  var qs   = questionsDoConcurso();
+  var tops = topicos.filter(function(t){return t.concursoId===currentConcursoId;});
+
+  // Monta dados de revisão por tópico
+  var linhas = [];
+  tops.forEach(function(top) {
+    var qsTop = qs.filter(function(q){return q.topico===top.id && q.vezesRespondida>0;});
+    if(!qsTop.length) return; // nunca estudado, não aparece no planner
+
+    var pendentes = qsTop.filter(function(q){return q.proximaRevisao<=hoje;});
+    var proximas  = qsTop.filter(function(q){return q.proximaRevisao>hoje;});
+    var atrasadas = qsTop.filter(function(q){return q.proximaRevisao<hoje;});
+
+    // Próxima revisão do grupo
+    var proxDatas = proximas.map(function(q){return q.proximaRevisao;}).sort();
+    var proxData  = proxDatas.length ? proxDatas[0] : null;
+
+    var mat = materias.find(function(m){return m.id===top.materiaId;});
+    var pct = qsTop.length>0 ? Math.round((qsTop.filter(function(q){return q.status==='acerto';}).length/qsTop.length)*100) : 0;
+
+    if(atrasadas.length>0) {
+      linhas.push({top, mat, pct, qtd: atrasadas.length, tipo:'atrasado', proxData, topId: top.id});
+    }
+    if(pendentes.length>0 && atrasadas.length===0) {
+      linhas.push({top, mat, pct, qtd: pendentes.length, tipo:'hoje', proxData, topId: top.id});
+    }
+    if(proximas.length>0 && pendentes.length===0 && atrasadas.length===0) {
+      linhas.push({top, mat, pct, qtd: proximas.length, tipo:'ok', proxData, topId: top.id});
     }
   });
-  var revisoesPend=qs.filter(function(q){return q.status==='erro'||q.status==='duvida';});
-  if(revisoesPend.length>0) alertas.push({tipo:'info',msg:'🔄 <strong>'+revisoesPend.length+'</strong> questão(ões) aguardam revisão espaçada.'});
 
-  var alertasEl=document.getElementById('planner-alertas');
-  if(alertasEl) alertasEl.innerHTML=alertas.map(function(a){
-    var bg=a.tipo==='danger'?'var(--red-l)':'var(--blue-l)';
-    var cor=a.tipo==='danger'?'var(--red)':'var(--blue)';
-    var brd=a.tipo==='danger'?'rgba(255,77,106,.2)':'rgba(79,124,255,.2)';
-    return '<div style="background:'+bg+';border:1px solid '+brd+';border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:13px;color:'+cor+'">'+a.msg+'</div>';
-  }).join('');
+  // Ordenar: atrasado > hoje > ok
+  var ordem = {atrasado:0, hoje:1, ok:2};
+  linhas.sort(function(a,b){return ordem[a.tipo]-ordem[b.tipo];});
 
-  var autoCards=revisoesPend.slice(0,3).map(function(q){
-    var m=materias.find(function(x){return x.id===q.materia;});
-    return {id:'auto_'+q.id,titulo:q.text.slice(0,55)+(q.text.length>55?'...':''),materiaId:q.materia,status:'review',isAuto:true,matNome:m?m.icon+' '+m.name:''};
-  });
+  var atrasadas = linhas.filter(function(l){return l.tipo==='atrasado';});
+  var hoje_list = linhas.filter(function(l){return l.tipo==='hoje';});
+  var proximas_list = linhas.filter(function(l){return l.tipo==='ok';});
 
-  var colNames={todo:'A Fazer',doing:'Estudando',review:'Revisando',done:'Concluído'};
-  ['todo','doing','review','done'].forEach(function(col){
-    var colCards=cards.filter(function(c){return c.status===col;});
-    if(col==='review') colCards=autoCards.concat(colCards);
-    var countEl=document.getElementById('count-'+col);
-    var cardsEl=document.getElementById('cards-'+col);
-    if(countEl) countEl.textContent=colCards.length;
-    if(!cardsEl) return;
-    if(!colCards.length){
-      cardsEl.innerHTML='<div style="text-align:center;padding:20px;color:var(--muted);font-size:12px">Nenhum card aqui</div>';
-      return;
+  function mkRow(l) {
+    var matNome = l.mat ? (l.mat.icon||'📚')+' '+l.mat.name : '—';
+    var badge, cor;
+    if(l.tipo==='atrasado') {
+      badge = '<span class="rev-status-badge" style="background:var(--red-l);color:var(--red)">🔴 Atrasado</span>';
+    } else if(l.tipo==='hoje') {
+      badge = '<span class="rev-status-badge" style="background:var(--amber-l);color:var(--amber)">🟡 Revisar hoje</span>';
+    } else {
+      var diasFalta = l.proxData ? Math.round((new Date(l.proxData)-new Date())/(1000*60*60*24)) : '—';
+      badge = '<span class="rev-status-badge" style="background:var(--green-l);color:var(--green)">🟢 em '+diasFalta+'d</span>';
     }
-    cardsEl.innerHTML=colCards.map(function(card){
-      var m=materias.find(function(x){return x.id===card.materiaId;});
-      var isAtrasado=card.prazo&&card.prazo<hoje2&&col!=='done';
-      var _onclick = card.isAuto ? 'goToErros()' : 'openEditCard(\'' + card.id + '\''+')';
-      var statusOpts=['todo','doing','review','done'].map(function(s){
-        return '<option value="'+s+'"'+(s===col?' selected':'')+'>'+colNames[s]+'</option>';
-      }).join('');
-      return '<div class="kanban-card '+(isAtrasado?'atrasado':'')+' '+(card.isAuto?'revisao-auto':'')+'" onclick="'+_onclick+'">'+
-        (card.isAuto?'<div style="font-size:10px;color:var(--amber);font-weight:700;margin-bottom:4px">↻ REVISÃO AUTOMÁTICA</div>':'')+
-        '<div class="kc-titulo">'+card.titulo+'</div>'+
-        ((m||card.matNome)?'<div class="kc-materia">'+(m?m.icon+' '+m.name:card.matNome)+'</div>':'')+
-        '<div class="kc-footer">'+
-          (card.prazo?'<span class="kc-badge" style="background:var(--bg2);color:var(--muted)">📅 '+new Date(card.prazo+'T12:00:00').toLocaleDateString('pt-BR')+'</span>':'')+
-          (isAtrasado?'<span class="kc-alerta">⚠ ATRASADO</span>':'')+
-          (card.metaQ?'<span class="kc-badge" style="background:var(--blue-l);color:var(--blue)">Meta: '+card.metaQ+'q</span>':'')+
-        '</div>'+
-        (!card.isAuto?'<div class="kc-status-wrap" onclick="event.stopPropagation()"><select class="kc-status-select" data-id="'+card.id+'" onchange="moverCard(this.dataset.id,this.value)">'+statusOpts+'</select></div>':'')+
-      '</div>';
-    }).join('');
-  });
+    return '<tr class="rev-row-'+l.tipo+'">'
+      +'<td style="font-weight:600;max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+l.top.nome+'</td>'
+      +'<td style="color:var(--muted);font-size:12px">'+matNome+'</td>'
+      +'<td style="text-align:center;font-weight:700;font-family:var(--fm)">'+l.qtd+'</td>'
+      +'<td style="text-align:center;font-family:var(--fm);color:'+(l.pct>=75?'var(--green)':l.pct>=50?'var(--amber)':'var(--red)')+'">'+l.pct+'%</td>'
+      +'<td>'+badge+'</td>'
+      +'<td><button class="rev-btn" onclick="iniciarPorTopico(\''+l.topId+'\')">▶ Revisar</button></td>'
+    +'</tr>';
+  }
 
-  var mats=materiasDoConcurso();
-  var cardMatEl=document.getElementById('card-materia');
-  if(cardMatEl) cardMatEl.innerHTML='<option value="">Nenhuma</option>'+mats.map(function(m){return '<option value="'+m.id+'">'+(m.icon||'📚')+' '+m.name+'</option>';}).join('');
+  function mkTable(rows) {
+    if(!rows.length) return '';
+    return '<table class="rev-table">'
+      +'<thead><tr>'
+      +'<th>Tópico</th><th>Matéria</th><th style="text-align:center">Questões</th>'
+      +'<th style="text-align:center">Acerto</th><th>Status</th><th></th>'
+      +'</tr></thead>'
+      +'<tbody>'+rows.map(mkRow).join('')+'</tbody>'
+      +'</table>';
+  }
+
+  var html = '';
+
+  if(!linhas.length) {
+    html = '<div class="rev-empty">📭 Nenhuma revisão agendada ainda.<br><span style="font-size:12px">Responda questões para gerar revisões espaçadas automaticamente.</span></div>';
+  } else {
+    if(atrasadas.length) {
+      html += '<div class="rev-section"><div class="rev-section-title" style="color:var(--red)">🔴 Atrasadas — '+atrasadas.length+' tópico(s)</div>'+mkTable(atrasadas)+'</div>';
+    }
+    if(hoje_list.length) {
+      html += '<div class="rev-section"><div class="rev-section-title" style="color:var(--amber)">🟡 Revisar hoje — '+hoje_list.length+' tópico(s)</div>'+mkTable(hoje_list)+'</div>';
+    }
+    if(proximas_list.length) {
+      html += '<div class="rev-section"><div class="rev-section-title" style="color:var(--green)">🟢 Próximas revisões — '+proximas_list.length+' tópico(s)</div>'+mkTable(proximas_list)+'</div>';
+    }
+  }
+
+  var alertasEl = document.getElementById('planner-alertas');
+  if(alertasEl) alertasEl.innerHTML='';
+  var rev = document.getElementById('planner-revisoes');
+  if(rev) rev.innerHTML = html;
 }
+
 
 function goToErros() {
   goTo('erros', document.querySelectorAll('.nb')[4]);
