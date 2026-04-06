@@ -525,7 +525,23 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
 .edital-subtopico:last-child{border-bottom:none;}
 .edital-subtopico-name{font-size:12px;color:var(--muted);flex:1;}
 .edital-subtopico-stats{font-size:11px;font-family:var(--fm);white-space:nowrap;}
-/* ── TRIAGEM ── */
+/* ── PLANO DO DIA ── */
+.plano-item{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;cursor:pointer;transition:background .15s;}
+.plano-item:hover{background:var(--bg3);}
+.plano-item.urgente{border-left:3px solid var(--red);}
+.plano-item.fraco{border-left:3px solid var(--amber);}
+.plano-item.ok{border-left:3px solid var(--green);}
+.plano-icon{font-size:18px;flex-shrink:0;}
+.plano-info{flex:1;min-width:0;}
+.plano-topico{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.plano-meta{font-size:11px;color:var(--muted);margin-top:2px;}
+.plano-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;white-space:nowrap;flex-shrink:0;}
+.plano-btn{font-size:11px;padding:4px 10px;border-radius:6px;background:var(--blue-l);color:var(--blue);border:1px solid rgba(79,124,255,.2);cursor:pointer;font-family:var(--ff);font-weight:600;white-space:nowrap;flex-shrink:0;}
+.plano-btn:hover{background:var(--blue);color:#fff;}
+/* ── EDITAL QUICK BTN ── */
+.edital-quick-btn{background:var(--blue-l);border:1px solid rgba(79,124,255,.2);color:var(--blue);border-radius:6px;padding:3px 8px;font-size:10px;font-weight:700;cursor:pointer;font-family:var(--ff);white-space:nowrap;flex-shrink:0;transition:all .15s;}
+.edital-quick-btn:hover{background:var(--blue);color:#fff;}
+</style>
 .triagem-mat-group{margin-bottom:18px;}
 .triagem-mat-header{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg3);border:1px solid var(--border);border-radius:8px 8px 0 0;cursor:pointer;user-select:none;}
 .triagem-mat-header:hover{background:var(--border);}
@@ -628,6 +644,13 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
     <div class="meta-bar"><div class="meta-fill" id="meta-fill" style="width:0%"></div></div>
   </div>
   <div class="dash-grid" id="dash-stats"></div>
+
+  <!-- PLANO DO DIA -->
+  <div id="plano-dia-wrap" style="margin-top:12px;display:none">
+    <div class="sec-label" style="margin-bottom:8px">📅 Plano do dia</div>
+    <div id="plano-dia-list"></div>
+  </div>
+
   <div class="chart-wrap" style="margin-top:12px">
     <div class="sec-label">Acertos — últimos 7 dias</div>
     <div class="chart-bars" id="chart-bars"></div>
@@ -1268,11 +1291,12 @@ function renderDash() {
   var pct  = Math.min(100,Math.round((hist.respondidas/meta)*100));
   var qs   = questionsDoConcurso();
   var erros= qs.filter(q=>q.status==='erro').length;
-  var pend = qs.filter(q=>q.proximaRevisao<=hoje).length;
+  var pend = qs.filter(q=>q.proximaRevisao<=hoje && q.vezesRespondida>0).length;
   var taxa = calcTaxa(qs);
 
   // ── IA MENTORA ──
   renderMentora(c, hoje, hist, meta, pct, qs, erros, pend, taxa);
+  renderPlanoDia();
 
   document.getElementById('meta-sub').textContent  = hist.respondidas+'/'+meta+' questões';
   document.getElementById('meta-pct').textContent  = pct+'%';
@@ -1298,6 +1322,77 @@ function renderDash() {
 
   document.getElementById('qa-pend').textContent  = pend ? pend+' pendentes' : 'Em dia! 🎉';
   document.getElementById('qa-erros').textContent = erros+' questões';
+}
+
+function renderPlanoDia() {
+  var wrap = document.getElementById('plano-dia-wrap');
+  var list = document.getElementById('plano-dia-list');
+  if(!wrap||!list) return;
+
+  var qs = questionsDoConcurso();
+  var tops = topicos.filter(t=>t.concursoId===currentConcursoId);
+  if(!tops.length){ wrap.style.display='none'; return; }
+
+  // Calcular score de urgência por tópico
+  var scored = tops.map(function(top) {
+    var qsTop = qs.filter(q=>q.topico===top.id && q.vezesRespondida>0);
+    var qsTotal = qs.filter(q=>q.topico===top.id);
+    var nunca = qsTotal.length > 0 && qsTop.length === 0;
+    var pct = qsTop.length > 0 ? Math.round((qsTop.filter(q=>q.status==='acerto').length/qsTop.length)*100) : 0;
+    var mat = materias.find(m=>m.id===top.materiaId);
+
+    // Score: nunca estudado = 0, abaixo 75% = pct, ok = 100+pct
+    var score = nunca ? -1 : (pct < 75 ? pct : 100 + pct);
+    var tipo = nunca ? 'urgente' : (pct < 75 ? 'fraco' : 'ok');
+    var temQuestoes = qsTotal.length > 0;
+
+    return {top, mat, pct, nunca, tipo, score, temQuestoes, totalQ: qsTotal.length, respondidas: qsTop.length};
+  });
+
+  // Ordena: nunca estudado primeiro, depois % mais baixo
+  scored = scored.filter(s=>s.temQuestoes).sort((a,b)=>a.score-b.score);
+
+  // Pega os 5 mais urgentes
+  var plano = scored.slice(0,5);
+  if(!plano.length){ wrap.style.display='none'; return; }
+
+  wrap.style.display='';
+  list.innerHTML = plano.map(function(s) {
+    var icon = s.nunca ? '🔴' : (s.pct < 75 ? '🟡' : '🟢');
+    var badge = s.nunca
+      ? '<span class="plano-badge" style="background:var(--red-l);color:var(--red)">Nunca estudado</span>'
+      : s.pct < 75
+        ? '<span class="plano-badge" style="background:var(--amber-l);color:var(--amber)">'+s.pct+'% acerto</span>'
+        : '<span class="plano-badge" style="background:var(--green-l);color:var(--green)">'+s.pct+'% acerto</span>';
+    var matNome = s.mat ? (s.mat.icon||'📚')+' '+s.mat.name : '';
+    var sub = s.nunca ? s.totalQ+' questões disponíveis · nunca respondido' : s.respondidas+'/'+s.totalQ+' questões respondidas';
+
+    return '<div class="plano-item '+s.tipo+'" onclick="iniciarPorTopico(\''+s.top.id+'\')">'
+      +'<span class="plano-icon">'+icon+'</span>'
+      +'<div class="plano-info">'
+        +'<div class="plano-topico">'+s.top.nome+'</div>'
+        +'<div class="plano-meta">'+matNome+' · '+sub+'</div>'
+      +'</div>'
+      +badge
+      +'<button class="plano-btn" onclick="event.stopPropagation();iniciarPorTopico(\''+s.top.id+'\')">▶ Estudar</button>'
+    +'</div>';
+  }).join('');
+}
+
+function iniciarPorTopico(topId) {
+  var top = topicos.find(t=>t.id===topId);
+  if(!top) return;
+  var mat = materias.find(m=>m.id===top.materiaId);
+  // Navega para responder e pré-seleciona matéria/tópico
+  goTo('responder', document.querySelectorAll('.nb')[1]);
+  setTimeout(function() {
+    var cfgMat = document.getElementById('cfg-mat');
+    if(cfgMat && mat) { cfgMat.value=mat.id; syncFiltroTopico(); }
+    setTimeout(function() {
+      var cfgTop = document.getElementById('cfg-top');
+      if(cfgTop) { cfgTop.value=topId; syncFiltroSubtopico(); }
+    }, 50);
+  }, 50);
 }
 
 function renderMentora(c, hoje, hist, meta, pct, qs, erros, pend, taxa) {
@@ -1636,7 +1731,9 @@ function showResultado() {
   document.getElementById('res-corr').textContent=corr;
   document.getElementById('res-erros').textContent=erros;
   document.getElementById('res-liq').textContent=corr-erros;
-  session=null; renderDash();
+  session=null;
+  renderDash(); // atualiza IA e plano do dia
+  renderPlanoDia(); // garante atualização do plano
 }
 
 // ═══════════════════════════════════════
@@ -2522,6 +2619,7 @@ function renderEdital() {
           pctTop>=70?`<span class="edital-topico-badge" style="background:var(--green-l);color:var(--green)">✓ ok</span>`:
           pctTop>=40?`<span class="edital-topico-badge" style="background:var(--amber-l);color:var(--amber)">revisar</span>`:
           `<span class="edital-topico-badge" style="background:var(--red-l);color:var(--red)">⚠ fraco</span>`}
+          ${totalTop>0?`<button class="edital-quick-btn" onclick="event.stopPropagation();iniciarPorTopico('${top.id}')" title="Responder questões deste tópico">🎯</button>`:''}
         </div>`;
 
       if((top.subtopicos||[]).length) {
