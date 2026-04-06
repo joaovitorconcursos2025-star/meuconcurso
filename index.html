@@ -1618,6 +1618,11 @@ function renderSessQ() {
         <span class="tag tag-${q.nivel||'medio'}">${q.nivel||'médio'}</span>
         ${m?`<span class="tag" style="background:var(--bg3);color:var(--muted)">${m.icon||'📚'} ${m.name}</span>`:''}
         ${q.assunto?`<span style="font-size:11px;color:var(--muted)">${q.assunto}</span>`:''}
+        ${q.vezesRespondida>0?`<span style="font-size:10px;background:var(--bg3);border:1px solid var(--border);padding:2px 8px;border-radius:4px;font-family:var(--fm);display:flex;gap:5px;align-items:center">
+          <span style="color:var(--muted)">${q.vezesRespondida}x</span>
+          <span style="color:var(--green)">✓${q.vezesAcertada||0}</span>
+          <span style="color:var(--red)">✗${(q.vezesRespondida||0)-(q.vezesAcertada||0)}</span>
+        </span>`:''}
         <span style="font-size:10px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:2px 7px;border-radius:4px;font-weight:700;margin-left:auto">${isVE?'C/E':'ABCD'}</span>
         <span class="tag tag-${q.status||'nova'}">${q.status||'nova'}</span>
       </div>
