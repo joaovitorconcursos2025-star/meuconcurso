@@ -2308,79 +2308,78 @@ async function handleLogin(user){
 async function loadComoConvidado(email) {
   try {
     setSyncSt('🔄 Verificando acesso...');
-    // Busca convites no Firebase do Super Admin
-    var adminRef = db.collection('usuarios').doc(SUPER_ADMIN_EMAIL.replace(/[@.]/g,'_'));
 
-    // Busca a lista de convites
-    var convDoc = await adminRef.collection('dados').doc('convites').get();
-    var convites = convDoc.exists ? (convDoc.data().value || []) : [];
+    // Busca convites no Firebase do Super Admin usando o UID dele
+    // O UID do admin é armazenado após primeiro login dele
+    var adminUID = await getAdminUID();
+    if(!adminUID) {
+      mostrarSemAcesso('Não foi possível conectar ao servidor.');
+      return;
+    }
+
+    var convDoc = await db.collection('usuarios').doc(adminUID)
+      .collection('dados').doc('convites').get();
+    var todosConvites = convDoc.exists ? (convDoc.data().value || []) : [];
 
     // Filtra concursos que esse email tem acesso
-    var concursosPermitidos = convites
+    var concursosPermitidos = todosConvites
       .filter(function(c){ return c.email === email; })
       .map(function(c){ return c.concursoId; });
 
     if(!concursosPermitidos.length) {
-      document.getElementById('sec-concursos').innerHTML = `
-        <div style="text-align:center;padding:60px 20px">
-          <div style="font-size:48px;margin-bottom:16px">🔒</div>
-          <div style="font-size:18px;font-weight:700;margin-bottom:8px">Acesso não autorizado</div>
-          <div style="font-size:13px;color:var(--muted)">Você ainda não foi convidado para nenhum concurso.<br>Peça ao administrador para te convidar.</div>
-        </div>`;
-      document.getElementById('login-screen').style.display = 'none';
+      mostrarSemAcesso('Você ainda não foi convidado para nenhum concurso.\nPeça ao administrador para te convidar.');
       setSyncSt('');
       return;
     }
 
-    // Carrega dados do Super Admin (questões, matérias, tópicos, concursos)
-    var adminUid = await getAdminUid();
-    if(!adminUid) { setSyncSt('⚠️ Erro ao carregar dados'); return; }
-
-    var adminDataRef = db.collection('usuarios').doc(adminUid).collection('dados');
-
-    var [concDoc, matDoc, qDoc, topDoc] = await Promise.all([
-      adminDataRef.doc('concursos').get(),
-      adminDataRef.doc('materias').get(),
-      adminDataRef.doc('questions').get(),
-      adminDataRef.doc('topicos').get(),
-    ]);
-
-    var todosConc = concDoc.exists ? (concDoc.data().value||[]) : [];
-    concursos = todosConc.filter(function(c){ return concursosPermitidos.includes(c.id); });
-    materias  = matDoc.exists  ? (matDoc.data().value||[]).filter(function(m){ return concursosPermitidos.includes(m.concursoId); }) : [];
-    questions = qDoc.exists    ? (qDoc.data().value||[]).filter(function(q){ return concursosPermitidos.includes(q.concursoId); }) : [];
-    topicos   = topDoc.exists  ? (topDoc.data().value||[]).filter(function(t){ return concursosPermitidos.includes(t.concursoId); }) : [];
-
-    // Carrega progresso próprio do convidado
-    await loadAll(); // carrega historico, config, kanban, etc. do próprio usuário
-    // Restaura concursos/materias/questoes/topicos do admin (loadAll sobrescreve)
-    // Faz de novo após loadAll
+    // Carrega dados compartilhados do Admin
+    var adminDataRef = db.collection('usuarios').doc(adminUID).collection('dados');
     var [concDoc2, matDoc2, qDoc2, topDoc2] = await Promise.all([
       adminDataRef.doc('concursos').get(),
       adminDataRef.doc('materias').get(),
       adminDataRef.doc('questions').get(),
       adminDataRef.doc('topicos').get(),
     ]);
-    concursos = (concDoc2.exists ? (concDoc2.data().value||[]) : []).filter(function(c){ return concursosPermitidos.includes(c.id); });
-    materias  = (matDoc2.exists  ? (matDoc2.data().value||[]) : []).filter(function(m){ return concursosPermitidos.includes(m.concursoId); });
-    questions = (qDoc2.exists    ? (qDoc2.data().value||[]) : []).filter(function(q){ return concursosPermitidos.includes(q.concursoId); });
-    topicos   = (topDoc2.exists  ? (topDoc2.data().value||[]) : []).filter(function(t){ return concursosPermitidos.includes(t.concursoId); });
 
-    // Convidado não pode salvar questões/materias/topicos/concursos
+    concursos = (concDoc2.exists ? (concDoc2.data().value||[]) : [])
+      .filter(function(c){ return concursosPermitidos.includes(c.id); });
+    materias  = (matDoc2.exists  ? (matDoc2.data().value||[]) : [])
+      .filter(function(m){ return concursosPermitidos.includes(m.concursoId); });
+    questions = (qDoc2.exists    ? (qDoc2.data().value||[]) : [])
+      .filter(function(q){ return concursosPermitidos.includes(q.concursoId); });
+    topicos   = (topDoc2.exists  ? (topDoc2.data().value||[]) : [])
+      .filter(function(t){ return concursosPermitidos.includes(t.concursoId); });
+
+    // Carrega progresso pessoal do convidado
+    historico    = await cloudLoad('historico',   {});
+    config       = await cloudLoad('config',      {meta:50,sessaoQtd:20,diasAcerto1:3,diasAcerto2:7,diasErro:1,diasDuvida:2});
+    kanbanCards  = await cloudLoad('kanbanCards', []);
+
     modoConvidado = true;
-
-    setSyncSt('✅ Acesso liberado');
+    setSyncSt('✅ Conectado');
     renderConcursos();
   } catch(e) {
     console.error('Erro loadComoConvidado:', e);
-    setSyncSt('⚠️ Erro ao carregar');
+    mostrarSemAcesso('Erro ao carregar dados: '+e.message);
   }
 }
 
-async function getAdminUid() {
+function mostrarSemAcesso(msg) {
+  document.getElementById('sec-concursos').innerHTML =
+    '<div style="text-align:center;padding:60px 20px">'
+    +'<div style="font-size:48px;margin-bottom:16px">🔒</div>'
+    +'<div style="font-size:18px;font-weight:700;margin-bottom:8px">Acesso não autorizado</div>'
+    +'<div style="font-size:13px;color:var(--muted);white-space:pre-line">'+msg+'</div>'
+    +'</div>';
+}
+
+async function getAdminUID() {
   try {
-    // Busca UID do super admin via email armazenado em documento público
-    var snap = await db.collection('adminPublic').doc('info').get();
+    // O UID do admin é salvo no documento 'adminUID' dentro dos dados do admin
+    // Mas como não temos o UID ainda, usamos o email como identificador
+    // Busca em coleção indexada por email (sem caracteres especiais)
+    var emailKey = SUPER_ADMIN_EMAIL.replace(/[^a-z0-9]/gi,'_');
+    var snap = await db.collection('adminIndex').doc(emailKey).get();
     return snap.exists ? snap.data().uid : null;
   } catch(e) { return null; }
 }
@@ -2410,12 +2409,12 @@ var convites = []; // [{email, concursoId, concursoNome}]
 
 async function carregarConvites() {
   try {
-    var key = currentUser.uid;
-    var snap = await db.collection('usuarios').doc(key)
+    var snap = await db.collection('usuarios').doc(currentUser.uid)
       .collection('dados').doc('convites').get();
     convites = snap.exists ? (snap.data().value || []) : [];
-    // Salva UID público para convidados encontrarem
-    await db.collection('adminPublic').doc('info').set({uid: key, email: currentUser.email});
+    // Salva índice do admin para convidados encontrarem
+    var emailKey = currentUser.email.replace(/[^a-z0-9]/gi,'_');
+    await db.collection('adminIndex').doc(emailKey).set({uid: currentUser.uid});
   } catch(e) { convites = []; }
 }
 
