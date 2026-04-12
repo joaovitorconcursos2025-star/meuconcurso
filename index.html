@@ -1048,6 +1048,7 @@ var auth = firebase.auth();
 // ═══════════════════════════════════════
 var currentUser  = null;
 var isSuperAdmin = false;
+var modoConvidado = false;
 var currentConcursoId = null; // concurso selecionado
 
 // Dados do usuário atual
@@ -2382,9 +2383,6 @@ async function getAdminUID() {
     return snap.exists ? snap.data().uid : null;
   } catch(e) { return null; }
 }
-
-// Flag modo convidado — bloqueia save de dados compartilhados
-var modoConvidado = false;
 
 // Override save para convidados — só salva progresso pessoal
 var _saveOriginal = null;
