@@ -619,7 +619,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
     <button class="nb" onclick="goTo('erros',this)">Erros</button>
     <button class="nb" onclick="goTo('planner',this)">📅 Planner</button>
     <button class="nb" onclick="goTo('edital',this)">📋 Edital</button>
-    <button class="nb" onclick="goTo('admin',this)">Admin</button>
+    <button class="nb" id="btn-admin" onclick="goTo('admin',this)" style="display:none">Admin</button>
   </nav>
   <span id="sync-st"></span>
   <div id="auth-area"></div>
@@ -736,6 +736,30 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
       </div>
     </div>
   </div>
+
+  <!-- Convidados -->
+  <div class="atp" id="atp-convites">
+    <div style="margin-bottom:16px">
+      <div style="font-weight:700;font-size:15px;margin-bottom:4px">👥 Gerenciar Convidados</div>
+      <div style="font-size:12px;color:var(--muted)">Permita que outros usuários acessem seus concursos. Eles veem as questões e edital, mas não podem editar nada.</div>
+    </div>
+    <div class="card" style="margin-bottom:16px">
+      <div style="font-weight:600;font-size:13px;margin-bottom:12px">➕ Convidar usuário</div>
+      <div class="fg" style="margin-bottom:10px">
+        <label>Email do convidado</label>
+        <input type="email" id="conv-email" placeholder="email@exemplo.com" style="width:100%">
+      </div>
+      <div class="fg" style="margin-bottom:12px">
+        <label>Concurso que poderá acessar</label>
+        <select id="conv-conc" style="width:100%">
+          <option value="">-- Selecione --</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" onclick="adicionarConvite()">✉️ Adicionar convite</button>
+    </div>
+    <div id="convites-list"></div>
+  </div>
+
 </div>
 
 <!-- ══ BANCO ══ -->
@@ -769,6 +793,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
     <button class="at" onclick="adminTab(this,'atp-mat')">📚 Matérias</button>
     <button class="at" onclick="adminTab(this,'atp-conc')">🏆 Concursos</button>
     <button class="at" onclick="adminTab(this,'atp-cfg')">⚙️ Config</button>
+    <button class="at" onclick="adminTab(this,'atp-convites');renderConvites()">👥 Convidados</button>
   </div>
 
   <!-- Questões -->
@@ -1125,6 +1150,7 @@ async function loadAll() {
 }
 
 function save() {
+  if(modoConvidado) { saveConvidado(); return; }
   try {
     localStorage.setItem('mc3_data', JSON.stringify({concursos,materias,questions,topicos,kanbanCards,filaPendente,config,historico,nextQId,nextMId,nextCId,nextTId,nextKId}));
   } catch(e){}
@@ -1241,6 +1267,9 @@ function selecionarConcurso(id) {
   document.getElementById('concurso-badge').style.display = 'flex';
   document.getElementById('concurso-badge').textContent = '← '+c.name;
   document.getElementById('main-nav').style.display = 'flex';
+  // Mostra admin só pro super admin
+  var btnAdmin = document.getElementById('btn-admin');
+  if(btnAdmin) btnAdmin.style.display = isSuperAdmin ? '' : 'none';
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.getElementById('sec-dashboard').classList.add('active');
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
@@ -2142,6 +2171,7 @@ function resetAllData(){
 function renderAdmin(){
   renderQAdminList(); renderMatAdmin(); renderTopicoAdmin(); renderConcAdmin(); loadConfigUI(); syncSelectsMaterias();
   atualizarBadgeTriagem();
+  if(isSuperAdmin) renderConvites();
   var el=document.getElementById('super-admin-info');
   if(el&&isSuperAdmin) el.innerHTML=`<div class="super-admin-bar">⭐ Super Admin — você gerencia todos os dados do app.</div>`;
   else if(el) el.innerHTML='';
@@ -2257,10 +2287,204 @@ function renderAuthArea(user){
 async function handleLogin(user){
   currentUser = user;
   isSuperAdmin = (user.email === SUPER_ADMIN_EMAIL);
+
+  // Mostra/oculta botão Admin
+  var btnAdmin = document.getElementById('btn-admin');
+  if(btnAdmin) btnAdmin.style.display = isSuperAdmin ? '' : 'none';
+
   document.getElementById('login-screen').style.display = 'none';
   renderAuthArea(user);
-  await loadAll();
-  renderConcursos();
+
+  if(isSuperAdmin) {
+    // Super Admin — carrega dados normalmente
+    await loadAll();
+    renderConcursos();
+  } else {
+    // Convidado — busca no Firebase do Super Admin quais concursos pode acessar
+    await loadComoConvidado(user.email);
+  }
+}
+
+async function loadComoConvidado(email) {
+  try {
+    setSyncSt('🔄 Verificando acesso...');
+    // Busca convites no Firebase do Super Admin
+    var adminRef = db.collection('usuarios').doc(SUPER_ADMIN_EMAIL.replace(/[@.]/g,'_'));
+
+    // Busca a lista de convites
+    var convDoc = await adminRef.collection('dados').doc('convites').get();
+    var convites = convDoc.exists ? (convDoc.data().value || []) : [];
+
+    // Filtra concursos que esse email tem acesso
+    var concursosPermitidos = convites
+      .filter(function(c){ return c.email === email; })
+      .map(function(c){ return c.concursoId; });
+
+    if(!concursosPermitidos.length) {
+      document.getElementById('sec-concursos').innerHTML = `
+        <div style="text-align:center;padding:60px 20px">
+          <div style="font-size:48px;margin-bottom:16px">🔒</div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:8px">Acesso não autorizado</div>
+          <div style="font-size:13px;color:var(--muted)">Você ainda não foi convidado para nenhum concurso.<br>Peça ao administrador para te convidar.</div>
+        </div>`;
+      document.getElementById('login-screen').style.display = 'none';
+      setSyncSt('');
+      return;
+    }
+
+    // Carrega dados do Super Admin (questões, matérias, tópicos, concursos)
+    var adminUid = await getAdminUid();
+    if(!adminUid) { setSyncSt('⚠️ Erro ao carregar dados'); return; }
+
+    var adminDataRef = db.collection('usuarios').doc(adminUid).collection('dados');
+
+    var [concDoc, matDoc, qDoc, topDoc] = await Promise.all([
+      adminDataRef.doc('concursos').get(),
+      adminDataRef.doc('materias').get(),
+      adminDataRef.doc('questions').get(),
+      adminDataRef.doc('topicos').get(),
+    ]);
+
+    var todosConc = concDoc.exists ? (concDoc.data().value||[]) : [];
+    concursos = todosConc.filter(function(c){ return concursosPermitidos.includes(c.id); });
+    materias  = matDoc.exists  ? (matDoc.data().value||[]).filter(function(m){ return concursosPermitidos.includes(m.concursoId); }) : [];
+    questions = qDoc.exists    ? (qDoc.data().value||[]).filter(function(q){ return concursosPermitidos.includes(q.concursoId); }) : [];
+    topicos   = topDoc.exists  ? (topDoc.data().value||[]).filter(function(t){ return concursosPermitidos.includes(t.concursoId); }) : [];
+
+    // Carrega progresso próprio do convidado
+    await loadAll(); // carrega historico, config, kanban, etc. do próprio usuário
+    // Restaura concursos/materias/questoes/topicos do admin (loadAll sobrescreve)
+    // Faz de novo após loadAll
+    var [concDoc2, matDoc2, qDoc2, topDoc2] = await Promise.all([
+      adminDataRef.doc('concursos').get(),
+      adminDataRef.doc('materias').get(),
+      adminDataRef.doc('questions').get(),
+      adminDataRef.doc('topicos').get(),
+    ]);
+    concursos = (concDoc2.exists ? (concDoc2.data().value||[]) : []).filter(function(c){ return concursosPermitidos.includes(c.id); });
+    materias  = (matDoc2.exists  ? (matDoc2.data().value||[]) : []).filter(function(m){ return concursosPermitidos.includes(m.concursoId); });
+    questions = (qDoc2.exists    ? (qDoc2.data().value||[]) : []).filter(function(q){ return concursosPermitidos.includes(q.concursoId); });
+    topicos   = (topDoc2.exists  ? (topDoc2.data().value||[]) : []).filter(function(t){ return concursosPermitidos.includes(t.concursoId); });
+
+    // Convidado não pode salvar questões/materias/topicos/concursos
+    modoConvidado = true;
+
+    setSyncSt('✅ Acesso liberado');
+    renderConcursos();
+  } catch(e) {
+    console.error('Erro loadComoConvidado:', e);
+    setSyncSt('⚠️ Erro ao carregar');
+  }
+}
+
+async function getAdminUid() {
+  try {
+    // Busca UID do super admin via email armazenado em documento público
+    var snap = await db.collection('adminPublic').doc('info').get();
+    return snap.exists ? snap.data().uid : null;
+  } catch(e) { return null; }
+}
+
+// Flag modo convidado — bloqueia save de dados compartilhados
+var modoConvidado = false;
+
+// Override save para convidados — só salva progresso pessoal
+var _saveOriginal = null;
+function saveConvidado() {
+  // Salva apenas historico, config, kanbanCards (progresso pessoal)
+  try {
+    localStorage.setItem('mc3_data_guest', JSON.stringify({historico, config, kanbanCards}));
+  } catch(e){}
+  if(!currentUser) return;
+  Promise.all([
+    cloudSave('historico',   historico),
+    cloudSave('config',      config),
+    cloudSave('kanbanCards', kanbanCards),
+  ]).catch(function(){});
+}
+
+// ═══════════════════════════════════════
+// CONVITES (apenas Super Admin)
+// ═══════════════════════════════════════
+var convites = []; // [{email, concursoId, concursoNome}]
+
+async function carregarConvites() {
+  try {
+    var snap = await db.collection('usuarios').doc(currentUser.uid)
+      .collection('dados').doc('convites').get();
+    convites = snap.exists ? (snap.data().value || []) : [];
+
+    // Salva UID do admin em documento público para convidados encontrarem
+    await db.collection('adminPublic').doc('info').set({uid: currentUser.uid});
+  } catch(e) { convites = []; }
+}
+
+async function salvarConvites() {
+  try {
+    await db.collection('usuarios').doc(currentUser.uid)
+      .collection('dados').doc('convites').set({value: convites});
+  } catch(e) { toast('⚠️ Erro ao salvar convites'); }
+}
+
+async function adicionarConvite() {
+  var email = (document.getElementById('conv-email')?.value||'').trim().toLowerCase();
+  var concId = document.getElementById('conv-conc')?.value||'';
+  if(!email){ toast('Digite o email do convidado'); return; }
+  if(!concId){ toast('Selecione o concurso'); return; }
+  if(!email.includes('@')){ toast('Email inválido'); return; }
+
+  var conc = concursos.find(function(c){return c.id===concId;});
+  if(!conc){ toast('Concurso não encontrado'); return; }
+
+  // Verifica duplicata
+  var jaExiste = convites.some(function(c){return c.email===email&&c.concursoId===concId;});
+  if(jaExiste){ toast('Esse email já tem acesso a esse concurso'); return; }
+
+  convites.push({email: email, concursoId: concId, concursoNome: conc.name});
+  await salvarConvites();
+  document.getElementById('conv-email').value = '';
+  renderConvites();
+  toast('✅ Convite adicionado para '+email);
+}
+
+async function removerConvite(email, concId) {
+  if(!confirm('Remover acesso de '+email+' a esse concurso?')) return;
+  convites = convites.filter(function(c){return !(c.email===email&&c.concursoId===concId);});
+  await salvarConvites();
+  renderConvites();
+  toast('Acesso removido');
+}
+
+async function renderConvites() {
+  if(!isSuperAdmin) return;
+  await carregarConvites();
+
+  // Popula select de concursos
+  var sel = document.getElementById('conv-conc');
+  if(sel) {
+    sel.innerHTML = '<option value="">-- Selecione --</option>' +
+      concursos.map(function(c){return'<option value="'+c.id+'">'+(c.icon||'🏆')+' '+c.name+'</option>';}).join('');
+  }
+
+  var list = document.getElementById('convites-list');
+  if(!list) return;
+
+  if(!convites.length) {
+    list.innerHTML = '<div style="text-align:center;padding:24px;color:var(--muted);font-size:13px">Nenhum convidado ainda.</div>';
+    return;
+  }
+
+  list.innerHTML = '<div style="font-weight:600;font-size:13px;margin-bottom:10px">Convidados ativos</div>' +
+    convites.map(function(c){
+      return '<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:6px">'
+        +'<span style="font-size:18px">👤</span>'
+        +'<div style="flex:1">'
+          +'<div style="font-size:13px;font-weight:600">'+c.email+'</div>'
+          +'<div style="font-size:11px;color:var(--muted)">Acesso: '+c.concursoNome+'</div>'
+        +'</div>'
+        +'<button class="btn btn-red btn-sm" onclick="removerConvite(\''+c.email+'\',\''+c.concursoId+'\')">🗑 Remover</button>'
+      +'</div>';
+    }).join('');
 }
 
 auth.getRedirectResult().then(function(result){
@@ -2430,33 +2654,43 @@ function renderPlanner() {
   var linhas = [];
   tops.forEach(function(top) {
     var qsTop = qs.filter(function(q){return q.topico===top.id && q.vezesRespondida>0;});
-    if(!qsTop.length) return; // nunca estudado, não aparece no planner
+    if(!qsTop.length) return;
 
     var pendentes = qsTop.filter(function(q){return q.proximaRevisao<=hoje;});
     var proximas  = qsTop.filter(function(q){return q.proximaRevisao>hoje;});
     var atrasadas = qsTop.filter(function(q){return q.proximaRevisao<hoje;});
 
-    // Próxima revisão do grupo
     var proxDatas = proximas.map(function(q){return q.proximaRevisao;}).sort();
     var proxData  = proxDatas.length ? proxDatas[0] : null;
 
     var mat = materias.find(function(m){return m.id===top.materiaId;});
     var pct = qsTop.length>0 ? Math.round((qsTop.filter(function(q){return q.status==='acerto';}).length/qsTop.length)*100) : 0;
 
-    if(atrasadas.length>0) {
+    // 0% de acerto → sempre vermelho independente da data
+    var forcarVermelho = pct===0 && qsTop.length>0;
+
+    if(forcarVermelho) {
+      linhas.push({top, mat, pct, qtd: qsTop.length, tipo:'atrasado', proxData, topId: top.id});
+    } else if(atrasadas.length>0) {
       linhas.push({top, mat, pct, qtd: atrasadas.length, tipo:'atrasado', proxData, topId: top.id});
-    }
-    if(pendentes.length>0 && atrasadas.length===0) {
+    } else if(pendentes.length>0) {
       linhas.push({top, mat, pct, qtd: pendentes.length, tipo:'hoje', proxData, topId: top.id});
-    }
-    if(proximas.length>0 && pendentes.length===0 && atrasadas.length===0) {
+    } else if(proximas.length>0) {
       linhas.push({top, mat, pct, qtd: proximas.length, tipo:'ok', proxData, topId: top.id});
     }
   });
 
-  // Ordenar: atrasado > hoje > ok
-  var ordem = {atrasado:0, hoje:1, ok:2};
-  linhas.sort(function(a,b){return ordem[a.tipo]-ordem[b.tipo];});
+  // Ordenar: atrasado > hoje > ok(por data asc)
+  linhas.sort(function(a,b){
+    var ordem = {atrasado:0, hoje:1, ok:2};
+    if(ordem[a.tipo] !== ordem[b.tipo]) return ordem[a.tipo]-ordem[b.tipo];
+    // dentro do verde: ordena por data mais próxima primeiro
+    if(a.tipo==='ok' && b.tipo==='ok') {
+      var da = a.proxData||'9999'; var db = b.proxData||'9999';
+      return da<db?-1:da>db?1:0;
+    }
+    return 0;
+  });
 
   var atrasadas = linhas.filter(function(l){return l.tipo==='atrasado';});
   var hoje_list = linhas.filter(function(l){return l.tipo==='hoje';});
