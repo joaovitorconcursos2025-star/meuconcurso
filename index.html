@@ -2410,12 +2410,12 @@ var convites = []; // [{email, concursoId, concursoNome}]
 
 async function carregarConvites() {
   try {
-    var snap = await db.collection('usuarios').doc(currentUser.uid)
+    var key = currentUser.uid;
+    var snap = await db.collection('usuarios').doc(key)
       .collection('dados').doc('convites').get();
     convites = snap.exists ? (snap.data().value || []) : [];
-
-    // Salva UID do admin em documento público para convidados encontrarem
-    await db.collection('adminPublic').doc('info').set({uid: currentUser.uid});
+    // Salva UID público para convidados encontrarem
+    await db.collection('adminPublic').doc('info').set({uid: key, email: currentUser.email});
   } catch(e) { convites = []; }
 }
 
@@ -2423,6 +2423,7 @@ async function salvarConvites() {
   try {
     await db.collection('usuarios').doc(currentUser.uid)
       .collection('dados').doc('convites').set({value: convites});
+    toast('✅ Salvo!');
   } catch(e) { toast('⚠️ Erro ao salvar convites'); }
 }
 
@@ -2432,57 +2433,57 @@ async function adicionarConvite() {
   if(!email){ toast('Digite o email do convidado'); return; }
   if(!concId){ toast('Selecione o concurso'); return; }
   if(!email.includes('@')){ toast('Email inválido'); return; }
-
   var conc = concursos.find(function(c){return c.id===concId;});
   if(!conc){ toast('Concurso não encontrado'); return; }
-
-  // Verifica duplicata
   var jaExiste = convites.some(function(c){return c.email===email&&c.concursoId===concId;});
   if(jaExiste){ toast('Esse email já tem acesso a esse concurso'); return; }
-
   convites.push({email: email, concursoId: concId, concursoNome: conc.name});
   await salvarConvites();
   document.getElementById('conv-email').value = '';
-  renderConvites();
-  toast('✅ Convite adicionado para '+email);
+  await renderConvites();
 }
 
 async function removerConvite(email, concId) {
   if(!confirm('Remover acesso de '+email+' a esse concurso?')) return;
   convites = convites.filter(function(c){return !(c.email===email&&c.concursoId===concId);});
   await salvarConvites();
-  renderConvites();
+  await renderConvites();
   toast('Acesso removido');
 }
 
 async function renderConvites() {
   if(!isSuperAdmin) return;
+
+  var list = document.getElementById('convites-list');
+  if(!list) return;
+  list.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:10px">🔄 Carregando...</div>';
+
   await carregarConvites();
 
   // Popula select de concursos
   var sel = document.getElementById('conv-conc');
   if(sel) {
     sel.innerHTML = '<option value="">-- Selecione --</option>' +
-      concursos.map(function(c){return'<option value="'+c.id+'">'+(c.icon||'🏆')+' '+c.name+'</option>';}).join('');
+      concursos.map(function(c){
+        return '<option value="'+c.id+'">'+(c.icon||'🏆')+' '+c.name+'</option>';
+      }).join('');
   }
 
-  var list = document.getElementById('convites-list');
-  if(!list) return;
-
   if(!convites.length) {
-    list.innerHTML = '<div style="text-align:center;padding:24px;color:var(--muted);font-size:13px">Nenhum convidado ainda.</div>';
+    list.innerHTML = '<div style="text-align:center;padding:24px;color:var(--muted);font-size:13px">Nenhum convidado ainda.<br>Adicione um email acima para compartilhar o concurso.</div>';
     return;
   }
 
-  list.innerHTML = '<div style="font-weight:600;font-size:13px;margin-bottom:10px">Convidados ativos</div>' +
+  list.innerHTML = '<div style="font-weight:600;font-size:13px;margin-bottom:10px">Convidados ativos ('+convites.length+')</div>' +
     convites.map(function(c){
       return '<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-bottom:6px">'
-        +'<span style="font-size:18px">👤</span>'
+        +'<span style="font-size:20px">👤</span>'
         +'<div style="flex:1">'
           +'<div style="font-size:13px;font-weight:600">'+c.email+'</div>'
-          +'<div style="font-size:11px;color:var(--muted)">Acesso: '+c.concursoNome+'</div>'
+          +'<div style="font-size:11px;color:var(--muted);margin-top:2px">📚 '+c.concursoNome+'</div>'
         +'</div>'
-        +'<button class="btn btn-red btn-sm" onclick="removerConvite(\''+c.email+'\',\''+c.concursoId+'\')">🗑 Remover</button>'
+        +'<button class="btn btn-sm" style="background:var(--red-l);color:var(--red);border:1px solid rgba(255,77,106,.2)" '
+        +'onclick="removerConvite(\''+c.email+'\',\''+c.concursoId+'\')">🗑 Remover</button>'
       +'</div>';
     }).join('');
 }
