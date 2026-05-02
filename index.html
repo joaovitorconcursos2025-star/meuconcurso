@@ -736,7 +736,6 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
       </div>
     </div>
   </div>
-</div>
 
 <!-- ══ BANCO ══ -->
 <div class="sec" id="sec-banco">
@@ -928,6 +927,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
       </div>
     </div>
   </div>
+
 </div>
 
 <!-- ══ PLANNER ══ -->
@@ -1158,7 +1158,7 @@ function setSyncSt(msg) {
 // ═══════════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════════
-var TODAY     = () => new Date().toISOString().slice(0,10);
+var TODAY = () => { var d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); };
 var DAYS_ADD  = (n) => { var d=new Date(); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); };
 
 function calcPrioridade(q) {
@@ -1241,6 +1241,9 @@ function selecionarConcurso(id) {
   document.getElementById('concurso-badge').style.display = 'flex';
   document.getElementById('concurso-badge').textContent = '← '+c.name;
   document.getElementById('main-nav').style.display = 'flex';
+  // Mostra admin só pro super admin
+  var btnAdmin = document.getElementById('btn-admin');
+  if(btnAdmin) btnAdmin.style.display = isSuperAdmin ? '' : 'none';
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.getElementById('sec-dashboard').classList.add('active');
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
@@ -2263,6 +2266,16 @@ async function handleLogin(user){
   renderConcursos();
 }
 
+
+
+
+
+
+
+
+
+
+
 auth.getRedirectResult().then(function(result){
   if(result&&result.user) handleLogin(result.user);
 }).catch(function(e){if(e.code!=='auth/no-auth-event')console.error('[redirect]',e.code);});
@@ -2430,33 +2443,43 @@ function renderPlanner() {
   var linhas = [];
   tops.forEach(function(top) {
     var qsTop = qs.filter(function(q){return q.topico===top.id && q.vezesRespondida>0;});
-    if(!qsTop.length) return; // nunca estudado, não aparece no planner
+    if(!qsTop.length) return;
 
     var pendentes = qsTop.filter(function(q){return q.proximaRevisao<=hoje;});
     var proximas  = qsTop.filter(function(q){return q.proximaRevisao>hoje;});
     var atrasadas = qsTop.filter(function(q){return q.proximaRevisao<hoje;});
 
-    // Próxima revisão do grupo
     var proxDatas = proximas.map(function(q){return q.proximaRevisao;}).sort();
     var proxData  = proxDatas.length ? proxDatas[0] : null;
 
     var mat = materias.find(function(m){return m.id===top.materiaId;});
     var pct = qsTop.length>0 ? Math.round((qsTop.filter(function(q){return q.status==='acerto';}).length/qsTop.length)*100) : 0;
 
-    if(atrasadas.length>0) {
+    // 0% de acerto → sempre vermelho independente da data
+    var forcarVermelho = pct===0 && qsTop.length>0;
+
+    if(forcarVermelho) {
+      linhas.push({top, mat, pct, qtd: qsTop.length, tipo:'atrasado', proxData, topId: top.id});
+    } else if(atrasadas.length>0) {
       linhas.push({top, mat, pct, qtd: atrasadas.length, tipo:'atrasado', proxData, topId: top.id});
-    }
-    if(pendentes.length>0 && atrasadas.length===0) {
+    } else if(pendentes.length>0) {
       linhas.push({top, mat, pct, qtd: pendentes.length, tipo:'hoje', proxData, topId: top.id});
-    }
-    if(proximas.length>0 && pendentes.length===0 && atrasadas.length===0) {
+    } else if(proximas.length>0) {
       linhas.push({top, mat, pct, qtd: proximas.length, tipo:'ok', proxData, topId: top.id});
     }
   });
 
-  // Ordenar: atrasado > hoje > ok
-  var ordem = {atrasado:0, hoje:1, ok:2};
-  linhas.sort(function(a,b){return ordem[a.tipo]-ordem[b.tipo];});
+  // Ordenar: atrasado > hoje > ok(por data asc)
+  linhas.sort(function(a,b){
+    var ordem = {atrasado:0, hoje:1, ok:2};
+    if(ordem[a.tipo] !== ordem[b.tipo]) return ordem[a.tipo]-ordem[b.tipo];
+    // dentro do verde: ordena por data mais próxima primeiro
+    if(a.tipo==='ok' && b.tipo==='ok') {
+      var da = a.proxData||'9999'; var db = b.proxData||'9999';
+      return da<db?-1:da>db?1:0;
+    }
+    return 0;
+  });
 
   var atrasadas = linhas.filter(function(l){return l.tipo==='atrasado';});
   var hoje_list = linhas.filter(function(l){return l.tipo==='hoje';});
