@@ -1158,7 +1158,7 @@ function setSyncSt(msg) {
 // ═══════════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════════
-var TODAY = () => { var d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); };
+var TODAY     = () => new Date().toISOString().slice(0,10);
 var DAYS_ADD  = (n) => { var d=new Date(); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); };
 
 function calcPrioridade(q) {
