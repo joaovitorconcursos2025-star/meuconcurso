@@ -647,7 +647,8 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
     <button class="nb" onclick="goTo('erros',this)">Erros</button>
     <button class="nb" onclick="goTo('planner',this)">📅 Planner</button>
     <button class="nb" onclick="goTo('edital',this)">📋 Edital</button>
-    <button class="nb" onclick="goTo('admin',this)">Admin</button>
+    <button class="nb" onclick="goTo('leis',this)">📜 Leis</button>
+    <button class="nb" id="btn-admin" onclick="goTo('admin',this)" style="display:none">Admin</button>
   </nav>
   <span id="sync-st"></span>
   <div id="auth-area"></div>
@@ -700,8 +701,8 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
     <div class="chart-bars" id="chart-bars"></div>
   </div>
   <div class="quick-grid" style="margin-top:12px">
-    <button class="qa-btn" onclick="goTo('responder',document.querySelectorAll('.nb')[1])"><span class="qa-icon">⚡</span><div class="qa-title">Responder agora</div><div class="qa-sub" id="qa-pend">...</div></button>
-    <button class="qa-btn" onclick="goTo('erros',document.querySelectorAll('.nb')[3])"><span class="qa-icon">🔴</span><div class="qa-title">Revisar erros</div><div class="qa-sub" id="qa-erros">0 questões</div></button>
+    <button class="qa-btn" onclick="goTo('responder',nbBtn('responder'))"><span class="qa-icon">⚡</span><div class="qa-title">Responder agora</div><div class="qa-sub" id="qa-pend">...</div></button>
+    <button class="qa-btn" onclick="goTo('erros',nbBtn('erros'))"><span class="qa-icon">🔴</span><div class="qa-title">Revisar erros</div><div class="qa-sub" id="qa-erros">0 questões</div></button>
     <button class="qa-btn" onclick="startSession('prova_abcd')"><span class="qa-icon">📋</span><div class="qa-title">Prova ABCD</div><div class="qa-sub">Simulado completo</div></button>
     <button class="qa-btn" onclick="startSession('prova_ve')"><span class="qa-icon">✅</span><div class="qa-title">Certo ou Errado</div><div class="qa-sub">Revisão rápida</div></button>
   </div>
@@ -760,7 +761,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
       </div>
       <div style="display:flex;gap:10px;justify-content:center">
         <button class="btn btn-primary" onclick="startSession()">Nova Sessão</button>
-        <button class="btn btn-ghost" onclick="goTo('dashboard',document.querySelectorAll('.nb')[0])">Dashboard</button>
+        <button class="btn btn-ghost" onclick="goTo('dashboard',nbBtn('dashboard'))">Dashboard</button>
       </div>
     </div>
   </div>
@@ -1051,7 +1052,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
       <div style="font-size:13px;font-weight:600;margin-bottom:4px" id="planner-nome">Selecione um concurso</div>
       <div style="font-size:12px;color:var(--muted)" id="planner-data-info">Configure a data do concurso no Admin → Concursos</div>
     </div>
-    <button class="btn btn-primary btn-sm" onclick="goTo('admin',document.querySelectorAll('.nb')[6]);setTimeout(()=>adminTab(document.querySelectorAll('.at')[2],'atp-conc'),100)">⚙️ Data do concurso</button>
+    <button class="btn btn-primary btn-sm" onclick="goTo('admin',nbBtn('admin'));setTimeout(()=>adminTab(document.querySelectorAll('.at')[2],'atp-conc'),100)">⚙️ Data do concurso</button>
   </div>
   <div id="planner-alertas" style="margin-bottom:14px"></div>
   <div id="planner-revisoes"></div>
@@ -1064,7 +1065,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
   <div class="edital-header">
     <input type="text" placeholder="🔍 Buscar matéria ou tópico..." oninput="filtrarEdital(this.value)" style="flex:1;max-width:300px">
     <button class="btn btn-ghost btn-sm" onclick="toggleExpandAll()">Expandir tudo</button>
-    <button class="btn btn-primary btn-sm" onclick="goTo('admin',document.querySelectorAll('.nb')[6]);setTimeout(()=>adminTab(document.querySelectorAll('.at')[1],'atp-mat'),100)">+ Gerenciar matérias</button>
+    <button class="btn btn-primary btn-sm" onclick="goTo('admin',nbBtn('admin'));setTimeout(()=>adminTab(document.querySelectorAll('.at')[1],'atp-mat'),100)">+ Gerenciar matérias</button>
   </div>
   <div id="edital-list"></div>
 </div>
@@ -1305,6 +1306,17 @@ function aplicarRevisao(q, resultado) {
   if(resultado==='acerto') historico[hoje].acertos++;
 }
 
+
+// Helper — acha botão da nav pelo id da seção (evita índices fixos)
+function nbBtn(id) {
+  var btns = document.querySelectorAll('.nb');
+  for(var i=0;i<btns.length;i++){
+    var fn = btns[i].getAttribute('onclick')||'';
+    if(fn.indexOf("'"+id+"'")>=0 || fn.indexOf('"'+id+'"')>=0) return btns[i];
+  }
+  return btns[0];
+}
+
 // Meta e historico por concurso
 function getMetaConcurso() {
   if(!currentConcursoId) return config.meta||50;
@@ -1389,7 +1401,7 @@ function selecionarConcurso(id) {
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.getElementById('sec-dashboard').classList.add('active');
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('.nb')[0].classList.add('active');
+  nbBtn('dashboard').classList.add('active');
   syncSelectsMaterias();
   renderDash();
 }
@@ -1410,7 +1422,7 @@ function promptNovoConcurso() {
     currentConcursoId = '__new__';
   }
   document.getElementById('main-nav').style.display='flex';
-  goTo('admin', document.querySelectorAll('.nb')[4]);
+  goTo('admin', nbBtn('admin'));
   adminTab(document.querySelectorAll('.at')[2], 'atp-conc');
 }
 
@@ -1525,7 +1537,7 @@ function iniciarPorTopico(topId) {
   if(!top) return;
   var mat = materias.find(m=>m.id===top.materiaId);
   // Navega para responder e pré-seleciona matéria/tópico
-  goTo('responder', document.querySelectorAll('.nb')[1]);
+  goTo('responder', nbBtn('responder'));
   setTimeout(function() {
     var cfgMat = document.getElementById('cfg-mat');
     if(cfgMat && mat) { cfgMat.value=mat.id; syncFiltroTopico(); }
@@ -1580,36 +1592,36 @@ function renderMentora(c, hoje, hist, meta, pct, qs, erros, pend, taxa) {
     msg = 'A prova para <strong>'+c.name+'</strong> já passou. Adicione um novo concurso ou atualize a data.';
   } else if(qs.length === 0) {
     msg = 'Você ainda não tem questões cadastradas para <strong>'+c.name+'</strong>. Vá ao Admin e adicione as primeiras questões — quanto antes começar, melhor! 📚';
-    acoes.push({label:'➕ Adicionar questões', fn:'goTo(\'admin\',document.querySelectorAll(\'.nb\')[6])'});
+    acoes.push({label:'➕ Adicionar questões', fn:'goTo(\'admin\',nbBtn(\'admin\'))'});
   } else if(diasSemEstudo >= 3) {
     msg = '⚠️ Faz <strong>'+diasSemEstudo+' dias</strong> sem estudar!'+
       (diasProva!==null?' Sua prova é em <strong>'+diasProva+' dias</strong>.':'')+
       ' Cada dia parado é um passo para trás. Vamos responder pelo menos '+Math.ceil(meta/2)+' questões hoje?';
-    acoes.push({label:'⚡ Responder agora', fn:'goTo(\'responder\',document.querySelectorAll(\'.nb\')[1])'});
+    acoes.push({label:'⚡ Responder agora', fn:'goTo(\'responder\',nbBtn(\'responder\'))'});
   } else if(pct >= 100) {
     msg = '🎉 Meta diária batida! Você respondeu <strong>'+hist.respondidas+' questões</strong> hoje.'+
       (taxa >= 70 ? ' Taxa de acerto de '+taxa+'% — excelente!' : ' Foque nos erros para melhorar a taxa de '+taxa+'%.')+
       (diasProva!==null?' Faltam <strong>'+diasProva+' dias</strong> para a prova.':'');
-    if(erros>0) acoes.push({label:'🔴 Revisar erros ('+erros+')', fn:'goTo(\'erros\',document.querySelectorAll(\'.nb\')[4])'});
+    if(erros>0) acoes.push({label:'🔴 Revisar erros ('+erros+')', fn:'goTo(\'erros\',nbBtn(\'erros\'))'});
   } else if(pend > 0) {
     msg = 'Você tem <strong>'+pend+' questão(ões) para revisar hoje</strong> pelo sistema de repetição espaçada.'+
       (erros>0?' Além de <strong>'+erros+' erros</strong> ativos.':'')+
       (diasProva!==null?' Faltam <strong>'+diasProva+' dias</strong> para a prova.':'')+
       ' Não pule a revisão — ela é o que grava de verdade!';
-    acoes.push({label:'🧠 Revisar agora', fn:'goTo(\'responder\',document.querySelectorAll(\'.nb\')[1])'});
+    acoes.push({label:'🧠 Revisar agora', fn:'goTo(\'responder\',nbBtn(\'responder\'))'});
   } else if(taxa < 50 && qs.filter(function(q){return q.vezesRespondida>0;}).length > 10) {
     msg = 'Sua taxa de acerto está em <strong>'+taxa+'%</strong> — abaixo da média de corte. '+
       'Foque em revisar os <strong>'+erros+' erros ativos</strong> antes de avançar para novos conteúdos.'+
       (diasProva!==null?' Você tem '+diasProva+' dias para virar esse jogo!':'');
-    acoes.push({label:'🔴 Ver erros', fn:'goTo(\'erros\',document.querySelectorAll(\'.nb\')[4])'});
-    acoes.push({label:'📋 Edital', fn:'goTo(\'edital\',document.querySelectorAll(\'.nb\')[5])'});
+    acoes.push({label:'🔴 Ver erros', fn:'goTo(\'erros\',nbBtn(\'erros\'))'});
+    acoes.push({label:'📋 Edital', fn:'goTo(\'edital\',nbBtn(\'edital\'))'});
   } else {
     var faltam = meta - hist.respondidas;
     msg = (diasProva!==null?'Faltam <strong>'+diasProva+' dias</strong> para a prova. ':'') +
       'Hoje você fez <strong>'+hist.respondidas+' de '+meta+'</strong> questões ('+pct+'%).'+
       (faltam>0?' Faltam mais <strong>'+faltam+'</strong> para bater a meta.':'')+
       (taxa>=70?' Taxa de acerto: <strong>'+taxa+'%</strong> 🔥':' Taxa de acerto: <strong>'+taxa+'%</strong> — pode melhorar!');
-    acoes.push({label:'⚡ Continuar estudando', fn:'goTo(\'responder\',document.querySelectorAll(\'.nb\')[1])'});
+    acoes.push({label:'⚡ Continuar estudando', fn:'goTo(\'responder\',nbBtn(\'responder\'))'});
   }
 
   msgEl.innerHTML = msg;
@@ -1712,7 +1724,7 @@ function startSimuladoOficial() {
   if(aviso.length) toast('⚠️ Questões insuficientes em: '+aviso.join(', '));
 
   session = {qs, mode:'prova_abcd', cur:0, corr:0, erros:0, simuladoOficial:true};
-  goTo('responder', document.querySelectorAll('.nb')[1]);
+  goTo('responder', nbBtn('responder'));
   document.getElementById('resp-setup').style.display='none';
   document.getElementById('q-session').classList.add('active');
   document.getElementById('q-resultado').style.display='none';
@@ -1740,7 +1752,7 @@ function startSession(modeOv) {
   var qs  =selecionarQuestoes(mode,qtd,mat,niv,top,sub);
   if(!qs.length){toast('Nenhuma questão disponível com esses filtros');return;}
   session={qs,mode,cur:0,corr:0,erros:0};
-  goTo('responder',document.querySelectorAll('.nb')[1]);
+  goTo('responder',nbBtn('responder'));
   document.getElementById('resp-setup').style.display='none';
   document.getElementById('q-session').classList.add('active');
   document.getElementById('q-resultado').style.display='none';
@@ -1960,7 +1972,7 @@ function revirarAgora(id) {
   var q=questions.find(x=>x.id===id);
   if(!q) return;
   session={qs:[q],mode:'revisao',cur:0,corr:0,erros:0};
-  goTo('responder',document.querySelectorAll('.nb')[1]);
+  goTo('responder',nbBtn('responder'));
   document.getElementById('resp-setup').style.display='none';
   document.getElementById('q-session').classList.add('active');
   document.getElementById('q-resultado').style.display='none';
@@ -2181,7 +2193,7 @@ function editQuestion(id){
   } else {
     document.getElementById('qf-ve-correct').value=q.veCorrect!=null?q.veCorrect:1;
   }
-  goTo('admin',document.querySelectorAll('.nb')[6]);
+  goTo('admin',nbBtn('admin'));
   adminTab(document.querySelectorAll('.at')[0],'atp-q');
   toast('Questão carregada');
 }
@@ -2692,7 +2704,7 @@ function renderPlanner() {
 
 
 function goToErros() {
-  goTo('erros', document.querySelectorAll('.nb')[4]);
+  goTo('erros', nbBtn('erros'));
 }
 
 function moverCard(id, novoStatus) {
@@ -2802,7 +2814,7 @@ function renderEdital() {
 
     if(!tops.length) {
       html+=`<div class="edital-topico" style="color:var(--muted);font-size:12px;padding:12px 16px">
-        Nenhum tópico cadastrado. <button type="button" onclick="goTo('admin',document.querySelectorAll('.nb')[6]);setTimeout(()=>adminTab(document.querySelectorAll('.at')[1],'atp-mat'),100)" style="background:none;border:none;color:var(--blue);cursor:pointer;font-family:var(--ff);font-size:12px;text-decoration:underline">Adicionar tópicos</button>
+        Nenhum tópico cadastrado. <button type="button" onclick="goTo('admin',nbBtn('admin'));setTimeout(()=>adminTab(document.querySelectorAll('.at')[1],'atp-mat'),100)" style="background:none;border:none;color:var(--blue);cursor:pointer;font-family:var(--ff);font-size:12px;text-decoration:underline">Adicionar tópicos</button>
       </div>`;
     }
 
