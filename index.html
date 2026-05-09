@@ -600,12 +600,62 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
 .lei-prog-fill{height:100%;background:var(--purple);border-radius:3px;transition:width .5s;}
 .lei-stats{font-size:11px;color:var(--muted);display:flex;gap:12px;}
 
+/* Árvore da lei */
+.lei-arvore{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:10px;}
+.lei-arvore-header{padding:14px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .15s;background:var(--bg2);}
+.lei-arvore-header:hover{background:var(--bg3);}
+.lei-arvore-nome{font-weight:800;font-size:15px;flex:1;}
+.lei-arvore-stats{font-size:11px;color:var(--muted);font-family:var(--fm);}
+.lei-arvore-arrow{color:var(--muted);transition:transform .2s;font-size:12px;}
+.lei-arvore-arrow.open{transform:rotate(90deg);}
+.lei-arvore-bar{height:4px;background:var(--bg3);}
+.lei-arvore-bar-fill{height:100%;background:var(--purple);transition:width .5s;}
+
+.lei-nivel{display:none;border-top:1px solid var(--border);}
+.lei-nivel.open{display:block;}
+
+/* Título */
+.lei-titulo{padding:10px 16px;background:rgba(255,184,48,.06);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;cursor:pointer;transition:background .15s;}
+.lei-titulo:hover{background:rgba(255,184,48,.12);}
+.lei-titulo-nome{font-size:13px;font-weight:800;color:var(--amber);flex:1;}
+.lei-titulo-stats{font-size:11px;color:var(--muted);font-family:var(--fm);}
+.lei-titulo-arrow{color:var(--muted);transition:transform .2s;font-size:11px;}
+.lei-titulo-arrow.open{transform:rotate(90deg);}
+
+/* Capítulo */
+.lei-capitulo{display:none;border-bottom:1px solid var(--border);}
+.lei-capitulo.open{display:block;}
+.lei-capitulo-header{padding:9px 16px 9px 32px;background:rgba(79,124,255,.06);display:flex;align-items:center;gap:8px;cursor:pointer;transition:background .15s;}
+.lei-capitulo-header:hover{background:rgba(79,124,255,.12);}
+.lei-capitulo-nome{font-size:12px;font-weight:700;color:var(--blue);flex:1;}
+.lei-capitulo-stats{font-size:11px;color:var(--muted);font-family:var(--fm);}
+.lei-capitulo-arrow{color:var(--muted);transition:transform .2s;font-size:11px;}
+.lei-capitulo-arrow.open{transform:rotate(90deg);}
+
+/* Seção */
+.lei-secao{display:none;}
+.lei-secao.open{display:block;}
+.lei-secao-header{padding:8px 16px 8px 48px;background:rgba(34,201,122,.04);display:flex;align-items:center;gap:8px;cursor:pointer;border-bottom:1px solid var(--border);transition:background .15s;}
+.lei-secao-header:hover{background:rgba(34,201,122,.1);}
+.lei-secao-nome{font-size:12px;font-weight:600;color:var(--green);flex:1;}
+.lei-secao-stats{font-size:11px;color:var(--muted);font-family:var(--fm);}
+.lei-secao-arrow{color:var(--muted);transition:transform .2s;font-size:10px;}
+.lei-secao-arrow.open{transform:rotate(90deg);}
+
+/* Artigos */
+.lei-artigos-lista{display:none;}
+.lei-artigos-lista.open{display:block;}
+.lei-artigo-item{padding:8px 16px 8px 64px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;cursor:pointer;transition:background .15s;}
+.lei-artigo-item:last-child{border-bottom:none;}
+.lei-artigo-item:hover{background:var(--bg3);}
+.lei-artigo-num{font-size:12px;font-weight:700;color:var(--text);flex:1;}
+.lei-artigo-status{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;}
+.lei-ler-btn{font-size:11px;padding:3px 10px;border-radius:6px;background:var(--purple-l);color:var(--purple);border:1px solid rgba(168,85,247,.2);cursor:pointer;font-family:var(--ff);font-weight:600;white-space:nowrap;}
+.lei-ler-btn:hover{background:var(--purple);color:#fff;}
+
+/* Leitura */
 .artigo-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:20px;margin-bottom:14px;}
-.artigo-num{font-family:var(--fd);font-size:13px;font-weight:800;color:var(--purple);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px;}
-.artigo-tipo-titulo{border-left:3px solid var(--amber);background:var(--amber-l);}
-.artigo-tipo-capitulo{border-left:3px solid var(--blue);background:var(--blue-l);}
-.artigo-tipo-secao{border-left:3px solid var(--green);background:var(--green-l);}
-.artigo-tipo-subsecao{border-left:2px solid var(--border2);}
+.artigo-num{font-family:var(--fd);font-size:13px;font-weight:800;color:var(--purple);margin-bottom:4px;}
 .artigo-texto{font-size:15px;line-height:1.8;margin-bottom:16px;}
 .artigo-nota{background:var(--amber-l);border:1px solid rgba(255,184,48,.2);border-radius:6px;padding:8px 12px;font-size:12px;color:var(--amber);margin-bottom:14px;}
 .artigo-btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
@@ -790,14 +840,18 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
 
 <!-- ══ LEIS ══ -->
 <div class="sec" id="sec-leis">
+
+  <!-- Lista de leis -->
   <div id="leis-lista-view">
     <div class="page-title">📜 Leis</div>
-    <div class="page-sub">Leia artigo por artigo — disponível em todos os concursos</div>
+    <div class="page-sub">Selecione a lei e escolha o que ler — artigo, seção, capítulo ou lei toda</div>
     <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;align-items:center">
-      <button class="btn btn-primary btn-sm" onclick="abrirAdminLeis()">➕ Gerenciar leis</button>
+      <button class="btn btn-primary btn-sm" id="btn-gerenciar-leis" onclick="abrirAdminLeis()" style="display:none">⚙️ Gerenciar leis</button>
     </div>
     <div id="leis-grid"></div>
   </div>
+
+  <!-- Leitura artigo a artigo -->
   <div id="leis-leitura-view" style="display:none">
     <div class="q-topbar">
       <div class="q-prog"><div class="q-prog-fill" id="lei-prog"></div></div>
@@ -810,11 +864,12 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
     </div>
     <div id="lei-artigo-display"></div>
   </div>
+
+  <!-- Admin de leis (só super admin) -->
   <div id="leis-admin-view" style="display:none">
     <div class="page-title">⚙️ Gerenciar Leis</div>
     <div class="page-sub">Cadastre leis e seus artigos</div>
     <button class="btn btn-ghost btn-sm" style="margin-bottom:16px" onclick="fecharAdminLeis()">← Voltar</button>
-
     <div class="card" style="margin-bottom:14px">
       <div style="font-weight:700;font-size:14px;margin-bottom:14px" id="lf-title">➕ Nova Lei</div>
       <div class="fr2">
@@ -827,45 +882,52 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
         <button type="button" class="btn btn-ghost" onclick="clearLeiForm()">Limpar</button>
       </div>
     </div>
-
     <div class="sec-label">Leis cadastradas (<span id="leis-count">0</span>)</div>
     <div id="leis-admin-list"></div>
 
     <div id="artigos-section" style="display:none;margin-top:20px">
       <div class="sec-label" id="artigos-section-title">Artigos</div>
       <div class="card" style="margin-bottom:14px">
-        <div style="font-weight:700;font-size:14px;margin-bottom:12px" id="af-title">➕ Novo Artigo</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:12px" id="af-title">➕ Novo Item</div>
         <div class="fr2">
-          <div class="fg"><label>Número/Título *</label><input id="af-num" type="text" placeholder="Ex: Art. 1º ou Título I"></div>
           <div class="fg">
-            <label>Tipo</label>
-            <select id="af-tipo">
-              <option value="artigo">📄 Artigo</option>
+            <label>Tipo *</label>
+            <select id="af-tipo" onchange="onTipoChange()">
               <option value="titulo">📌 Título</option>
               <option value="capitulo">📂 Capítulo</option>
               <option value="secao">📑 Seção</option>
               <option value="subsecao">📃 Subseção</option>
+              <option value="artigo" selected>📄 Artigo</option>
             </select>
           </div>
+          <div class="fg"><label>Número/Título *</label><input id="af-num" type="text" placeholder="Ex: Art. 1º / Título I / Capítulo II"></div>
         </div>
-        <div class="fg"><label>Texto *</label><textarea id="af-texto" rows="4" placeholder="Digite o texto completo do artigo..."></textarea></div>
-        <div class="fg"><label>Notas (opcional)</label><input id="af-notas" type="text" placeholder="Ex: Importante para a prova!"></div>
-        <div style="display:flex;gap:8px">
+        <div id="af-pai-wrap" class="fg" style="display:none">
+          <label>Pertence a</label>
+          <select id="af-pai"><option value="">— Raiz da lei —</option></select>
+        </div>
+        <div class="fg"><label>Texto</label><textarea id="af-texto" rows="4" placeholder="Texto do artigo (deixe vazio para títulos/capítulos)..."></textarea></div>
+        <div class="fg"><label>Notas</label><input id="af-notas" type="text" placeholder="Ex: Importante para a prova!"></div>
+        <div style="display:flex;gap:8px;margin-bottom:16px">
           <button type="button" class="btn btn-primary" onclick="saveArtigo()">💾 Salvar</button>
           <button type="button" class="btn btn-ghost" onclick="clearArtigoForm()">Limpar</button>
         </div>
-        <div style="margin-top:12px">
-          <div style="font-size:12px;color:var(--muted);margin-bottom:6px">💡 Cole o texto completo da lei e quebre automaticamente por artigo:</div>
-          <div style="display:flex;gap:8px">
-            <textarea id="af-colar" rows="3" placeholder="Cole o texto completo aqui..." style="flex:1;font-size:12px"></textarea>
-            <button type="button" class="btn btn-amber btn-sm" style="align-self:flex-end" onclick="parsearLei()">⚡ Importar</button>
+        <div style="border-top:1px solid var(--border);padding-top:14px;margin-top:4px">
+          <div style="font-size:12px;font-weight:700;margin-bottom:6px">⚡ Importar texto completo da lei</div>
+          <div style="font-size:11px;color:var(--muted);margin-bottom:8px">Cole o texto e o sistema quebra automaticamente por Título, Capítulo, Seção e Artigo.</div>
+          <div style="margin-bottom:8px">
+            <label>Texto da lei</label>
+            <textarea id="af-colar" rows="5" placeholder="Cole aqui o texto completo da lei..." style="font-size:12px;resize:vertical;min-height:80px"></textarea>
           </div>
+          <button type="button" class="btn btn-amber" onclick="parsearLei()">⚡ Importar e quebrar automaticamente</button>
         </div>
       </div>
       <div id="artigos-admin-list"></div>
     </div>
   </div>
+
 </div>
+
 
 <!-- ══ ADMIN ══ -->
 <div class="sec" id="sec-admin">
@@ -1461,7 +1523,7 @@ function renderDash() {
     {val:taxa+'%', label:'Taxa de acerto',  sub:qs.reduce((a,q)=>a+(q.vezesRespondida||0),0)+' respostas dadas', cls:'sc-blue'},
     {val:pend,     label:'Para revisar hoje',sub:'questões pendentes',cls:'sc-amber'},
     {val:erros,    label:'Erros ativos',    sub:'prioridade máxima',  cls:'sc-red'},
-    {val:hist.respondidas,label:'Hoje',     sub:'de '+meta+' na meta',cls:'sc-green'},
+    {val:(getHistoricoConc()[hoje]||{}).artigosLidos||0,label:'Artigos hoje',sub:'lidos e dominados',cls:'sc-green'},
   ].map(s=>`<div class="stat-card ${s.cls}"><div class="stat-val">${s.val}</div><div class="stat-label">${s.label}</div><div class="stat-sub">${s.sub}</div></div>`).join('');
 
   // Gráfico
@@ -3271,337 +3333,511 @@ function adicionarNaFila(questoes) {
 
 
 // ═══════════════════════════════════════
-// LEIS
 // ═══════════════════════════════════════
-var leis = []; // [{id, nome, icon, desc, artigos:[{id,num,tipo,texto,notas,status:'novo'|'dominado'|'rever'|'pular'}]}]
+// LEIS — estrutura hierárquica
+// ═══════════════════════════════════════
+/*
+  Lei: {id, nome, icon, desc, itens:[]}
+  Item: {id, tipo:'titulo'|'capitulo'|'secao'|'subsecao'|'artigo', num, texto, notas, paiId, status:'novo'|'dominado'|'rever'|'pular'}
+  Hierarquia: titulo > capitulo > secao > subsecao > artigo
+  itens são flat mas referenciados por paiId
+*/
+var leis = [];
 var nextLeiId = 1;
-var nextArtId = 1;
+var nextItemId = 1;
 var leiAtualId = null;
-var artigoAtualIdx = 0;
+var leiSessao = []; // itens sendo lidos na sessão atual
+var leiSessaoCur = 0;
 var editingLeiId = null;
-var editingArtId = null;
+var editingItemId = null;
+var artigosHoje = 0; // contador do dashboard
 
-// Storage de leis (global, não por concurso)
+// ── Storage ──
 async function saveLeis() {
-  try {
-    localStorage.setItem('mc_leis', JSON.stringify({leis, nextLeiId, nextArtId}));
-  } catch(e){}
+  try { localStorage.setItem('mc_leis', JSON.stringify({leis,nextLeiId,nextItemId,artigosHoje})); } catch(e){}
   if(currentUser) {
     try {
       await cloudSave('leis', leis);
       await cloudSave('nextLeiId', nextLeiId);
-      await cloudSave('nextArtId', nextArtId);
+      await cloudSave('nextItemId', nextItemId);
+      await cloudSave('artigosHoje', artigosHoje);
     } catch(e){}
   }
 }
 
 async function loadLeis() {
   try {
-    var local = JSON.parse(localStorage.getItem('mc_leis')||'{}');
-    if(local.leis) leis = local.leis;
-    if(local.nextLeiId) nextLeiId = local.nextLeiId;
-    if(local.nextArtId) nextArtId = local.nextArtId;
+    var l = JSON.parse(localStorage.getItem('mc_leis')||'{}');
+    if(l.leis) leis=l.leis;
+    if(l.nextLeiId) nextLeiId=l.nextLeiId;
+    if(l.nextItemId) nextItemId=l.nextItemId;
+    if(l.artigosHoje) artigosHoje=l.artigosHoje;
   } catch(e){}
   if(currentUser) {
     try {
-      var l = await cloudLoad('leis', null);
-      if(l) leis = l;
-      var lid = await cloudLoad('nextLeiId', 1);
-      if(lid) nextLeiId = lid;
-      var aid = await cloudLoad('nextArtId', 1);
-      if(aid) nextArtId = aid;
+      var cl=await cloudLoad('leis',null); if(cl) leis=cl;
+      var cl2=await cloudLoad('nextLeiId',1); if(cl2) nextLeiId=cl2;
+      var cl3=await cloudLoad('nextItemId',1); if(cl3) nextItemId=cl3;
+      var cl4=await cloudLoad('artigosHoje',0); if(cl4) artigosHoje=cl4;
     } catch(e){}
   }
 }
 
-// ── Tela de listagem de Leis ──
+// ── Helpers ──
+function getLei(id) { return leis.find(function(l){return l.id===id;}); }
+function getItensFilhos(lei, paiId) {
+  return (lei.itens||[]).filter(function(i){return (i.paiId||null)===(paiId||null);});
+}
+function getArtigosDoItem(lei, itemId) {
+  // Retorna todos artigos descendentes de um item (recursivo)
+  var result=[];
+  function buscar(pid) {
+    (lei.itens||[]).forEach(function(i){
+      if((i.paiId||null)===(pid||null)) {
+        if(i.tipo==='artigo') result.push(i);
+        else buscar(i.id);
+      }
+    });
+  }
+  buscar(itemId);
+  return result;
+}
+function pctItem(artigos) {
+  if(!artigos.length) return 0;
+  return Math.round((artigos.filter(function(a){return a.status==='dominado';}).length/artigos.length)*100);
+}
+function statusBadge(status) {
+  var map={dominado:'background:var(--green-l);color:var(--green)',rever:'background:var(--amber-l);color:var(--amber)',pular:'background:var(--bg3);color:var(--muted)',novo:'background:var(--bg3);color:var(--muted)'};
+  var txt={dominado:'✓ Dominado',rever:'👁 Rever',pular:'⏭ Pular',novo:'Novo'};
+  return '<span class="lei-artigo-status" style="'+( map[status]||map.novo)+'">'+( txt[status]||'Novo')+'</span>';
+}
+
+// ── RENDERIZAÇÃO DA ÁRVORE ──
 function renderLeis() {
-  var grid = document.getElementById('leis-grid');
-  if(!grid) return;
-  if(!leis.length) {
-    grid.innerHTML = '<div class="empty"><div class="empty-icon">📜</div><p>Nenhuma lei cadastrada.<br>Clique em "Gerenciar leis" para adicionar.</p></div>';
+  // Mostra botão gerenciar só pro super admin
+  var btnG=document.getElementById('btn-gerenciar-leis');
+  if(btnG) btnG.style.display=isSuperAdmin?'':'none';
+
+  var grid=document.getElementById('leis-grid'); if(!grid) return;
+  if(!leis.length){
+    grid.innerHTML='<div class="empty"><div class="empty-icon">📜</div><p>Nenhuma lei cadastrada.'+(isSuperAdmin?' Clique em "Gerenciar leis".':'')+'</p></div>';
     return;
   }
-  grid.innerHTML = leis.map(function(l) {
-    var total = l.artigos.length;
-    var dom = l.artigos.filter(function(a){return a.status==='dominado';}).length;
-    var rev = l.artigos.filter(function(a){return a.status==='rever';}).length;
-    var pct = total>0 ? Math.round((dom/total)*100) : 0;
-    return '<div class="lei-card" onclick="iniciarLeitura(\''+l.id+'\')">'+
-      '<div style="font-size:28px;margin-bottom:8px">'+(l.icon||'📋')+'</div>'+
-      '<div class="lei-nome">'+l.nome+'</div>'+
-      '<div class="lei-desc">'+( l.desc||'')+'</div>'+
-      '<div class="lei-prog-bar"><div class="lei-prog-fill" style="width:'+pct+'%"></div></div>'+
-      '<div class="lei-stats">'+
-        '<span style="color:var(--green)">✓ '+dom+' dominados</span>'+
-        '<span style="color:var(--amber)">👁 '+rev+' rever</span>'+
-        '<span>'+total+' artigos</span>'+
-      '</div>'+
-    '</div>';
+  grid.innerHTML=leis.map(function(l,li){
+    var artigos=(l.itens||[]).filter(function(i){return i.tipo==='artigo';});
+    var total=artigos.length;
+    var dom=artigos.filter(function(a){return a.status==='dominado';}).length;
+    var rev=artigos.filter(function(a){return a.status==='rever';}).length;
+    var pct=total>0?Math.round((dom/total)*100):0;
+    var topItens=getItensFilhos(l,null);
+
+    var arvoreHtml='<div class="lei-arvore" id="lei-arvore-'+li+'">'
+      +'<div class="lei-arvore-header" onclick="toggleLeiArvore('+li+')">'
+        +'<span style="font-size:24px">'+(l.icon||'📋')+'</span>'
+        +'<div style="flex:1">'
+          +'<div class="lei-arvore-nome">'+l.nome+'</div>'
+          +'<div class="lei-arvore-stats">'+total+' artigos · '+dom+' dominados · '+rev+' rever</div>'
+        +'</div>'
+        +(total>0?'<button class="lei-ler-btn" onclick="event.stopPropagation();iniciarSessaoLeiIdx('+li+',null,null)">▶ Lei toda</button>':'')
+        +'<span class="lei-arvore-arrow" id="arrow-lei-'+li+'">▶</span>'
+      +'</div>'
+      +'<div class="lei-arvore-bar"><div class="lei-arvore-bar-fill" style="width:'+pct+'%"></div></div>'
+      +'<div class="lei-nivel" id="nivel-lei-'+li+'">'
+        +renderNivel(l, null, li)
+      +'</div>'
+    +'</div>';
+    return arvoreHtml;
   }).join('');
 }
 
-// ── Leitura de artigo ──
-function iniciarLeitura(leiId) {
-  var filtro = document.querySelector('.lei-filtro-ativo')||null;
-  leiAtualId = leiId;
-  // Encontra primeiro artigo não pulado e não dominado, ou o primeiro
-  var lei = leis.find(function(l){return l.id===leiId;});
-  if(!lei||!lei.artigos.length) { toast('Esta lei não tem artigos cadastrados'); return; }
-  // Pula artigos do tipo titulo/capitulo/secao/subsecao que são apenas cabeçalhos
-  var primeiro = lei.artigos.findIndex(function(a){return a.status!=='pular' && a.tipo==='artigo';});
-  artigoAtualIdx = primeiro>=0 ? primeiro : 0;
+// Wrapper que usa índice em vez de id string (evita problema de aspas)
+function iniciarSessaoLeiIdx(leiIdx, itemIdx, artIdx) {
+  var lei = leis[leiIdx]; if(!lei) return;
+  var grupoId = itemIdx!=null ? (lei.itens[itemIdx]||{}).id : null;
+  var artigoId = artIdx!=null ? (lei.itens[artIdx]||{}).id : null;
+  iniciarSessaoLei(lei.id, grupoId, artigoId);
+}
+
+function renderNivel(lei, paiId, leiIdx) {
+  var filhos=getItensFilhos(lei, paiId);
+  if(!filhos.length) return '<div style="padding:12px 16px;color:var(--muted);font-size:12px">Nenhum item cadastrado.</div>';
+  return filhos.map(function(item, idx) {
+    var key='l'+leiIdx+'_'+item.id;
+    var itemIdx=(lei.itens||[]).indexOf(item);
+    if(item.tipo==='artigo') {
+      return '<div class="lei-artigo-item" onclick="iniciarSessaoLeiIdx('+leiIdx+',null,'+itemIdx+')">'
+        +'<div class="lei-artigo-num">'+item.num+'</div>'
+        +statusBadge(item.status||'novo')
+        +'<button class="lei-ler-btn" onclick="event.stopPropagation();iniciarSessaoLeiIdx('+leiIdx+',null,'+itemIdx+')">▶ Ler</button>'
+      +'</div>';
+    }
+    var artigos=getArtigosDoItem(lei, item.id);
+    var pct=pctItem(artigos);
+    var corMap={titulo:'var(--amber)',capitulo:'var(--blue)',secao:'var(--green)',subsecao:'var(--muted)'};
+    var cor=corMap[item.tipo]||'var(--muted)';
+    var paddingMap={titulo:'16px',capitulo:'32px',secao:'48px',subsecao:'60px'};
+    var pad=paddingMap[item.tipo]||'16px';
+
+    return '<div style="border-bottom:1px solid var(--border)">'
+      +'<div style="padding:9px 16px 9px '+pad+';display:flex;align-items:center;gap:8px;cursor:pointer;transition:background .15s;background:var(--bg2)" '
+        +'onmouseover="this.style.background=\'var(--bg3)\'" onmouseout="this.style.background=\'var(--bg2)\'" '
+        +'onclick="toggleItemArvore(\''+key+'\')">'
+        +'<span style="color:'+cor+';font-size:11px;flex-shrink:0" id="arrow-'+key+'">▶</span>'
+        +'<div style="flex:1">'
+          +'<div style="font-size:13px;font-weight:700;color:'+cor+'">'+item.num+'</div>'
+          +(artigos.length?'<div style="font-size:10px;color:var(--muted);font-family:var(--fm)">'+artigos.length+' artigos · '+pct+'% dominado</div>':'')
+        +'</div>'
+        +(artigos.length?'<button class="lei-ler-btn" onclick="event.stopPropagation();iniciarSessaoLeiIdx('+leiIdx+','+itemIdx+',null)">▶ Ler tudo</button>':'')
+      +'</div>'
+      +'<div id="nivel-'+key+'" style="display:none">'
+        +renderNivel(lei, item.id, leiIdx)
+      +'</div>'
+    +'</div>';
+  }).join('');
+}
+
+function toggleLeiArvore(idx) {
+  var n=document.getElementById('nivel-lei-'+idx);
+  var a=document.getElementById('arrow-lei-'+idx);
+  if(!n) return;
+  var open=n.classList.contains('open');
+  n.classList.toggle('open');
+  if(a) { a.textContent=open?'▶':'▼'; a.classList.toggle('open'); }
+}
+
+function toggleItemArvore(key) {
+  var n=document.getElementById('nivel-'+key);
+  var a=document.getElementById('arrow-'+key);
+  if(!n) return;
+  var open=n.style.display!=='none';
+  n.style.display=open?'none':'block';
+  if(a) a.textContent=open?'▶':'▼';
+}
+
+// ── SESSÃO DE LEITURA ──
+function iniciarSessaoLei(leiId, grupoId, artigoId) {
+  var lei=getLei(leiId); if(!lei) return;
+  var artigos=[];
+  if(artigoId) {
+    // Artigo único
+    var art=(lei.itens||[]).find(function(i){return i.id===artigoId;});
+    if(art) artigos=[art];
+  } else if(grupoId) {
+    // Todos artigos do grupo (capítulo/seção/título)
+    artigos=getArtigosDoItem(lei, grupoId);
+  } else {
+    // Lei toda
+    artigos=(lei.itens||[]).filter(function(i){return i.tipo==='artigo';});
+  }
+  if(!artigos.length){ toast('Nenhum artigo neste item'); return; }
+  leiAtualId=leiId;
+  leiSessao=artigos;
+  leiSessaoCur=0;
   document.getElementById('leis-lista-view').style.display='none';
   document.getElementById('leis-leitura-view').style.display='block';
-  document.getElementById('leis-admin-view').style.display='none';
-  renderArtigoAtual();
+  renderArtigoLeitura();
 }
 
 function fecharLeitura() {
-  leiAtualId = null;
+  leiAtualId=null; leiSessao=[]; leiSessaoCur=0;
   document.getElementById('leis-lista-view').style.display='block';
   document.getElementById('leis-leitura-view').style.display='none';
   renderLeis();
 }
 
-function renderArtigoAtual() {
-  var lei = leis.find(function(l){return l.id===leiAtualId;});
-  if(!lei) return;
-  var total = lei.artigos.length;
-  var art = lei.artigos[artigoAtualIdx];
-  var dom = lei.artigos.filter(function(a){return a.status==='dominado';}).length;
-  var rev = lei.artigos.filter(function(a){return a.status==='rever';}).length;
+function renderArtigoLeitura() {
+  var lei=getLei(leiAtualId);
+  var art=leiSessao[leiSessaoCur];
+  if(!art||!lei) return;
+  var total=leiSessao.length;
+  var dom=leiSessao.filter(function(a){return a.status==='dominado';}).length;
+  var rev=leiSessao.filter(function(a){return a.status==='rever';}).length;
 
-  document.getElementById('lei-prog').style.width = ((artigoAtualIdx/total)*100)+'%';
-  document.getElementById('lei-counter').textContent = (artigoAtualIdx+1)+'/'+total+' — '+lei.nome;
-  document.getElementById('lei-dom').textContent = '✓ '+dom;
-  document.getElementById('lei-rev').textContent = '👁 '+rev;
+  document.getElementById('lei-prog').style.width=((leiSessaoCur/total)*100)+'%';
+  document.getElementById('lei-counter').textContent=(leiSessaoCur+1)+'/'+total;
+  document.getElementById('lei-dom').textContent='✓ '+dom;
+  document.getElementById('lei-rev').textContent='👁 '+rev;
 
-  var isCabecalho = art.tipo!=='artigo';
-  var bgClass = {titulo:'artigo-tipo-titulo',capitulo:'artigo-tipo-capitulo',secao:'artigo-tipo-secao',subsecao:'artigo-tipo-subsecao'}[art.tipo]||'';
-  var statusBadge = {dominado:'<span style="color:var(--green);font-size:11px;font-weight:700">✓ Dominado</span>',rever:'<span style="color:var(--amber);font-size:11px;font-weight:700">👁 Rever</span>',pular:'<span style="color:var(--muted);font-size:11px">⏭ Pulado</span>'}[art.status]||'';
+  // Caminho hierárquico do artigo
+  var caminho='';
+  if(art.paiId) {
+    var pai=(lei.itens||[]).find(function(i){return i.id===art.paiId;});
+    if(pai) {
+      caminho=pai.num;
+      if(pai.paiId) {
+        var avo=(lei.itens||[]).find(function(i){return i.id===pai.paiId;});
+        if(avo) caminho=avo.num+' › '+caminho;
+      }
+    }
+  }
 
-  var btns = isCabecalho
-    ? '<div style="display:flex;gap:8px;justify-content:center"><button class="btn btn-primary" onclick="proximoArtigo()">Próximo →</button></div>'
-    : '<div class="artigo-btns">'
-        +'<button class="artigo-btn artigo-btn-dom" onclick="marcarArtigo(&quot;dominado&quot;)">✅ Dominado</button>'
-        +'<button class="artigo-btn artigo-btn-rev" onclick="marcarArtigo(&quot;rever&quot;)">👁 Rever</button>'
-        +'<button class="artigo-btn artigo-btn-pul" onclick="marcarArtigo(&quot;pular&quot;)">⏭ Pular</button>'
-      +'</div>';
-
-  document.getElementById('lei-artigo-display').innerHTML =
-    '<div class="artigo-card '+bgClass+'">'
-    +'<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">'
+  document.getElementById('lei-artigo-display').innerHTML=
+    '<div class="artigo-card">'
+    +(caminho?'<div style="font-size:11px;color:var(--muted);margin-bottom:8px">'+caminho+'</div>':'')
+    +'<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">'
       +'<div class="artigo-num">'+art.num+'</div>'
-      +statusBadge
+      +statusBadge(art.status||'novo')
     +'</div>'
     +(art.notas?'<div class="artigo-nota">💡 '+art.notas+'</div>':'')
     +'<div class="artigo-texto">'+art.texto.split('\n').join('<br>')+'</div>'
-    +btns
+    +'<div class="artigo-btns">'
+      +'<button class="artigo-btn artigo-btn-dom" onclick="marcarArtigoLeitura(&quot;dominado&quot;)">✅ Dominado</button>'
+      +'<button class="artigo-btn artigo-btn-rev" onclick="marcarArtigoLeitura(&quot;rever&quot;)">👁 Rever</button>'
+      +'<button class="artigo-btn artigo-btn-pul" onclick="marcarArtigoLeitura(&quot;pular&quot;)">⏭ Pular</button>'
+    +'</div>'
     +'</div>'
     +'<div style="display:flex;gap:8px;margin-top:8px;justify-content:center">'
-    +(artigoAtualIdx>0?'<button class="btn btn-ghost btn-sm" onclick="anteriorArtigo()">← Anterior</button>':'')
-    +(artigoAtualIdx<total-1?'<button class="btn btn-ghost btn-sm" onclick="proximoArtigo()">Próximo →</button>':'<button class="btn btn-green" onclick="fecharLeitura()">🎉 Concluído!</button>')
+    +(leiSessaoCur>0?'<button class="btn btn-ghost btn-sm" onclick="anteriorArtigoLeitura()">← Anterior</button>':'')
+    +(leiSessaoCur<total-1?'<button class="btn btn-ghost btn-sm" onclick="proximoArtigoLeitura()">Próximo →</button>':'<button class="btn btn-green" onclick="fecharLeitura()">🎉 Concluído!</button>')
     +'</div>';
 }
 
-function marcarArtigo(status) {
-  var lei = leis.find(function(l){return l.id===leiAtualId;});
-  if(!lei) return;
-  lei.artigos[artigoAtualIdx].status = status;
+function marcarArtigoLeitura(status) {
+  var lei=getLei(leiAtualId); if(!lei) return;
+  var art=leiSessao[leiSessaoCur];
+  // Atualiza na lei original
+  var idx=(lei.itens||[]).findIndex(function(i){return i.id===art.id;});
+  if(idx>=0) lei.itens[idx].status=status;
+  art.status=status;
+  // Conta no historico do dia
+  if(status==='dominado') {
+    artigosHoje=(artigosHoje||0)+1;
+    var hoje=TODAY();
+    if(!historico[hoje]) historico[hoje]={respondidas:0,acertos:0};
+    historico[hoje].artigosLidos=(historico[hoje].artigosLidos||0)+1;
+    var _hc=getHistoricoConc();
+    if(!_hc[hoje]) _hc[hoje]={respondidas:0,acertos:0};
+    _hc[hoje].artigosLidos=(_hc[hoje].artigosLidos||0)+1;
+    setHistoricoConc(hoje,_hc[hoje]);
+  }
   saveLeis();
-  proximoArtigo();
+  proximoArtigoLeitura();
 }
 
-function proximoArtigo() {
-  var lei = leis.find(function(l){return l.id===leiAtualId;});
-  if(!lei) return;
-  if(artigoAtualIdx < lei.artigos.length-1) {
-    artigoAtualIdx++;
-    renderArtigoAtual();
-  } else {
-    fecharLeitura();
-    toast('🎉 Lei concluída!');
-  }
+function proximoArtigoLeitura() {
+  if(leiSessaoCur<leiSessao.length-1){ leiSessaoCur++; renderArtigoLeitura(); }
+  else { fecharLeitura(); toast('🎉 Leitura concluída!'); }
 }
 
-function anteriorArtigo() {
-  if(artigoAtualIdx > 0) {
-    artigoAtualIdx--;
-    renderArtigoAtual();
-  }
+function anteriorArtigoLeitura() {
+  if(leiSessaoCur>0){ leiSessaoCur--; renderArtigoLeitura(); }
 }
 
-// ── Admin de Leis ──
+// ── ADMIN DE LEIS ──
 function abrirAdminLeis() {
   document.getElementById('leis-lista-view').style.display='none';
-  document.getElementById('leis-leitura-view').style.display='none';
   document.getElementById('leis-admin-view').style.display='block';
   renderLeisAdmin();
 }
-
 function fecharAdminLeis() {
   document.getElementById('leis-lista-view').style.display='block';
   document.getElementById('leis-admin-view').style.display='none';
   document.getElementById('artigos-section').style.display='none';
-  leiAtualId=null; editingLeiId=null; editingArtId=null;
+  leiAtualId=null; editingLeiId=null; editingItemId=null;
   renderLeis();
 }
 
-function saveLei() {
-  var nome = document.getElementById('lf-nome').value.trim();
-  if(!nome){ toast('⚠️ Digite o nome da lei'); return; }
-  var icon = document.getElementById('lf-icon').value.trim()||'📋';
-  var desc = document.getElementById('lf-desc').value.trim();
-  if(editingLeiId!=null) {
-    var idx = leis.findIndex(function(l){return l.id===editingLeiId;});
-    if(idx>=0) { leis[idx].nome=nome; leis[idx].icon=icon; leis[idx].desc=desc; }
-    editingLeiId=null;
-    document.getElementById('lf-title').textContent='➕ Nova Lei';
-  } else {
-    leis.push({id:'lei_'+nextLeiId++, nome, icon, desc, artigos:[]});
-  }
-  saveLeis(); clearLeiForm(); renderLeisAdmin();
-  toast('✅ Lei salva!');
+function onTipoChange() {
+  var tipo=document.getElementById('af-tipo').value;
+  var paiWrap=document.getElementById('af-pai-wrap');
+  var textoEl=document.getElementById('af-texto');
+  if(!paiWrap||!textoEl) return;
+  // Mostrar pai só para artigos e subseções
+  paiWrap.style.display=(tipo==='artigo'||tipo==='subsecao'||tipo==='secao')?'block':'none';
+  if(tipo!=='artigo') textoEl.placeholder='Deixe vazio — título/capítulo/seção não têm texto próprio';
+  else textoEl.placeholder='Texto completo do artigo...';
 }
 
-function clearLeiForm() {
+function saveLei() {
+  var nome=document.getElementById('lf-nome').value.trim();
+  if(!nome){toast('⚠️ Digite o nome da lei');return;}
+  var icon=document.getElementById('lf-icon').value.trim()||'📋';
+  var desc=document.getElementById('lf-desc').value.trim();
+  if(editingLeiId!=null){
+    var idx=leis.findIndex(function(l){return l.id===editingLeiId;});
+    if(idx>=0){leis[idx].nome=nome;leis[idx].icon=icon;leis[idx].desc=desc;}
+    editingLeiId=null; document.getElementById('lf-title').textContent='➕ Nova Lei';
+  } else {
+    leis.push({id:'lei_'+nextLeiId++,nome,icon,desc,itens:[]});
+  }
+  saveLeis(); clearLeiForm(); renderLeisAdmin(); toast('✅ Lei salva!');
+}
+function clearLeiForm(){
   editingLeiId=null;
   document.getElementById('lf-title').textContent='➕ Nova Lei';
   ['lf-nome','lf-icon','lf-desc'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});
 }
-
-function editLei(id) {
+function editLei(id){
   var l=leis.find(function(x){return x.id===id;}); if(!l) return;
   editingLeiId=id;
   document.getElementById('lf-title').textContent='✏️ Editando Lei';
   document.getElementById('lf-nome').value=l.nome||'';
   document.getElementById('lf-icon').value=l.icon||'';
   document.getElementById('lf-desc').value=l.desc||'';
-  toast('Lei carregada');
 }
-
-function deleteLei(id) {
-  if(!confirm('Excluir esta lei e todos os seus artigos?')) return;
+function deleteLei(id){
+  if(!confirm('Excluir esta lei e todos os seus itens?')) return;
   leis=leis.filter(function(l){return l.id!==id;});
-  if(leiAtualId===id) leiAtualId=null;
-  document.getElementById('artigos-section').style.display='none';
-  saveLeis(); renderLeisAdmin();
-  toast('Lei excluída');
+  if(leiAtualId===id){leiAtualId=null; document.getElementById('artigos-section').style.display='none';}
+  saveLeis(); renderLeisAdmin(); toast('Lei excluída');
 }
-
-function renderLeisAdmin() {
+function renderLeisAdmin(){
   var el=document.getElementById('leis-count'); if(el) el.textContent=leis.length;
   var list=document.getElementById('leis-admin-list'); if(!list) return;
   if(!leis.length){list.innerHTML='<div style="color:var(--muted);font-size:13px;padding:12px">Nenhuma lei. Crie acima.</div>';return;}
-  list.innerHTML=leis.map(function(l){
+  list.innerHTML=leis.map(function(l,li){
+    var total=(l.itens||[]).filter(function(i){return i.tipo==='artigo';}).length;
     return '<div class="q-adm-row">'
       +'<div style="font-size:22px;width:36px;text-align:center;flex-shrink:0">'+(l.icon||'📋')+'</div>'
       +'<div class="q-adm-body"><strong>'+l.nome+'</strong>'
-        +'<div style="font-size:11px;color:var(--muted);margin-top:2px">'+(l.desc||'—')+' · '+l.artigos.length+' artigos</div></div>'
+        +'<div style="font-size:11px;color:var(--muted);margin-top:2px">'+(l.desc||'—')+' · '+total+' artigos</div></div>'
       +'<div class="q-adm-acts">'
-        +'<button type="button" class="btn btn-ghost btn-sm" onclick="abrirArtigos(\''+l.id+'\')">📄 Artigos</button>'
-        +'<button type="button" class="btn btn-ghost btn-sm" onclick="editLei(\''+l.id+'\')">✏️</button>'
-        +'<button type="button" class="btn btn-red btn-sm" onclick="deleteLei(\''+l.id+'\')">🗑</button>'
+        +'<button type="button" class="btn btn-ghost btn-sm" onclick="abrirItens(leis['+li+'].id)">📄 Itens</button>'
+        +'<button type="button" class="btn btn-ghost btn-sm" onclick="editLei(leis['+li+'].id)">✏️</button>'
+        +'<button type="button" class="btn btn-red btn-sm" onclick="deleteLei(leis['+li+'].id)">🗑</button>'
       +'</div>'
     +'</div>';
   }).join('');
 }
 
-// ── Artigos ──
-function abrirArtigos(leiId) {
-  leiAtualId = leiId;
-  var lei = leis.find(function(l){return l.id===leiId;});
-  var sec = document.getElementById('artigos-section');
-  var title = document.getElementById('artigos-section-title');
+function abrirItens(leiId){
+  leiAtualId=leiId;
+  var lei=getLei(leiId);
+  var sec=document.getElementById('artigos-section');
+  var title=document.getElementById('artigos-section-title');
   if(sec) sec.style.display='block';
-  if(title) title.textContent='Artigos de: '+(lei?lei.nome:'');
-  renderArtigosAdmin();
-  sec.scrollIntoView({behavior:'smooth'});
+  if(title&&lei) title.textContent='Itens de: '+lei.nome;
+  syncSelectPai();
+  onTipoChange();
+  renderItensAdmin();
+  if(sec) sec.scrollIntoView({behavior:'smooth'});
 }
 
-function saveArtigo() {
-  if(!leiAtualId){ toast('Selecione uma lei primeiro'); return; }
-  var num = document.getElementById('af-num').value.trim();
-  var texto = document.getElementById('af-texto').value.trim();
-  if(!num){ toast('⚠️ Digite o número/título'); return; }
-  if(!texto){ toast('⚠️ Digite o texto'); return; }
-  var tipo = document.getElementById('af-tipo').value;
-  var notas = document.getElementById('af-notas').value.trim();
-  var lei = leis.find(function(l){return l.id===leiAtualId;});
-  if(!lei) return;
-  if(editingArtId!=null) {
-    var idx=lei.artigos.findIndex(function(a){return a.id===editingArtId;});
-    if(idx>=0) { lei.artigos[idx].num=num; lei.artigos[idx].texto=texto; lei.artigos[idx].tipo=tipo; lei.artigos[idx].notas=notas; }
-    editingArtId=null;
-    document.getElementById('af-title').textContent='➕ Novo Artigo';
+function syncSelectPai(){
+  var lei=getLei(leiAtualId); if(!lei) return;
+  var sel=document.getElementById('af-pai'); if(!sel) return;
+  var grupos=(lei.itens||[]).filter(function(i){return i.tipo!=='artigo';});
+  sel.innerHTML='<option value="">— Raiz da lei —</option>'+grupos.map(function(g){
+    var indent={titulo:'',capitulo:'&nbsp;&nbsp;',secao:'&nbsp;&nbsp;&nbsp;&nbsp;',subsecao:'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'}[g.tipo]||'';
+    return '<option value="'+g.id+'">'+indent+g.num+'</option>';
+  }).join('');
+}
+
+function saveArtigo(){
+  if(!leiAtualId){toast('Selecione uma lei primeiro');return;}
+  var num=document.getElementById('af-num').value.trim();
+  if(!num){toast('⚠️ Digite o número/título');return;}
+  var tipo=document.getElementById('af-tipo').value;
+  var texto=document.getElementById('af-texto').value.trim();
+  var notas=document.getElementById('af-notas').value.trim();
+  var paiId=document.getElementById('af-pai')?.value||null;
+  if(!paiId) paiId=null;
+  var lei=getLei(leiAtualId); if(!lei) return;
+  if(!lei.itens) lei.itens=[];
+  if(editingItemId!=null){
+    var idx=lei.itens.findIndex(function(i){return i.id===editingItemId;});
+    if(idx>=0) Object.assign(lei.itens[idx],{num,tipo,texto,notas,paiId});
+    editingItemId=null; document.getElementById('af-title').textContent='➕ Novo Item';
   } else {
-    lei.artigos.push({id:'art_'+nextArtId++, num, tipo, texto, notas, status:'novo'});
+    lei.itens.push({id:'item_'+nextItemId++,num,tipo,texto,notas,paiId,status:'novo'});
   }
-  saveLeis(); clearArtigoForm(); renderArtigosAdmin();
-  toast('✅ Artigo salvo!');
+  saveLeis(); clearArtigoForm(); syncSelectPai(); renderItensAdmin(); toast('✅ Item salvo!');
 }
-
-function clearArtigoForm() {
-  editingArtId=null;
-  document.getElementById('af-title').textContent='➕ Novo Artigo';
+function clearArtigoForm(){
+  editingItemId=null;
+  document.getElementById('af-title').textContent='➕ Novo Item';
   ['af-num','af-texto','af-notas','af-colar'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});
-  document.getElementById('af-tipo').value='artigo';
+  var tp=document.getElementById('af-tipo'); if(tp) tp.value='artigo';
+  var pai=document.getElementById('af-pai'); if(pai) pai.value='';
+  onTipoChange();
+}
+function editItem(itemId){
+  var lei=getLei(leiAtualId); if(!lei) return;
+  var item=(lei.itens||[]).find(function(i){return i.id===itemId;}); if(!item) return;
+  editingItemId=itemId;
+  document.getElementById('af-title').textContent='✏️ Editando Item';
+  document.getElementById('af-num').value=item.num||'';
+  document.getElementById('af-tipo').value=item.tipo||'artigo';
+  document.getElementById('af-texto').value=item.texto||'';
+  document.getElementById('af-notas').value=item.notas||'';
+  var pai=document.getElementById('af-pai'); if(pai) pai.value=item.paiId||'';
+  onTipoChange();
+}
+function deleteItem(itemId){
+  if(!confirm('Excluir este item?')) return;
+  var lei=getLei(leiAtualId); if(!lei) return;
+  lei.itens=(lei.itens||[]).filter(function(i){return i.id!==itemId;});
+  saveLeis(); syncSelectPai(); renderItensAdmin(); toast('Item excluído');
+}
+function renderItensAdmin(){
+  var list=document.getElementById('artigos-admin-list'); if(!list) return;
+  var lei=getLei(leiAtualId);
+  if(!lei||!(lei.itens||[]).length){list.innerHTML='<div style="color:var(--muted);font-size:13px;padding:12px">Nenhum item. Adicione acima ou use o importador.</div>';return;}
+  var corMap={artigo:'var(--text)',titulo:'var(--amber)',capitulo:'var(--blue)',secao:'var(--green)',subsecao:'var(--muted)'};
+  var padMap={titulo:'0',capitulo:'12px',secao:'24px',subsecao:'36px',artigo:'48px'};
+  var lei_itens=lei.itens||[];
+  list.innerHTML=lei_itens.map(function(i,ii){
+    var cor=corMap[i.tipo]||'var(--text)';
+    var pad=padMap[i.tipo]||'0';
+    return '<div class="q-adm-row" style="border-left:3px solid '+cor+';padding-left:calc(14px + '+pad+')">'
+      +'<div class="q-adm-body">'
+        +'<strong style="font-size:12px;color:'+cor+'">'+i.num+'</strong>'
+        +(i.texto?'<div style="font-size:11px;color:var(--muted);margin-top:2px">'+i.texto.substring(0,60)+(i.texto.length>60?'...':'')+'</div>':'')
+      +'</div>'
+      +'<div class="q-adm-acts">'
+        +'<button type="button" class="btn btn-ghost btn-sm" onclick="editItem(lei_itens['+ii+'].id)">✏️</button>'
+        +'<button type="button" class="btn btn-red btn-sm" onclick="deleteItem(lei_itens['+ii+'].id)">🗑</button>'
+      +'</div>'
+    +'</div>';
+  }).join('');
 }
 
-function editArtigo(artId) {
-  var lei=leis.find(function(l){return l.id===leiAtualId;}); if(!lei) return;
-  var art=lei.artigos.find(function(a){return a.id===artId;}); if(!art) return;
-  editingArtId=artId;
-  document.getElementById('af-title').textContent='✏️ Editando Artigo';
-  document.getElementById('af-num').value=art.num||'';
-  document.getElementById('af-texto').value=art.texto||'';
-  document.getElementById('af-tipo').value=art.tipo||'artigo';
-  document.getElementById('af-notas').value=art.notas||'';
-  toast('Artigo carregado');
-}
+// ── PARSER ──
+function parsearLei(){
+  var texto=document.getElementById('af-colar')?.value?.trim();
+  if(!texto){toast('Cole o texto da lei primeiro');return;}
+  if(!leiAtualId){toast('Selecione uma lei primeiro');return;}
+  var lei=getLei(leiAtualId); if(!lei) return;
+  if(!lei.itens) lei.itens=[];
 
-function deleteArtigo(artId) {
-  if(!confirm('Excluir este artigo?')) return;
-  var lei=leis.find(function(l){return l.id===leiAtualId;}); if(!lei) return;
-  lei.artigos=lei.artigos.filter(function(a){return a.id!==artId;});
-  saveLeis(); renderArtigosAdmin();
-  toast('Artigo excluído');
-}
+  var linhas=texto.split('\n');
+  var adicionados=0;
+  var paiAtual=null; // id do item pai atual
+  var avoPai=null;
 
-function parsearLei() {
-  var texto = document.getElementById('af-colar').value.trim();
-  if(!texto){ toast('Cole o texto da lei primeiro'); return; }
-  if(!leiAtualId){ toast('Selecione uma lei primeiro'); return; }
-  var lei = leis.find(function(l){return l.id===leiAtualId;});
-  if(!lei) return;
+  // Stack para manter hierarquia: [titulo, capitulo, secao, subsecao]
+  var stack={titulo:null,capitulo:null,secao:null,subsecao:null};
 
-  var linhas = texto.split('\n');
-  var adicionados = 0;
-  var bufNum='', bufTipo='artigo', bufTexto=[];
+  var bufNum='', bufTipo='artigo', bufPai=null, bufTexto=[];
 
-  function flush() {
-    if(bufNum && bufTexto.length) {
-      lei.artigos.push({id:'art_'+nextArtId++, num:bufNum, tipo:bufTipo, texto:bufTexto.join('\n').trim(), notas:'', status:'novo'});
+  function flush(){
+    if(bufNum){
+      var item={id:'item_'+nextItemId++,num:bufNum,tipo:bufTipo,texto:bufTexto.join('\n').trim(),notas:'',paiId:bufPai,status:'novo'};
+      lei.itens.push(item);
       adicionados++;
+      // Atualiza stack
+      if(bufTipo!=='artigo') stack[bufTipo]=item.id;
     }
-    bufNum=''; bufTexto=[]; bufTipo='artigo';
+    bufNum=''; bufTexto=[]; bufTipo='artigo'; bufPai=null;
   }
 
-  linhas.forEach(function(linha) {
-    var l = linha.trim();
-    if(!l) return;
-    var isArt = /^Art\.?\s*\d+[°oO]?/i.test(l);
-    var isTit = /^T[ií]tulo\s+/i.test(l);
-    var isCap = /^Cap[ií]tulo\s+/i.test(l);
-    var isSec = /^Se[çc][ãa]o\s+/i.test(l) && !/^Subse/i.test(l);
-    var isSub = /^Subse[çc][ãa]o\s+/i.test(l);
+  linhas.forEach(function(linha){
+    var l=linha.trim(); if(!l) return;
+    var isTit=/^T[ií]tulo\s+/i.test(l);
+    var isCap=/^Cap[ií]tulo\s+/i.test(l);
+    var isSec=/^Se[çc][ãa]o\s+/i.test(l)&&!/^Subse/i.test(l);
+    var isSub=/^Subse[çc][ãa]o\s+/i.test(l);
+    var isArt=/^Art\.?\s*\d+/i.test(l)||/^Artigo\s+\d+/i.test(l);
 
-    if(isArt||isTit||isCap||isSec||isSub) {
+    if(isTit||isCap||isSec||isSub||isArt){
       flush();
-      bufNum = l.split('–')[0].split('-')[0].trim();
-      bufTipo = isArt?'artigo':isTit?'titulo':isCap?'capitulo':isSec?'secao':'subsecao';
-      var resto = l.substring(bufNum.length).replace(/^[\s–-]+/,'');
+      bufNum=l.split('–')[0].split('—')[0].split('-')[0].trim().substring(0,60);
+      if(isTit){ bufTipo='titulo'; bufPai=null; stack.capitulo=null;stack.secao=null;stack.subsecao=null; }
+      else if(isCap){ bufTipo='capitulo'; bufPai=stack.titulo||null; stack.secao=null;stack.subsecao=null; }
+      else if(isSec){ bufTipo='secao'; bufPai=stack.capitulo||stack.titulo||null; stack.subsecao=null; }
+      else if(isSub){ bufTipo='subsecao'; bufPai=stack.secao||stack.capitulo||stack.titulo||null; }
+      else { bufTipo='artigo'; bufPai=stack.subsecao||stack.secao||stack.capitulo||stack.titulo||null; }
+      var resto=l.substring(bufNum.length).replace(/^[\s–—-]+/,'');
       if(resto) bufTexto.push(resto);
     } else {
       bufTexto.push(l);
@@ -3609,36 +3845,9 @@ function parsearLei() {
   });
   flush();
 
-  saveLeis(); renderArtigosAdmin();
+  saveLeis(); syncSelectPai(); renderItensAdmin();
   document.getElementById('af-colar').value='';
-  toast('✅ '+adicionados+' artigos importados!');
-}
-
-function renderArtigosAdmin() {
-  var list=document.getElementById('artigos-admin-list'); if(!list) return;
-  var lei=leis.find(function(l){return l.id===leiAtualId;});
-  if(!lei||!lei.artigos.length){
-    list.innerHTML='<div style="color:var(--muted);font-size:13px;padding:12px">Nenhum artigo. Adicione acima ou cole o texto da lei.</div>';
-    return;
-  }
-  list.innerHTML=lei.artigos.map(function(a,i){
-    var cores={artigo:'var(--text)',titulo:'var(--amber)',capitulo:'var(--blue)',secao:'var(--green)',subsecao:'var(--muted)'};
-    var statusBg={dominado:'var(--green-l)',rever:'var(--amber-l)',pular:'var(--bg3)',novo:'var(--bg3)'};
-    var statusTxt={dominado:'✓ Dominado',rever:'👁 Rever',pular:'⏭ Pulado',novo:'Novo'};
-    return '<div class="q-adm-row" style="border-left:3px solid '+(cores[a.tipo]||'var(--border)')+'">'
-      +'<div class="q-adm-body">'
-        +'<div style="display:flex;gap:6px;align-items:center;margin-bottom:4px">'
-          +'<strong style="font-size:12px;color:'+(cores[a.tipo]||'var(--text)')+'">'+a.num+'</strong>'
-          +'<span style="font-size:10px;padding:1px 6px;border-radius:4px;background:'+(statusBg[a.status]||'var(--bg3)')+'">'+( statusTxt[a.status]||'Novo')+'</span>'
-        +'</div>'
-        +'<div style="font-size:12px;color:var(--muted)">'+a.texto.substring(0,80)+(a.texto.length>80?'...':'')+'</div>'
-      +'</div>'
-      +'<div class="q-adm-acts">'
-        +'<button type="button" class="btn btn-ghost btn-sm" onclick="editArtigo(\''+a.id+'\')">✏️</button>'
-        +'<button type="button" class="btn btn-red btn-sm" onclick="deleteArtigo(\''+a.id+'\')">🗑</button>'
-      +'</div>'
-    +'</div>';
-  }).join('');
+  toast('✅ '+adicionados+' itens importados!');
 }
 
 function loginOffline(){
