@@ -3692,9 +3692,9 @@ function renderLeisAdmin(){
       +'<div class="q-adm-body"><strong>'+l.nome+'</strong>'
         +'<div style="font-size:11px;color:var(--muted);margin-top:2px">'+(l.desc||'—')+' · '+total+' artigos</div></div>'
       +'<div class="q-adm-acts">'
-        +'<button type="button" class="btn btn-ghost btn-sm" onclick="abrirItens(leis['+li+'].id)">📄 Itens</button>'
-        +'<button type="button" class="btn btn-ghost btn-sm" onclick="editLei(leis['+li+'].id)">✏️</button>'
-        +'<button type="button" class="btn btn-red btn-sm" onclick="deleteLei(leis['+li+'].id)">🗑</button>'
+        +'<button type="button" class="btn btn-ghost btn-sm" onclick="abrirItens(\''+l.id+'\')">📄 Itens</button>'
+        +'<button type="button" class="btn btn-ghost btn-sm" onclick="editLei(\''+l.id+'\')">✏️</button>'
+        +'<button type="button" class="btn btn-red btn-sm" onclick="deleteLei(\''+l.id+'\')">🗑</button>'
       +'</div>'
     +'</div>';
   }).join('');
@@ -3785,8 +3785,8 @@ function renderItensAdmin(){
         +(i.texto?'<div style="font-size:11px;color:var(--muted);margin-top:2px">'+i.texto.substring(0,60)+(i.texto.length>60?'...':'')+'</div>':'')
       +'</div>'
       +'<div class="q-adm-acts">'
-        +'<button type="button" class="btn btn-ghost btn-sm" onclick="editItem(lei_itens['+ii+'].id)">✏️</button>'
-        +'<button type="button" class="btn btn-red btn-sm" onclick="deleteItem(lei_itens['+ii+'].id)">🗑</button>'
+        +'<button type="button" class="btn btn-ghost btn-sm" onclick="editItem(\''+i.id+'\')">✏️</button>'
+        +'<button type="button" class="btn btn-red btn-sm" onclick="deleteItem(\''+i.id+'\')">🗑</button>'
       +'</div>'
     +'</div>';
   }).join('');
