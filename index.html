@@ -3466,13 +3466,32 @@ function iniciarSessaoLeiIdx(leiIdx, itemIdx, artIdx) {
 }
 
 function toggleDestaque(leiId, itemId) {
-  // Para propagação de qualquer evento ativo
   var ev = window.event; if(ev){ev.stopPropagation();ev.preventDefault();}
   var lei=getLei(leiId); if(!lei) return;
   var item=(lei.itens||[]).find(function(i){return i.id===itemId;}); if(!item) return;
   item.destaque = !item.destaque;
   saveLeis();
-  renderLeis();
+
+  // Atualiza o DOM diretamente sem re-renderizar tudo
+  var star = ev && ev.target ? ev.target : null;
+  if(star && star.classList.contains('lei-star')) {
+    star.textContent = item.destaque ? '⭐' : '☆';
+    if(item.destaque) star.classList.add('ativo');
+    else star.classList.remove('ativo');
+    // Atualiza borda do item pai
+    var row = star.closest('[style*="border-bottom"]') || star.parentElement;
+    if(row) {
+      if(item.destaque) {
+        row.style.borderLeft = '3px solid var(--amber)';
+        var inner = row.querySelector('[style*="background"]');
+        if(inner) inner.style.background = 'rgba(255,184,48,.08)';
+      } else {
+        row.style.borderLeft = '';
+        var inner2 = row.querySelector('[style*="background"]');
+        if(inner2) inner2.style.background = '';
+      }
+    }
+  }
 }
 
 function renderNivel(lei, paiId, leiIdx) {
