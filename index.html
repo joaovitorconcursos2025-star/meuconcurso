@@ -3466,6 +3466,8 @@ function iniciarSessaoLeiIdx(leiIdx, itemIdx, artIdx) {
 }
 
 function toggleDestaque(leiId, itemId) {
+  // Para propagação de qualquer evento ativo
+  var ev = window.event; if(ev){ev.stopPropagation();ev.preventDefault();}
   var lei=getLei(leiId); if(!lei) return;
   var item=(lei.itens||[]).find(function(i){return i.id===itemId;}); if(!item) return;
   item.destaque = !item.destaque;
