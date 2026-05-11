@@ -2485,7 +2485,9 @@ function renderAuthArea(user){
 
 async function handleLogin(user){
   currentUser = user;
-  isSuperAdmin = (user.email === SUPER_ADMIN_EMAIL);
+  isSuperAdmin = (user.email||'').toLowerCase().trim() === SUPER_ADMIN_EMAIL.toLowerCase().trim();
+  var btnAdmin = document.getElementById('btn-admin');
+  if(btnAdmin) btnAdmin.style.display = isSuperAdmin ? '' : 'none';
   document.getElementById('login-screen').style.display = 'none';
   renderAuthArea(user);
   await loadAll();
