@@ -3682,7 +3682,7 @@ function onTipoChange() {
   var textoEl=document.getElementById('af-texto');
   if(!paiWrap||!textoEl) return;
   // Mostrar pai só para artigos e subseções
-  paiWrap.style.display=(tipo==='artigo'||tipo==='subsecao'||tipo==='secao')?'block':'none';
+  paiWrap.style.display=(tipo==='artigo'||tipo==='subsecao'||tipo==='secao'||tipo==='capitulo')?'block':'none';
   if(tipo!=='artigo') textoEl.placeholder='Deixe vazio — título/capítulo/seção não têm texto próprio';
   else textoEl.placeholder='Texto completo do artigo...';
 }
