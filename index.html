@@ -798,6 +798,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
     <div class="q-topbar">
       <div class="q-prog"><div class="q-prog-fill" id="sess-prog"></div></div>
       <div class="q-counter" id="sess-count">1/20</div>
+      <div id="sess-topico" style="font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px;flex:1;text-align:center"></div>
       <div class="q-score"><span style="color:var(--green)" id="sess-corr">✓ 0</span><span style="color:var(--red)" id="sess-err">✗ 0</span></div>
       <button class="btn btn-ghost btn-sm" onclick="endSession()">Encerrar</button>
     </div>
@@ -1834,6 +1835,10 @@ function renderSessQ() {
   var total=session.qs.length;
   document.getElementById('sess-prog').style.width=((session.cur/total)*100)+'%';
   document.getElementById('sess-count').textContent=(session.cur+1)+'/'+total;
+  // Mostra tópico da questão atual
+  var _top = topicos.find(function(t){return t.id===q.topico;});
+  var topicoEl = document.getElementById('sess-topico');
+  if(topicoEl) topicoEl.textContent = _top ? _top.nome : '';
   document.getElementById('sess-corr').textContent='✓ '+session.corr;
   document.getElementById('sess-err').textContent='✗ '+session.erros;
 
