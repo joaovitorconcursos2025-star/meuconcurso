@@ -1375,6 +1375,12 @@ function aplicarRevisao(q, resultado) {
   if(!historico[hoje]) historico[hoje]={respondidas:0,acertos:0};
   historico[hoje].respondidas++;
   if(resultado==='acerto') historico[hoje].acertos++;
+  // Salva imediatamente no Firebase a cada resposta
+  if(currentUser) {
+    var _ref = db.collection('usuarios').doc(currentUser.uid).collection('dados');
+    _ref.doc('historico').set({v:historico, t:Date.now()}).catch(function(){});
+    _ref.doc('questions').set({v:questions, t:Date.now()}).catch(function(){});
+  }
 }
 
 
@@ -2097,11 +2103,25 @@ function editConcurso(id){
   adminTab(document.querySelectorAll('.at')[2],'atp-conc');
   toast('Concurso carregado');
 }
+// ── Senha de segurança para ações destrutivas ──
+var SENHA_ADMIN = 'jv2026@fiscal'; // só o João sabe
+
+function confirmarSenhaAdmin(acao) {
+  var senha = prompt('🔐 Confirme sua senha de segurança para ' + acao + ':');
+  if (senha === null) return false; // cancelou
+  if (senha !== SENHA_ADMIN) {
+    toast('❌ Senha incorreta! Ação cancelada.');
+    return false;
+  }
+  return true;
+}
+
 function deleteConcurso(id){
   var c=concursos.find(x=>x.id===id);
   if(!c) return;
   var qCount=questions.filter(q=>q.concursoId===id).length;
   if(!confirm('Excluir "'+c.name+'"?'+(qCount?' Tem '+qCount+' questão(ões).':''))) return;
+  if(!confirmarSenhaAdmin('excluir o concurso "'+c.name+'"')) return;
   concursos=concursos.filter(x=>x.id!==id);
   save(); renderConcAdmin(); renderConcursos(); toast('Concurso excluído');
 }
@@ -2165,6 +2185,7 @@ function deleteMateria(id){
   var m=materias.find(x=>x.id===id); if(!m) return;
   var qc=questions.filter(q=>q.materia===id).length;
   if(!confirm('Excluir "'+m.name+'"?'+(qc?' Tem '+qc+' questão(ões).':''))) return;
+  if(!confirmarSenhaAdmin('excluir a matéria "'+m.name+'"')) return;
   materias=materias.filter(x=>x.id!==id);
   save(); renderMatAdmin(); syncSelectsMaterias(); toast('Matéria excluída');
 }
@@ -2572,6 +2593,7 @@ function editTopico(id) {
 
 function deleteTopico(id) {
   if(!confirm('Excluir este tópico?')) return;
+  if(!confirmarSenhaAdmin('excluir este tópico')) return;
   topicos=topicos.filter(t=>t.id!==id);
   save(); renderTopicoAdmin(); syncSelectsTopicos(); toast('Tópico excluído');
 }
