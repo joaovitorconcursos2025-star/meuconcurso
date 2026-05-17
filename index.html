@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Meu Concurso</title>
 <meta name="theme-color" content="#0a0a0f">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Meu Concurso">
 <link rel="manifest" id="pwa-manifest">
@@ -3912,7 +3913,7 @@ window.addEventListener('offline', function(){
 
 // PWA manifest
 try {
-  var _m={name:"Meu Concurso",short_name:"MeuConcurso",start_url:"./",display:"standalone",background_color:"#0a0a0f",theme_color:"#0a0a0f",icons:[{src:"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='80' fill='%230a0a0f'/><text y='380' x='60' font-size='380'>🎯</text></svg>",sizes:"512x512",type:"image/svg+xml"}]};
+  var _m={name:"Meu Concurso",short_name:"MeuConcurso",start_url:"https://joaovitorconcursos2025-star.github.io/meuconcurso/",display:"standalone",background_color:"#0a0a0f",theme_color:"#0a0a0f",icons:[{src:"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='80' fill='%230a0a0f'/><text y='380' x='60' font-size='380'>🎯</text></svg>",sizes:"512x512",type:"image/svg+xml"}]};
   var _mb=new Blob([JSON.stringify(_m)],{type:'application/json'});
   var _mel=document.getElementById('pwa-manifest');
   if(_mel) _mel.href=URL.createObjectURL(_mb);
