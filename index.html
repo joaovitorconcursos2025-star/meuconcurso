@@ -2120,7 +2120,6 @@ function deleteConcurso(id){
   var c=concursos.find(x=>x.id===id);
   if(!c) return;
   var qCount=questions.filter(q=>q.concursoId===id).length;
-  if(!confirm('Excluir "'+c.name+'"?'+(qCount?' Tem '+qCount+' questão(ões).':''))) return;
   if(!confirmarSenhaAdmin('excluir o concurso "'+c.name+'"')) return;
   concursos=concursos.filter(x=>x.id!==id);
   save(); renderConcAdmin(); renderConcursos(); toast('Concurso excluído');
@@ -2184,7 +2183,6 @@ function editMateria(id){
 function deleteMateria(id){
   var m=materias.find(x=>x.id===id); if(!m) return;
   var qc=questions.filter(q=>q.materia===id).length;
-  if(!confirm('Excluir "'+m.name+'"?'+(qc?' Tem '+qc+' questão(ões).':''))) return;
   if(!confirmarSenhaAdmin('excluir a matéria "'+m.name+'"')) return;
   materias=materias.filter(x=>x.id!==id);
   save(); renderMatAdmin(); syncSelectsMaterias(); toast('Matéria excluída');
@@ -2305,8 +2303,7 @@ function clearQForm(){
   document.getElementById('qf-title').textContent='➕ Nova Questão';
   ['qf-text','qf-assunto','qf-banca','qf-ano','qf-expl'].forEach(id=>{var el=document.getElementById(id);if(el)el.value='';});
   [0,1,2,3].forEach(i=>{var el=document.getElementById('qf-opt-'+i);if(el)el.value='';});
-  var tel=document.getElementById('qf-topico'); if(tel) tel.value='';
-  var sel=document.getElementById('qf-subtopico'); if(sel) sel.value='';
+  // NÃO limpa matéria e tópico — mantém fixos para bateria de questões
   document.getElementById('qf-nivel').value='medio';
   document.getElementById('qf-correct').value='0';
   setTipo('abcd');
@@ -2319,15 +2316,21 @@ function renderQAdminList(){
   if(!qs.length){list.innerHTML='<div class="empty"><div class="empty-icon">📭</div><p>Nenhuma questão ainda.</p></div>';return;}
   list.innerHTML=qs.map(q=>{
     var m=materias.find(x=>x.id===q.materia);
+    var top=topicos.find(x=>x.id===q.topico);
     var isVE=q.tipo==='ve';
-    return `<div class="q-adm-row">
+    var semMat=!q.materia;
+    var semTop=!q.topico;
+    return `<div class="q-adm-row" style="${semMat?'border-left:3px solid var(--red)':semTop?'border-left:3px solid var(--amber)':''}">
       <div class="q-adm-body">
-        <div style="display:flex;gap:5px;margin-bottom:5px;flex-wrap:wrap">
+        <div style="display:flex;gap:5px;margin-bottom:5px;flex-wrap:wrap;align-items:center">
           <span style="font-size:10px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:2px 7px;border-radius:4px;font-weight:700;font-family:var(--fm)">#${q.id}</span>
           <span style="font-size:10px;background:var(--bg3);border:1px solid var(--border);color:var(--muted);padding:2px 7px;border-radius:4px;font-weight:700">${isVE?'C/E':'ABCD'}</span>
           <span class="tag tag-${q.nivel||'medio'}">${q.nivel||'médio'}</span>
           <span class="tag tag-${q.status||'nova'}">${q.status||'nova'}</span>
-          ${m?`<span class="tag" style="background:var(--bg3);color:var(--muted)">${m.icon||'📚'} ${m.name}</span>`:''}
+          ${semMat?'<span style="font-size:10px;background:var(--red-l);color:var(--red);padding:2px 7px;border-radius:4px;font-weight:700">⚠ Sem matéria</span>':
+            `<span class="tag" style="background:var(--bg3);color:var(--muted)">${m.icon||'📚'} ${m.name}</span>`}
+          ${semTop?'<span style="font-size:10px;background:var(--amber-l);color:var(--amber);padding:2px 7px;border-radius:4px;font-weight:700">⚠ Sem tópico</span>':
+            `<span style="font-size:10px;background:var(--blue-l);color:var(--blue);padding:2px 7px;border-radius:4px;font-weight:600">📌 ${top.nome}</span>`}
         </div>
         <div style="color:var(--text);font-size:13px">${q.text}</div>
         <div style="font-size:11px;color:var(--muted);margin-top:3px">
@@ -2592,7 +2595,6 @@ function editTopico(id) {
 }
 
 function deleteTopico(id) {
-  if(!confirm('Excluir este tópico?')) return;
   if(!confirmarSenhaAdmin('excluir este tópico')) return;
   topicos=topicos.filter(t=>t.id!==id);
   save(); renderTopicoAdmin(); syncSelectsTopicos(); toast('Tópico excluído');
