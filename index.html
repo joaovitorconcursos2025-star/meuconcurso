@@ -1097,6 +1097,12 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
       <button type="button" class="btn btn-green" onclick="importarEditalFiscal()">📥 Importar Edital Fiscal Canedo</button>
       <div id="import-log" style="display:none;margin-top:10px;background:var(--bg3);border-radius:8px;padding:12px;font-size:12px;font-family:var(--fm);color:var(--green);max-height:150px;overflow-y:auto;line-height:1.8"></div>
     </div>
+    <div class="card" style="margin-bottom:12px">
+      <div style="font-weight:700;font-size:14px;margin-bottom:6px">📦 Importar pacote de concurso</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6">Arquivo <strong style="color:var(--text)">.json</strong> gerado pelo Claude com concurso, matérias, tópicos do edital e questões. Junta ao que você já tem, sem apagar nada.</div>
+      <button type="button" class="btn btn-green" onclick="document.getElementById('pac-file').click()">📦 Escolher pacote</button>
+      <input type="file" id="pac-file" accept=".json" style="display:none" onchange="importarPacote(this)">
+    </div>
     <div class="card">
       <div style="font-weight:700;font-size:14px;margin-bottom:12px">🗄️ Backup</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -1262,9 +1268,25 @@ async function cloudLoad(key, def) {
   } catch(e) { return def; }
 }
 
+// O Firestore aceita no máximo 1 MiB por documento. Cada chave (ex.: 'questions') é um documento só.
+var LIMITE_DOC = 1048576;
+function tamanhoDoc(val){ try { return new Blob([JSON.stringify({v:val,t:0})]).size; } catch(e){ return 0; } }
+var _avisoTamanho = {};
+function checarTamanhos() {
+  var chaves = {questions:questions, topicos:topicos, filaPendente:filaPendente, leis:(typeof leis!=='undefined'?leis:[])};
+  Object.keys(chaves).forEach(function(k){
+    var b = tamanhoDoc(chaves[k]), pct = Math.round(b*100/LIMITE_DOC);
+    if(pct >= 80 && !_avisoTamanho[k]) {
+      _avisoTamanho[k] = true;
+      toast((pct>=100?'❌ ':'⚠️ ')+'"'+k+'" está em '+pct+'% do limite da nuvem. '+(pct>=100?'Não está mais salvando na nuvem!':'Avise o Claude para dividir o armazenamento.'));
+    }
+  });
+}
+
 async function syncAll() {
   if(!currentUser) return;
   setSyncSt('💾 Salvando...');
+  checarTamanhos();
   try {
     await Promise.all([
       cloudSave('concursos',    concursos),
@@ -2103,16 +2125,14 @@ function editConcurso(id){
   adminTab(document.querySelectorAll('.at')[2],'atp-conc');
   toast('Concurso carregado');
 }
-// ── Senha de segurança para ações destrutivas ──
-var SENHA_ADMIN = 'jv2026@fiscal'; // só o João sabe
-
+// ── Confirmação para ações destrutivas ──
+// A senha ficava escrita aqui e qualquer pessoa podia vê-la no código do site.
+// Agora: só o super-admin logado pode excluir, e precisa digitar EXCLUIR para confirmar.
 function confirmarSenhaAdmin(acao) {
-  var senha = prompt('🔐 Confirme sua senha de segurança para ' + acao + ':');
-  if (senha === null) return false; // cancelou
-  if (senha !== SENHA_ADMIN) {
-    toast('❌ Senha incorreta! Ação cancelada.');
-    return false;
-  }
+  if (!isSuperAdmin) { toast('⛔ Só o administrador pode ' + acao + '.'); return false; }
+  var txt = prompt('⚠️ Para ' + acao + ', digite EXCLUIR:');
+  if (txt === null) return false; // cancelou
+  if (txt.trim().toUpperCase() !== 'EXCLUIR') { toast('Ação cancelada.'); return false; }
   return true;
 }
 
@@ -2370,11 +2390,19 @@ function loadConfigUI(){
   set('cfg-acerto1',config.diasAcerto1||3); set('cfg-acerto2',config.diasAcerto2||7);
   set('cfg-erro',config.diasErro||1); set('cfg-duvida',config.diasDuvida||2);
 }
+// Backup COMPLETO: antes só salvava concursos, matérias, questões, config e histórico —
+// tópicos, planner, fila, leis e contadores de ID se perdiam numa restauração.
 function exportData(){
-  var data=JSON.stringify({concursos,materias,questions,config,historico},null,2);
+  var data=JSON.stringify({backupVersao:2,concursos,materias,questions,topicos,kanbanCards,filaPendente,config,configConc,historico,historicoConc,
+    nextQId,nextMId,nextCId,nextTId,nextKId,leis,nextLeiId,nextItemId},null,2);
   var blob=new Blob([data],{type:'application/json'});
   var a=document.createElement('a'); a.href=URL.createObjectURL(blob);
-  a.download='meuconcurso-backup-'+TODAY()+'.json'; a.click(); toast('📤 Exportado!');
+  a.download='meuconcurso-backup-'+TODAY()+'.json'; a.click(); toast('📤 Backup completo exportado!');
+}
+// Maior número usado num ID como 'mat_12' ou 12 → próximo ID livre
+function proximoIdLivre(lista, prefixo, atual){
+  var max=0; (lista||[]).forEach(function(x){ var n=parseInt(String(x.id).replace(prefixo,''),10); if(!isNaN(n)&&n>max) max=n; });
+  return Math.max(atual||1, max+1);
 }
 function importData(input){
   var file=input.files[0]; if(!file) return;
@@ -2382,15 +2410,84 @@ function importData(input){
   reader.onload=e=>{
     try{
       var d=JSON.parse(e.target.result);
+      if(d.formato==='meu-concurso-pacote'){ toast('Esse arquivo é um pacote. Use "Importar pacote de concurso".'); input.value=''; return; }
+      if(!confirm('Restaurar este backup? Ele SUBSTITUI os dados atuais do app.')){ input.value=''; return; }
       if(d.concursos) concursos=d.concursos;
       if(d.materias)  materias=d.materias;
       if(d.questions) questions=d.questions;
+      if(d.topicos)   topicos=d.topicos;
+      if(d.kanbanCards)   kanbanCards=d.kanbanCards;
+      if(d.filaPendente)  filaPendente=d.filaPendente;
       if(d.config)    config=d.config;
+      if(d.configConc)    configConc=d.configConc;
       if(d.historico) historico=d.historico;
-      save(); renderAdmin(); renderDash(); toast('✅ Importado!');
+      if(d.historicoConc) historicoConc=d.historicoConc;
+      if(d.leis){ leis=d.leis; nextLeiId=d.nextLeiId||nextLeiId; nextItemId=d.nextItemId||nextItemId; saveLeis(); }
+      // Backups antigos não traziam os contadores: recalcula para não repetir IDs
+      nextQId=proximoIdLivre(questions,'',d.nextQId);
+      nextMId=proximoIdLivre(materias,'mat_',d.nextMId);
+      nextCId=proximoIdLivre(concursos,'conc_',d.nextCId);
+      nextTId=proximoIdLivre(topicos,'top_',d.nextTId);
+      nextKId=proximoIdLivre(kanbanCards,'k_',d.nextKId);
+      save(); renderAdmin(); renderDash(); toast('✅ Backup restaurado!');
     }catch(err){toast('Erro ao importar');}
+    input.value='';
   };
   reader.readAsText(file);
+}
+
+// ═══════════════════════════════════════
+// PACOTE DE CONCURSO (gerado pelo Claude)
+// Junta ao que já existe, sem apagar nada. Pode importar o mesmo pacote de novo:
+// matérias e tópicos com o mesmo nome são reaproveitados e questões repetidas são ignoradas.
+// ═══════════════════════════════════════
+function importarPacote(input){
+  var file=input.files[0]; if(!file) return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      var p=JSON.parse(e.target.result);
+      if(p.formato!=='meu-concurso-pacote'||!p.concurso){ toast('❌ Arquivo não é um pacote de concurso.'); input.value=''; return; }
+      var r=aplicarPacote(p);
+      save(); renderConcursos(); renderAdmin(); syncSelectsMaterias();
+      toast('✅ '+r.conc+': +'+r.mats+' matérias, +'+r.tops+' tópicos, +'+r.qs+' questões'+(r.dup?' ('+r.dup+' já existiam)':''));
+    }catch(err){ console.error(err); toast('❌ Erro ao ler o pacote: '+err.message); }
+    input.value='';
+  };
+  reader.readAsText(file);
+}
+function aplicarPacote(p){
+  var norm=function(s){return String(s||'').trim().toLowerCase();};
+  var c=concursos.find(function(x){return norm(x.name)===norm(p.concurso.name);});
+  if(!c){ c={id:'conc_'+nextCId,name:p.concurso.name,icon:p.concurso.icon||'🏆',desc:p.concurso.desc||'',dataProva:p.concurso.dataProva||''}; nextCId++; concursos.push(c); }
+  var res={conc:c.name,mats:0,tops:0,qs:0,dup:0}, matId={}, topId={}, subId={};
+  (p.materias||[]).forEach(function(m){
+    var ex=materias.find(function(x){return x.concursoId===c.id&&norm(x.name)===norm(m.name);});
+    if(!ex){ ex={id:'mat_'+nextMId,name:m.name,icon:m.icon||'📚',desc:m.desc||'',concursoId:c.id}; nextMId++; materias.push(ex); res.mats++; }
+    matId[m.ref]=ex.id;
+  });
+  (p.topicos||[]).forEach(function(t){
+    var mid=matId[t.materiaRef]; if(!mid) return;
+    var ex=topicos.find(function(x){return x.concursoId===c.id&&x.materiaId===mid&&norm(x.nome)===norm(t.nome);});
+    if(!ex){ ex={id:'top_'+nextTId,materiaId:mid,concursoId:c.id,nome:t.nome,subtopicos:[]}; nextTId++; topicos.push(ex); res.tops++; }
+    topId[t.ref]=ex.id;
+    (t.subtopicos||[]).forEach(function(s){
+      var es=(ex.subtopicos||[]).find(function(x){return norm(x.nome)===norm(s.nome);});
+      if(!es){ es={id:'sub_'+ex.id+'_'+((ex.subtopicos||[]).length+1),nome:s.nome}; ex.subtopicos=(ex.subtopicos||[]).concat([es]); }
+      subId[s.ref]=es.id;
+    });
+  });
+  var jaTem={}; questions.forEach(function(q){ if(q.concursoId===c.id) jaTem[norm(q.text)]=true; });
+  (p.questoes||[]).forEach(function(q){
+    if(!q.text||jaTem[norm(q.text)]){ res.dup++; return; }
+    jaTem[norm(q.text)]=true;
+    questions.push({id:nextQId,status:'nova',prioridade:3,vezesRespondida:0,vezesAcertada:0,proximaRevisao:TODAY(),
+      tipo:q.tipo||'abcd',text:q.text,options:q.options||[],correct:q.correct!=null?q.correct:0,veCorrect:q.veCorrect!=null?q.veCorrect:1,
+      materia:matId[q.materiaRef]||'',concursoId:c.id,topico:topId[q.topicoRef]||'',subtopico:subId[q.subtopicoRef]||'',
+      assunto:q.assunto||'',nivel:q.nivel||'medio',banca:q.banca||'',ano:q.ano||'',explanation:q.explanation||''});
+    nextQId++; res.qs++;
+  });
+  return res;
 }
 function resetAllData(){
   if(!confirm('Apagar TODOS os dados?')) return;
