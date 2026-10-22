@@ -1338,18 +1338,100 @@ async function cloudLoad(key, def) {
   } catch(e) { return def; }
 }
 
-// O Firestore aceita no máximo 1 MiB por documento. Cada chave (ex.: 'questions') é um documento só.
+// ═══════════════════════════════════════
+// ARMAZENAMENTO EM PARTES
+// O Firestore aceita no máximo 1 MiB por documento. Listas grandes (questões,
+// simulados, fila) são divididas em partes de ~600 KB: dados/<chave>__0, __1, ...
+// e um índice dados/<chave>__meta {n}. Só as partes que mudaram são regravadas,
+// tudo num único lote (batch), que grava tudo ou nada.
+// O documento antigo (dados/<chave>) não é apagado: fica como cópia de segurança.
+// ═══════════════════════════════════════
 var LIMITE_DOC = 1048576;
+var PARTE_MAX = 600000;
+var _bigCache = {};      // chave -> textos das partes gravadas por último
+var _bigMetaN = {};      // chave -> nº de partes existentes na nuvem
+var _bigFalhou = {};     // chave -> true se a leitura falhou (não grava por cima)
 function tamanhoDoc(val){ try { return new Blob([JSON.stringify({v:val,t:0})]).size; } catch(e){ return 0; } }
+var _bigLayout = {};     // chave -> [[ids da parte 0], [ids da parte 1], ...] (mantém cada item na mesma parte)
+var PARTE_TETO = 850000;  // uma parte só é redividida se passar disto
+function _tam(x){ return new Blob([JSON.stringify(x)]).size+4; }
+function dividirEmPartes(arr, key){
+  arr=arr||[];
+  var layout=key&&_bigLayout[key], partes=[];
+  if(layout && layout.length){
+    // 1) cada item volta para a parte em que já estava (responder uma questão regrava só a parte dela)
+    var onde={}; layout.forEach(function(ids,i){ ids.forEach(function(id){ onde[id]=i; }); });
+    layout.forEach(function(){ partes.push([]); });
+    var novos=[];
+    arr.forEach(function(x){ var i=(x&&x.id!=null)?onde[x.id]:undefined; if(i===undefined) novos.push(x); else partes[i].push(x); });
+    // 2) itens novos vão para a última parte, abrindo outra quando enche
+    var ult=partes[partes.length-1], tam=ult.reduce(function(t,x){return t+_tam(x);},0);
+    novos.forEach(function(x){ var t=_tam(x); if(ult.length && tam+t>PARTE_MAX){ ult=[]; partes.push(ult); tam=0; } ult.push(x); tam+=t; });
+    // 3) parte que cresceu demais é redividida; partes vazias somem
+    var out=[];
+    partes.forEach(function(pt){
+      var tot=pt.reduce(function(t,x){return t+_tam(x);},0);
+      if(tot<=PARTE_TETO){ if(pt.length) out.push(pt); return; }
+      var cur=[], tt=0; pt.forEach(function(x){ var t=_tam(x); if(cur.length&&tt+t>PARTE_MAX){ out.push(cur); cur=[]; tt=0; } cur.push(x); tt+=t; }); if(cur.length) out.push(cur);
+    });
+    partes=out;
+  } else {
+    var cur=[], tam=0;
+    arr.forEach(function(x){ var t=_tam(x); if(cur.length && tam+t>PARTE_MAX){ partes.push(cur); cur=[]; tam=0; } cur.push(x); tam+=t; });
+    if(cur.length) partes.push(cur);
+  }
+  if(!partes.length) partes.push([]);
+  return partes;
+}
+function _layoutDe(partes){ return partes.map(function(pt){ return pt.map(function(x){ return x&&x.id; }).filter(function(id){ return id!=null; }); }); }
+async function cloudSaveBig(key, arr){
+  if(!currentUser) return;
+  if(_bigFalhou[key]) { console.warn('[save] '+key+' não gravado: a leitura da nuvem falhou nesta sessão'); return; }
+  var partes=dividirEmPartes(arr,key), strs=partes.map(function(p){return JSON.stringify(p);});
+  var antigo=_bigCache[key], ref=userRef().collection('dados'), batch=db.batch(), mud=0;
+  strs.forEach(function(st,i){ if(!antigo || antigo[i]!==st){ batch.set(ref.doc(key+'__'+i),{v:partes[i],t:Date.now()}); mud++; } });
+  var nAnt=Math.max(antigo?antigo.length:0, _bigMetaN[key]||0);
+  for(var i=strs.length;i<nAnt;i++){ batch.delete(ref.doc(key+'__'+i)); mud++; }
+  if(!mud && antigo && antigo.length===strs.length) return;
+  batch.set(ref.doc(key+'__meta'),{n:strs.length,t:Date.now()});
+  await batch.commit();
+  _bigCache[key]=strs; _bigMetaN[key]=strs.length; _bigLayout[key]=_layoutDe(partes);
+}
+async function cloudLoadBig(key, def){
+  if(!currentUser) return def;
+  var ref=userRef().collection('dados');
+  try {
+    var meta=await ref.doc(key+'__meta').get();
+    if(meta.exists){
+      var n=meta.data().n||0; _bigMetaN[key]=n;
+      var docs=await Promise.all(Array.from({length:n},function(_,i){return ref.doc(key+'__'+i).get();}));
+      var out=[], strs=[], lay=[];
+      docs.forEach(function(d){ var v=d.exists?(d.data().v||[]):[]; out=out.concat(v); strs.push(JSON.stringify(v)); lay.push(v); });
+      _bigLayout[key]=_layoutDe(lay);
+      if(docs.some(function(d){return !d.exists;})) _bigCache[key]=null; else _bigCache[key]=strs;
+      return out;
+    }
+    var d=await ref.doc(key).get();          // formato antigo: um documento só
+    return d.exists ? d.data().v : def;
+  } catch(e) {
+    console.error('[load] '+key, e&&e.code);
+    _bigFalhou[key]=true;                     // evita gravar uma lista vazia por cima dos dados
+    setSyncSt('⚠️ Não carregou '+key+' — recarregue a página');
+    return def;
+  }
+}
 var _avisoTamanho = {};
 function checarTamanhos() {
-  var chaves = {questions:questions, topicos:topicos, filaPendente:filaPendente, leis:(typeof leis!=='undefined'?leis:[])};
-  Object.keys(chaves).forEach(function(k){
-    var b = tamanhoDoc(chaves[k]), pct = Math.round(b*100/LIMITE_DOC);
-    if(pct >= 80 && !_avisoTamanho[k]) {
-      _avisoTamanho[k] = true;
-      toast((pct>=100?'❌ ':'⚠️ ')+'"'+k+'" está em '+pct+'% do limite da nuvem. '+(pct>=100?'Não está mais salvando na nuvem!':'Avise o Claude para dividir o armazenamento.'));
-    }
+  // Listas em partes: limite prático de ~9 MB por gravação (lote de 10 MiB)
+  var grandes = {questions:questions, simulados:simulados, filaPendente:filaPendente};
+  Object.keys(grandes).forEach(function(k){
+    var b = tamanhoDoc(grandes[k]), pct = Math.round(b*100/(9*LIMITE_DOC));
+    if(pct >= 80 && !_avisoTamanho[k]) { _avisoTamanho[k]=true; toast('⚠️ "'+k+'" está em '+pct+'% da capacidade. Avise o Claude.'); }
+  });
+  var simples = {topicos:topicos, leis:(typeof leis!=='undefined'?leis:[]), historicoConc:historicoConc};
+  Object.keys(simples).forEach(function(k){
+    var b = tamanhoDoc(simples[k]), pct = Math.round(b*100/LIMITE_DOC);
+    if(pct >= 80 && !_avisoTamanho[k]) { _avisoTamanho[k]=true; toast((pct>=100?'❌ ':'⚠️ ')+'"'+k+'" está em '+pct+'% do limite da nuvem. Avise o Claude.'); }
   });
 }
 
@@ -1361,10 +1443,10 @@ async function syncAll() {
     await Promise.all([
       cloudSave('concursos',    concursos),
       cloudSave('materias',     materias),
-      cloudSave('questions',    questions),
+      cloudSaveBig('questions', questions),
       cloudSave('topicos',      topicos),
       cloudSave('kanbanCards',  kanbanCards),
-      cloudSave('filaPendente', filaPendente),
+      cloudSaveBig('filaPendente', filaPendente),
       cloudSave('config',       config),
       cloudSave('historico',    historico),
       cloudSave('historicoConc', historicoConc),
@@ -1374,7 +1456,7 @@ async function syncAll() {
       cloudSave('nextCId',      nextCId),
       cloudSave('nextTId',      nextTId),
       cloudSave('nextKId',      nextKId),
-      cloudSave('simulados',    simulados),
+      cloudSaveBig('simulados', simulados),
       cloudSave('simResultados', simResultados),
       cloudSave('nextSimId',    nextSimId),
     ]);
@@ -1389,10 +1471,10 @@ async function loadAll() {
   setSyncSt('🔄 Carregando...');
   concursos     = await cloudLoad('concursos',    []);
   materias      = await cloudLoad('materias',     []);
-  questions     = await cloudLoad('questions',    []);
+  questions     = await cloudLoadBig('questions',    []);
   topicos       = await cloudLoad('topicos',      []);
   kanbanCards   = await cloudLoad('kanbanCards',  []);
-  filaPendente  = await cloudLoad('filaPendente', []);
+  filaPendente  = await cloudLoadBig('filaPendente', []);
   config        = await cloudLoad('config',       {meta:50,sessaoQtd:20,diasAcerto1:3,diasAcerto2:7,diasErro:1,diasDuvida:2});
   historico     = await cloudLoad('historico',    {});
   historicoConc = await cloudLoad('historicoConc', {});
@@ -1402,7 +1484,7 @@ async function loadAll() {
   nextCId       = await cloudLoad('nextCId',      1);
   nextTId       = await cloudLoad('nextTId',      1);
   nextKId       = await cloudLoad('nextKId',      1);
-  simulados     = await cloudLoad('simulados',    []);
+  simulados     = await cloudLoadBig('simulados',    []);
   simResultados = await cloudLoad('simResultados', []);
   nextSimId     = await cloudLoad('nextSimId',    1);
   setSyncSt('✅ Sincronizado');
@@ -1480,7 +1562,7 @@ function aplicarRevisao(q, resultado) {
   if(currentUser) {
     var _ref = db.collection('usuarios').doc(currentUser.uid).collection('dados');
     _ref.doc('historico').set({v:historico, t:Date.now()}).catch(function(){});
-    _ref.doc('questions').set({v:questions, t:Date.now()}).catch(function(){});
+    cloudSaveBig('questions', questions).catch(function(e){ console.error('[save] questions', e&&e.code); });
   }
 }
 
