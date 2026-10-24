@@ -1835,7 +1835,7 @@ function renderPlanoDia() {
   }).join('');
 }
 
-function iniciarPorTopico(topId) {
+function iniciarPorTopico(topId, subId) {
   var top = topicos.find(t=>t.id===topId);
   if(!top) return;
   var mat = materias.find(m=>m.id===top.materiaId);
@@ -1847,6 +1847,8 @@ function iniciarPorTopico(topId) {
     setTimeout(function() {
       var cfgTop = document.getElementById('cfg-top');
       if(cfgTop) { cfgTop.value=topId; syncFiltroSubtopico(); }
+      var cfgSub = document.getElementById('cfg-sub');
+      if(cfgSub && subId) cfgSub.value=subId;
     }, 50);
   }, 50);
 }
@@ -2658,7 +2660,7 @@ function importarPacote(input){
       if(p.formato!=='meu-concurso-pacote'||!p.concurso){ toast('❌ Arquivo não é um pacote de concurso.'); input.value=''; return; }
       var r=aplicarPacote(p);
       save(); renderConcursos(); renderAdmin(); syncSelectsMaterias();
-      toast('✅ '+r.conc+': +'+r.mats+' matérias, +'+r.tops+' tópicos, +'+r.qs+' questões'+(r.sims?', +'+r.sims+' simulado(s)':'')+(r.dup?' ('+r.dup+' já existiam)':'')+(r.realce?' · '+r.realce+' atualizadas com destaques':''));
+      toast('✅ '+r.conc+': +'+r.mats+' matérias, +'+r.tops+' tópicos, +'+r.qs+' questões'+(r.sims?', +'+r.sims+' simulado(s)':'')+(r.dup?' ('+r.dup+' já existiam)':'')+(r.realce?' · '+r.realce+' atualizadas com destaques':'')+(r.movidas?' · '+r.movidas+' reorganizadas em tópicos':'')+(r.topRem?' · '+r.topRem+' tópicos antigos removidos':''));
     }catch(err){ console.error(err); toast('❌ Erro ao ler o pacote: '+err.message); }
     input.value='';
   };
@@ -2686,7 +2688,7 @@ function aplicarPacote(p){
     });
   });
   var jaTem={}; questions.forEach(function(q){ if(q.concursoId===c.id) jaTem[norm(q.text)]=q; });
-  res.realce=0;
+  res.realce=0; res.movidas=0; res.topRem=0;
   (p.questoes||[]).forEach(function(q){
     if(!q.text) return;
     var ex=jaTem[norm(q.text)];
@@ -2697,6 +2699,10 @@ function aplicarPacote(p){
       if(ex!==true && temU && !/<u>/.test(ex.text+(ex.options||[]).join('')) && (ex.options||[]).length===(q.options||[]).length){
         ex.text=q.text; ex.options=(q.options||[]).slice(); res.realce++;
       }
+      if(ex!==true && p.reorganizar && matId[q.materiaRef] && ex.materia===matId[q.materiaRef]){
+        var nt=topId[q.topicoRef]||'', ns=subId[q.subtopicoRef]||'';
+        if(nt && (ex.topico!==nt || (ex.subtopico||'')!==ns)){ ex.topico=nt; ex.subtopico=ns; res.movidas++; }
+      }
       return;
     }
     jaTem[norm(q.text)]=true;
@@ -2705,6 +2711,15 @@ function aplicarPacote(p){
       materia:matId[q.materiaRef]||'',concursoId:c.id,topico:topId[q.topicoRef]||'',subtopico:subId[q.subtopicoRef]||'',
       assunto:q.assunto||'',nivel:q.nivel||'medio',banca:q.banca||'',ano:q.ano||'',explanation:q.explanation||''});
     nextQId++; res.qs++;
+  });
+  // Tópicos antigos (organização anterior) só saem se ficaram sem nenhuma questão
+  var novos={}; Object.keys(topId).forEach(function(k){ novos[topId[k]]=true; });
+  (p.removerTopicos||[]).forEach(function(rt){
+    var mid=matId[rt.materiaRef]; if(!mid) return;
+    topicos.filter(function(t){ return t.concursoId===c.id && t.materiaId===mid && norm(t.nome)===norm(rt.nome) && !novos[t.id]; }).forEach(function(t){
+      if(questions.some(function(q){ return q.topico===t.id; })) return;
+      topicos=topicos.filter(function(x){ return x.id!==t.id; }); res.topRem++;
+    });
   });
   res.sims=0;
   (p.simulados||[]).forEach(function(sp){
@@ -3226,7 +3241,13 @@ function saveTopico() {
     if(!mat)  { toast('⚠️ Selecione a matéria'); return; }
     if(!nome) { toast('⚠️ Digite o nome do tópico'); return; }
     var subRaw = document.getElementById('tf-subtopicos').value;
-    var subtopicos = subRaw.split('\n').map(s=>s.trim()).filter(s=>s).map((s,i)=>({id:'sub_'+(nextTId+i+100),nome:s}));
+    var antigosSub = editingTId!=null ? ((topicos.find(t=>t.id===editingTId)||{}).subtopicos||[]) : [];
+    var usados = {};
+    var subtopicos = subRaw.split('\n').map(s=>s.trim()).filter(s=>s).map((s,i)=>{
+      var ant = antigosSub.find(x=>!usados[x.id] && x.nome.trim().toLowerCase()===s.toLowerCase());
+      var id = ant ? ant.id : 'sub_'+Date.now().toString(36)+'_'+i;
+      usados[id]=true; return {id:id,nome:s};
+    });
 
     if(editingTId != null) {
       var idx = topicos.findIndex(t=>t.id===editingTId);
@@ -3608,6 +3629,7 @@ function renderEdital() {
             <div class="edital-subtopico-stats" style="color:${subColor};font-weight:600">
               ${qsSub.length}q${qsSub.length>0?' · '+pctSub+'%':''}
             </div>
+            ${qsSub.length>0?`<button class="edital-quick-btn" onclick="event.stopPropagation();iniciarPorTopico('${top.id}','${sub.id}')" title="Responder questões deste subtópico">🎯</button>`:''}
           </div>`;
         });
         html+=`</div>`;
