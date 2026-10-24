@@ -1170,6 +1170,12 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
       <button type="button" class="btn btn-green" onclick="document.getElementById('pac-file').click()">📦 Escolher pacote</button>
       <input type="file" id="pac-file" accept=".json" style="display:none" onchange="importarPacote(this)">
     </div>
+    <div class="card" style="margin-bottom:12px">
+      <div style="font-weight:700;font-size:14px;margin-bottom:6px">🩺 Verificar meus dados</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6">Compara as questões que o app carregou com a cópia de segurança guardada na nuvem e mostra se falta alguma. Só lê; nada é alterado sem você confirmar.</div>
+      <button type="button" class="btn btn-ghost" onclick="diagnosticarDados()">🩺 Verificar agora</button>
+      <div id="diag-out" style="margin-top:12px"></div>
+    </div>
     <div class="card">
       <div style="font-weight:700;font-size:14px;margin-bottom:12px">🗄️ Backup</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -1384,9 +1390,13 @@ function dividirEmPartes(arr, key){
   return partes;
 }
 function _layoutDe(partes){ return partes.map(function(pt){ return pt.map(function(x){ return x&&x.id; }).filter(function(id){ return id!=null; }); }); }
+var _bigModo = {};       // chave -> 'unico' quando as regras do Firebase não liberam o formato em partes
+var _avisoModo = false;
+function _negado(e){ return e && (e.code==='permission-denied' || /permission/i.test(e.message||'')); }
 async function cloudSaveBig(key, arr){
   if(!currentUser) return;
   if(_bigFalhou[key]) { console.warn('[save] '+key+' não gravado: a leitura da nuvem falhou nesta sessão'); return; }
+  if(_bigModo[key]==='unico') { await cloudSave(key, arr); return; }   // formato antigo (um documento só)
   var partes=dividirEmPartes(arr,key), strs=partes.map(function(p){return JSON.stringify(p);});
   var antigo=_bigCache[key], ref=userRef().collection('dados'), batch=db.batch(), mud=0;
   strs.forEach(function(st,i){ if(!antigo || antigo[i]!==st){ batch.set(ref.doc(key+'__'+i),{v:partes[i],t:Date.now()}); mud++; } });
@@ -1394,28 +1404,60 @@ async function cloudSaveBig(key, arr){
   for(var i=strs.length;i<nAnt;i++){ batch.delete(ref.doc(key+'__'+i)); mud++; }
   if(!mud && antigo && antigo.length===strs.length) return;
   batch.set(ref.doc(key+'__meta'),{n:strs.length,t:Date.now()});
-  await batch.commit();
+  try {
+    await batch.commit();
+  } catch(e) {
+    if(_negado(e) && !_bigMetaN[key]) {
+      // As regras do Firebase recusaram os documentos novos: continua no formato antigo, como antes.
+      _bigModo[key]='unico';
+      if(!_avisoModo){ _avisoModo=true; toast('⚠️ O Firebase não liberou o armazenamento ampliado. Seus dados seguem salvos no formato antigo. Mande ao Claude um print das Regras do Firestore.'); }
+      await cloudSave(key, arr); return;
+    }
+    throw e;
+  }
   _bigCache[key]=strs; _bigMetaN[key]=strs.length; _bigLayout[key]=_layoutDe(partes);
 }
 async function cloudLoadBig(key, def){
   if(!currentUser) return def;
   var ref=userRef().collection('dados');
+  var meta=null;
   try {
-    var meta=await ref.doc(key+'__meta').get();
-    if(meta.exists){
+    meta=await ref.doc(key+'__meta').get();
+  } catch(e) {
+    if(_negado(e)) {
+      // As regras do Firebase não deixam ler o índice (ainda não existe ou não é permitido):
+      // usa o formato antigo, exatamente como o app fazia antes.
+      _bigModo[key]='unico';
+    } else {
+      console.error('[load] '+key, e&&e.code);
+      _bigFalhou[key]=true;                   // falha de conexão: não grava uma lista vazia por cima dos dados
+      setSyncSt('⚠️ Não carregou '+key+' — recarregue a página');
+      return def;
+    }
+  }
+  if(meta && meta.exists){
+    try {
       var n=meta.data().n||0; _bigMetaN[key]=n;
       var docs=await Promise.all(Array.from({length:n},function(_,i){return ref.doc(key+'__'+i).get();}));
       var out=[], strs=[], lay=[];
       docs.forEach(function(d){ var v=d.exists?(d.data().v||[]):[]; out=out.concat(v); strs.push(JSON.stringify(v)); lay.push(v); });
       _bigLayout[key]=_layoutDe(lay);
-      if(docs.some(function(d){return !d.exists;})) _bigCache[key]=null; else _bigCache[key]=strs;
+      _bigCache[key]=docs.some(function(d){return !d.exists;}) ? null : strs;
       return out;
+    } catch(e) {
+      console.error('[load] '+key, e&&e.code);
+      _bigFalhou[key]=true;
+      setSyncSt('⚠️ Não carregou '+key+' — recarregue a página');
+      return def;
     }
+  }
+  try {
     var d=await ref.doc(key).get();          // formato antigo: um documento só
     return d.exists ? d.data().v : def;
   } catch(e) {
+    if(_negado(e)) return def;               // documento ainda não existe (mesmo comportamento de antes)
     console.error('[load] '+key, e&&e.code);
-    _bigFalhou[key]=true;                     // evita gravar uma lista vazia por cima dos dados
+    _bigFalhou[key]=true;
     setSyncSt('⚠️ Não carregou '+key+' — recarregue a página');
     return def;
   }
@@ -2062,7 +2104,7 @@ function renderSessQ() {
         <div class="opts" id="opts-wrap">
           ${(q.options||[]).filter(o=>o).map((o,i)=>`
             <div class="opt" id="opt-${i}" onclick="respABCD(${i})">
-              <div class="opt-ltr">${'ABCD'[i]}</div><div>${o}</div>
+              <div class="opt-ltr">${'ABCDE'[i]}</div><div>${o}</div>
             </div>`).join('')}
         </div>`}
       <div class="fb-box" id="fb"></div>
@@ -2109,7 +2151,7 @@ function showFeedback(q, resultado) {
     session.corr++;
   } else {
     cls='fail';
-    var gab=q.tipo==='ve'?(q.veCorrect==1?'CERTO':'ERRADO'):('ABCD'[q.correct]+' — '+(q.options[q.correct]||''));
+    var gab=q.tipo==='ve'?(q.veCorrect==1?'CERTO':'ERRADO'):('ABCDE'[q.correct]+' — '+(q.options[q.correct]||''));
     msg='✗ Incorreto. Gabarito: <strong>'+gab+'</strong>'+(q.explanation?'<br><span style="font-size:12px;opacity:.8">'+q.explanation+'</span>':'');
     session.erros++;
     if(mw) mw.classList.add('show');
@@ -2516,7 +2558,7 @@ function renderQAdminList(){
         </div>
         <div style="color:var(--text);font-size:13px">${q.text}</div>
         <div style="font-size:11px;color:var(--muted);margin-top:3px">
-          ${isVE?(q.veCorrect==1?'Gabarito: CERTO':'Gabarito: ERRADO'):'Gabarito: '+'ABCD'[q.correct||0]}
+          ${isVE?(q.veCorrect==1?'Gabarito: CERTO':'Gabarito: ERRADO'):'Gabarito: '+'ABCDE'[q.correct||0]}
           ${q.banca?' · '+q.banca:''} ${q.ano||''}
         </div>
       </div>
@@ -2835,11 +2877,11 @@ function renderSimProva(){
       var oc='sim-opt';
       if(esc===i) oc+=' marcada';
       if(r && !it.anulada){ if(i===it.correct) oc+=' gab'; else if(esc===i) oc+=' errou'; }
-      html+='<div class="'+oc+'" '+(r?'':'onclick="marcarSim('+it.n+','+i+')"')+'><span class="sim-bolha">'+'ABCD'[i]+'</span><span>'+simEsc(o)+'</span></div>';
+      html+='<div class="'+oc+'" '+(r?'':'onclick="marcarSim('+it.n+','+i+')"')+'><span class="sim-bolha">'+'ABCDE'[i]+'</span><span>'+simEsc(o)+'</span></div>';
     });
     html+='</div>';
     if(r && !it.anulada){
-      html+='<div class="sim-fb '+cls+'"><b>'+(cls==='certa'?'✅ Acertou':cls==='errada'?'❌ Errou — gabarito '+'ABCD'[it.correct]:'⚪ Em branco — gabarito '+'ABCD'[it.correct])+'</b>'+(it.expl?'<div>'+simEsc(it.expl)+'</div>':'')+'</div>';
+      html+='<div class="sim-fb '+cls+'"><b>'+(cls==='certa'?'✅ Acertou':cls==='errada'?'❌ Errou — gabarito '+'ABCDE'[it.correct]:'⚪ Em branco — gabarito '+'ABCDE'[it.correct])+'</b>'+(it.expl?'<div>'+simEsc(it.expl)+'</div>':'')+'</div>';
     } else if(r && it.anulada && it.expl){ html+='<div class="sim-fb anulada"><div>'+simEsc(it.expl)+'</div></div>'; }
     html+='</div>';
   });
@@ -2915,6 +2957,70 @@ function resumoResultadoHtml(s,r){
     '<div class="sim-hist" style="margin-top:12px">'+linhas+'</div>'+
     (erradas.length?'<div class="sim-meta" style="margin-top:10px">Errou ou deixou em branco: '+erradas.join(', ')+'</div>':'')+
     '<div class="sim-meta" style="margin-top:6px">As questões ligadas ao edital já foram para a sua revisão espaçada (aba Erros).</div></div>';
+}
+
+// ═══════════════════════════════════════
+// VERIFICAR E RECUPERAR DADOS
+// Compara o que está carregado com a cópia antiga (dados/questions e dados/simulados,
+// que a versão em partes nunca apaga nem regrava) e recupera o que faltar, somando.
+// ═══════════════════════════════════════
+var _diag = null;
+function _diagChave(q){ return String(q.concursoId||'')+'|'+String(q.text||'').trim().toLowerCase(); }
+async function diagnosticarDados(){
+  var out=document.getElementById('diag-out'); if(!out) return;
+  if(!currentUser){ out.innerHTML='<div style="font-size:12px;color:var(--amber)">Entre com sua conta Google para verificar os dados da nuvem.</div>'; return; }
+  out.innerHTML='<div style="font-size:12px;color:var(--muted)">Verificando…</div>';
+  try{
+    var ref=userRef().collection('dados');
+    var dq=await ref.doc('questions').get(), ds=await ref.doc('simulados').get();
+    var copiaQ=dq.exists?(dq.data().v||[]):[], copiaS=ds.exists?(ds.data().v||[]):[];
+    var temQ={}; questions.forEach(function(q){ temQ[_diagChave(q)]=true; });
+    var faltamQ=copiaQ.filter(function(q){ return !temQ[_diagChave(q)]; });
+    var temS={}; simulados.forEach(function(x){ temS[(x.concursoId||'')+'|'+(x.ref||x.id)]=true; });
+    var faltamS=copiaS.filter(function(x){ return !temS[(x.concursoId||'')+'|'+(x.ref||x.id)]; });
+    _diag={faltamQ:faltamQ,faltamS:faltamS};
+    var porConc={};
+    function soma(lista,campo){ lista.forEach(function(q){ var k=q.concursoId||'(sem concurso)'; porConc[k]=porConc[k]||{app:0,copia:0,faltam:0}; porConc[k][campo]++; }); }
+    soma(questions,'app'); soma(copiaQ,'copia'); soma(faltamQ,'faltam');
+    var nome=function(id){ var c=concursos.find(function(x){return x.id===id;}); return c?c.name:id; };
+    var linhas=Object.keys(porConc).map(function(k){ var x=porConc[k];
+      return '<tr><td style="padding:4px 8px 4px 0">'+nome(k)+'</td><td style="text-align:right;padding:4px 8px;font-family:var(--fm)">'+x.app+'</td><td style="text-align:right;padding:4px 8px;font-family:var(--fm)">'+x.copia+'</td><td style="text-align:right;padding:4px 0;font-family:var(--fm);color:'+(x.faltam?'var(--red)':'var(--green)')+'">'+x.faltam+'</td></tr>'; }).join('');
+    var html='<div style="overflow-x:auto"><table style="font-size:12px;border-collapse:collapse;width:100%"><tr style="color:var(--muted)"><th style="text-align:left;font-weight:600">Concurso</th><th style="text-align:right;font-weight:600;padding:0 8px">No app</th><th style="text-align:right;font-weight:600;padding:0 8px">Na cópia</th><th style="text-align:right;font-weight:600">Faltando</th></tr>'+linhas+'</table></div>';
+    html+='<div style="font-size:12px;margin-top:8px">Simulados: '+simulados.length+' no app, '+copiaS.length+' na cópia'+(faltamS.length?', <b style="color:var(--red)">'+faltamS.length+' faltando</b>':'')+'.</div>';
+    if(faltamQ.length||faltamS.length){
+      html+='<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center"><button type="button" class="btn btn-primary btn-sm" onclick="recuperarDaCopia()">♻️ Recuperar '+faltamQ.length+' questão(ões)'+(faltamS.length?' e '+faltamS.length+' simulado(s)':'')+'</button><span style="font-size:11px;color:var(--muted)">Soma ao que já existe; não apaga nada.</span></div>';
+    } else {
+      html+='<div style="font-size:12px;color:var(--green);margin-top:8px">✅ Nada faltando: tudo o que está na cópia de segurança já está no app.</div>';
+    }
+    out.innerHTML=html;
+  }catch(e){
+    out.innerHTML='<div style="font-size:12px;color:var(--red)">Não consegui ler a nuvem ('+(e&&e.code||'erro')+'). Verifique a internet e tente de novo.</div>';
+  }
+}
+function recuperarDaCopia(){
+  if(!_diag) return;
+  if(_bigFalhou.questions||_bigFalhou.simulados){ toast('⚠️ A leitura da nuvem falhou nesta sessão. Recarregue a página e verifique de novo.'); return; }
+  var usados={}; questions.forEach(function(q){ usados[q.id]=true; });
+  var maior=questions.reduce(function(m,q){ var n=parseInt(q.id,10); return isNaN(n)?m:Math.max(m,n); },0);
+  nextQId=Math.max(nextQId||1, maior+1);
+  var nq=0;
+  _diag.faltamQ.forEach(function(q){
+    var c=JSON.parse(JSON.stringify(q));
+    if(c.id==null || usados[c.id]){ c.id=nextQId++; }   // id já usado por outra questão: ganha um novo
+    usados[c.id]=true; questions.push(c); nq++;
+  });
+  var maiorAgora=questions.reduce(function(m,q){ var n=parseInt(q.id,10); return isNaN(n)?m:Math.max(m,n); },0);
+  nextQId=Math.max(nextQId, maiorAgora+1);
+  var ns=0;
+  _diag.faltamS.forEach(function(x){
+    var c=JSON.parse(JSON.stringify(x));
+    if(simulados.some(function(y){return y.id===c.id;})){ c.id='sim_'+nextSimId; nextSimId++; }
+    simulados.push(c); ns++;
+  });
+  _diag=null;
+  save();
+  toast('♻️ Recuperado: '+nq+' questão(ões)'+(ns?' e '+ns+' simulado(s)':'')+'.');
+  diagnosticarDados();
 }
 
 function resetAllData(){
@@ -3707,7 +3813,7 @@ function renderTriagem() {
       var tops = q.matSugerida ? topicos.filter(function(t){return t.concursoId===currentConcursoId&&t.materiaId===q.matSugerida;}) : [];
       var topOpts = '<option value="">-- Nenhum --</option>'+tops.map(function(t){return'<option value="'+t.id+'">'+t.nome+'</option>';}).join('');
       var isAbcd = q.tipo==='abcd';
-      var gabLabel = isAbcd ? 'ABCD'[q.correct||0] : (q.veCorrect==1?'CERTO':'ERRADO');
+      var gabLabel = isAbcd ? 'ABCDE'[q.correct||0] : (q.veCorrect==1?'CERTO':'ERRADO');
 
       html += '<div class="triagem-q-item'+(q.status==='aprovada'?' aprovada':'')+'" id="tqi-'+q.id+'">';
 
@@ -3726,7 +3832,7 @@ function renderTriagem() {
       // Alternativas
       if(isAbcd && q.options && q.options.length) {
         html += '<div class="triagem-q-alts">';
-        (q.options||[]).forEach(function(o,i){ if(o) html += 'ABCD'[i]+') '+o+'<br>'; });
+        (q.options||[]).forEach(function(o,i){ if(o) html += 'ABCDE'[i]+') '+o+'<br>'; });
         html += '</div>';
       }
 
