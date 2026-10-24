@@ -2545,8 +2545,8 @@ function renderQAdminList(){
     var m=materias.find(x=>x.id===q.materia);
     var top=topicos.find(x=>x.id===q.topico);
     var isVE=q.tipo==='ve';
-    var semMat=!q.materia;
-    var semTop=!q.topico;
+    var semMat=!q.materia||!m;   // também quando a matéria/tópico da questão foi apagado
+    var semTop=!q.topico||!top;
     return `<div class="q-adm-row" style="${semMat?'border-left:3px solid var(--red)':semTop?'border-left:3px solid var(--amber)':''}">
       <div class="q-adm-body">
         <div style="display:flex;gap:5px;margin-bottom:5px;flex-wrap:wrap;align-items:center">
@@ -2659,7 +2659,9 @@ function importarPacote(input){
       var p=JSON.parse(e.target.result);
       if(p.formato!=='meu-concurso-pacote'||!p.concurso){ toast('❌ Arquivo não é um pacote de concurso.'); input.value=''; return; }
       var r=aplicarPacote(p);
-      save(); renderConcursos(); renderAdmin(); syncSelectsMaterias();
+      save();
+      // a importação já foi gravada; um erro ao redesenhar a tela não pode parecer falha da importação
+      try{ renderConcursos(); renderAdmin(); syncSelectsMaterias(); }catch(errTela){ console.error(errTela); }
       toast('✅ '+r.conc+': +'+r.mats+' matérias, +'+r.tops+' tópicos, +'+r.qs+' questões'+(r.sims?', +'+r.sims+' simulado(s)':'')+(r.dup?' ('+r.dup+' já existiam)':'')+(r.realce?' · '+r.realce+' atualizadas com destaques':'')+(r.movidas?' · '+r.movidas+' reorganizadas em tópicos':'')+(r.topRem?' · '+r.topRem+' tópicos antigos removidos':''));
     }catch(err){ console.error(err); toast('❌ Erro ao ler o pacote: '+err.message); }
     input.value='';
