@@ -2696,23 +2696,35 @@ function aplicarPacote(p){
   });
   res.sims=0;
   (p.simulados||[]).forEach(function(sp){
-    if(simulados.some(function(x){return x.concursoId===c.id&&x.ref===sp.ref;})){ return; }
-    var sid='sim_'+nextSimId; nextSimId++;
+    var existente=simulados.find(function(x){return x.concursoId===c.id&&x.ref===sp.ref;});
+    var sid=existente?existente.id:('sim_'+nextSimId);
     var porTexto={}; questions.forEach(function(q){ if(q.concursoId===c.id) porTexto[norm(q.text)]=q; });
+    // Garante que cada questão do simulado ligada ao edital esteja no banco (recria se tiver sumido)
+    function questaoDoBanco(it){
+      if(!(it.materiaRef&&matId[it.materiaRef]&&!it.anulada)) return null;
+      var q=porTexto[norm(it.text)];
+      if(!q){
+        q={id:nextQId,status:'nova',prioridade:3,vezesRespondida:0,vezesAcertada:0,proximaRevisao:TODAY(),
+          tipo:'abcd',text:it.text,options:it.options,correct:it.correct,veCorrect:1,
+          materia:matId[it.materiaRef],concursoId:c.id,topico:topId[it.topicoRef]||'',subtopico:subId[it.subtopicoRef]||'',
+          assunto:'',nivel:'medio',banca:sp.banca||'',ano:sp.ano||'',explanation:it.expl||'',
+          fonte:sp.nome+' · Q'+it.n, textoRef:it.textoRef?(sid+':'+it.textoRef):''};
+        nextQId++; questions.push(q); porTexto[norm(it.text)]=q; res.qs++;
+      }
+      return q;
+    }
+    if(existente){
+      // Simulado já existe: não duplica, só reconstrói as ligações com o banco
+      (sp.itens||[]).forEach(function(it){
+        var q=questaoDoBanco(it), alvo=existente.itens.find(function(x){return x.n===it.n;});
+        if(q&&alvo) alvo.qId=q.id;
+      });
+      return;
+    }
+    nextSimId++;
     var itens=(sp.itens||[]).map(function(it){
       var item={n:it.n,disc:it.disc,text:it.text,options:it.options,correct:it.correct,anulada:!!it.anulada,expl:it.expl||'',textoRef:it.textoRef||''};
-      if(it.materiaRef&&matId[it.materiaRef]&&!it.anulada){
-        var q=porTexto[norm(it.text)];
-        if(!q){
-          q={id:nextQId,status:'nova',prioridade:3,vezesRespondida:0,vezesAcertada:0,proximaRevisao:TODAY(),
-            tipo:'abcd',text:it.text,options:it.options,correct:it.correct,veCorrect:1,
-            materia:matId[it.materiaRef],concursoId:c.id,topico:topId[it.topicoRef]||'',subtopico:subId[it.subtopicoRef]||'',
-            assunto:'',nivel:'medio',banca:sp.banca||'',ano:sp.ano||'',explanation:it.expl||'',
-            fonte:sp.nome+' · Q'+it.n, textoRef:it.textoRef?(sid+':'+it.textoRef):''};
-          nextQId++; questions.push(q); porTexto[norm(it.text)]=q; res.qs++;
-        }
-        item.qId=q.id;
-      }
+      var q=questaoDoBanco(it); if(q) item.qId=q.id;
       return item;
     });
     simulados.push({id:sid,ref:sp.ref,concursoId:c.id,tipo:'oficial',nome:sp.nome,orgao:sp.orgao||'',banca:sp.banca||'',ano:sp.ano||'',cargo:sp.cargo||'',
