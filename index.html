@@ -734,6 +734,7 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
 .artigo-btn-pul{border-color:var(--border);color:var(--muted);background:var(--bg3);}
 .artigo-btn-pul:hover{border-color:var(--border2);}
 
+s{opacity:.65}
 u{text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--blue);font-weight:600}
 </style>
 </head>
@@ -1049,7 +1050,8 @@ u{text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:
         <div class="fg"><label>B)</label><input id="qf-opt-1" type="text" placeholder="Alternativa B"></div>
         <div class="fg"><label>C)</label><input id="qf-opt-2" type="text" placeholder="Alternativa C"></div>
         <div class="fg"><label>D)</label><input id="qf-opt-3" type="text" placeholder="Alternativa D"></div>
-        <div class="fg"><label>Gabarito *</label><select id="qf-correct"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select></div>
+        <div class="fg"><label>E)</label><input id="qf-opt-4" type="text" placeholder="Alternativa E (se houver)"></div>
+        <div class="fg"><label>Gabarito *</label><select id="qf-correct"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option><option value="4">E</option></select></div>
       </div>
       <div id="bloco-ve" style="display:none">
         <div class="fg"><label>A afirmativa é *</label><select id="qf-ve-correct"><option value="1">✅ CERTO</option><option value="0">❌ ERRADO</option></select></div>
@@ -2472,8 +2474,10 @@ function saveQuestion() {
       explanation:document.getElementById('qf-expl').value.trim(),
     };
     if(qfTipo==='abcd'){
-      var opts=[0,1,2,3].map(i=>document.getElementById('qf-opt-'+i).value.trim());
+      var opts=[0,1,2,3,4].map(i=>document.getElementById('qf-opt-'+i).value.trim());
+      while(opts.length>2 && !opts[opts.length-1]) opts.pop();   // tira alternativas vazias do fim (D/E opcionais)
       if(!opts[0]||!opts[1]){toast('⚠️ Preencha ao menos A e B');return;}
+      if(parseInt(document.getElementById('qf-correct').value)>=opts.length){toast('⚠️ O gabarito aponta para uma alternativa vazia');return;}
       q.options=opts; q.correct=parseInt(document.getElementById('qf-correct').value); q.veCorrect=1;
     } else {
       q.options=[]; q.correct=0; q.veCorrect=parseInt(document.getElementById('qf-ve-correct').value);
@@ -2509,7 +2513,7 @@ function editQuestion(id){
   },50);
   setTipo(q.tipo||(q.options&&q.options.length>0?'abcd':'ve'));
   if(q.tipo==='abcd'||(q.options&&q.options.length>0)){
-    (q.options||[]).forEach((o,i)=>{var el=document.getElementById('qf-opt-'+i);if(el)el.value=o||'';});
+    [0,1,2,3,4].forEach(i=>{var el=document.getElementById('qf-opt-'+i);if(el)el.value=(q.options||[])[i]||'';});
     document.getElementById('qf-correct').value=q.correct||0;
   } else {
     document.getElementById('qf-ve-correct').value=q.veCorrect!=null?q.veCorrect:1;
@@ -2529,7 +2533,7 @@ function clearQForm(){
   editingQId=null;
   document.getElementById('qf-title').textContent='➕ Nova Questão';
   ['qf-text','qf-assunto','qf-banca','qf-ano','qf-expl'].forEach(id=>{var el=document.getElementById(id);if(el)el.value='';});
-  [0,1,2,3].forEach(i=>{var el=document.getElementById('qf-opt-'+i);if(el)el.value='';});
+  [0,1,2,3,4].forEach(i=>{var el=document.getElementById('qf-opt-'+i);if(el)el.value='';});
   // NÃO limpa matéria e tópico — mantém fixos para bateria de questões
   document.getElementById('qf-nivel').value='medio';
   document.getElementById('qf-correct').value='0';
@@ -2662,7 +2666,7 @@ function importarPacote(input){
       save();
       // a importação já foi gravada; um erro ao redesenhar a tela não pode parecer falha da importação
       try{ renderConcursos(); renderAdmin(); syncSelectsMaterias(); }catch(errTela){ console.error(errTela); }
-      toast('✅ '+r.conc+': +'+r.mats+' matérias, +'+r.tops+' tópicos, +'+r.qs+' questões'+(r.sims?', +'+r.sims+' simulado(s)':'')+(r.dup?' ('+r.dup+' já existiam)':'')+(r.realce?' · '+r.realce+' atualizadas com destaques':'')+(r.movidas?' · '+r.movidas+' reorganizadas em tópicos':'')+(r.topRem?' · '+r.topRem+' tópicos antigos removidos':''));
+      toast('✅ '+r.conc+': +'+r.mats+' matérias, +'+r.tops+' tópicos, +'+r.qs+' questões'+(r.sims?', +'+r.sims+' simulado(s)':'')+(r.dup?' ('+r.dup+' já existiam)':'')+(r.realce?' · '+r.realce+' atualizadas com destaques':'')+(r.movidas?' · '+r.movidas+' reorganizadas em tópicos':'')+(r.topRem?' · '+r.topRem+' tópicos antigos removidos':'')+(r.completadas?' · '+r.completadas+' com alternativas completadas':''));
     }catch(err){ console.error(err); toast('❌ Erro ao ler o pacote: '+err.message); }
     input.value='';
   };
@@ -2690,7 +2694,7 @@ function aplicarPacote(p){
     });
   });
   var jaTem={}; questions.forEach(function(q){ if(q.concursoId===c.id) jaTem[norm(q.text)]=q; });
-  res.realce=0; res.movidas=0; res.topRem=0;
+  res.realce=0; res.movidas=0; res.topRem=0; res.completadas=0;
   (p.questoes||[]).forEach(function(q){
     if(!q.text) return;
     var ex=jaTem[norm(q.text)];
@@ -2700,6 +2704,11 @@ function aplicarPacote(p){
       var temU=/<u>/.test(q.text+(q.options||[]).join(''));
       if(ex!==true && temU && !/<u>/.test(ex.text+(ex.options||[]).join('')) && (ex.options||[]).length===(q.options||[]).length){
         ex.text=q.text; ex.options=(q.options||[]).slice(); res.realce++;
+      }
+      if(ex!==true && p.reorganizar && (q.options||[]).length>(ex.options||[]).length && (ex.options||[]).length>=2
+         && (ex.options||[]).every(function(o,i){ return norm(o).replace(/[^a-z0-9à-ú]/g,'')===norm(q.options[i]).replace(/[^a-z0-9à-ú]/g,''); })
+         && (ex.tipo!=='abcd' || ex.correct===q.correct)){
+        ex.options=q.options.slice(); res.completadas++;   // completa a alternativa E que faltava
       }
       if(ex!==true && p.reorganizar && matId[q.materiaRef] && ex.materia===matId[q.materiaRef]){
         var nt=topId[q.topicoRef]||'', ns=subId[q.subtopicoRef]||'';
@@ -2769,7 +2778,7 @@ var simRun = null; // {simId, respostas:{n:idx}, inicio, fim, corrigido, resulta
 var SIM_RUN_KEY = 'mc_sim_run';
 var simTimer = null;
 
-function simTxt(s){ return simEsc(s).replace(/&lt;(\/?)u&gt;/g,'<$1u>'); }
+function simTxt(s){ return simEsc(s).replace(/&lt;(\/?)([us])&gt;/g,'<$1$2>'); }
 function simEsc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
 function simDoConcurso(){ return simulados.filter(function(s){return s.concursoId===currentConcursoId;}); }
 function simById(id){ return simulados.find(function(s){return s.id===id;}); }
@@ -2923,8 +2932,8 @@ function renderSimProva(){
     });
     html+='</div>';
     if(r && !it.anulada){
-      html+='<div class="sim-fb '+cls+'"><b>'+(cls==='certa'?'✅ Acertou':cls==='errada'?'❌ Errou — gabarito '+'ABCDE'[it.correct]:'⚪ Em branco — gabarito '+'ABCDE'[it.correct])+'</b>'+(it.expl?'<div>'+simEsc(it.expl)+'</div>':'')+'</div>';
-    } else if(r && it.anulada && it.expl){ html+='<div class="sim-fb anulada"><div>'+simEsc(it.expl)+'</div></div>'; }
+      html+='<div class="sim-fb '+cls+'"><b>'+(cls==='certa'?'✅ Acertou':cls==='errada'?'❌ Errou — gabarito '+'ABCDE'[it.correct]:'⚪ Em branco — gabarito '+'ABCDE'[it.correct])+'</b>'+(it.expl?'<div>'+simTxt(it.expl)+'</div>':'')+'</div>';
+    } else if(r && it.anulada && it.expl){ html+='<div class="sim-fb anulada"><div>'+simTxt(it.expl)+'</div></div>'; }
     html+='</div>';
   });
   if(s.discursiva) html+='<div class="sim-disc">Prova discursiva</div><div class="sim-q"><div class="sim-q-text">'+simEsc(s.discursiva)+'</div><div class="sim-meta" style="margin-top:8px">A discursiva não é corrigida pelo app. Escreva à mão, no tempo da prova, e mande a foto para o Claude corrigir.</div></div>';
