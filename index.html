@@ -4589,7 +4589,7 @@ function parsearLei(){
       var item={id:'item_'+nextItemId++,num:bufNum,tipo:bufTipo,texto:bufTexto.join('\n').trim(),notas:'',paiId:bufPai,status:'novo'};
       lei.itens.push(item);
       adicionados++;
-      // Atualiza stack
+      // Atualiza stack 
       if(bufTipo!=='artigo') stack[bufTipo]=item.id;
     }
     bufNum=''; bufTexto=[]; bufTipo='artigo'; bufPai=null;
