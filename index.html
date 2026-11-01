@@ -663,6 +663,28 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
 .lei-stats{font-size:11px;color:var(--muted);display:flex;gap:12px;}
 
 /* Árvore da lei */
+.lc-topo{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.lc-ferr{position:sticky;top:0;z-index:5;display:flex;gap:6px;align-items:center;padding:8px 0;background:var(--bg);flex-wrap:wrap;}
+.lc-ferr input{flex:1;min-width:150px;}
+.lc-b{font-size:12px;padding:5px 9px;border-radius:6px;background:var(--bg3);color:var(--text);border:1px solid var(--border);cursor:pointer;font-family:var(--ff);white-space:nowrap;}
+.lc-b.on,.lc-b.ativo{background:var(--purple-l);color:var(--purple);border-color:rgba(168,85,247,.35);}
+#lc-conteudo{line-height:1.65;}
+.lc-h{font-weight:800;margin:22px 0 8px;color:var(--blue);}
+.lc-h-titulo{color:var(--amber);font-size:1.1em;text-align:center;}
+.lc-h-capitulo{text-align:center;}
+.lc-h-secao,.lc-h-subsecao{color:var(--green);font-size:.95em;text-align:center;}
+.lc-art{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:8px;}
+.lc-art.lc-estrela{border-left:3px solid var(--amber);}
+.lc-art.lc-st-dominado{opacity:.75;}
+.lc-art.lc-st-dominado .lc-art-num{color:var(--green);}
+.lc-art.lc-st-rever .lc-art-num{color:var(--amber);}
+.lc-art-top{display:flex;align-items:center;gap:8px;margin-bottom:4px;}
+.lc-art-num{font-weight:800;flex:1;}
+.lc-acts{display:flex;gap:4px;}
+.lc-txt .lc-par{margin-top:4px;}
+.lc-txt .lc-inc{padding-left:14px;}
+.lc-txt .lc-ali{padding-left:28px;}
+.lc-txt mark{background:rgba(255,184,48,.45);color:inherit;border-radius:2px;}
 .lei-arvore{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:10px;}
 .lei-arvore-header{padding:14px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .15s;background:var(--bg2);}
 .lei-arvore-header:hover{background:var(--bg3);}
@@ -939,6 +961,25 @@ u{text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:
       <button class="btn btn-ghost btn-sm" onclick="fecharLeitura()">← Voltar</button>
     </div>
     <div id="lei-artigo-display"></div>
+  </div>
+
+  <!-- Leitura corrida (lei seca) -->
+  <div id="leis-corrido-view" style="display:none">
+    <div class="lc-topo">
+      <button class="btn btn-ghost btn-sm" onclick="fecharLeiCorrida()">← Leis</button>
+      <div style="flex:1;min-width:0">
+        <div id="lc-titulo" style="font-weight:800;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis"></div>
+        <div id="lc-sub" style="font-size:11px;color:var(--muted)"></div>
+      </div>
+    </div>
+    <div class="lc-ferr">
+      <input id="lc-busca" type="search" placeholder="🔎 Buscar palavra na lei..." oninput="corridaBuscar(this.value)">
+      <button class="lc-b" id="lc-so-edital" onclick="corridaSoEdital()" title="Mostrar só o que está marcado com ⭐">⭐ só edital</button>
+      <button class="lc-b" onclick="corridaFonte(-1)" title="Diminuir letra">A−</button>
+      <button class="lc-b" onclick="corridaFonte(1)" title="Aumentar letra">A+</button>
+    </div>
+    <div id="lc-conteudo"></div>
+    <div style="text-align:center;margin:16px 0 30px"><button class="btn btn-ghost btn-sm" onclick="window.scrollTo(0,0)">↑ Topo</button></div>
   </div>
 
   <!-- Admin de leis (só super admin) -->
@@ -1473,7 +1514,7 @@ function checarTamanhos() {
     var b = tamanhoDoc(grandes[k]), pct = Math.round(b*100/(9*LIMITE_DOC));
     if(pct >= 80 && !_avisoTamanho[k]) { _avisoTamanho[k]=true; toast('⚠️ "'+k+'" está em '+pct+'% da capacidade. Avise o Claude.'); }
   });
-  var simples = {topicos:topicos, leis:(typeof leis!=='undefined'?leis:[]), historicoConc:historicoConc};
+  var simples = {topicos:topicos, leisMeta:(typeof leis!=='undefined'?_leisMeta():[]), historicoConc:historicoConc};
   Object.keys(simples).forEach(function(k){
     var b = tamanhoDoc(simples[k]), pct = Math.round(b*100/LIMITE_DOC);
     if(pct >= 80 && !_avisoTamanho[k]) { _avisoTamanho[k]=true; toast((pct>=100?'❌ ':'⚠️ ')+'"'+k+'" está em '+pct+'% do limite da nuvem. Avise o Claude.'); }
@@ -2666,7 +2707,7 @@ function importarPacote(input){
       save();
       // a importação já foi gravada; um erro ao redesenhar a tela não pode parecer falha da importação
       try{ renderConcursos(); renderAdmin(); syncSelectsMaterias(); }catch(errTela){ console.error(errTela); }
-      toast('✅ '+r.conc+': +'+r.mats+' matérias, +'+r.tops+' tópicos, +'+r.qs+' questões'+(r.sims?', +'+r.sims+' simulado(s)':'')+(r.dup?' ('+r.dup+' já existiam)':'')+(r.realce?' · '+r.realce+' atualizadas com destaques':'')+(r.movidas?' · '+r.movidas+' reorganizadas em tópicos':'')+(r.topRem?' · '+r.topRem+' tópicos antigos removidos':'')+(r.completadas?' · '+r.completadas+' com alternativas completadas':'')+(r.corrigidas?' · '+r.corrigidas+' enunciados corrigidos':'')+(r.comentarios?' · '+r.comentarios+' comentários revisados':''));
+      toast('✅ '+r.conc+': +'+r.mats+' matérias, +'+r.tops+' tópicos, +'+r.qs+' questões'+(r.sims?', +'+r.sims+' simulado(s)':'')+(r.dup?' ('+r.dup+' já existiam)':'')+(r.realce?' · '+r.realce+' atualizadas com destaques':'')+(r.movidas?' · '+r.movidas+' reorganizadas em tópicos':'')+(r.topRem?' · '+r.topRem+' tópicos antigos removidos':'')+(r.completadas?' · '+r.completadas+' com alternativas completadas':'')+(r.corrigidas?' · '+r.corrigidas+' enunciados corrigidos':'')+(r.comentarios?' · '+r.comentarios+' comentários revisados':'')+(r.leis?' · +'+r.leis+' lei(s)':'')+(r.leisAtu?' · '+r.leisAtu+' lei(s) atualizada(s)':''));
     }catch(err){ console.error(err); toast('❌ Erro ao ler o pacote: '+err.message); }
     input.value='';
   };
@@ -2747,6 +2788,7 @@ function aplicarPacote(p){
       topicos=topicos.filter(function(x){ return x.id!==t.id; }); res.topRem++;
     });
   });
+  aplicarLeisPacote(p, c, matId, topId, res);
   res.sims=0;
   (p.simulados||[]).forEach(function(sp){
     var existente=simulados.find(function(x){return x.concursoId===c.id&&x.ref===sp.ref;});
@@ -3640,6 +3682,7 @@ function renderEdital() {
           pctTop>=40?`<span class="edital-topico-badge" style="background:var(--amber-l);color:var(--amber)">revisar</span>`:
           `<span class="edital-topico-badge" style="background:var(--red-l);color:var(--red)">⚠ fraco</span>`}
           ${totalTop>0?`<button class="edital-quick-btn" onclick="event.stopPropagation();iniciarPorTopico('${top.id}')" title="Responder questões deste tópico">🎯</button>`:''}
+          ${leisDoTopico(top.id).length?`<button class="edital-quick-btn" onclick="event.stopPropagation();abrirLeiDoTopico('${top.id}')" title="Ler a lei deste tópico">📜</button>`:''}
         </div>`;
 
       if((top.subtopicos||[]).length) {
@@ -4095,15 +4138,48 @@ var editingItemId = null;
 var artigosHoje = 0; // contador do dashboard
 
 // ── Storage ──
+// Formato atual: dados/leisMeta (dados de cada lei, sem os artigos), dados/leisItens__N (texto dos
+// artigos, em partes — a CF sozinha passa de 1 MB) e dados/leisProg (status/⭐/notas de cada artigo).
+// Marcar um artigo regrava só o leisProg; o texto só é regravado quando muda (as partes iguais não são enviadas).
+// O documento antigo dados/leis (formato de antes) não é apagado: fica como cópia de segurança.
+var _leisFalhou=false;
+var LEI_PROG_CAMPOS=['status','destaque','notas'];
+function _leisMeta(){ return leis.map(function(l){ var o={}; Object.keys(l).forEach(function(k){ if(k!=='itens') o[k]=l[k]; }); return o; }); }
+function _leisItensFlat(){
+  var out=[];
+  leis.forEach(function(l){ (l.itens||[]).forEach(function(i){
+    var o={leiId:l.id}; Object.keys(i).forEach(function(k){ if(LEI_PROG_CAMPOS.indexOf(k)<0) o[k]=i[k]; }); out.push(o);
+  }); });
+  return out;
+}
+function _leisProg(){
+  var m={};
+  leis.forEach(function(l){ (l.itens||[]).forEach(function(i){
+    var st=i.status&&i.status!=='novo'?i.status:'', d=!!i.destaque, n=i.notas||'';
+    if(st||d||n) m[i.id]=[st,d?1:0,n];
+  }); });
+  return m;
+}
+function _leisMontar(meta, itens, prog){
+  var porLei={};
+  (itens||[]).forEach(function(i){ var o={}; Object.keys(i).forEach(function(k){ if(k!=='leiId') o[k]=i[k]; });
+    var pg=(prog||{})[i.id]; o.status=(pg&&pg[0])||'novo'; o.destaque=!!(pg&&pg[1]); o.notas=(pg&&pg[2])||(o.notas||'');
+    (porLei[i.leiId]=porLei[i.leiId]||[]).push(o); });
+  return (meta||[]).map(function(l){ var o=Object.assign({},l); o.itens=porLei[l.id]||[]; return o; });
+}
 async function saveLeis() {
-  try { localStorage.setItem('mc_leis', JSON.stringify({leis,nextLeiId,nextItemId,artigosHoje})); } catch(e){}
+  try { localStorage.setItem('mc_leis', JSON.stringify({leis,nextLeiId,nextItemId,artigosHoje})); }
+  catch(e){ try { localStorage.setItem('mc_leis', JSON.stringify({leisMeta:_leisMeta(),leisProg:_leisProg(),nextLeiId,nextItemId,artigosHoje})); } catch(e2){} }
   if(currentUser) {
+    if(_leisFalhou){ console.warn('[save] leis não gravadas: a leitura da nuvem falhou nesta sessão'); return; }
     try {
-      await cloudSave('leis', leis);
+      await cloudSaveBig('leisItens', _leisItensFlat());
+      await cloudSave('leisMeta', _leisMeta());
+      await cloudSave('leisProg', _leisProg());
       await cloudSave('nextLeiId', nextLeiId);
       await cloudSave('nextItemId', nextItemId);
       await cloudSave('artigosHoje', artigosHoje);
-    } catch(e){}
+    } catch(e){ console.error('[save] leis', e&&e.code); }
   }
 }
 
@@ -4117,12 +4193,25 @@ async function loadLeis() {
   } catch(e){}
   if(currentUser) {
     try {
-      var cl=await cloudLoad('leis',null); if(cl) leis=cl;
+      var meta=await cloudLoad('leisMeta',null);
+      if(meta){
+        var itens=await cloudLoadBig('leisItens',[]);
+        if(_bigFalhou['leisItens']) _leisFalhou=true;
+        else leis=_leisMontar(meta, itens, await cloudLoad('leisProg',{}));
+      } else {
+        var cl=await cloudLoad('leis',null); if(cl) leis=cl;   // formato antigo
+      }
       var cl2=await cloudLoad('nextLeiId',1); if(cl2) nextLeiId=cl2;
       var cl3=await cloudLoad('nextItemId',1); if(cl3) nextItemId=cl3;
       var cl4=await cloudLoad('artigosHoje',0); if(cl4) artigosHoje=cl4;
     } catch(e){}
   }
+  _leisMigrar();
+}
+// leis antigas sem concurso: as de Senador Canedo vão para o concurso de Senador Canedo
+function _leisMigrar(){
+  var sc=concursos.find(function(c){ return /senador canedo/i.test(c.name); });
+  leis.forEach(function(l){ if(!l.concursoId && sc && /senador canedo/i.test(l.nome)) l.concursoId=sc.id; });
 }
 
 // ── Helpers ──
@@ -4161,11 +4250,16 @@ function renderLeis() {
   if(btnG) btnG.style.display=isSuperAdmin?'':'none';
 
   var grid=document.getElementById('leis-grid'); if(!grid) return;
-  if(!leis.length){
-    grid.innerHTML='<div class="empty"><div class="empty-icon">📜</div><p>Nenhuma lei cadastrada.'+(isSuperAdmin?' Clique em "Gerenciar leis".':'')+'</p></div>';
+  var vis=leisDoConcurso();
+  var cAt=concursos.find(function(c){return c.id===currentConcursoId;});
+  var sub=document.querySelector('#leis-lista-view .page-sub');
+  if(sub) sub.textContent=(cAt?cAt.name+' · ':'')+'Leia por artigo (card a card) ou corrido (lei seca), com busca. ⭐ = cai no edital.';
+  if(!vis.length){
+    grid.innerHTML='<div class="empty"><div class="empty-icon">📜</div><p>Nenhuma lei cadastrada'+(cAt?' para '+cAt.name:'')+'.'+(isSuperAdmin?' Importe um pacote de leis ou clique em "Gerenciar leis".':'')+'</p></div>';
     return;
   }
-  grid.innerHTML=leis.map(function(l,li){
+  grid.innerHTML=vis.map(function(l){
+    var li=leis.indexOf(l);
     var artigos=(l.itens||[]).filter(function(i){return i.tipo==='artigo';});
     var total=artigos.length;
     var dom=artigos.filter(function(a){return a.status==='dominado';}).length;
@@ -4178,9 +4272,11 @@ function renderLeis() {
         +'<span style="font-size:24px">'+(l.icon||'📋')+'</span>'
         +'<div style="flex:1">'
           +'<div class="lei-arvore-nome">'+l.nome+'</div>'
-          +'<div class="lei-arvore-stats">'+total+' artigos · '+dom+' dominados · '+rev+' rever</div>'
+          +'<div class="lei-arvore-stats">'+(l.desc?escLei(l.desc)+' · ':'')+total+' artigos · '+dom+' dominados · '+rev+' rever</div>'
+          +leiTopicosHtml(l)
         +'</div>'
-        +(total>0?'<button class="lei-ler-btn" onclick="event.stopPropagation();iniciarSessaoLeiIdx('+li+',null,null)">▶ Lei toda</button>':'')
+        +(total>0?'<div style="display:flex;flex-direction:column;gap:4px"><button class="lei-ler-btn" onclick="event.stopPropagation();abrirLeiCorrida('+li+',null)">📖 Ler corrido</button>'
+          +'<button class="lei-ler-btn" onclick="event.stopPropagation();iniciarSessaoLeiIdx('+li+',null,null)">▶ Card a card</button></div>':'')
         +'<span class="lei-arvore-arrow" id="arrow-lei-'+li+'">▶</span>'
       +'</div>'
       +'<div class="lei-arvore-bar"><div class="lei-arvore-bar-fill" style="width:'+pct+'%"></div></div>'
@@ -4190,6 +4286,172 @@ function renderLeis() {
     +'</div>';
     return arvoreHtml;
   }).join('');
+}
+
+
+// ── Leis do concurso atual (as sem concurso aparecem em todos) ──
+function leisDoConcurso(){
+  _leisMigrar();
+  return leis.filter(function(l){ return !l.concursoId || l.concursoId===currentConcursoId; })
+    .sort(function(a,b){ return (a.ordem||999)-(b.ordem||999); });
+}
+function escLei(t){ return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function leiTopicosHtml(l){
+  var ns=(l.topicoIds||[]).map(function(id){ var t=topicos.find(function(x){return x.id===id;}); return t?t.nome:null; }).filter(Boolean);
+  if(!ns.length) return '';
+  return '<div style="font-size:10px;color:var(--amber);margin-top:3px">📌 Edital: '+escLei(ns.slice(0,3).join(' · '))+(ns.length>3?' +'+(ns.length-3):'')+'</div>';
+}
+function leisDoTopico(topId){ return leisDoConcurso().filter(function(l){ return (l.topicoIds||[]).indexOf(topId)>=0; }); }
+function abrirLeiDoTopico(topId){
+  var ls=leisDoTopico(topId); if(!ls.length) return;
+  goTo('leis', nbBtn('leis'));
+  setTimeout(function(){ abrirLeiCorrida(leis.indexOf(ls[0]), null); }, 60);
+}
+
+// ── LEITURA CORRIDA (lei seca) ──
+var corrida={leiIdx:null, grupoIdx:null, busca:'', fonte:15, soEdital:false};
+try { var _fs=parseInt(localStorage.getItem('mc_lei_fonte')||''); if(_fs>=12&&_fs<=24) corrida.fonte=_fs; } catch(e){}
+function semAcento(t){ return String(t||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase(); }
+function abrirLeiCorrida(leiIdx, grupoIdx){
+  var lei=leis[leiIdx]; if(!lei) return;
+  corrida.leiIdx=leiIdx; corrida.grupoIdx=grupoIdx; corrida.busca=''; corrida.soEdital=false;
+  document.getElementById('leis-lista-view').style.display='none';
+  document.getElementById('leis-leitura-view').style.display='none';
+  document.getElementById('leis-corrido-view').style.display='block';
+  var b=document.getElementById('lc-busca'); if(b) b.value='';
+  renderLeiCorrida(); window.scrollTo(0,0);
+}
+function fecharLeiCorrida(){
+  document.getElementById('leis-corrido-view').style.display='none';
+  document.getElementById('leis-lista-view').style.display='block';
+  renderLeis();
+}
+function corridaFonte(d){
+  corrida.fonte=Math.max(12,Math.min(24,corrida.fonte+d));
+  try{ localStorage.setItem('mc_lei_fonte',String(corrida.fonte)); }catch(e){}
+  var c=document.getElementById('lc-conteudo'); if(c) c.style.fontSize=corrida.fonte+'px';
+}
+var _lcT=null;
+function corridaBuscar(v){ clearTimeout(_lcT); _lcT=setTimeout(function(){ corrida.busca=v.trim(); renderLeiCorrida(); },250); }
+function corridaSoEdital(){ corrida.soEdital=!corrida.soEdital; renderLeiCorrida(); }
+function _destacarBusca(html, termo){
+  if(!termo) return html;
+  // marca o termo ignorando acentos e maiúsculas, sem mexer nas tags
+  var alvo=semAcento(termo); if(alvo.length<2) return html;
+  return html.split(/(<[^>]+>)/).map(function(parte){
+    if(parte.charAt(0)==='<') return parte;
+    var base=semAcento(parte), out='', i=0, k;
+    if(base.length!==parte.length) return parte;
+    while((k=base.indexOf(alvo,i))>=0){ out+=parte.slice(i,k)+'<mark>'+parte.slice(k,k+alvo.length)+'</mark>'; i=k+alvo.length; }
+    return out+parte.slice(i);
+  }).join('');
+}
+function _textoArtigoHtml(t){
+  return escLei(t).split('\n').map(function(l){
+    var m=l.match(/^(§\s*\d+[ºo°]?(?:-[A-Z])?|Parágrafo único\.?)(.*)$/);
+    if(m) return '<div class="lc-par"><b>'+m[1]+'</b>'+m[2]+'</div>';
+    if(/^[IVXLC]+\s*[-–]/.test(l)) return '<div class="lc-inc">'+l+'</div>';
+    if(/^[a-z]\)\s/.test(l)) return '<div class="lc-ali">'+l+'</div>';
+    return '<div>'+l+'</div>';
+  }).join('');
+}
+function renderLeiCorrida(){
+  var lei=leis[corrida.leiIdx]; if(!lei) return;
+  var itens=lei.itens||[];
+  var grupo=corrida.grupoIdx!=null?itens[corrida.grupoIdx]:null;
+  // itens do trecho, na ordem da lei
+  var dentro={};
+  if(grupo){ dentro[grupo.id]=true; itens.forEach(function(i){ if(i.paiId&&dentro[i.paiId]) dentro[i.id]=true; }); }
+  var trecho=grupo?itens.filter(function(i){ return dentro[i.id]&&i.id!==grupo.id; }):itens;
+  // ⭐ no grupo vale para tudo dentro dele
+  var estrelado={}; itens.forEach(function(i){ if(i.destaque||(i.paiId&&estrelado[i.paiId])) estrelado[i.id]=true; });
+  var termo=semAcento(corrida.busca);
+  var arts=trecho.filter(function(i){ return i.tipo==='artigo'; });
+  var vis=arts.filter(function(a){
+    if(corrida.soEdital && !estrelado[a.id]) return false;
+    if(termo.length>=2 && semAcento(a.num+' '+a.texto).indexOf(termo)<0) return false;
+    return true;
+  });
+  var visSet={}; vis.forEach(function(a){ visSet[a.id]=true; });
+  // um cabeçalho aparece se tiver algum artigo visível dentro
+  var temVis={}; vis.forEach(function(a){ var p=a.paiId; while(p&&!temVis[p]){ temVis[p]=true; var pi=itens.find(function(x){return x.id===p;}); p=pi?pi.paiId:null; } });
+  var dom=arts.filter(function(a){return a.status==='dominado';}).length;
+  document.getElementById('lc-titulo').textContent=lei.nome;
+  document.getElementById('lc-sub').textContent=(grupo?grupo.num+' · ':'')+arts.length+' artigos · '+dom+' dominados'+(termo.length>=2||corrida.soEdital?' · '+vis.length+' encontrados':'');
+  var bE=document.getElementById('lc-so-edital'); if(bE){ bE.classList.toggle('ativo',corrida.soEdital); }
+  var html='';
+  trecho.forEach(function(i){
+    var idx=itens.indexOf(i);
+    if(i.tipo!=='artigo'){
+      if(!temVis[i.id]) return;
+      html+='<div class="lc-h lc-h-'+i.tipo+(estrelado[i.id]?' lc-estrela':'')+'">'+(i.destaque?'⭐ ':'')+escLei(i.num)+'</div>';
+      return;
+    }
+    if(!visSet[i.id]) return;
+    var st=i.status||'novo';
+    html+='<div class="lc-art lc-st-'+st+(estrelado[i.id]?' lc-estrela':'')+'" id="lc-'+i.id+'">'
+      +'<div class="lc-art-top"><span class="lc-art-num">'+escLei(i.num)+'</span>'
+        +'<span class="lc-acts">'
+          +'<button class="lc-b'+(st==='dominado'?' on':'')+'" title="Dominado" onclick="corridaMarcar('+idx+',\'dominado\')">✓</button>'
+          +'<button class="lc-b'+(st==='rever'?' on':'')+'" title="Rever" onclick="corridaMarcar('+idx+',\'rever\')">👁</button>'
+          +'<button class="lc-b'+(i.destaque?' on':'')+'" title="Cai no edital" onclick="corridaEstrela('+idx+')">'+(i.destaque?'⭐':'☆')+'</button>'
+        +'</span></div>'
+      +(i.notas?'<div class="artigo-nota">💡 '+escLei(i.notas)+'</div>':'')
+      +'<div class="lc-txt">'+_destacarBusca(_textoArtigoHtml(i.texto||''), corrida.busca)+'</div>'
+    +'</div>';
+  });
+  if(!html) html='<div class="empty"><p>'+(termo.length>=2?'Nada encontrado para “'+escLei(corrida.busca)+'”.':'Nenhum artigo aqui.')+'</p></div>';
+  if(lei.fonte) html+='<div style="font-size:11px;color:var(--muted);margin:18px 0 8px">Fonte: '+escLei(lei.fonte)+'</div>';
+  var c=document.getElementById('lc-conteudo'); c.style.fontSize=corrida.fonte+'px'; c.innerHTML=html;
+}
+function corridaMarcar(idx, status){
+  var lei=leis[corrida.leiIdx]; var it=lei&&lei.itens[idx]; if(!it) return;
+  var novo=(it.status===status)?'novo':status;
+  if(novo==='dominado' && it.status!=='dominado'){
+    artigosHoje=(artigosHoje||0)+1;
+    var hoje=TODAY(); var _hc=getHistoricoConc();
+    if(!_hc[hoje]) _hc[hoje]={respondidas:0,acertos:0};
+    _hc[hoje].artigosLidos=(_hc[hoje].artigosLidos||0)+1; setHistoricoConc(hoje,_hc[hoje]);
+  }
+  it.status=novo; saveLeis();
+  var y=window.scrollY; renderLeiCorrida(); window.scrollTo(0,y);
+}
+function corridaEstrela(idx){
+  var lei=leis[corrida.leiIdx]; var it=lei&&lei.itens[idx]; if(!it) return;
+  it.destaque=!it.destaque; saveLeis();
+  var y=window.scrollY; renderLeiCorrida(); window.scrollTo(0,y);
+}
+
+// ── PACOTE: leis ──
+// pl = {ref, nome, icon, desc, fonte, ordem, materiaRef, topicoRefs:[], itens:[{ref,tipo,num,texto,paiRef,destaque}]}
+// Lei já existente (mesmo nome, mesmo concurso): o texto é atualizado e o progresso (status, ⭐, notas) é mantido.
+function aplicarLeisPacote(p, c, matId, topId, res){
+  var norm=function(t){ return semAcento(t).replace(/\s+/g,' ').trim(); };
+  res.leis=0; res.leisAtu=0;
+  (p.leis||[]).forEach(function(pl){
+    if(!pl.nome||!(pl.itens||[]).length) return;
+    var ex=leis.find(function(l){ return l.concursoId===c.id && norm(l.nome)===norm(pl.nome); });
+    function chave(lista, it, porRef){
+      var k=[it.tipo+'|'+norm(it.num)], pai=it.paiRef!==undefined?it.paiRef:it.paiId, n=0;
+      while(pai && n++<8){ var pi=porRef[pai]; if(!pi) break; k.unshift(pi.tipo+'|'+norm(pi.num)); pai=pi.paiRef!==undefined?pi.paiRef:pi.paiId; }
+      return k.join('>');
+    }
+    var antigos={};
+    if(ex){ var porIdA={}; ex.itens.forEach(function(i){ porIdA[i.id]=i; }); ex.itens.forEach(function(i){ antigos[chave(ex.itens,i,porIdA)]=i; }); }
+    var porRefN={}; pl.itens.forEach(function(i){ porRefN[i.ref]=i; });
+    var idDoRef={}, novos=[];
+    pl.itens.forEach(function(i){
+      var old=antigos[chave(pl.itens,i,porRefN)];
+      var id=old?old.id:('item_'+nextItemId++); idDoRef[i.ref]=id;
+      novos.push({id:id, tipo:i.tipo, num:i.num, texto:i.texto||'', paiId:i.paiRef?(idDoRef[i.paiRef]||null):null,
+        status:old?(old.status||'novo'):'novo', destaque:old?!!old.destaque:!!i.destaque, notas:old?(old.notas||''):''});
+    });
+    var meta={nome:pl.nome, icon:pl.icon||'📜', desc:pl.desc||'', fonte:pl.fonte||'', ordem:pl.ordem||999, concursoId:c.id,
+      materiaId:matId[pl.materiaRef]||'', topicoIds:(pl.topicoRefs||[]).map(function(r){ return topId[r]; }).filter(Boolean)};
+    if(ex){ Object.assign(ex, meta); ex.itens=novos; res.leisAtu++; }
+    else { leis.push(Object.assign({id:'lei_'+nextLeiId++}, meta, {itens:novos})); res.leis++; }
+  });
+  if((p.leis||[]).length) saveLeis();
 }
 
 // Wrapper que usa índice em vez de id string (evita problema de aspas)
@@ -4258,10 +4520,10 @@ function renderNivel(lei, paiId, leiIdx) {
         +'<span class="lei-star'+(item.destaque?' ativo':'')+'" onclick="event.stopPropagation();toggleDestaque(leis['+leiIdx+'].id,leis['+leiIdx+'].itens['+itemIdx+'].id)" title="Destacar — cai no edital">'+(item.destaque?'⭐':'☆')+'</span>'
         +'<span style="color:'+cor+';font-size:11px;flex-shrink:0" id="arrow-'+key+'">▶</span>'
         +'<div style="flex:1">'
-          +'<div style="font-size:13px;font-weight:700;color:'+cor+'">'+item.num+'</div>'
+          +'<div style="font-size:13px;font-weight:700;color:'+cor+'">'+escLei(item.num)+'</div>'
           +(artigos.length?'<div style="font-size:10px;color:var(--muted);font-family:var(--fm)">'+artigos.length+' artigos · '+pct+'% dominado</div>':'')
         +'</div>'
-        +(artigos.length?'<button class="lei-ler-btn" onclick="event.stopPropagation();iniciarSessaoLeiIdx('+leiIdx+','+itemIdx+',null)">▶ Ler tudo</button>':'')
+        +(artigos.length?'<button class="lei-ler-btn" onclick="event.stopPropagation();abrirLeiCorrida('+leiIdx+','+itemIdx+')">📖</button> <button class="lei-ler-btn" onclick="event.stopPropagation();iniciarSessaoLeiIdx('+leiIdx+','+itemIdx+',null)">▶ Cards</button>':'')
       +'</div>'
       +'<div id="nivel-'+key+'" style="display:none">'
         +renderNivel(lei, item.id, leiIdx)
@@ -4589,7 +4851,7 @@ function parsearLei(){
       var item={id:'item_'+nextItemId++,num:bufNum,tipo:bufTipo,texto:bufTexto.join('\n').trim(),notas:'',paiId:bufPai,status:'novo'};
       lei.itens.push(item);
       adicionados++;
-      // Atualiza stack 
+      // Atualiza stack
       if(bufTipo!=='artigo') stack[bufTipo]=item.id;
     }
     bufNum=''; bufTexto=[]; bufTipo='artigo'; bufPai=null;
