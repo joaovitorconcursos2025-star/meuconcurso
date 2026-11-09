@@ -5530,7 +5530,7 @@ function chancesBloco(cg,b,conc){
   var p=cov*pObs+(1-cov)*pUnseen, nEff=n*cov;
   // simulados oficiais feitos no app (últimos 3): questões novas, entram como evidência direta
   var ks=0, ns=0;
-  simResultados.filter(function(r){return r.concursoId===conc.id;}).slice(-3).forEach(function(r){
+  simResultados.filter(function(r){return r.concursoId===conc.id && Object.keys(r.respostas||{}).length>=0.6*(r.total||1);}).slice(-3)   // só simulados feitos de verdade (≥60% respondido).forEach(function(r){
     Object.keys(r.porDisc||{}).forEach(function(dk){ if(b.disc.test(dk)){ ks+=r.porDisc[dk].acertos||0; ns+=r.porDisc[dk].total||0; } });
   });
   if(ns) { p=(p*Math.max(nEff,4)+ks)/(Math.max(nEff,4)+ns); nEff+=ns; }
