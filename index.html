@@ -815,6 +815,14 @@ u{text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:
 .email-toggle{width:100%;padding:13px;border-radius:12px;border:1.5px solid var(--border2);background:none;color:var(--text,#eee);font-family:var(--ff);font-size:15px;font-weight:600;cursor:pointer;margin-bottom:14px}
 .le-lab{display:block;font-size:13px;font-weight:700;margin:10px 0 4px;color:var(--muted)}.le-in{width:100%;box-sizing:border-box;padding:13px;font-size:16px;border-radius:10px;border:1.5px solid var(--border2);background:var(--bg3);color:inherit;font-family:var(--ff)}
 .le-btn{margin-top:14px;justify-content:center;font-size:16px}.le-links{display:flex;justify-content:space-between;gap:10px;margin:12px 0 14px;font-size:13px}.le-links a{cursor:pointer;color:var(--blue)}
+.ch-tit{font-weight:800;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}.ch-sub{font-weight:400;text-transform:none;letter-spacing:0;font-size:11px;color:var(--muted)}
+.ch-card{background:var(--bg3);border-radius:10px;padding:10px 12px;margin-bottom:8px;cursor:pointer}.ch-nome{font-weight:700;font-size:14px;margin-bottom:6px}
+.ch-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.ch-nums div{display:flex;flex-direction:column}.ch-nums b{font-size:18px}.ch-nums span{font-size:10.5px;color:var(--muted);line-height:1.3}.ch-nums i{font-style:normal;font-weight:700}
+.ch-bar{position:relative;height:8px;background:var(--bg2);border-radius:5px;margin:8px 0 4px}.ch-bar i{position:absolute;left:0;top:0;bottom:0;background:var(--blue);border-radius:5px}.ch-bar em{position:absolute;top:-3px;width:3px;height:14px;background:#fff;border-radius:2px}
+.ch-grande{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0}.ch-grande div{background:var(--bg2);border-radius:10px;padding:10px}.ch-grande b{font-size:28px}.ch-grande span{display:block;font-size:12px;color:var(--muted)}
+.ch-meta{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:14px}.ch-mini{font-size:12px;color:var(--muted)}
+.ch-tab{width:100%;border-collapse:collapse;font-size:13px}.ch-tab th,.ch-tab td{padding:6px 4px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}.ch-tab th{color:var(--muted);font-weight:600;font-size:11px}
+.ch-inp label{display:block;font-size:13px;margin:6px 0}.ch-inp input{width:90px;margin-left:6px;padding:6px;border-radius:8px;border:1px solid var(--border2);background:var(--bg3);color:inherit}
 </style>
 </head>
 <body>
@@ -900,6 +908,7 @@ u{text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:
   <div class="dash-grid" id="dash-stats"></div>
 
   <!-- CRONOGRAMA ATÉ A PROVA -->
+  <div id="chances-wrap" class="crono-wrap" style="display:none"></div>
   <div id="crono-wrap" class="crono-wrap" style="display:none"></div>
 
   <!-- PLANO DO DIA -->
@@ -1694,6 +1703,7 @@ function calcPrioridade(q) {
 
 function aplicarRevisao(q, resultado) {
   var hoje = TODAY();
+  if(!q.vezesRespondida && q.primeiraResp==null) q.primeiraResp = resultado==='acerto'?1:0;   // 1ª tentativa (usada no 📈 Minhas chances)
   q.vezesRespondida = (q.vezesRespondida||0) + 1;
   q.ultimaResposta  = hoje;
   if(resultado==='acerto') {
@@ -1867,6 +1877,7 @@ function renderDash() {
   renderMentora(c, hoje, hist, meta, pct, qs, erros, pend, taxa);
   renderPlanoDia();
   try{ renderCronograma(); }catch(e){ console.error('[crono]',e); }
+  try{ renderChances(); }catch(e){ console.error('[chances]',e); }
 
   document.getElementById('meta-sub').textContent  = hist.respondidas+'/'+meta+' questões';
   document.getElementById('meta-pct').textContent  = pct+'%';
@@ -5429,6 +5440,204 @@ async function removerLiberacao(uid, id){
     await db.collection('liberacoes').doc(uid).set({ids:lib.ids, itens:lib.itens||{}, email:p.email||'', t:Date.now()});
     _uLib[uid]=lib; renderUsuarios();
   }catch(e){ toast('❌ '+(e.code||e.message)); }
+}
+</script>
+<div id="chances-ov" class="uv-ov" style="display:none"></div>
+<script>
+// ═══════════════════════════════════════
+// 📈 MINHAS CHANCES — progresso real e probabilidade de aprovação por cargo
+// Método (explicado também na tela):
+//  • Para cada bloco da prova, o acerto provável vem das SUAS respostas, contando só a 1ª tentativa de cada
+//    questão (refazer a mesma questão não infla a nota) + simulados oficiais feitos no app (questões novas).
+//  • Assuntos do bloco que você ainda não praticou entram com acerto de "chute com noção" (25% + 10 pontos).
+//  • Nota estimada = soma dos blocos × peso; a incerteza vem do tamanho da amostra e do sorteio das questões.
+//  • A chance é calculada por simulação (5.000 provas) contra a nota de corte: TJGO = notas reais do concurso de
+//    2021 (UFG); Câmara = modelo de classificação com o nº de inscritos e as vagas do edital.
+// ═══════════════════════════════════════
+var CH_CARGOS = [
+ { key:'tjgo', conc:/^TJ GO$/, nome:'TJGO · Analista Judiciário — Apoio Judiciário e Administrativo', alts:4, objMax:100, tipo:'tjgo',
+   blocos:[
+    {nome:'Língua Portuguesa', n:15, w:1, mats:[/^l[íi]ngua portuguesa$/i], disc:/portugu/i},
+    {nome:'História e Geografia de Goiás', n:5, w:1, mats:[/hist[óo]ria e geografia/i], disc:/hist[óo]ria|geografia/i},
+    {nome:'Legislação Complementar', n:10, w:2, mats:[/legisla[çc][ãa]o complementar/i], disc:/legisla[çc][ãa]o/i},
+    {nome:'Direito Constitucional', n:5, w:2, mats:[/^direito constitucional$/i], disc:/constitucional/i},
+    {nome:'Direito Administrativo', n:7, w:2, mats:[/^direito administrativo$/i], disc:/direito administrativo/i},
+    {nome:'Noções de Administração Pública', n:18, w:2, mats:[/administra[çc][ãa]o p[úu]blica/i], disc:/administra[çc][ãa]o p[úu]blica/i}],
+   ref:'Concurso TJGO 2021 (UFG), ampla concorrência: 7.672 inscritos no cargo; discursiva corrigida só até o 380º da objetiva (nota objetiva ≈ 79/100); último da lista final (444º) com nota final 69; 100º com 82,5; 50º com 85. Nota final = (objetiva + discursiva) ÷ 2.',
+   padrao:{disc:75} },
+ { key:'rh', conc:/Cristalina.*Analista de RH/i, nome:'Câmara de Cristalina · Analista de Recursos Humanos', alts:4, objMax:60, tipo:'camara', vagas:1, lista:6, discMax:20, corrigeDisc:20,
+   blocos:[
+    {nome:'Língua Portuguesa', n:10, w:1, mats:[/^l[íi]ngua portuguesa$/i], disc:/portugu/i},
+    {nome:'Raciocínio Lógico', n:5, w:1, mats:[/racioc[íi]nio/i], disc:/racioc|l[óo]gic|matem/i},
+    {nome:'Informática', n:5, w:1, mats:[/inform[áa]tica/i], disc:/inform/i},
+    {nome:'Dir. Administrativo e Constitucional', n:10, w:1, mats:[/direito administrativo e constitucional/i], disc:/direito/i},
+    {nome:'Legislação Específica', n:10, w:1, mats:[/legisla[çc][ãa]o espec/i], disc:/legisla/i},
+    {nome:'Conhecimentos do Cargo (RH)', n:10, w:2, mats:[/cargo.*analista de rh/i], disc:/cargo|espec[íi]fic/i}],
+   ref:'Edital Consulplan 1/2026: objetiva de 60 pontos (mínimo 50%), discursiva de 20 pontos corrigida só para os 20 primeiros da ampla concorrência; 1 vaga + 5 de cadastro reserva.',
+   padrao:{inscritos:350, disc:14} },
+ { key:'tp', conc:/Cristalina.*Analista de RH/i, nome:'Câmara de Cristalina · Técnico Parlamentar', alts:4, objMax:60, tipo:'camara', vagas:4, lista:9,
+   blocos:[
+    {nome:'Língua Portuguesa', n:10, w:1, mats:[/^l[íi]ngua portuguesa$/i], disc:/portugu/i},
+    {nome:'Raciocínio Lógico', n:5, w:1, mats:[/racioc[íi]nio/i], disc:/racioc|l[óo]gic|matem/i},
+    {nome:'Informática', n:5, w:1, mats:[/inform[áa]tica/i], disc:/inform/i},
+    {nome:'Dir. Administrativo e Constitucional', n:10, w:1, mats:[/direito administrativo e constitucional/i], disc:/direito/i},
+    {nome:'Legislação Específica', n:10, w:1, mats:[/legisla[çc][ãa]o espec/i], disc:/legisla/i},
+    {nome:'Conhecimentos do Cargo (Técnico Parlamentar)', n:10, w:2, mats:[/t[ée]cnico parlamentar/i], disc:/parlamentar/i}],
+   ref:'Edital Consulplan 1/2026: objetiva de 60 pontos (mínimo 50%), sem discursiva; 4 vagas na ampla concorrência + 5 de cadastro reserva.',
+   padrao:{inscritos:1500} },
+ { key:'asg', conc:/Cristalina.*Servi[çc]os Gerais/i, nome:'Câmara de Cristalina · Auxiliar de Serviços Gerais', alts:4, objMax:50, tipo:'camara', vagas:3, lista:8,
+   blocos:[
+    {nome:'Língua Portuguesa', n:10, w:1, mats:[/portuguesa/i], disc:/portugu/i},
+    {nome:'Matemática', n:10, w:1, mats:[/matem[áa]tica/i], disc:/matem/i},
+    {nome:'Conhecimentos Gerais', n:10, w:1, mats:[/conhecimentos gerais/i], disc:/gerais/i},
+    {nome:'Conhecimentos do Cargo', n:10, w:2, mats:[/conhecimentos do cargo/i], disc:/cargo/i}],
+   ref:'Edital Consulplan 1/2026: objetiva de 50 pontos (mínimo 50%); 3 vagas na ampla concorrência + 5 de cadastro reserva.',
+   padrao:{inscritos:800} }
+];
+
+function _chRandn(){ var u=0,v=0; while(!u)u=Math.random(); while(!v)v=Math.random(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v); }
+function _chInvNorm(p){ // Acklam
+  var a=[-39.6968302866538,220.946098424521,-275.928510446969,138.357751867269,-30.6647980661472,2.50662827745924],
+      b=[-54.4760987982241,161.585836858041,-155.698979859887,66.8013118877197,-13.2806815528857],
+      c=[-0.00778489400243029,-0.322396458041136,-2.40075827716184,-2.54973253934373,4.37466414146497,2.93816398269878],
+      d=[0.00778469570904146,0.32246712907004,2.445134137143,3.75440866190742], pl=0.02425, q, r;
+  p=Math.min(Math.max(p,1e-9),1-1e-9);
+  if(p<pl){ q=Math.sqrt(-2*Math.log(p)); return (((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1); }
+  if(p>1-pl){ q=Math.sqrt(-2*Math.log(1-p)); return -(((((c[0]*q+c[1])*q+c[2])*q+c[3])*q+c[4])*q+c[5])/((((d[0]*q+d[1])*q+d[2])*q+d[3])*q+1); }
+  q=p-0.5; r=q*q; return (((((a[0]*r+a[1])*r+a[2])*r+a[3])*r+a[4])*r+a[5])*q/(((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1);
+}
+var _chCfg=null, _chHist=null;
+async function _chCarregar(){
+  if(_chCfg) return;
+  try{ _chCfg=await cloudLoad('chancesCfg',{})||{}; }catch(e){ _chCfg={}; }
+  try{ _chHist=await cloudLoad('chancesHist',{})||{}; }catch(e){ _chHist={}; }
+}
+function _chPar(cg,k){ var v=((_chCfg||{})[cg.key]||{})[k]; return v!=null&&v!==''?Number(v):cg.padrao[k]; }
+// 1ª tentativa: gravada a partir de agora; para respostas antigas, só conta como acerto quem nunca errou
+function _chPrimeira(q){ if(q.primeiraResp!=null) return q.primeiraResp?1:0; return (q.vezesAcertada||0)>=(q.vezesRespondida||0)?1:0; }
+
+function chancesBloco(cg,b,conc){
+  var mats=materias.filter(function(m){ return m.concursoId===conc.id && b.mats.some(function(r){return r.test(m.name);}); });
+  var mid={}; mats.forEach(function(m){mid[m.id]=1;});
+  var qs=questions.filter(function(q){ return q.concursoId===conc.id && mid[q.materia]; });
+  var porTop={}; qs.forEach(function(q){ var t=q.topico||'_'; (porTop[t]=porTop[t]||{tot:0,resp:0}).tot++; if(q.vezesRespondida) porTop[t].resp++; });
+  var tops=Object.keys(porTop), cov=0;
+  tops.forEach(function(t){ var x=porTop[t]; var meta=Math.min(10,Math.max(3,Math.ceil(x.tot*0.3))); cov+=Math.min(1,x.resp/meta); });
+  cov=tops.length?cov/tops.length:0;
+  var resp=qs.filter(function(q){return q.vezesRespondida;}), k=0; resp.forEach(function(q){ k+=_chPrimeira(q); });
+  var n=resp.length, chance=1/cg.alts, pUnseen=chance+0.10, a0=(chance+0.15)*6, b0=6-a0;
+  var pObs=(a0+k)/(a0+b0+n);
+  var p=cov*pObs+(1-cov)*pUnseen, nEff=n*cov;
+  // simulados oficiais feitos no app (últimos 3): questões novas, entram como evidência direta
+  var ks=0, ns=0;
+  simResultados.filter(function(r){return r.concursoId===conc.id;}).slice(-3).forEach(function(r){
+    Object.keys(r.porDisc||{}).forEach(function(dk){ if(b.disc.test(dk)){ ks+=r.porDisc[dk].acertos||0; ns+=r.porDisc[dk].total||0; } });
+  });
+  if(ns) { p=(p*Math.max(nEff,4)+ks)/(Math.max(nEff,4)+ns); nEff+=ns; }
+  var varP=p*(1-p)/(nEff+6)+Math.pow(1-cov,2)*0.006;
+  return {nome:b.nome,n:b.n,w:b.w,p:p,varP:varP,cov:cov,resp:n,acertos1:k,banco:qs.length,ks:ks,ns:ns,pontos:b.w*b.n*p,max:b.w*b.n};
+}
+
+function chancesCalcular(cg,conc){
+  var bl=cg.blocos.map(function(b){return chancesBloco(cg,b,conc);});
+  var mu=0, sd2=0, max=0, covW=0;
+  bl.forEach(function(x){ mu+=x.pontos; max+=x.max; covW+=x.cov*x.max; sd2+=x.w*x.w*x.n*x.p*(1-x.p)+Math.pow(x.w*x.n,2)*x.varP; });
+  var sd=Math.sqrt(sd2), N=5000, r={bl:bl,mu:mu,sd:sd,max:max,cov:covW/max};
+  function obj(){ var s=0; bl.forEach(function(x){ var pp=Math.min(.99,Math.max(.01,x.p+_chRandn()*Math.sqrt(x.varP))); var m=x.n*pp, v=x.n*pp*(1-pp); s+=x.w*Math.min(x.n,Math.max(0,Math.round(m+_chRandn()*Math.sqrt(v)))); }); return s; }
+  if(cg.tipo==='tjgo'){
+    var disc=_chPar(cg,'disc'), okL=0, okT=0, okD=0;
+    for(var i=0;i<N;i++){ var o=obj(); var d=Math.min(100,Math.max(0,disc+_chRandn()*10));
+      var cDisc=79+_chRandn()*2.5, cL=69+_chRandn()*3, cT=82.5+_chRandn()*3; var nf=(o+d)/2;
+      if(o>=cDisc){ okD++; if(d>=60&&nf>=cL) okL++; if(d>=60&&nf>=cT) okT++; } }
+    r.metas=[{rot:'Ter a discursiva corrigida (objetiva ≥ ~79)',p:okD/N},{rot:'Entrar na lista final (≥ ~69 de nota final)',p:okL/N},{rot:'Ficar entre os 100 primeiros (nomeação provável)',p:okT/N}];
+    r.alvo=79; r.alvoTxt='objetiva ≥ 79/100 (corte da discursiva em 2021)';
+  } else {
+    var ins=Math.max(cg.lista+1,_chPar(cg,'inscritos')), m0=0.50*cg.objMax, s0=0.15*cg.objMax;
+    function corte(k){ return m0+s0*_chInvNorm(1-k/ins); }
+    var temD=!!cg.discMax, dmu=temD?_chPar(cg,'disc'):0;
+    var fm=m0+(temD?0.6*cg.discMax:0), fs=Math.sqrt(s0*s0+(temD?Math.pow(0.15*cg.discMax,2):0));
+    function corteF(k){ return fm+fs*_chInvNorm(1-k/ins); }
+    var cV=corteF(cg.vagas), cL2=corteF(cg.lista), cD=temD?corte(cg.corrigeDisc):0, okV=0, okL2=0, okA=0;
+    for(var j=0;j<N;j++){ var o2=obj(); if(o2<cg.objMax/2) continue; okA++;
+      var d2=temD?Math.min(cg.discMax,Math.max(0,dmu+_chRandn()*3)):0;
+      if(temD && (o2<cD+_chRandn()*2 || d2<cg.discMax/2)) continue;
+      var f=o2+d2, ruido=_chRandn()*fs*0.12;
+      if(f>=cV+ruido) okV++; if(f>=cL2+ruido) okL2++; }
+    r.metas=[{rot:'Passar do mínimo do edital (50% da objetiva)',p:okA/N}];
+    if(temD) r.metas.push({rot:'Ficar entre os 20 da objetiva (discursiva corrigida)',p:null});
+    r.metas.push({rot:'Entrar no cadastro (até o '+cg.lista+'º)',p:okL2/N},{rot:'Vaga imediata (até o '+cg.vagas+'º da ampla concorrência)',p:okV/N});
+    if(temD){ var okD2=0; for(var t=0;t<2000;t++){ var o3=obj(); if(o3>=cg.objMax/2 && o3>=cD+_chRandn()*2) okD2++; } r.metas[1].p=okD2/2000; }
+    r.alvo=temD?Math.max(cD,cL2-dmu):cL2; r.ins=ins;
+    r.alvoTxt=temD?('objetiva ≈ '+r.alvo.toFixed(1)+'/'+cg.objMax+' (com discursiva '+dmu+'/'+cg.discMax+')'):('objetiva ≈ '+r.alvo.toFixed(1)+'/'+cg.objMax+' para entrar no cadastro');
+  }
+  // onde estão os pontos: quanto cada bloco renderia se você chegasse a 85% nele
+  bl.forEach(function(x){ x.ganho=Math.max(0,x.w*x.n*(0.85-x.p)); });
+  return r;
+}
+
+function _chPct(x){ return Math.round(x*100)+'%'; }
+function _chCor(p){ return p>=0.6?'var(--green,#2ecc71)':p>=0.25?'var(--amber)':'var(--red,#ff5c5c)'; }
+async function renderChances(){
+  var wrap=document.getElementById('chances-wrap'); if(!wrap) return;
+  var conc=concursos.find(function(x){return x.id===currentConcursoId;});
+  var cgs=conc?CH_CARGOS.filter(function(cg){return cg.conc.test(conc.name);}):[];
+  if(!cgs.length){ wrap.style.display='none'; return; }
+  await _chCarregar();
+  var hoje=TODAY(), html='<div class="ch-tit">📈 Minhas chances <span class="ch-sub">calculadas com as suas respostas</span></div>', mudou=false;
+  cgs.forEach(function(cg){
+    var r=chancesCalcular(cg,conc), meta=r.metas[r.metas.length-1], lista=r.metas[r.metas.length-2];
+    _chHist[cg.key]=_chHist[cg.key]||{};
+    var h=_chHist[cg.key], dias=Object.keys(h).sort(), ant=dias.filter(function(d){return d<hoje;}).slice(-7)[0];
+    if(!h[hoje] || Math.abs(h[hoje].nota-r.mu)>0.05){ h[hoje]={nota:+r.mu.toFixed(2),cov:+r.cov.toFixed(3),p:+lista.p.toFixed(3)}; mudou=true; }
+    var tend=ant?(r.mu-h[ant].nota):null;
+    html+='<div class="ch-card" onclick="abrirChances(\''+cg.key+'\')"><div class="ch-nome">'+escLei(cg.nome)+'</div>'
+      +'<div class="ch-nums"><div><b>'+r.mu.toFixed(1).replace('.',',')+'</b><span>/'+r.max+' nota estimada'+(tend!=null?' <i style="color:'+(tend>=0?'var(--green,#2ecc71)':'var(--red,#ff5c5c)')+'">'+(tend>=0?'▲':'▼')+Math.abs(tend).toFixed(1).replace('.',',')+'</i>':'')+'</span></div>'
+      +'<div><b>'+_chPct(r.cov)+'</b><span>do edital praticado</span></div>'
+      +'<div><b style="color:'+_chCor(lista.p)+'">'+_chPct(lista.p)+'</b><span>'+(cg.tipo==='tjgo'?'entrar na lista':'cadastro')+'</span></div>'
+      +'<div><b style="color:'+_chCor(meta.p)+'">'+_chPct(meta.p)+'</b><span>'+(cg.tipo==='tjgo'?'top 100':'vaga imediata')+'</span></div></div>'
+      +'<div class="ch-bar"><i style="width:'+Math.min(100,r.mu/r.max*100)+'%"></i><em style="left:'+Math.min(100,r.alvo/r.max*100)+'%"></em></div>'
+      +'<div class="ch-sub">Marca branca = nota de corte de referência · toque para ver os detalhes</div></div>';
+  });
+  wrap.innerHTML=html; wrap.style.display='block';
+  if(mudou){ try{ cloudSave('chancesHist',_chHist); }catch(e){} }
+}
+
+async function abrirChances(key){
+  await _chCarregar();
+  var cg=CH_CARGOS.find(function(x){return x.key===key;}), conc=concursos.find(function(x){return x.id===currentConcursoId;}); if(!cg||!conc) return;
+  var r=chancesCalcular(cg,conc), ov=document.getElementById('chances-ov');
+  var lin=r.bl.map(function(x){ return '<tr><td>'+escLei(x.nome)+'<div class="ch-mini">'+x.n+' questões × '+x.w+' · '+x.resp+' respondidas de '+x.banco+(x.ns?' · simulados: '+x.ks+'/'+x.ns:'')+'</div></td>'
+    +'<td style="color:'+_chCor(x.p)+'"><b>'+_chPct(x.p)+'</b></td><td>'+_chPct(x.cov)+'</td><td>'+x.pontos.toFixed(1).replace('.',',')+'/'+x.max+'</td><td>'+(x.ganho>0.4?'+'+x.ganho.toFixed(1).replace('.',','):'—')+'</td></tr>'; }).join('');
+  var foco=r.bl.slice().sort(function(a,b){return b.ganho-a.ganho;}).slice(0,3).filter(function(x){return x.ganho>0.4;});
+  var hist=(_chHist[cg.key]||{}), ds=Object.keys(hist).sort().slice(-30);
+  var spark=ds.length>1?'<div class="ch-mini" style="margin-top:6px">Evolução da nota estimada (últimos '+ds.length+' dias): '+ds.map(function(d){return hist[d].nota.toFixed(1).replace('.',',');}).join(' → ')+'</div>':'';
+  var cfg=(_chCfg[cg.key]||{});
+  var inputs='';
+  if(cg.tipo==='tjgo') inputs='<label>Sua nota esperada na discursiva (0 a 100) <input type="number" min="0" max="100" value="'+_chPar(cg,'disc')+'" onchange="chancesSalvar(\''+cg.key+'\',\'disc\',this.value)"></label><div class="ch-mini">Sem redação corrigida não há como medir no app: use a nota de uma correção real assim que tiver. Em 2021 a mediana dos aprovados ficou perto de 85.</div>';
+  else { inputs='<label>Inscritos no cargo <input type="number" min="10" value="'+_chPar(cg,'inscritos')+'" onchange="chancesSalvar(\''+cg.key+'\',\'inscritos\',this.value)"></label><div class="ch-mini">'+(cfg.inscritos?'Valor informado por você.':'Ainda é uma ESTIMATIVA: troque pelo número oficial quando a Consulplan divulgar a concorrência (depois de 18/11).')+'</div>';
+    if(cg.discMax) inputs+='<label>Sua nota esperada na discursiva (0 a 20) <input type="number" min="0" max="20" value="'+_chPar(cg,'disc')+'" onchange="chancesSalvar(\''+cg.key+'\',\'disc\',this.value)"></label>'; }
+  ov.innerHTML='<div class="uv-box"><div class="uv-head"><b>📈 '+escLei(cg.nome)+'</b><button class="btn btn-ghost btn-sm" onclick="fecharChances()">✕ Fechar</button></div>'
+    +'<div class="ch-grande"><div><b>'+r.mu.toFixed(1).replace('.',',')+'</b>/'+r.max+'<span>nota objetiva estimada hoje · faixa provável '+Math.max(0,r.mu-1.28*r.sd).toFixed(0)+' a '+Math.min(r.max,r.mu+1.28*r.sd).toFixed(0)+'</span></div><div><b>'+_chPct(r.cov)+'</b><span>do edital praticado (ponderado pelo peso)</span></div></div>'
+    +'<div class="uv-sec">Chances (5.000 provas simuladas)</div>'+r.metas.map(function(m){ return '<div class="ch-meta"><span>'+m.rot+'</span><b style="color:'+_chCor(m.p)+'">'+_chPct(m.p)+'</b></div>'; }).join('')
+    +'<div class="ch-mini" style="margin-top:6px">Meta para ter boa chance: '+r.alvoTxt+'.</div>'+spark
+    +'<div class="uv-sec">Por bloco da prova</div><div style="overflow-x:auto"><table class="ch-tab"><tr><th>Bloco</th><th>Acerto</th><th>Praticado</th><th>Pontos</th><th>Ganho possível*</th></tr>'+lin+'</table></div>'
+    +'<div class="ch-mini">* pontos a ganhar se você chegar a 85% de acerto naquele bloco.</div>'
+    +(foco.length?'<div class="uv-sec">Onde estudar primeiro</div>'+foco.map(function(x,i){return '<div class="ch-meta"><span>'+(i+1)+'. '+escLei(x.nome)+'</span><b>+'+x.ganho.toFixed(1).replace('.',',')+' pts</b></div>';}).join(''):'')
+    +'<div class="uv-sec">Ajustes</div><div class="ch-inp">'+inputs+'</div>'
+    +'<div class="uv-sec">Como é calculado (sem achismo)</div><div class="ch-mini" style="line-height:1.6">'
+    +'1) <b>Acerto por bloco</b>: só a 1ª tentativa de cada questão conta (refazer não infla a nota); simulados oficiais feitos no app entram como questões novas. Com poucas respostas, o valor é puxado para perto de 40% até haver dados.<br>'
+    +'2) <b>Assuntos não praticados</b>: entram com 35% (chute com noção, 4 alternativas). Por isso praticar todos os tópicos sobe a nota estimada.<br>'
+    +'3) <b>Nota</b> = soma dos blocos × número de questões × peso, com a incerteza da amostra e do sorteio da prova.<br>'
+    +'4) <b>Corte</b>: '+escLei(cg.ref)+(cg.tipo==='camara'?' Sem notas de corte anteriores deste concurso, o corte é estimado pela posição que você precisa (vagas) entre '+r.ins+' inscritos, supondo notas dos candidatos com média de 50% e desvio de 15% — o padrão de provas objetivas desse porte. Esta é a parte mais incerta do cálculo.':'')+'<br>'
+    +'5) <b>Chance</b> = em quantas das 5.000 provas simuladas você passa do corte (o corte também varia um pouco).'
+    +'</div></div>';
+  ov.style.display='flex'; document.body.style.overflow='hidden';
+}
+function fecharChances(){ document.getElementById('chances-ov').style.display='none'; document.body.style.overflow=''; }
+async function chancesSalvar(key,campo,val){
+  await _chCarregar(); _chCfg[key]=_chCfg[key]||{}; _chCfg[key][campo]=val===''?null:Number(val);
+  try{ await cloudSave('chancesCfg',_chCfg); }catch(e){}
+  abrirChances(key); renderChances();
 }
 </script>
 <div id="resumo-ov" class="rs-ov" style="display:none"></div>
