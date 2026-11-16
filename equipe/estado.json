@@ -1,0 +1,15 @@
+{
+  "prova": "2026-12-20",
+  "atualizado": "2026-11-16",
+  "regras": {"max_questoes_por_noite": 40, "um_pacote_por_noite": true},
+  "banco_atual": {"legislacao_especifica": {"lei_organica": 10, "regimento_interno": 9, "estatuto": 9}},
+  "fila": [
+    {"id": "LE-1", "prioridade": 1, "papel": "elaborador", "tarefa": "Legislação Específica: +30 questões por noite até chegar a 60 da Lei Orgânica, 50 do Regimento Interno e 40 do Estatuto. Cobrir capítulos ainda sem questão antes de repetir artigo. Priorizar: Câmara e processo legislativo (LO arts. 18-56), Prefeito (57-66), servidores (83), Mesa/Comissões/reuniões/votação (RI), provimento, estágio probatório (20-A a 20-Y), vantagens, férias, licenças e regime disciplinar (Estatuto).", "status": "em andamento"},
+    {"id": "BANCA-1", "prioridade": 1, "papel": "analista_banca", "tarefa": "Perfil do Instituto Consulplan: provas aplicadas de 2023 a 2026 para Câmaras Municipais e para cargos de Analista de RH / Gestão de Pessoas e Técnico Legislativo/Parlamentar. Registrar em equipe/banca.md: lista de provas com link, estilo de enunciado, distribuição de assuntos por disciplina, como a banca cobra lei municipal (letra de lei? caso prático?), temas de discursiva. Marcar o que é fato (com link) e o que é inferência.", "status": "pendente"},
+    {"id": "RH-1", "prioridade": 2, "papel": "elaborador", "tarefa": "Resumos dos 7 tópicos de Conhecimentos do Cargo · Analista de RH (hoje sem resumo), fiéis ao texto do edital (equipe/fontes/edital-01-2026.txt, seção ANALISTA DE RECURSOS HUMANOS), um tópico ou dois por noite, no formato dos resumos existentes.", "status": "pendente"},
+    {"id": "BANCA-2", "prioridade": 2, "papel": "analista_banca", "tarefa": "Coletar questões REAIS da Consulplan por tópico do edital (com órgão, cargo, ano e link da prova/gabarito oficial), começando por Conhecimentos do Cargo de RH e do Técnico Parlamentar. Só entram com gabarito oficial conferido.", "status": "pendente"},
+    {"id": "DISC-1", "prioridade": 3, "papel": "elaborador", "tarefa": "Prova discursiva do Analista: ler as regras no edital (critérios, linhas, pontuação), levantar temas que a Consulplan já cobrou e montar 6 propostas de treino com espelho de correção.", "status": "pendente"},
+    {"id": "APP-1", "prioridade": 3, "papel": "engenheiro_app", "tarefa": "Incluir Legislação Específica no cronograma do app sem perder as marcações já feitas (planoFeito é indexado por data e posição: só acrescentar tarefas no FIM da lista de cada dia). Avaliar antes de publicar.", "status": "pendente"},
+    {"id": "SIM-1", "prioridade": 4, "papel": "elaborador", "tarefa": "Dois simulados completos no formato da prova (50 questões, 60 pontos) por cargo, para as duas últimas semanas.", "status": "pendente"}
+  ]
+}
