@@ -5268,7 +5268,7 @@ try {
   }
 } catch(e){}
 </script>
-<script type="application/json" id="mc-conteudo-idx" data-v="b0ee03e46f">[{"id": "cristalina-estudo-v1", "conc": "Câmara de Cristalina — Analista de RH", "soAdmin": false, "criar": false}, {"id": "cristalina-leis-federais-v1", "conc": "Câmara de Cristalina — Analista de RH", "soAdmin": false, "criar": false}, {"id": "cristalina-tecnico-parlamentar-v1", "conc": "Câmara de Cristalina — Analista de RH", "soAdmin": false, "criar": false}, {"id": "cristalina-leis-cf-edital-v3", "conc": "Câmara de Cristalina — Analista de RH", "soAdmin": false, "criar": false}, {"id": "cristalina-asg-v1", "conc": "Câmara de Cristalina — Auxiliar de Serviços Gerais", "soAdmin": true, "criar": true}, {"id": "tjgo-adm-aula07", "conc": "TJ GO", "soAdmin": false, "criar": false}, {"id": "tjgo-apoio-v1", "conc": "TJ GO", "soAdmin": false, "criar": false}, {"id": "tjgo-adm-aula08-09", "conc": "TJ GO", "soAdmin": false, "criar": false}, {"id": "tjgo-estrategia-lc-da-dc-hg-v1", "conc": "TJ GO", "soAdmin": false, "criar": false}]</script>
+<script type="application/json" id="mc-conteudo-idx" data-v="0102742810">[{"id": "cristalina-estudo-v1", "conc": "Câmara de Cristalina — Analista de RH", "soAdmin": false, "criar": false}, {"id": "cristalina-leis-federais-v1", "conc": "Câmara de Cristalina — Analista de RH", "soAdmin": false, "criar": false}, {"id": "cristalina-tecnico-parlamentar-v1", "conc": "Câmara de Cristalina — Analista de RH", "soAdmin": false, "criar": false}, {"id": "cristalina-leis-cf-edital-v3", "conc": "Câmara de Cristalina — Analista de RH", "soAdmin": false, "criar": false}, {"id": "cristalina-asg-v1", "conc": "Câmara de Cristalina — Auxiliar de Serviços Gerais", "soAdmin": true, "criar": true}, {"id": "tjgo-adm-aula07", "conc": "TJ GO", "soAdmin": false, "criar": false}, {"id": "tjgo-apoio-v1", "conc": "TJ GO", "soAdmin": false, "criar": false}, {"id": "tjgo-adm-aula08-09", "conc": "TJ GO", "soAdmin": false, "criar": false}, {"id": "tjgo-estrategia-lc-da-dc-hg-v1", "conc": "TJ GO", "soAdmin": false, "criar": false}, {"id": "cristalina-legislacao-especifica-v1", "conc": "Câmara de Cristalina — Analista de RH", "soAdmin": false, "criar": false}]</script>
 <div id="usuarios-ov" class="uv-ov" style="display:none"><div class="uv-box"><div class="uv-head"><b>👥 Usuários e liberações</b><button class="btn btn-ghost btn-sm" onclick="renderUsuarios()">🔄</button><button class="btn btn-ghost btn-sm" onclick="fecharUsuarios()">✕ Fechar</button></div><div id="usuarios-body"></div></div></div>
 <script>
 // ═══════════════════════════════════════
@@ -5530,7 +5530,7 @@ function chancesBloco(cg,b,conc){
   var p=cov*pObs+(1-cov)*pUnseen, nEff=n*cov;
   // simulados oficiais feitos no app (últimos 3): questões novas, entram como evidência direta
   var ks=0, ns=0;
-  simResultados.filter(function(r){return r.concursoId===conc.id && Object.keys(r.respostas||{}).length>=0.6*(r.total||1);}).slice(-3)   // só simulados feitos de verdade (≥60% respondido).forEach(function(r){
+  simResultados.filter(function(r){return r.concursoId===conc.id && Object.keys(r.respostas||{}).length>=0.6*(r.total||1);}).slice(-3)   /* só simulados feitos de verdade (≥60% respondido) */ .forEach(function(r){
     Object.keys(r.porDisc||{}).forEach(function(dk){ if(b.disc.test(dk)){ ks+=r.porDisc[dk].acertos||0; ns+=r.porDisc[dk].total||0; } });
   });
   if(ns) { p=(p*Math.max(nEff,4)+ks)/(Math.max(nEff,4)+ns); nEff+=ns; }
@@ -5598,8 +5598,64 @@ async function renderChances(){
       +'<div class="ch-bar"><i style="width:'+Math.min(100,r.mu/r.max*100)+'%"></i><em style="left:'+Math.min(100,r.alvo/r.max*100)+'%"></em></div>'
       +'<div class="ch-sub">Marca branca = nota de corte de referência · toque para ver os detalhes</div></div>';
   });
+  html+='<button class="btn" style="width:100%;margin-top:8px" onclick="mentorRelatorio()">📋 Relatório para o mentor (copiar)</button>';
   wrap.innerHTML=html; wrap.style.display='block';
   if(mudou){ try{ cloudSave('chancesHist',_chHist); }catch(e){} }
+}
+
+// ═══════════════════════════════════════
+// RELATÓRIO PARA O MENTOR — resumo em texto do desempenho, para colar na conversa com o Claude
+// ═══════════════════════════════════════
+function mentorRelatorioTexto(){
+  var c=concursos.find(function(x){return x.id===currentConcursoId;}); if(!c) return '';
+  var hoje=TODAY(), d7=DAYS_ADD(-7), L=[];
+  var pct=function(a,b){ return b?Math.round(a/b*100)+'%':'—'; };
+  var qs=questions.filter(function(q){return q.concursoId===c.id;});
+  var prim=function(q){ return q.primeiraResp!=null?(q.primeiraResp?1:0):((q.vezesAcertada||0)>=(q.vezesRespondida||0)?1:0); };
+  L.push('RELATÓRIO DO MENTOR · '+c.name+' · '+hoje);
+  if(c.dataProva){ var dd=Math.round((new Date(c.dataProva+'T12:00:00')-new Date(hoje+'T12:00:00'))/86400000); L.push('Prova: '+c.dataProva+' (faltam '+dd+' dias)'); }
+  var resp=qs.filter(function(q){return (q.vezesRespondida||0)>0;});
+  L.push('Geral: '+resp.length+'/'+qs.length+' questões respondidas · acerto na 1ª tentativa '+pct(resp.reduce(function(a,q){return a+prim(q);},0),resp.length)
+    +' · hoje '+qs.filter(function(q){return q.ultimaResposta===hoje;}).length+' · últimos 7 dias '+qs.filter(function(q){return q.ultimaResposta&&q.ultimaResposta>=d7;}).length
+    +' · em erro agora '+qs.filter(function(q){return q.status==='erro';}).length);
+  try{ var cgs=CH_CARGOS.filter(function(cg){return cg.conc.test(c.name);}); cgs.forEach(function(cg){ var r=chancesCalcular(cg,c);
+    L.push('Chances · '+cg.nome+': nota estimada '+r.mu.toFixed(1)+'/'+r.max+' · edital praticado '+Math.round(r.cov*100)+'% · corte de referência '+(r.alvo!=null?r.alvo:'—')); }); }catch(e){}
+  L.push(''); L.push('POR MATÉRIA (respondidas/total · acerto 1ª tentativa · últimos 7 dias)');
+  materias.filter(function(m){return m.concursoId===c.id;}).forEach(function(m){
+    var a=qs.filter(function(q){return q.materia===m.id;}), r=a.filter(function(q){return (q.vezesRespondida||0)>0;});
+    L.push('- '+m.name+': '+r.length+'/'+a.length+' · '+pct(r.reduce(function(x,q){return x+prim(q);},0),r.length)+' · '+a.filter(function(q){return q.ultimaResposta&&q.ultimaResposta>=d7;}).length);
+  });
+  var tp=topicos.filter(function(t){return t.concursoId===c.id;}).map(function(t){
+    var a=qs.filter(function(q){return q.topico===t.id;}), r=a.filter(function(q){return (q.vezesRespondida||0)>0;});
+    var m=materias.find(function(x){return x.id===t.materiaId;});
+    return {nome:(m?m.name+' › ':'')+t.nome, tot:a.length, n:r.length, ok:r.reduce(function(x,q){return x+prim(q);},0)};
+  });
+  var fracos=tp.filter(function(t){return t.n>=3;}).sort(function(a,b){return a.ok/a.n-b.ok/b.n;}).slice(0,10);
+  L.push(''); L.push('TÓPICOS MAIS FRACOS (mín. 3 respondidas)');
+  if(!fracos.length) L.push('- ainda sem dados suficientes');
+  fracos.forEach(function(t){ L.push('- '+t.nome+': '+t.ok+'/'+t.n+' ('+pct(t.ok,t.n)+')'); });
+  var zero=tp.filter(function(t){return t.tot>0&&t.n===0;});
+  L.push(''); L.push('TÓPICOS COM QUESTÕES E NENHUMA RESPONDIDA: '+zero.length);
+  zero.slice(0,15).forEach(function(t){ L.push('- '+t.nome+' ('+t.tot+')'); });
+  if(c.plano&&(c.plano.dias||[]).length){
+    var feito=c.planoFeito||{}, atras=0, tarefasAtras=0, hojeTxt='';
+    c.plano.dias.forEach(function(d){ var f=feito[d.d]||[], tot=(d.t||[]).length, ok=(d.t||[]).filter(function(_,i){return f[i];}).length;
+      if(d.d<hoje&&ok<tot){ atras++; tarefasAtras+=tot-ok; }
+      if(d.d===hoje) hojeTxt=ok+'/'+tot+' tarefas ('+(d.titulo||'')+')'; });
+    L.push(''); L.push('CRONOGRAMA: hoje '+(hojeTxt||'sem tarefas')+' · dias anteriores incompletos '+atras+' ('+tarefasAtras+' tarefas pendentes)');
+  }
+  return L.join('\n');
+}
+function mentorRelatorio(){
+  var txt=mentorRelatorioTexto(); if(!txt){ toast('Abra um concurso primeiro'); return; }
+  var mostrar=function(){
+    var ov=document.createElement('div'); ov.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px';
+    ov.innerHTML='<div style="background:var(--card,#1c1f2b);color:var(--text,#fff);border-radius:14px;padding:14px;max-width:640px;width:100%"><b>📋 Relatório para o mentor</b><div style="font-size:12px;opacity:.8;margin:6px 0">Selecione tudo, copie e cole na conversa com o Claude.</div><textarea readonly style="width:100%;height:50vh;font-size:12px"></textarea><button class="btn" style="width:100%;margin-top:8px">Fechar</button></div>';
+    ov.querySelector('textarea').value=txt; ov.querySelector('button').onclick=function(){ ov.remove(); }; document.body.appendChild(ov);
+    var ta=ov.querySelector('textarea'); ta.focus(); ta.select();
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){ toast('📋 Relatório copiado — cole na conversa com o Claude'); }, mostrar); }
+  else mostrar();
 }
 
 async function abrirChances(key){
