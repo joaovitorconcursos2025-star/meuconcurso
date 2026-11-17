@@ -1,0 +1,88 @@
+{
+  "_sobre": "Repertório do Fiscal da Câmara (escritório da equipe). Cada lista é disparada por um gatilho do relatório. {n}, {mat}, {topico}, {dias}, {pct} são preenchidos pelo app.",
+  "materia_zerada": [
+    "Zero em {mat}. Você quer trabalhar na Câmara ou só passar na frente dela?",
+    "Primeiro lugar de vigia e zero em {mat}. Tá vigiando o quê, a geladeira?",
+    "{mat} zerada. Nem a PMMG aceitaria esse relatório.",
+    "Tem questão de {mat} mofando no app. Vou chamar a Vigilância Sanitária.",
+    "Não abriu {mat}? A banca vai abrir por você no dia 20, e não vai ser bonito.",
+    "{mat} está esperando você igual fila do INSS."
+  ],
+  "abaixo_da_meta": [
+    "Meu salário não é compatível com o meu trabalho.",
+    "Até os Correios te entregaram uma vaga. Você não entrega 60 questões.",
+    "{n} questões? Isso é aquecimento, não é estudo.",
+    "Passou pra eletricista e não liga o cérebro.",
+    "Eletricista sabe: sem corrente não acende. Sem questão não passa.",
+    "No ritmo de hoje, a prova chega antes de você.",
+    "A GCM de Guapó tá mais preparada que você hoje.",
+    "Quem faz {n} questões por dia passa no concurso do ano que vem.",
+    "Isso não é meta, é sugestão que você ignorou.",
+    "O cronômetro trabalhou mais que você hoje."
+  ],
+  "erro_repetido": [
+    "Seu burro, você não leu o PDF?",
+    "Burro tem que comer capim mesmo.",
+    "Ensinar um animal é mais fácil.",
+    "Errou de novo a mesma? Você tem assinatura nesse erro?",
+    "Não pode acumular cargo, mas acumular erro pode, né?",
+    "Essa questão já te conhece pelo nome.",
+    "Errar uma vez é aprendizado. Duas é teimosia. Três é vocação.",
+    "Até o Revisor cansou de reprovar você nessa.",
+    "Você e esse erro deviam casar logo."
+  ],
+  "topico_fraco": [
+    "{pct} em {topico}. Ensinar um animal é mais fácil.",
+    "Passou na PMMG e trava em {topico}?",
+    "{topico} com {pct}? Volta pro resumo, cabra.",
+    "Cinco aprovações no currículo pra perder vaga pra quem estudou por vídeo de 1 minuto?",
+    "Esse {pct} em {topico} é nota de quem chutou de olho fechado.",
+    "{topico} vale ponto, não é enfeite."
+  ],
+  "legislacao_especifica": [
+    "Quer ser servidor da Câmara e não sabe quantos vereadores ela tem?",
+    "O Estatuto caiu em 5 de 8 provas da banca. Você caiu em 0 questões dele.",
+    "Lei Orgânica não é bula de remédio pra ler só quando dá problema.",
+    "O Regimento tem 3 comissões permanentes. Você tem 0 questões feitas.",
+    "Posse em 15 dias, exercício em 5. Seu estudo: em nenhum."
+  ],
+  "cronograma_atrasado": [
+    "{n} tarefas atrasadas. Isso aqui virou repartição pública mal administrada.",
+    "Seu cronograma está mais abandonado que obra parada.",
+    "A tarefa de hoje perguntou se você ainda vive aqui.",
+    "Atraso se paga com questão, não com desculpa."
+  ],
+  "sumiu": [
+    "Sumiu? O concurso não sumiu.",
+    "Ontem nada. Hoje? A banca não tira folga.",
+    "Faltam {dias} dias. Você tá contando ou só olhando?",
+    "Trabalhou a noite toda? Ótimo. Agora trabalha pra sair dela."
+  ],
+  "contagem": [
+    "Faltam {dias} dias. Cada dia parado é um concorrente passando na sua frente.",
+    "{dias} dias. Dá pra virar o jogo, mas não sentado.",
+    "Daqui {dias} dias tem gente que vai tomar posse. Decide se é você."
+  ],
+  "bateu_meta": [
+    "Esse é o cara da PMMG. Não se acostume.",
+    "Primeiro lugar de vigia voltou. Amanhã repete.",
+    "Seis aprovações. A sexta é essa.",
+    "Bateu a meta. Não se acostume.",
+    "Hoje eu não tenho do que reclamar. Isso me irrita.",
+    "Até que enfim trabalhou mais que eu.",
+    "Assim dá gosto fiscalizar. Quase.",
+    "Continua assim e eu peço transferência por falta de serviço."
+  ],
+  "acerto_alto": [
+    "{pct} em {topico}... quem fez as questões por você?",
+    "{pct}? Tá com cara de quem vai tomar posse.",
+    "Esse {topico} já é seu. Agora vai roubar ponto de outro.",
+    "Assim a GCM de Guapó vai sentir saudade."
+  ],
+  "modo_educado": [
+    "Ainda dá tempo de bater a meta de hoje.",
+    "{mat} está sem questões feitas. Que tal 10 agora?",
+    "Faltam {dias} dias. Constância vence.",
+    "Bom trabalho hoje. Amanhã, mais um passo."
+  ]
+}
