@@ -1,5 +1,11 @@
 # Diário da equipe
 
+## 2026-11-17 (mentor, relatório do João)
+- Respondidas 40 de 705; 39 nos últimos 7 dias; acerto na 1ª tentativa 68%. Edital praticado: 12% (RH) e 3% (TP).
+- Zero em Legislação Específica, Raciocínio Lógico, Informática e Cargo do Técnico Parlamentar. Pior tópico: RH › Gestão de pessoas nas organizações, 58%.
+- Cronograma com 37 tarefas atrasadas: o mentor perdoou o atraso; PLANO-1 entrou no topo da fila para refazer o cronograma a partir de 18/11.
+- Meta de 18/11: 60 questões (20 Leg. Específica, 15 TP, 10 RLM, 15 do cronograma) e refazer os 13 erros.
+
 ## 2026-11-17
 - Entrou no app (pacote cristalina-legislacao-especifica-20261117, commit 4e30a68): +30 questões inéditas de Legislação Específica, 10 por lei. Lei Orgânica arts. 31, 34, 40, 45, 47, 49, 51, 59, 61, 83; Regimento arts. 28, 38, 58, 74, 85, 134, 160, 171, 176, 195; Estatuto arts. 20-B/20-C, 20-D, 20-M, 20-U, 55, 90, 97, 111, 113, 168. Banco agora: LO 20, RI 19, Estatuto 19. Gabarito A8 B8 C7 D7.
 - Revisor: 30/30 aprovadas, confere.py sem reprovação. Ajuste pedido pelo Comandante: comentário da questão do RI art. 28 ganhou a ressalva do ADT art. 2º (com 15 Vereadores, Comissão Permanente terá 3 efetivos e 2 suplentes), porque a LO art. 18 já fixa 15 Vereadores. Nada barrado.
