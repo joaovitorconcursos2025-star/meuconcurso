@@ -1,15 +1,15 @@
 {
   "prova": "2026-12-20",
-  "atualizado": "2026-11-17",
+  "atualizado": "2026-11-18",
   "regras": {
     "max_questoes_por_noite": 40,
     "um_pacote_por_noite": true
   },
   "banco_atual": {
     "legislacao_especifica": {
-      "lei_organica": 20,
-      "regimento_interno": 19,
-      "estatuto": 19
+      "lei_organica": 32,
+      "regimento_interno": 29,
+      "estatuto": 35
     },
     "artigos_ja_cobertos": {
       "lo": [
@@ -32,7 +32,19 @@
         "61",
         "62",
         "64",
-        "83"
+        "83",
+        "21",
+        "35",
+        "37",
+        "38",
+        "46",
+        "48",
+        "52",
+        "53",
+        "60",
+        "66",
+        "72",
+        "73"
       ],
       "ri": [
         "4",
@@ -53,7 +65,17 @@
         "169",
         "171",
         "176",
-        "195"
+        "195",
+        "13",
+        "16",
+        "41",
+        "53",
+        "59",
+        "114",
+        "155",
+        "172",
+        "177",
+        "194"
       ],
       "est": [
         "6",
@@ -76,7 +98,23 @@
         "148",
         "165",
         "168",
-        "220"
+        "220",
+        "19",
+        "20-A",
+        "20-K",
+        "20-V",
+        "21",
+        "22",
+        "27",
+        "30",
+        "80",
+        "102",
+        "108",
+        "120",
+        "134",
+        "152",
+        "156",
+        "171"
       ]
     }
   },
@@ -85,7 +123,7 @@
       "id": "PLANO-1",
       "prioridade": 1,
       "papel": "engenheiro_app",
-      "status": "pendente",
+      "status": "pendente — fora do escopo da rodada noturna (a rotina proíbe campo plano); precisa de sessão própria ou autorização do João",
       "tarefa": "Refazer o cronograma de 18/11 a 19/12 em um pacote novo com campo plano (o único caso em que plano é permitido). Motivo (relatório de 17/11): 37 tarefas atrasadas em 8 dias, 0 questões de Legislação Específica, Raciocínio Lógico, Informática e Conhecimentos do Cargo do Técnico Parlamentar. Regras: 4h por dia; meta de 60 questões por dia; todo dia 20 questões de Legislação Específica (alternando Estatuto, Lei Orgânica, Regimento; Estatuto primeiro) e 15 do Técnico Parlamentar; RLM e Informática 3x por semana; os tópicos atrasados entram redistribuídos, sem acumular; domingos para revisão de erros e, a partir de 06/12, simulados; últimos 5 dias só revisão. Preservar planoFeito: datas passadas ficam idênticas; mudar só de 18/11 em diante."
     },
     {
@@ -93,14 +131,14 @@
       "prioridade": 1,
       "papel": "elaborador",
       "tarefa": "Legislação Específica: +30 questões por noite até chegar a 60 da Lei Orgânica, 50 do Regimento Interno e 40 do Estatuto. Cobrir capítulos ainda sem questão antes de repetir artigo. Priorizar: Câmara e processo legislativo (LO arts. 18-56), Prefeito (57-66), servidores (83), Mesa/Comissões/reuniões/votação (RI), provimento, estágio probatório (20-A a 20-Y), vantagens, férias, licenças e regime disciplinar (Estatuto).",
-      "status": "em andamento (58/150 em 17/11)"
+      "status": "em andamento (96/150 em 18/11: LO 32/60, RI 29/50, Estatuto 35/40)"
     },
     {
       "id": "BANCA-1",
       "prioridade": 1,
       "papel": "analista_banca",
       "tarefa": "Perfil do Instituto Consulplan: provas aplicadas de 2023 a 2026 para Câmaras Municipais e para cargos de Analista de RH / Gestão de Pessoas e Técnico Legislativo/Parlamentar. Registrar em equipe/banca.md: lista de provas com link, estilo de enunciado, distribuição de assuntos por disciplina, como a banca cobra lei municipal (letra de lei? caso prático?), temas de discursiva. Marcar o que é fato (com link) e o que é inferência.",
-      "status": "parcial (17/11): 8 provas de Câmaras registradas em banca.md; faltam gabaritos oficiais conferidos e prova de Técnico/Agente Legislativo (Mariana 2025)"
+      "status": "parcial (18/11): Mariana Agente Legislativo não cobra LO/RI (edital); caderno e gabaritos oficiais inacessíveis (site da Consulplan e PCI bloqueados para a equipe)"
     },
     {
       "id": "RH-1",
@@ -114,7 +152,7 @@
       "prioridade": 2,
       "papel": "analista_banca",
       "tarefa": "Coletar questões REAIS da Consulplan por tópico do edital (com órgão, cargo, ano e link da prova/gabarito oficial), começando por Conhecimentos do Cargo de RH e do Técnico Parlamentar. Só entram com gabarito oficial conferido.",
-      "status": "pendente"
+      "status": "iniciada (18/11): 16 questões candidatas mapeadas em banca.md, todas sem gabarito oficial (não aptas)"
     },
     {
       "id": "DISC-1",
@@ -140,6 +178,7 @@
   ],
   "pacotes_publicados": [
     "cristalina-legislacao-especifica-v1",
-    "cristalina-legislacao-especifica-20261117"
+    "cristalina-legislacao-especifica-20261117",
+    "cristalina-legislacao-especifica-20261118"
   ]
 }

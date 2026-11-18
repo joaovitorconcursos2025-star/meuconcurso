@@ -95,3 +95,79 @@ Listagens consultadas: [PCI – provas da Câmara de Cotia](https://www.pciconcu
 - **Gabarito de Cotia ASP no PCI:** a página de download lista "gabarito.pdf", mas o arquivo exige JavaScript e verificação, e não foi aberto. Não tentei contornar.
 - **Gabaritos das demais provas** (Araraquara, Mariana, Poços, BH, Caratinga): não achei link direto nas buscas. As páginas do Gran Questões citam "Prova / Gabarito", mas não mostram a URL.
 - **Prova de Agente Legislativo de Mariana 2025:** só vi a página do Gran, sem o caderno. Não abri a página de download do PCI.
+
+---
+
+# Pesquisa BANCA-1/BANCA-2, 18/11/2026
+
+Método: cerca de 24 buscas e aberturas, feitas só com WebSearch e WebFetch. Não contornei nenhum bloqueio. Não copiei questões: registrei apenas número, tópico e tipo de comando.
+
+## Provas abertas ou consultadas nesta rodada
+
+| Órgão | Cargo | Ano | Link prova | Link gabarito | Gabarito oficial? |
+|---|---|---|---|---|---|
+| Câmara de Mariana/MG | Agente Legislativo (nível médio) | 2025 | Caderno **não aberto**. A página de download do [PCI](https://www.pciconcursos.com.br/provas/download/agente-legislativo-camara-de-mariana-mg-instituto-consulplan-2025) lista "agente-legislativo.pdf" atrás de uma verificação interativa | O mesmo PCI lista "gabarito.pdf" atrás da mesma verificação | não (não conferido) |
+| Câmara de Mariana/MG | Corregedor Legislativo | 2025 | [PDF](https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf) (reaberto para mapear as questões) | O Estratégia hospeda uma cópia, "[Gabarito oficial](https://cj.estrategia.com/portal/wp-content/uploads/2025/06/09174118/Gabaritos-concurso-Camara-de-Mariana-MG.pdf)" (enviada em 09/06/2025, então provavelmente o preliminar), mas o arquivo não abriu (robots) | não |
+| Câmara de Mariana/MG | Edital 1/2025 (todos os cargos) | 2025 | [Edital](https://cdn.direcaoconcursos.com.br/uploads/2025/03/1_487427.pdf) (cópia em CDN de cursinho) | n/a | n/a |
+| Câmara de Cotia/SP | Assistente de Serviço de Pessoal | 2024 | [PDF](https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf) (reaberto para mapear as questões) | Não localizado em fonte oficial | não |
+| Câmara de Araraquara/SP | Analista em Gestão de Pessoas | 2025 | [PDF](https://mapastatic.s3.amazonaws.com/67dd5c3de0fe763ab610093b/instituto-consulplan-2025-camara-de-araraquara-sp-analista-em-gestao-de-pessoas-prova.pdf) (já registrado em 17/11) | Não localizado | não |
+
+## Fatos (com link)
+
+- **Edital de Mariana 2025: todos os cargos têm 40 questões A–D.** São 10 de Língua Portuguesa (1,5 ponto cada), 5 de Raciocínio Lógico-Matemático (1,0), 10 de Conhecimentos de Direito e Legislação (2,0) e 15 de Conhecimentos do Cargo (2,0), somando 70 pontos. O mínimo para aprovação é 50%. O Agente Legislativo é de nível médio e não tem discursiva. [Edital](https://cdn.direcaoconcursos.com.br/uploads/2025/03/1_487427.pdf)
+- **Conteúdo do Agente Legislativo de Mariana** (Anexo I do edital, no resumo da leitura automática):
+  - A parte de Direito e Legislação é comum a todos os cargos: CF/88, Direito Administrativo, Leis 8.429/92, 14.133/21, 9.784/99, 12.527/11 e 13.709/18.
+  - Os Conhecimentos do Cargo são arquivo, redação administrativa (ofício, memorando, requerimento, circular), rotinas administrativas, Word e Excel, organização de reuniões, atendimento ao público e telefônico, e ética.
+  - **Não há** Lei Orgânica, Regimento Interno nem processo legislativo para esse cargo. A LC 05/2001 (Estatuto de Mariana) aparece só no Corregedor. [Edital](https://cdn.direcaoconcursos.com.br/uploads/2025/03/1_487427.pdf)
+- **Publicação dos gabaritos em Mariana.** O edital prevê o gabarito preliminar em www.institutoconsulplan.org.br a partir das 16h da segunda-feira seguinte à prova (item 9.1), com recurso em 3 dias úteis (item 9.2). Os atos com caráter oficial são os publicados no site da banca (itens 11.8.1 e 11.15). [Edital](https://cdn.direcaoconcursos.com.br/uploads/2025/03/1_487427.pdf)
+- **Página oficial do concurso de Mariana na banca:** `https://www.institutoconsulplan.org.br/getConc.aspx?key=CC66ZlWEvMQ=`. O link vem do [fiibrasil](https://fiibrasil.com/concurso/camara-de-mariana-mg-gabarito-concurso-01-2025/) e do [Estratégia CJ](https://cj.estrategia.com/portal/concurso-advogado-camara-de-mariana-mg/). Não abriu (ver abaixo).
+- **Estratégia CJ** lista cópias de atos de Mariana 2025: o resultado definitivo da objetiva (24/07/2025), o resultado final (20/09/2025) e um "Gabarito oficial" de 09/06/2025. Esses arquivos estão no domínio do Estratégia, não da banca. [link](https://cj.estrategia.com/portal/concurso-advogado-camara-de-mariana-mg/)
+- **Mariana 2025, Corregedor Legislativo: mapa das questões 16–40.** [PDF](https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf)
+  - **Q16–25, Direito e Legislação:** CF (fundamentos, desmembramento de municípios, crime de responsabilidade), autarquias, improbidade com jurisprudência do STJ, contratação emergencial na 14.133 com entendimento do STF, a 9.784, LAI (sigilo, com comando EXCETO) e LGPD (dado sensível).
+  - **Q26–36, Estatuto e disciplina:** estágio probatório (I–III), provimento derivado (INCORRETA), vacância (correspondência), V/F, licença para mandato eletivo, direito de petição (em formato de diálogo), cancelamento de penalidades (I–III), autoridade competente, revisão do PAD, e recusa de inspeção médica e conversão de suspensão (INCORRETA).
+  - **Q37–40:** Tribunal de Contas, 9.784 em V/F, princípios, e Câmara como órgão e desconcentração (INCORRETA).
+- **Cotia 2024, Assistente de Serviço de Pessoal: mapa das questões.** [PDF](https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf)
+  - **Q21–25, Lei Orgânica:** sanção e veto, competências privativas (I–IV), tributos municipais, iniciativa popular e emenda à Lei Orgânica, Câmara, vereadores e sessões.
+  - **Q26–30, Estatuto (Lei 628/1980):** cessão, penalidade, PAD, licença por doença de cônjuge e remuneração, reintegração, reversão e readaptação (I–III).
+  - **Q35–37:** habilidades interpessoais e avaliação (I–IV), gestão estratégica de pessoas, rotinas de DP.
+  - Quase todas pedem a alternativa "correta".
+
+## Inferências
+
+- **INFERÊNCIA: o caderno de Agente Legislativo de Mariana não é bom modelo para LO, RI e processo legislativo do Técnico Parlamentar.** Base: o Anexo I do edital de Mariana não prevê esses conteúdos para o cargo, enquanto o edital de Cristalina prevê processo legislativo, LO e RI no Conhecimentos do Cargo do Técnico Parlamentar (linhas 1557–1559 de `fontes/edital-01-2026.txt`). Serve como modelo para rotinas administrativas, arquivo, atendimento, redação oficial e a parte comum de Direito. Para o legislativo municipal, os melhores modelos continuam sendo Cotia (Q21–25) e BH 2024.
+- **INFERÊNCIA: o Estatuto deve render de 5 a 11 questões por prova quando está no edital, cobrado em "pacotes" de temas fixos.** Base: Cotia ASP traz 5 questões (Q26–30) e Mariana Corregedor traz 11 (Q26–36). Os temas fixos são provimento derivado (reversão, reintegração, readaptação, recondução), vacância, licenças com remuneração, penalidades com prazo de cancelamento, PAD e sindicância, e autoridade competente. Em Cristalina, o Estatuto (Lei 1.207/94, conforme a Retificação I; o edital original citava a Lei 475/1971) está em "Legislação Específica", com 10 questões que dividem espaço com a LO e o RI.
+- **INFERÊNCIA: a Consulplan mistura letra da lei com jurisprudência (STF e STJ) até em nível médio e em provas de Câmara.** Base: Mariana Corregedor (Q21, 22 e 35).
+- **INFERÊNCIA: os gabaritos oficiais da Consulplan ficam praticamente só em www.institutoconsulplan.org.br.** Os sites de terceiros (Estratégia, PCI) hospedam cópias, nem sempre identificadas como preliminar ou definitivo. Base: itens 9.1, 11.8.1 e 11.15 do edital de Mariana, mais as buscas desta rodada. Sem acesso ao site da banca, nenhuma questão fica apta para BANCA-2.
+
+## BANCA-2: questões candidatas
+
+Nenhuma está apta, porque nenhum gabarito oficial foi conferido. Ficam listadas para conferir quando o site da Consulplan abrir. O gabarito oficial está marcado "—" porque não foi conferido.
+
+| Tópico do edital de Cristalina | Órgão / cargo / ano | Nº | Tópico da questão | Gabarito oficial | Link | Status |
+|---|---|---|---|---|---|---|
+| Processo legislativo (LO/RI) | Cotia / Assistente de Serviço de Pessoal / 2024 | Q21 | Sanção e veto | — | [PDF](https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf) | sem gabarito oficial, não apta |
+| Processo legislativo (LO) | Cotia / ASP / 2024 | Q24 | Iniciativa popular e emenda à LO | — | idem | sem gabarito oficial, não apta |
+| LO: Câmara e vereadores | Cotia / ASP / 2024 | Q25 | Câmara, vereadores e sessões | — | idem | sem gabarito oficial, não apta |
+| LO: competências | Cotia / ASP / 2024 | Q22 | Competências privativas do município (I–IV) | — | idem | sem gabarito oficial, não apta |
+| Estatuto: provimento | Cotia / ASP / 2024 | Q30 | Reintegração, reversão e readaptação (I–III) | — | idem | sem gabarito oficial, não apta |
+| Estatuto: licenças | Cotia / ASP / 2024 | Q29 | Licença por doença de cônjuge e remuneração | — | idem | sem gabarito oficial, não apta |
+| Estatuto: disciplina | Cotia / ASP / 2024 | Q27, Q28 | Penalidade; PAD | — | idem | sem gabarito oficial, não apta |
+| Estatuto: cessão | Cotia / ASP / 2024 | Q26 | Cessão de servidor | — | idem | sem gabarito oficial, não apta |
+| Estatuto: provimento | Mariana / Corregedor Legislativo / 2025 | Q27 | Reversão, recondução, readaptação, reintegração (INCORRETA) | — | [PDF](https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf) | sem gabarito oficial, não apta |
+| Estatuto: vacância | Mariana / Corregedor / 2025 | Q28 | Formas de vacância | — | idem | sem gabarito oficial, não apta |
+| Estatuto: estágio e licença | Mariana / Corregedor / 2025 | Q26, Q30 | Estágio probatório; licença para mandato eletivo | — | idem | sem gabarito oficial, não apta |
+| Estatuto: direito de petição | Mariana / Corregedor / 2025 | Q31 | Reconsideração e recurso | — | idem | sem gabarito oficial, não apta |
+| Estatuto: penalidades e PAD | Mariana / Corregedor / 2025 | Q32, Q33, Q34, Q36 | Cancelamento; autoridade competente; revisão; sindicância e conversão de suspensão | — | idem | sem gabarito oficial, não apta |
+| Dir. Adm.: órgão e desconcentração (Câmara) | Mariana / Corregedor / 2025 | Q40 | Câmara como órgão público | — | idem | sem gabarito oficial, não apta |
+| RH (Analista) | Cotia / ASP / 2024 | Q35, Q36, Q37 | Avaliação de desempenho; gestão estratégica; DP | — | [PDF](https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf) | sem gabarito oficial, não apta |
+| RH (Analista) | Araraquara / Analista em Gestão de Pessoas / 2025 | Q51–60 | Casos práticos de gestão de pessoas (ver registro de 17/11) | — | [PDF](https://mapastatic.s3.amazonaws.com/67dd5c3de0fe763ab610093b/instituto-consulplan-2025-camara-de-araraquara-sp-analista-em-gestao-de-pessoas-prova.pdf) | sem gabarito oficial, não apta |
+
+## Não consegui abrir
+
+- **Página do concurso de Mariana no site da Consulplan** (`institutoconsulplan.org.br/getConc.aspx?key=CC66ZlWEvMQ=`): o pedido de permissão para a URL não foi respondido. Por isso nenhum gabarito oficial foi conferido (Mariana, Cotia e Araraquara).
+- **Gran Questões, Mariana Agente Legislativo** (`questoes.grancursosonline.com.br/prova/camara-de-mariana-mg-2025-instituto-consulplan-agente-legislativo`): mesma situação, permissão não respondida.
+- **arquivos.qconcursos.com, ids 132712 e 132713, montados pelo padrão de URL:** bloqueados por proveniência (URL construída). Uma busca mostrou que o 132713 é o caderno de Analista de Sistema. O id do caderno de Agente Legislativo não foi localizado em busca.
+- **PCI, download de Mariana Agente Legislativo:** lista prova e gabarito, mas exige verificação interativa. Não contornei.
+- **Estratégia** (concursos.estrategia.com, páginas de Mariana e Cotia): os redirecionamentos não foram autorizados (permissão não respondida).
+- **Cópia do gabarito de Mariana no Estratégia CJ** (PDF de 09/06/2025): o arquivo não abriu (robots_disallowed). Mesmo que abra, é cópia de terceiro e não conta como oficial.
+- **Gabaritos definitivos de Cotia 2024 e Araraquara 2025:** nenhuma busca retornou fonte oficial.
