@@ -123,7 +123,7 @@
       "id": "PLANO-1",
       "prioridade": 1,
       "papel": "engenheiro_app",
-      "status": "pendente — fora do escopo da rodada noturna (a rotina proíbe campo plano); precisa de sessão própria ou autorização do João",
+      "status": "feito em 18/11/2026 (sessão com o João, autorizado por ele): pacote cristalina-cronograma-20261118; dias até 18/11 preservados; Leg. Específica 20 questões/dia de 19/11 a 14/12 em rodízio Estatuto/LO/RI; 15-19/12 revisão. O app agora marca sozinho a tarefa de questões/resumo quando o João responde min(5, nº de questões) do tópico no dia (função _autoMarcarCronograma).",
       "tarefa": "Refazer o cronograma de 18/11 a 19/12 em um pacote novo com campo plano (o único caso em que plano é permitido). Motivo (relatório de 17/11): 37 tarefas atrasadas em 8 dias, 0 questões de Legislação Específica, Raciocínio Lógico, Informática e Conhecimentos do Cargo do Técnico Parlamentar. Regras: 4h por dia; meta de 60 questões por dia; todo dia 20 questões de Legislação Específica (alternando Estatuto, Lei Orgânica, Regimento; Estatuto primeiro) e 15 do Técnico Parlamentar; RLM e Informática 3x por semana; os tópicos atrasados entram redistribuídos, sem acumular; domingos para revisão de erros e, a partir de 06/12, simulados; últimos 5 dias só revisão. Preservar planoFeito: datas passadas ficam idênticas; mudar só de 18/11 em diante."
     },
     {

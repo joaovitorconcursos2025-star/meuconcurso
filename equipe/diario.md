@@ -1,5 +1,9 @@
 # Diário da equipe
 
+## 2026-11-18 (sessão com o João, à tarde)
+- PLANO-1 feito, com autorização do João: pacote cristalina-cronograma-20261118 refaz o cronograma. Dias até 18/11 idênticos (marcações dele preservadas); de 19/11 a 14/12 entra 1 tarefa por dia de "⚖️ Legislação Específica: 20 questões" (rodízio Estatuto, Lei Orgânica, Regimento; pula dia de simulado e dia que passaria de 4h); de 15 a 19/12, revisão.
+- App: cronograma e estudo agora se alinham. Ao responder min(5, nº de questões) de um tópico no dia, a tarefa de resumo/questões daquele tópico é marcada sozinha (a de hoje; senão a atrasada mais antiga). Vale para questões feitas pelo cronograma, pelo edital ou pelo planner. Motivo: o João estudava pelo edital e o cronograma acumulava 27 tarefas atrasadas.
+
 ## 2026-11-18
 - Entrou no app (pacote cristalina-legislacao-especifica-20261118, commit 8f7fc83): +38 questões inéditas de Legislação Específica. Estatuto 16 (arts. 19, 20-A, 20-K, 20-V, 21, 22, 27, 30, 80, 102, 108, 120, 134, 152, 156, 171); Lei Orgânica 12 (arts. 21, 35, 37, 38, 46, 48, 52, 53, 60, 66, 72, 73); Regimento 10 (arts. 13, 16, 41, 53, 59, 114, 155, 172, 177, 194). Banco agora: LO 32, RI 29, Estatuto 35. Gabarito A10 B10 C9 D9. Cerca de 1/4 com assertivas I–IV/V-F, 1/5 com EXCETO/INCORRETA, 5 casos práticos.
 - Revisor: 1ª leitura 36/38; vetou 2 e voltaram uma vez ao Elaborador. Est. art. 156 (abandono): havia duas respostas defensáveis, porque o "mais de" não se repete antes de "45 dias alternados"; alternativa trocada. Est. art. 30: comentário dizia "exoneração de ofício" para quem não entra em exercício (regra da 8.112); corrigido para o art. 31 do Estatuto (aproveitamento sem efeito, disponibilidade cassada). Também corrigidos um distrator de cálculo (art. 80) e dois comentários. Na 2ª leitura, 38/38 aprovadas; confere.py sem reprovação; JSON, checa_scripts e aplicarPacote 2x sem duplicar: OK. Nada barrado.
