@@ -171,3 +171,105 @@ Nenhuma está apta, porque nenhum gabarito oficial foi conferido. Ficam listadas
 - **Estratégia** (concursos.estrategia.com, páginas de Mariana e Cotia): os redirecionamentos não foram autorizados (permissão não respondida).
 - **Cópia do gabarito de Mariana no Estratégia CJ** (PDF de 09/06/2025): o arquivo não abriu (robots_disallowed). Mesmo que abra, é cópia de terceiro e não conta como oficial.
 - **Gabaritos definitivos de Cotia 2024 e Araraquara 2025:** nenhuma busca retornou fonte oficial.
+
+---
+
+# Pesquisa BANCA-2, 19/11/2026
+
+## Método
+- Foram cerca de 25 buscas e aberturas (16 WebSearch e cerca de 12 WebFetch, contando as bloqueadas), feitas só com WebSearch e WebFetch. Não usei curl nem python, não contornei bloqueios, não montei URLs e não copiei questões. Registrei só número, assunto e letra do gabarito.
+- **Domínios oficiais consultados:** cotia.sp.leg.br (Câmara de Cotia), camara-arq.sp.gov.br e diariooficialcmararaquara.sp.gov.br (Câmara de Araraquara), camarademariana.mg.gov.br e transparencia.camarademariana.mg.gov.br (Câmara de Mariana), institutoconsulplan.org.br (uma tentativa).
+- **Resultado:** encontrei o gabarito pós-recursos da Câmara de Cotia em domínio oficial e a decisão dos recursos. Araraquara e Mariana não tiveram gabarito oficial localizado.
+
+## Fatos (com link)
+
+### Gabarito pós-recursos de Cotia
+- **A Câmara de Cotia republica no próprio site os atos do Concurso 1/2024 (Consulplan).** A página lista "Gabarito preliminar", "Decisão dos recursos – gabaritos preliminares", "Gabaritos pós-recursos", o resultado preliminar e definitivo da objetiva e a homologação parcial. Não publica os cadernos de prova. [Página do concurso](https://www.cotia.sp.leg.br/concurso-publico/concurso-1-2024)
+- **O documento "GABARITO PÓS-RECURSOS – CÂMARA MUNICIPAL DE COTIA/SP"** traz o cargo Assistente de Serviço de Pessoal em dois tipos: Prova Tipo 1 (Branca) e Tipo 2 (Verde). O símbolo "#" marca questão anulada. O documento não tem data. [PDF oficial](https://www.cotia.sp.leg.br/concurso-publico/concurso-1-2024/CONCURSO%201-2024%20-%20GABARITOS%20POS-RECURSOS.pdf/@@download/file/CONCURSO%201-2024%20-%20GABARITOS%20P%C3%93S-RECURSOS.pdf)
+  - **Tipo 1, Branca:** 01 A · 02 A · 03 E · 04 D · 05 B · 06 D · 07 A · 08 C · 09 A · 10 D · 11 A · 12 C · 13 # · 14 B · 15 D · 16 D · 17 C · 18 C · 19 B · 20 B · 21 E · 22 C · 23 C · 24 D · 25 A · 26 C · 27 A · 28 E · 29 B · 30 E · 31 C · 32 E · 33 C · 34 C · 35 D · 36 C · 37 E · 38 D · 39 D · 40 B · 41 B · 42 A · 43 A · 44 D · 45 B · 46 C · 47 D · 48 A · 49 D · 50 B.
+  - **Tipo 2, Verde:** 01 D · 02 B · 03 C · 04 A · 05 A · 06 A · 07 E · 08 A · 09 D · 10 D · 11 D · 12 D · 13 B · 14 B · 15 C · 16 A · 17 C · 18 B · 19 # · 20 C · 21 E · 22 E · 23 A · 24 B · 25 E · 26 A · 27 C · 28 D · 29 C · 30 C · 31 C · 32 C · 33 E · 34 C · 35 B · 36 A · 37 B · 38 D · 39 E · 40 C · 41 A · 42 D · 43 D · 44 D · 45 C · 46 B · 47 A · 48 D · 49 B · 50 D.
+
+### Decisão dos recursos de Cotia (Assistente de Serviço de Pessoal)
+- O documento oficial dá a numeração Branca/Verde de cada questão recorrida e a decisão. [PDF oficial](https://www.cotia.sp.leg.br/concurso-publico/concurso-1-2024/CONCURSO%201-2024%20-%20DECISAO%20DOS%20RECURSOS%20-%20GABARITOS%20PRELIMINARES.pdf/@@download/file/CONCURSO%201-2024%20-%20DECIS%C3%83O%20DOS%20RECURSOS%20-%20GABARITOS%20PRELIMINARES.pdf)
+- **Anulada:** só a B13/V19 (tempo total de três exercícios).
+- **Mantidas (recurso indeferido):**
+  - B10/V1: crase.
+  - B14/V18: lógica proposicional.
+  - B17/V15: função linear.
+  - B18/V20: grau de dificuldade.
+  - B20/V13: diagrama de Venn.
+  - B24/V28: quórum de iniciativa popular na Lei Orgânica de Cotia.
+  - B30/V22: reversão na Lei 628/1980.
+  - B37/V39: CLT, rescisão por acordo e registro de ponto.
+  - B42/V36: assistência social.
+
+### Araraquara e Mariana
+- **Araraquara (Edital 1/2024, prova em 23/02/2025):** a página oficial do concurso só tem edital, retificação, "Homologação e resultado final" (16/05/2025) e convocações. Nenhum gabarito ou caderno foi publicado ali. O termo de homologação não traz gabarito, não lista questões anuladas e não cita a edição de diário onde o gabarito saiu.
+  - [Página do concurso](https://www.camara-arq.sp.gov.br/Download/Listar/2047)
+  - [Homologação](https://www.camara-arq.sp.gov.br/Arquivos/Downloads/1747411994278-873.pdf)
+  - [Notícia da Câmara](https://camara-arq.sp.gov.br/Noticia/Imprimir/69624): indica como página do concurso a da banca, `institutoconsulplan.org.br/getConc.aspx?key=WaXbl7ms0OQ=`.
+- **Mariana:** o domínio oficial da Câmara é camarademariana.mg.gov.br. A página "concurso-publico-e-processo-seletivo/servicos" devolve 404. A seção de concursos fica no Portal da Transparência, que não abriu (ver abaixo). [Home](https://camarademariana.mg.gov.br/)
+
+## Questões aptas (gabarito oficial conferido)
+
+**Numeração:** a tabela usa a numeração da Prova Tipo 1 (Branca). O caderno registrado em 17–18/11 é o Tipo 1 por INFERÊNCIA FORTE: os três pontos de controle da decisão de recursos batem com o mapa que fizemos do caderno (Q24 iniciativa popular, Q30 reversão, Q37 rescisão por acordo e ponto). Na numeração Verde, os mesmos assuntos seriam Q28, Q22 e Q39. Não consegui reabrir o caderno para ver a cor impressa (ver "Não consegui abrir").
+
+**Link do caderno:** [PDF](https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf). É cópia de repositório, não fonte oficial. A Câmara não publica cadernos.
+
+**Link do gabarito:** [Gabarito pós-recursos (cotia.sp.leg.br)](https://www.cotia.sp.leg.br/concurso-publico/concurso-1-2024/CONCURSO%201-2024%20-%20GABARITOS%20POS-RECURSOS.pdf/@@download/file/CONCURSO%201-2024%20-%20GABARITOS%20P%C3%93S-RECURSOS.pdf). Vale para todas as linhas: é o gabarito definitivo (pós-recursos).
+
+**Ressalvas:**
+- Cotia usou 5 alternativas (A–E); Cristalina usa 4.
+- As questões de LO e Estatuto têm gabarito pela lei de **Cotia** (LO de Cotia e Lei 628/1980). Servem como modelo de estilo e de tema, não como resposta para a lei de Cristalina. No app, só entram reescritas sobre o texto de Cristalina, sem copiar.
+
+| Tópico do edital de Cristalina (cargo › tópico) | Órgão/Cargo/Ano | Nº | Assunto | Gabarito oficial | Apta? |
+|---|---|---|---|---|---|
+| Ambos › Língua Portuguesa › crase | Cotia / Assist. Serviço de Pessoal / 2024 | 10 | Crase (recurso indeferido) | D | Sim |
+| Ambos › RLM › lógica dedutiva e quantitativa | idem | 14 | Lógica proposicional, bicondicional e tautologia (recurso indeferido) | B | Sim |
+| Ambos › RLM › razão e proporção, equações | idem | 17 | Função linear, resíduos por habitante (recurso indeferido) | C | Sim |
+| Ambos › RLM › conjuntos (operações) | idem | 20 | Diagrama de Venn (recurso indeferido) | B | Sim |
+| — | idem | 13 | Tempo de três exercícios | anulada | Não (anulada) |
+| TP › 5. Processo legislativo; Legislação Específica › LO | idem | 21 | Sanção e veto (LO de Cotia) | E | Sim (modelo; lei de Cotia) |
+| Legislação Específica › LO (competências) | idem | 22 | Competências privativas (I–IV) | C | Sim (modelo; lei de Cotia) |
+| Legislação Específica › LO (tributação) | idem | 23 | Tributos municipais | C | Sim (modelo; lei de Cotia) |
+| Legislação Específica › LO; TP › processo legislativo | idem | 24 | Iniciativa popular e emenda à LO, quórum (recurso indeferido) | D | Sim (modelo; lei de Cotia) |
+| Legislação Específica › LO (Câmara e vereadores) | idem | 25 | Câmara, vereadores e sessões | A | Sim (modelo; lei de Cotia) |
+| Legislação Específica › Estatuto (cessão) | idem | 26 | Cessão de servidor | C | Sim (modelo; Lei 628/1980) |
+| Legislação Específica › Estatuto (penalidades) | idem | 27 | Penalidade | A | Sim (modelo; Lei 628/1980) |
+| Legislação Específica › Estatuto (PAD) | idem | 28 | Processo administrativo disciplinar | E | Sim (modelo; Lei 628/1980) |
+| Legislação Específica › Estatuto (licenças) | idem | 29 | Licença por doença em pessoa da família e remuneração | B | Sim (modelo; Lei 628/1980) |
+| Legislação Específica › Estatuto (provimento derivado) | idem | 30 | Reintegração, reversão e readaptação (I–III; recurso indeferido) | E | Sim (modelo; Lei 628/1980) |
+| RH › 1. Competência interpessoal; 3. Avaliação de desempenho | idem | 35 | Habilidades interpessoais e avaliação (I–IV) | D | Sim |
+| RH › 1. Planejamento estratégico da gestão de pessoas | idem | 36 | Gestão estratégica de pessoas | C | Sim |
+| RH › atribuições do cargo (ponto e folha; fora do conteúdo programático explícito) | idem | 37 | CLT: rescisão por acordo e registro de ponto (recurso indeferido) | E | Sim (prioridade baixa) |
+
+**Total:** 17 questões aptas e 1 anulada. Delas, 3 são de RH (Q35–37), 4 da parte comum (Q10, 14, 17, 20) e 10 são modelo de Legislação Específica (Q21–30).
+
+## Atualização das candidatas de banca.md (18/11)
+- **Cotia, Assistente de Serviço de Pessoal, Q21–30 e Q35–37:** passam de "sem gabarito oficial, não apta" para **aptas**, com o gabarito acima (Tipo 1, Branca).
+- **Cotia, Q31–34 e Q38–50:** o gabarito oficial está transcrito acima, mas os assuntos dessas questões não foram mapeados por número. Ficam aptas quanto ao gabarito, sem tópico atribuído. A exceção conhecida é a Q42 (assistência social), que fica fora do edital de Cristalina.
+- **Araraquara, Analista em Gestão de Pessoas, Q51–60 e RH:** **continuam não aptas.** Não há gabarito em domínio oficial da Câmara e o site da banca não abriu.
+- **Mariana, Corregedor Legislativo (Q26–36, Q40) e Agente Legislativo:** **continuam não aptas.**
+
+## Inferências
+- **INFERÊNCIA: o caderno de Cotia ASP que temos é o Tipo 1 (Branca).** Base: os três assuntos da decisão de recursos caem nos números Branca do nosso mapa (24, 30 e 37), e nenhum cai nos números Verde. Para dar certeza: abrir o caderno e conferir a cor impressa.
+- **INFERÊNCIA: Câmaras de SP clientes da Consulplan tendem a republicar os gabaritos no próprio site; a de Araraquara não o fez.** Base: Cotia publica, Araraquara não. Para outras provas, vale procurar primeiro a página de concurso da Câmara.
+- **INFERÊNCIA: as questões "mantidas" após recurso (B10, 14, 17, 20, 24, 30 e 37) são as mais úteis como modelo de pegadinha da banca.** Base: candidatos contestaram e a banca manteve a resposta. A de Lei Orgânica (B24) é sobre quórum de iniciativa popular, e a do Estatuto (B30) é sobre o conceito de reversão.
+- **INFERÊNCIA: para o Analista de RH, Cotia só dá 2 questões aptas dentro do conteúdo programático (Q35 e Q36), mais a Q37 de DP.** O modelo mais próximo, Araraquara AGP, segue sem gabarito oficial.
+
+## Não consegui abrir
+- **Cotia, "Gabaritos pós-recursos" pela página de visualização** (`https://www.cotia.sp.leg.br/concurso-publico/concurso-1-2024/CONCURSO%201-2024%20-%20GABARITOS%20POS-RECURSOS.pdf/view`): a permissão não foi respondida a tempo. Abri o PDF pelo link de download que a busca retornou.
+- **Caderno Cotia ASP no qconcursos** (`arquivos.qconcursos.com/.../123201/...prova.pdf`): o classificador de permissões negou a reabertura. A cor do caderno ficou inferida, não lida.
+- **Página do concurso de Araraquara na Consulplan** (`https://institutoconsulplan.org.br/getConc.aspx?key=WaXbl7ms0OQ=`): a permissão não foi enviada (bloqueio de proveniência). Foi a única tentativa no site da banca.
+- **Diário Oficial da Câmara de Araraquara, edição 831/2025** (`https://www.diariooficialcmararaquara.sp.gov.br/download/831`): bloqueado por robots_disallowed.
+- **Portal da Transparência da Câmara de Mariana, seção de concursos** (`https://transparencia.camarademariana.mg.gov.br/recursos-humanos/concursos-e-processos/`): a permissão não foi enviada (bloqueio de proveniência).
+- **Página de concursos da Câmara de Mariana** (`http://camarademariana.mg.gov.br/concurso-publico-e-processo-seletivo/servicos/`): devolve 404.
+- **Gabarito oficial de Araraquara 2025 e de Mariana 2025:** nenhuma busca em domínio oficial o retornou.
+
+## Recomendação
+- **BANCA-2: sucesso parcial.** O critério de aceite foi atingido (1 gabarito oficial em domínio oficial e 17 questões aptas, mais de 8 mapeadas a tópicos do edital).
+- **Uso imediato:**
+  - Cotia Q35–36 como modelo para RH.
+  - Q10, 14, 17 e 20 para a parte comum.
+  - Q21–30 como modelo de estilo para Legislação Específica, sempre reescritas sobre a LO, o RI e o Estatuto de Cristalina.
+- **Araraquara AGP e Mariana:** encerrar a busca até 20/12 por inviabilidade. A única fonte oficial restante é o site da banca ou o portal da Câmara de Mariana, e os dois dependem de permissão que não veio. Reabrir só se o João liberar `institutoconsulplan.org.br`.

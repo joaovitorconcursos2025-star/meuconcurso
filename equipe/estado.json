@@ -1,15 +1,15 @@
 {
   "prova": "2026-12-20",
-  "atualizado": "2026-11-18",
+  "atualizado": "2026-11-19",
   "regras": {
     "max_questoes_por_noite": 40,
     "um_pacote_por_noite": true
   },
   "banco_atual": {
     "legislacao_especifica": {
-      "lei_organica": 32,
-      "regimento_interno": 29,
-      "estatuto": 35
+      "lei_organica": 48,
+      "regimento_interno": 43,
+      "estatuto": 41
     },
     "artigos_ja_cobertos": {
       "lo": [
@@ -44,7 +44,24 @@
         "60",
         "66",
         "72",
-        "73"
+        "73",
+        "20",
+        "22",
+        "32",
+        "39",
+        "41-A",
+        "41-B",
+        "41-C",
+        "54",
+        "56",
+        "63",
+        "70",
+        "71",
+        "75",
+        "77",
+        "80",
+        "82",
+        "92"
       ],
       "ri": [
         "4",
@@ -75,7 +92,27 @@
         "155",
         "172",
         "177",
-        "194"
+        "194",
+        "11",
+        "12",
+        "15",
+        "23",
+        "24",
+        "35",
+        "36",
+        "43",
+        "79",
+        "81",
+        "89",
+        "100",
+        "106",
+        "107",
+        "108",
+        "120",
+        "131",
+        "164",
+        "204",
+        "210"
       ],
       "est": [
         "6",
@@ -114,7 +151,19 @@
         "134",
         "152",
         "156",
-        "171"
+        "171",
+        "20",
+        "20-P",
+        "23",
+        "25",
+        "28",
+        "29",
+        "34",
+        "153",
+        "154",
+        "157",
+        "177",
+        "222"
       ]
     }
   },
@@ -131,14 +180,14 @@
       "prioridade": 1,
       "papel": "elaborador",
       "tarefa": "Legislação Específica: +30 questões por noite até chegar a 60 da Lei Orgânica, 50 do Regimento Interno e 40 do Estatuto. Cobrir capítulos ainda sem questão antes de repetir artigo. Priorizar: Câmara e processo legislativo (LO arts. 18-56), Prefeito (57-66), servidores (83), Mesa/Comissões/reuniões/votação (RI), provimento, estágio probatório (20-A a 20-Y), vantagens, férias, licenças e regime disciplinar (Estatuto).",
-      "status": "em andamento (96/150 em 18/11: LO 32/60, RI 29/50, Estatuto 35/40)"
+      "status": "em andamento (132/150 em 19/11: LO 48/60, RI 43/50, Estatuto 41/40 — meta do Estatuto batida). Faltam 12 LO (candidatos: 30, 42, 65, 66-A, 67, 69) e 7 RI (47, 92, 109/112, 139, 163, 61, 124). Não usar LO 25, RI 193, RI 28/31."
     },
     {
       "id": "BANCA-1",
       "prioridade": 1,
       "papel": "analista_banca",
       "tarefa": "Perfil do Instituto Consulplan: provas aplicadas de 2023 a 2026 para Câmaras Municipais e para cargos de Analista de RH / Gestão de Pessoas e Técnico Legislativo/Parlamentar. Registrar em equipe/banca.md: lista de provas com link, estilo de enunciado, distribuição de assuntos por disciplina, como a banca cobra lei municipal (letra de lei? caso prático?), temas de discursiva. Marcar o que é fato (com link) e o que é inferência.",
-      "status": "parcial (18/11): Mariana Agente Legislativo não cobra LO/RI (edital); caderno e gabaritos oficiais inacessíveis (site da Consulplan e PCI bloqueados para a equipe)"
+      "status": "parcial (19/11): perfil de estilo em banca.md; site da Consulplan segue sem permissão."
     },
     {
       "id": "RH-1",
@@ -152,7 +201,7 @@
       "prioridade": 2,
       "papel": "analista_banca",
       "tarefa": "Coletar questões REAIS da Consulplan por tópico do edital (com órgão, cargo, ano e link da prova/gabarito oficial), começando por Conhecimentos do Cargo de RH e do Técnico Parlamentar. Só entram com gabarito oficial conferido.",
-      "status": "iniciada (18/11): 16 questões candidatas mapeadas em banca.md, todas sem gabarito oficial (não aptas)"
+      "status": "19/11: gabarito oficial pós-recursos de Cotia 2024 (Assistente de Serviço de Pessoal) achado no site da Câmara; Q35 D, Q36 C, Q37 E (numeração do caderno Branco, cor do caderno inferida, falta confirmar). Araraquara e Mariana sem gabarito oficial acessível: encerrar como inviável salvo liberação do site da Consulplan. Pendente: confirmar cor do caderno de Cotia e mapear Q31-34 e Q38-50."
     },
     {
       "id": "DISC-1",
@@ -179,6 +228,7 @@
   "pacotes_publicados": [
     "cristalina-legislacao-especifica-v1",
     "cristalina-legislacao-especifica-20261117",
-    "cristalina-legislacao-especifica-20261118"
+    "cristalina-legislacao-especifica-20261118",
+    "cristalina-legislacao-especifica-20261119"
   ]
 }
