@@ -1,5 +1,9 @@
 # Diário da equipe
 
+## 2026-11-19 (sessão com o João) — nova frente: Banco Central
+- Entraram no app (só conta do João) os concursos **Banco Central — Auditor** (59 questões) e **Banco Central — Técnico** (39), pacotes `bcb-auditor-v1` e `bcb-tecnico-v1`: previsão pelo edital de 2024 + padrão FGV. Banca FGV contratada em 18/11; edital até 30/12/2026.
+- O João autorizou o time a trabalhar nisso. Regras em EQUIPE.md (Frente 2) e tarefas BCB-EDITAL, BCB-1 e BCB-BANCA na fila. Até 20/12 Cristalina continua em primeiro; Bacen no máximo 15 questões por noite, dentro das 40.
+
 ## 2026-11-19
 - Entrou no app (pacote cristalina-legislacao-especifica-20261119, commit e1efce5): +36 questões inéditas de Legislação Específica. Lei Orgânica 16 (arts. 20, 22, 39, 41-A, 41-B, 41-C, 54, 56, 63, 70, 71, 75, 77, 80/32, 82, 92); Regimento 14 (arts. 11, 12/13/15, 23, 24, 35/36, 43, 79/81, 89, 100, 106-108, 120, 131/164, 204, 210); Estatuto 6 (arts. 20/20-P, 23/25, 28/29, 34, 153-157, 168/177). Banco agora: LO 48, RI 43, Estatuto 41 (meta do Estatuto batida). Gabarito 9/9/9/9; 8 com assertivas, 7 com EXCETO/INCORRETA, 6 casos práticos.
 - Revisor independente: 36/36 aprovadas na 1ª leitura; confere.py sem reprovação. O Comandante mandou corrigir um comentário (PAD, Est. art. 177) que atribuía um distrator à "sindicância federal" sem base; agora diz só que "30 dias da citação" não tem apoio no art. 177. Engenheiro: JSON válido, checa_scripts OK, aplicarPacote 2x sem duplicar (628 questões, 73 tópicos). Nada barrado.

@@ -3,7 +3,8 @@
   "atualizado": "2026-11-19",
   "regras": {
     "max_questoes_por_noite": 40,
-    "um_pacote_por_noite": true
+    "um_pacote_por_noite_por_frente": true,
+    "max_questoes_bacen_por_noite": 15
   },
   "banco_atual": {
     "legislacao_especifica": {
@@ -165,6 +166,11 @@
         "177",
         "222"
       ]
+    },
+    "bacen": {
+      "auditor_questoes": 59,
+      "tecnico_questoes": 39,
+      "obs": "pacotes bcb-*-v1 de 19/11/2026: 2 a 3 questões por tópico; meta antes do edital: 8 por tópico"
     }
   },
   "fila": [
@@ -223,12 +229,38 @@
       "papel": "elaborador",
       "tarefa": "Dois simulados completos no formato da prova (50 questões, 60 pontos) por cargo, para as duas últimas semanas.",
       "status": "pendente"
+    },
+    {
+      "id": "BCB-EDITAL",
+      "prioridade": 1,
+      "papel": "analista_banca",
+      "frente": "bacen",
+      "tarefa": "Toda rodada, conferir se o edital do Bacen 2026 (FGV) foi publicado: bcb.gov.br (Acesso à informação > Concursos) e conhecimento.fgv.br. Se saiu: salvar o texto em equipe/fontes/bacen-edital-2026.txt, registrar no diário (data da prova, matérias, nº de questões e pesos de Auditor e Técnico, áreas do Auditor) e, na mesma rodada, montar o pacote bcb-<cargo>-edital-AAAAMMDD com as matérias/tópicos oficiais e concurso.dataProva preenchida; tópicos da previsão que ficaram fora do edital vão em removerTopicos (só saem se não tiverem questão). Não apagar questões do João.",
+      "status": "pendente"
+    },
+    {
+      "id": "BCB-1",
+      "prioridade": 2,
+      "papel": "elaborador",
+      "frente": "bacen",
+      "tarefa": "Questões inéditas padrão FGV (5 alternativas) para os concursos Banco Central — Auditor e Banco Central — Técnico, até regras.max_questoes_bacen_por_noite por rodada, alternando os cargos. Começar pelos tópicos com menos questões e pelas matérias comuns aos dois (Língua Portuguesa, Sistema Financeiro Nacional e Banco Central, Direito Administrativo). Cada tópico novo de questão segue as regras da Frente 2 em EQUIPE.md. Meta antes do edital: 8 questões por tópico.",
+      "status": "pendente"
+    },
+    {
+      "id": "BCB-BANCA",
+      "prioridade": 3,
+      "papel": "analista_banca",
+      "frente": "bacen",
+      "tarefa": "Perfil da FGV para provas de nível superior e médio em órgãos federais e da área financeira (2022-2026): matérias, número de questões, estilo de enunciado, pegadinhas recorrentes em Português e Economia. Registrar em equipe/banca-fgv.md com link de cada prova; separar fato de inferência.",
+      "status": "pendente"
     }
   ],
   "pacotes_publicados": [
     "cristalina-legislacao-especifica-v1",
     "cristalina-legislacao-especifica-20261117",
     "cristalina-legislacao-especifica-20261118",
-    "cristalina-legislacao-especifica-20261119"
+    "cristalina-legislacao-especifica-20261119",
+    "bcb-tecnico-v1",
+    "bcb-auditor-v1"
   ]
 }
