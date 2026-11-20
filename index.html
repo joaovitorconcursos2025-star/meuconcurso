@@ -1009,7 +1009,7 @@ u{text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:
   <div class="page-sub">Questões que precisam de atenção</div>
   <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center">
     <div class="chips" id="erro-chips" style="margin-bottom:0;flex:1"></div>
-    <button class="btn btn-primary btn-sm" onclick="startSession('somente_erros')">Revisar tudo</button>
+    <button class="btn btn-primary btn-sm" onclick="revisarTodosErros()">Revisar tudo</button>
   </div>
   <div id="erros-list"></div>
 </div>
@@ -2207,13 +2207,23 @@ function selMode(m) {
 
 function startSession(modeOv) {
   var mode=modeOv||currentMode;
+  // Atalhos (Prova ABCD, Certo/Errado) não herdam a matéria/tópico que o "▶ Estudar" deixou na tela de Responder
+  var cfg=function(id){ return modeOv ? '' : (document.getElementById(id)?.value||''); };
   var qtd =parseInt(document.getElementById('cfg-qtd')?.value||20);
-  var mat =document.getElementById('cfg-mat')?.value||'';
-  var niv =document.getElementById('cfg-niv')?.value||'';
-  var top =document.getElementById('cfg-top')?.value||'';
-  var sub =document.getElementById('cfg-sub')?.value||'';
-  var qs  =selecionarQuestoes(mode,qtd,mat,niv,top,sub);
-  if(!qs.length){toast('Nenhuma questão disponível com esses filtros');return;}
+  var qs  =selecionarQuestoes(mode,qtd,cfg('cfg-mat'),cfg('cfg-niv'),cfg('cfg-top'),cfg('cfg-sub'));
+  if(!qs.length){toast(modeOv?'Nenhuma questão disponível':'Nenhuma questão disponível com esses filtros');return;}
+  abrirSessao(qs,mode);
+}
+
+// Fila de Erros › "Revisar tudo": todos os erros/dúvidas da fila (respeita só o chip de matéria da própria fila)
+function revisarTodosErros() {
+  var qs=questionsDoConcurso().filter(function(q){ return (q.status==='erro'||q.status==='duvida') && (!erroFilter||q.materia===erroFilter); });
+  if(!qs.length){toast('Nenhum erro para revisar 🎉');return;}
+  qs.sort(function(a,b){ return (a.prioridade||3)-(b.prioridade||3); });
+  abrirSessao(qs,'somente_erros');
+}
+
+function abrirSessao(qs, mode) {
   session={qs,mode,cur:0,corr:0,erros:0};
   goTo('responder',nbBtn('responder'));
   document.getElementById('resp-setup').style.display='none';
