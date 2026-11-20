@@ -273,3 +273,108 @@ Nenhuma está apta, porque nenhum gabarito oficial foi conferido. Ficam listadas
   - Q10, 14, 17 e 20 para a parte comum.
   - Q21–30 como modelo de estilo para Legislação Específica, sempre reescritas sobre a LO, o RI e o Estatuto de Cristalina.
 - **Araraquara AGP e Mariana:** encerrar a busca até 20/12 por inviabilidade. A única fonte oficial restante é o site da banca ou o portal da Câmara de Mariana, e os dois dependem de permissão que não veio. Reabrir só se o João liberar `institutoconsulplan.org.br`.
+
+---
+
+# Pesquisa BANCA-2, 20/11/2026
+
+## Método
+- Foram cerca de 26 buscas e aberturas (16 WebSearch e 13 WebFetch, contando as bloqueadas), feitas só com WebSearch e WebFetch. Não usei curl, Python, cache nem mirror, não contornei bloqueios e não montei URLs. Não copiei enunciados: registrei só número, assunto e letra.
+- Segui a ordem pedida: (1) Câmara de BH, Edital 1/2023; (2) Câmara de Caratinga; (3) Câmara de Poços de Caldas; (4) outras Câmaras de MG/GO. Não usei os sites proibidos (Consulplan, Gran, PCI, Estratégia).
+- **Resultado:** o critério de aceite **não** foi atingido. Não achei gabarito **definitivo** (pós-recursos) aberto em domínio oficial. Achei em domínio oficial (cmbh.mg.gov.br) o **gabarito preliminar** e os **cadernos** da prova de nível médio legislativo de BH 2024 (Técnico Legislativo II, A–D). Mapeei 25 questões dela, que ficam como candidatas fortes, mas não aptas.
+
+## Fatos (com link)
+
+### Câmara Municipal de Belo Horizonte, Edital 1/2023 (prova em 28/04/2024)
+- **A CMBH publica os cadernos de todos os cargos, em 4 tipos (1 Branca, 2 Verde, 3 Amarela, 4 Azul).** Entre eles estão o **Técnico Legislativo II**, de nível médio, e o Coordenador do Processo Legislativo. Na página de provas o único gabarito é o "Gabaritos preliminares". Não há gabarito definitivo nem decisão de recursos. [Página "Provas"](https://www.cmbh.mg.gov.br/transparencia/concursos/2023/provas)
+- **A página "Resultados" não traz gabarito definitivo, decisão de recursos nem lista de anuladas.** Traz o resultado preliminar (24/05/2024) e o definitivo da objetiva (07/06/2024), a discursiva, o resultado final (28/06/2024) e a heteroidentificação. [Página "Resultados"](https://www.cmbh.mg.gov.br/transparencia/concursos/2023/resultados)
+- **Gabarito preliminar oficial.** O cabeçalho de cada bloco diz "CONCURSO PÚBLICO – CÂMARA MUNICIPAL DE BELO HORIZONTE/MG", com o cargo e o tipo da prova. O arquivo não tem data e não marca nenhuma questão anulada. [PDF (cmbh.mg.gov.br)](https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/gabaritos_preliminares.pdf)
+  - **Técnico Legislativo II, Tipo 2 (Verde), Q36–60** (lido duas vezes, com o mesmo resultado): 36 B · 37 B · 38 B · 39 A · 40 D · 41 C · 42 B · 43 D · 44 C · 45 C · 46 D · 47 D · 48 C · 49 B · 50 B · 51 B · 52 D · 53 C · 54 A · 55 D · 56 D · 57 A · 58 A · 59 B · 60 B.
+  - Os outros tipos e o Coordenador do Processo Legislativo foram lidos uma vez só, pela leitura automática. Não os transcrevo aqui porque não os conferi.
+- **Caderno do Técnico Legislativo II, Tipo 2 (Verde).** A capa diz "Técnico Legislativo II", "Tipo 2 – VERDE", período da tarde, Edital 1/2023. São 60 questões objetivas A–D e uma redação. [PDF (cmbh.mg.gov.br)](https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf)
+  - Q1–20: Língua Portuguesa (coesão, conotação, variação linguística, pontuação, colocação pronominal, crase, concordância, regência).
+  - Q21–35: Raciocínio Lógico (tabela-verdade, negação, condicional, tautologia, ordenação).
+  - Q36–60: Conhecimentos de Direito Público (mapa na tabela abaixo).
+  - Nenhuma questão cita o Regimento Interno da CMBH nem o Estatuto (Lei 7.863/1999). Quatro questões são de Lei Orgânica de BH (Q36, 38, 44 e 46).
+- **Edital de BH, Técnico Legislativo II.**
+  - São 60 questões A–D (item 6.1.3): Português 20, Raciocínio Lógico 15 e Direito Público 25.
+  - O conteúdo de Direito Público inclui a LO de BH, o RI da CMBH (Res. 1.480/1990) e o processo legislativo municipal.
+  - O gabarito preliminar sai no site da Consulplan (item 10.1). Questão anulada tem os pontos dados a todos (item 10.11). O edital fala em "gabarito oficial definitivo" (item 10.9).
+  - No DOM saem só o edital e o resultado final. Os demais atos saem nos sites da Consulplan e da CMBH (item 11.1), e o site da Consulplan tem caráter oficial (item 11.15).
+  - [Edital (cmbh.mg.gov.br)](https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2023/12/edital_concurso_publico_cmbh_20231.pdf)
+- **Existe um "GABARITO PÓS-RECURSOS" de BH 2024**, mas só como cópia de terceiro (qconcursos, id 108313, rotulado "Administrador"). O título aparece na busca, mas a abertura foi negada (ver "Não consegui abrir"). Não é domínio oficial. [link da busca](https://arquivos.qconcursos.com/prova/arquivo_gabarito/108313/instituto-consulplan-2024-camara-de-belo-horizonte-mg-administrador-gabarito.pdf)
+
+### Câmara de BH, Concurso 01/2017 (provas em 2018, Consulplan): pista
+- **A página oficial do concurso de 2017 lista**, para o Técnico Legislativo II (nível médio):
+  - cadernos nos 4 tipos, em cmbh.mg.gov.br;
+  - gabarito preliminar e extratos, em cmbh.mg.gov.br;
+  - "Técnico Legislativo – Gabaritos Definitivos", "Decisão de Recursos" e "Gabarito pós-recursos", em **links do Google Drive** colocados pela própria Câmara.
+  - A banca citada é a Consulplan. [Página "Concurso de 2017"](https://www.cmbh.mg.gov.br/transparencia/concursos/2017) · [Caderno TL II Tipo 1 Branca (2018)](https://www.cmbh.mg.gov.br/sites/default/files/provas_concurso_2017/T%C3%A9cnico%20Legislativo%20II%20-%20Tipo%201%20-%20Branca.pdf) (não aberto)
+- A prova é de 2018, fora da janela de 2023–2026, e a Consulplan ainda não usava o nome "Instituto Consulplan". Mesmo assim, é a única prova de **nível médio legislativo** com gabarito definitivo ligado a partir de domínio oficial que localizei.
+
+### Caratinga e Poços de Caldas
+- **Caratinga:** no domínio cmcaratinga.mg.gov.br, as buscas só devolveram o edital, o resultado final e uma convocação. Nenhum gabarito apareceu. [Edital](https://www.cmcaratinga.mg.gov.br/abrir_arquivo.aspx?cdLocal=12&arquivo=%7B05ACACB4-DE82-4E8B-56C1-5BBD13BEC034%7D.pdf) · [Resultado final](https://www.cmcaratinga.mg.gov.br/abrir_arquivo.aspx/Resultado_final_concurso_publico_2023?cdLocal=2&arquivo=%7B3D2EEC1D-BA6A-ABAD-4D4E-C24CA4A8AEAE%7D.pdf)
+- **Poços de Caldas:** o Portal da Transparência da Câmara tem uma subpágina "Concursos Públicos › 2024", mas ela não abriu. A busca no domínio não devolveu nenhum gabarito. [Índice "Concursos Públicos"](https://www.pocosdecaldas.mg.leg.br/transparencia/portal-da-transparencia/a-partir-de-2019/concurso-publico-quadro-outros/certames/concursos-publicos)
+
+### Outras Câmaras (item 4)
+- **Câmara de Divinópolis/MG, Edital 01/2023:** a banca foi o IBGP, não a Consulplan. Está descartada. [Anexo do edital (IBGP)](https://novo.ibgpconcursos.com.br/rest/concurso/download/edital/10361/?file=site%2Fanexos%2F339%2F02+-+ANEXO+II+-+ATRIBUI%EF%BF%BD%EF%BF%BDES+DOS+CARGOS+P%EF%BF%BDBLICOS+-+DESCRI%EF%BF%BD%EF%BF%BDES+DE+CARGO.pdf)
+- Uma busca ampla por "gabarito pós-recursos" da Consulplan em Câmaras de MG e GO só devolveu cópias em qconcursos. As de Câmara são de BH 2018 e 2024, Poços 2024, Cotia 2024, Araraquara 2025 e São Joaquim da Barra 2023. Nenhuma estava em domínio oficial.
+
+## Questões candidatas: BH 2024, Técnico Legislativo II, caderno Tipo 2 (Verde)
+
+**Tipo e cor do caderno:** a cor foi **lida** na capa do próprio caderno ("Tipo 2 – VERDE"), e o gabarito usado é o bloco "PROVA – TIPO 2 – VERDE" do mesmo cargo. Não há inferência sobre a cor.
+
+**Gabarito:** é o oficial **preliminar** (cmbh.mg.gov.br), não o definitivo. Por isso **nenhuma linha fica apta** pelo critério de BANCA-2. O status "candidata forte" quer dizer que o caderno e o gabarito estão em domínio oficial e só falta confirmar que não houve anulação nem troca de letra depois dos recursos.
+
+| Tópico do edital de Cristalina | Órgão / cargo / ano | Nº | Assunto | Gabarito oficial (preliminar) | Apta? |
+|---|---|---|---|---|---|
+| TP › 5. Processo legislativo; Leg. Específica › LO | CMBH / Técnico Legislativo II / 2024 | 36 | Quórum de projeto sobre uso e ocupação do solo (caso; LO de BH) | B | Não: preliminar (modelo; lei de BH) |
+| Dir. Const. › Organização do Estado (competências) | idem | 37 | Classificação de competências legislativas | B | Não: preliminar |
+| Leg. Específica › LO (competências da Câmara) | idem | 38 | Competências privativas da Câmara (I–V; LO de BH) | B | Não: preliminar (modelo; lei de BH) |
+| Dir. Const. › Organização do Estado | idem | 39 | Natureza da federação | A | Não: preliminar |
+| Dir. Const. › Direitos e garantias | idem | 40 | Direitos individuais e coletivos com jurisprudência (INCORRETA) | D | Não: preliminar |
+| Dir. Const. › Organização dos Poderes | idem | 41 | Separação de Poderes, freios e contrapesos | C | Não: preliminar |
+| TP › 5. Comissões (CPI) | idem | 42 | CPI (V/F) | B | Não: preliminar |
+| TP › 5. Comissões | idem | 43 | Atribuições de comissões permanentes e temporárias (I–VI) | D | Não: preliminar |
+| Leg. Específica › LO (Câmara e vereadores) | idem | 44 | Número de vereadores (LO de BH) | C | Não: preliminar (modelo; lei de BH) |
+| Dir. Const. › Organização dos Poderes | idem | 45 | Competência exclusiva do Congresso | C | Não: preliminar |
+| TP › 5. Processo legislativo; Leg. Específica › LO | idem | 46 | Espécies normativas do processo legislativo municipal (I–IV; LO de BH) | D | Não: preliminar (modelo; lei de BH) |
+| Dir. Adm. › Lei 9.784/1999 | idem | 47 | Princípio da oficialidade | D | Não: preliminar |
+| Dir. Adm. › Organização administrativa | idem | 48 | Desconcentração (I–IV) | C | Não: preliminar |
+| TP › 5. Processo legislativo (iniciativa) | idem | 49 | Iniciativa de emenda constitucional (I–IV) | B | Não: preliminar |
+| TP › 5. Processo legislativo (iniciativa) | idem | 50 | Iniciativa privativa do Presidente (I–IV) | B | Não: preliminar |
+| TP › 5. Processo legislativo (prazos, sanção) | idem | 51 | Prazo da sanção tácita (lacuna) | B | Não: preliminar |
+| Dir. Const. › Direitos e garantias | idem | 52 | Princípio concretizado pela Lei do Mandado de Segurança | D | Não: preliminar |
+| TP › 5. Processo legislativo | idem | 53 | Sujeitos do processo legislativo (I–IV) | C | Não: preliminar |
+| TP › 5. Processo legislativo (veto) | idem | 54 | Regras do veto | A | Não: preliminar |
+| Dir. Const. › Administração Pública | idem | 55 | Legalidade em sentido formal | D | Não: preliminar |
+| Dir. Const. › Administração Pública | idem | 56 | Requisitos de acesso ao serviço público | D | Não: preliminar |
+| Dir. Adm. › Lei 14.133 (modalidades) | idem | 57 | Modalidade para bens comuns | A | Não: preliminar |
+| Dir. Adm. › Lei 14.133 (contratos) | idem | 58 | Alteração unilateral do contrato (caso) | A | Não: preliminar |
+| Dir. Adm. › Lei 14.133 (prazos) | idem | 59 | Prazo de propostas após retificação do edital | B | Não: preliminar |
+| Dir. Adm. › Lei 14.133 (inexigibilidade) | idem | 60 | Inexigibilidade e serviço de publicidade | B | Não: preliminar |
+
+**Total:** 25 questões mapeadas e 0 aptas. Delas, 11 são do núcleo do Técnico Parlamentar: processo legislativo, comissões e LO (Q36, 38, 42, 43, 44, 46, 49, 50, 51, 53 e 54; a 44 é de LO, Câmara e vereadores). Nenhuma é de RH.
+
+## Inferências
+- **INFERÊNCIA: o gabarito definitivo das provas de BH 2024 só está, em fonte oficial, no site da Consulplan.** Base: a CMBH publicou os cadernos e o preliminar, mas não o pós-recursos, nas páginas "Provas" e "Resultados", e o edital (itens 10.1 e 11.15) põe os atos oficiais no site da banca. Isso confirma a inferência de 18/11.
+- **INFERÊNCIA: as Q37, 39, 41, 45, 49, 50, 51, 53, 54 e 55–60 têm resposta conferível na letra da CF, da 9.784 ou da 14.133, sem depender do gabarito definitivo.** Elas podem virar questões do app pelo procedimento da skill `questoes-consulplan-conferidas` (gabarito provado no texto da lei). O preliminar serve só de ponto de partida, e qualquer divergência entre a lei e o preliminar marca uma provável anulação ou troca.
+- **INFERÊNCIA: o estilo do nível médio legislativo de BH 2024 é mais de CF do que de lei municipal.** Base: das 25 questões de Direito Público, só 4 são de LO de BH e nenhuma de RI. Em Cristalina, a LO e o RI estão no Conhecimentos do Cargo do TP (10 questões, 2 pontos cada). Por isso o peso municipal deve ser maior em Cristalina do que em BH.
+- **INFERÊNCIA: a Consulplan usa nessa prova os formatos I–IV, I–V e I–VI, V/F, lacuna e caso com quórum**, o mesmo padrão já visto em Cotia, Mariana e Caratinga.
+
+## Não consegui abrir
+- **Caderno de BH 2024, TL II, Tipo 1 Branca** (`cmbh.mg.gov.br/.../2024/04/tecnico_legislativo_ii_-_tipo_1_-_branca.pdf`): bloqueio de proveniência (permissão anterior não respondida). Usei o Tipo 2 Verde, que veio da busca.
+- **Gabarito pós-recursos de BH 2024, cópia do qconcursos** (`arquivos.qconcursos.com/prova/arquivo_gabarito/108313/...`): abertura negada pelo classificador de permissões. Não tentei de novo. Mesmo aberto, seria cópia de terceiro.
+- **BH 2017/2018, "Técnico Legislativo – Gabaritos Definitivos"** (Google Drive, `drive.google.com/file/d/10GqguCYm4NYGNxEJX9gVsHhwT4pzcS0f`, ligado na página oficial): bloqueio de proveniência.
+- **BH 2017/2018, extrato de gabarito, recurso e resultado** (`cmbh.mg.gov.br/sites/default/files/pagina-basica/2018/05/concurso_-_extrato.doc`): bloqueio de proveniência.
+- **Poços de Caldas, página "Concursos Públicos › 2024"** (`pocosdecaldas.mg.leg.br/.../concursos-publicos/2024-1`): a permissão não foi respondida a tempo.
+- **Caratinga, matéria "Edital de convocação…"** (`cmcaratinga.mg.gov.br/detalhe-da-materia/info/.../46793`): robots_disallowed.
+- **Gabarito oficial de Caratinga 2024:** nenhuma busca no domínio oficial (cmcaratinga.mg.gov.br e caratinga.mg.gov.br) o retornou.
+
+## Recomendação
+- **BANCA-2 (Técnico Parlamentar): critério não atingido.** Há 25 questões mapeadas de BH 2024 com caderno e gabarito preliminar em domínio oficial, mas nenhum gabarito definitivo em domínio oficial.
+- **Uso imediato, sem esperar o definitivo:** usar BH 2024 TL II (Q36–60) como modelo de estilo do TP. As questões de CF, processo legislativo federal e 14.133 (Q37, 39, 41, 45, 49–51, 53–60) devem ser conferidas na letra da lei pela skill `questoes-consulplan-conferidas` antes de entrar no app. As de LO de BH (Q36, 38, 44 e 46) só entram reescritas sobre a LO de Cristalina.
+- **Destravar, se o João quiser, uma das duas opções:**
+  - (a) liberar os links do Google Drive da página oficial "Concurso de 2017" da CMBH, que trazem o gabarito definitivo e a decisão de recursos do TL II de 2018 (nível médio legislativo);
+  - (b) liberar `institutoconsulplan.org.br` para o pós-recursos de BH 2024.
+- **Sem essa liberação, encerrar a busca de gabarito definitivo até 20/12.** As Câmaras restantes (Caratinga, Poços, Mariana) não publicam o gabarito em domínio aberto ou estão bloqueadas, e o custo por rodada não compensa a um mês da prova.
