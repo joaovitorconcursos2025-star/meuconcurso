@@ -1,6 +1,6 @@
 {
   "prova": "2026-12-20",
-  "atualizado": "2026-11-20",
+  "atualizado": "2026-11-21",
   "regras": {
     "max_questoes_por_noite": 40,
     "um_pacote_por_noite_por_frente": true,
@@ -196,6 +196,82 @@
       "auditor_questoes": 59,
       "tecnico_questoes": 39,
       "obs": "pacotes bcb-*-v1 de 19/11/2026: 2 a 3 questões por tópico; meta antes do edital: 8 por tópico"
+    },
+    "tecnico_parlamentar": {
+      "tp6_processo_legislativo": 55,
+      "obs": "21/11: +30 de LO/RI de Cristalina (antes 25, todas de CF por simetria)",
+      "artigos_usados_tp6": {
+        "ri": [
+          "42",
+          "44",
+          "45",
+          "46",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "60",
+          "63",
+          "94",
+          "98",
+          "99",
+          "101",
+          "102",
+          "113",
+          "115",
+          "117",
+          "118",
+          "119",
+          "121",
+          "122",
+          "128",
+          "129",
+          "130",
+          "132",
+          "133",
+          "144",
+          "154",
+          "156",
+          "173",
+          "174",
+          "175",
+          "178",
+          "179",
+          "182",
+          "183",
+          "185",
+          "187",
+          "190",
+          "194",
+          "196",
+          "197",
+          "198",
+          "219"
+        ],
+        "lo": [
+          "127",
+          "131",
+          "132"
+        ]
+      },
+      "reserva": [
+        "RI 188/189",
+        "RI 39 e 32",
+        "RI 165 e 168"
+      ],
+      "nao_usar_extra": [
+        "RI 178 §2º",
+        "LO 129",
+        "RI 192",
+        "RI 29",
+        "RI 30",
+        "RI 150",
+        "RI 213",
+        "LO 127 §2º III",
+        "RI 99 §1º VIII",
+        "RI 202"
+      ]
     }
   },
   "fila": [
@@ -214,6 +290,20 @@
       "status": "concluída em 20/11/2026: LO 61/60, RI 52/50, Estatuto 41/40 (154 questões). Pacote cristalina-legislacao-especifica-20261120. Não usar LO 25, LO 41/42, RI 124, RI 193, RI 28/31, ADT art. 2º. Reserva para revisão futura: RI 214, RI 152, LO 96 (concorrência x Lei 14.133)."
     },
     {
+      "id": "TP-PL-1",
+      "prioridade": 1,
+      "papel": "elaborador",
+      "tarefa": "Técnico Parlamentar, tópico 5 (processo legislativo municipal): questões de LO/RI de Cristalina sobre tramitação, rito, prazos e comissões.",
+      "status": "concluída em 21/11/2026: +30 questões, pacote cristalina-tecnico-parlamentar-20261121 (commit 61f6429). Possível continuação: reservas RI 188/189, 39/32, 165/168."
+    },
+    {
+      "id": "BANCA-3",
+      "prioridade": 2,
+      "papel": "analista_banca",
+      "tarefa": "Regras da discursiva do Analista e temas de dissertação geral da Consulplan 2023-2026.",
+      "status": "concluída em 21/11/2026: regras do item 5.2 e 12 temas com link em banca.md; inferência antiga ('caso prático da área') corrigida."
+    },
+    {
       "id": "BANCA-1",
       "prioridade": 1,
       "papel": "analista_banca",
@@ -225,7 +315,7 @@
       "prioridade": 1,
       "papel": "elaborador",
       "tarefa": "Resumos dos 7 tópicos de Conhecimentos do Cargo · Analista de RH (hoje sem resumo), fiéis ao texto do edital (equipe/fontes/edital-01-2026.txt, seção ANALISTA DE RECURSOS HUMANOS), um tópico ou dois por noite, no formato dos resumos existentes.",
-      "status": "pendente — próxima rodada (LE-1 concluída)"
+      "status": "encerrada em 21/11/2026: premissa errada — os 31 subtópicos de Conhecimentos do Cargo · Analista de RH já têm resumo (pacote cristalina-estudo-v1). Doutrina de RH não está em equipe/fontes, então a rotina noturna não pode produzir resumos novos de RH sem decisão do João."
     },
     {
       "id": "BANCA-2",
@@ -239,7 +329,7 @@
       "prioridade": 3,
       "papel": "elaborador",
       "tarefa": "Prova discursiva do Analista: ler as regras no edital (critérios, linhas, pontuação), levantar temas que a Consulplan já cobrou e montar 6 propostas de treino com espelho de correção.",
-      "status": "pendente"
+      "status": "pronta para começar: BANCA-3 (21/11) levantou regras (item 5.2) e 12 temas Consulplan; 6 eixos recomendados em banca.md. Atenção: as propostas e espelhos dependem de temas gerais, não de equipe/fontes; definir se a rotina noturna pode fazê-las."
     },
     {
       "id": "APP-1",
@@ -287,6 +377,7 @@
     "cristalina-legislacao-especifica-20261119",
     "bcb-tecnico-v1",
     "bcb-auditor-v1",
-    "cristalina-legislacao-especifica-20261120"
+    "cristalina-legislacao-especifica-20261120",
+    "cristalina-tecnico-parlamentar-20261121"
   ]
 }

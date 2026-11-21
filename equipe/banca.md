@@ -75,7 +75,7 @@ Listagens consultadas: [PCI – provas da Câmara de Cotia](https://www.pciconcu
   - Base: Cotia, BH, Caratinga, Mariana, Araraquara.
 - **Estatuto dos servidores.** INFERÊNCIA: é o tema municipal que mais se repete. Esteve em Cotia, Mariana, Caratinga, Araraquara e Poços. Merece prioridade para os dois cargos, e em especial para o Analista de RH. Base: as cinco provas citadas.
 - **Analista de RH, objetiva.** INFERÊNCIA: a parte específica tende a ser de gestão de pessoas "comportamental" (Chiavenato, Robbins, competências, clima, avaliação, QVT), com casos práticos em que vence a resposta participativa e dialogada. A parte de DP (folha, CLT, eSocial) é menos certa. Base: Araraquara AGP e Cotia ASP.
-- **Analista de RH, discursiva.** INFERÊNCIA: deve ser um caso prático da área do cargo, com 3 ou 4 itens a abordar e 20 a 30 linhas. A correção deve pesar mais o conteúdo (macroestrutura) do que a gramática. Base: Araraquara AGP e Analista Legislativo. O edital de Cristalina precisa ser conferido para linhas e pontuação.
+- **Analista de RH, discursiva.** ~~INFERÊNCIA: deve ser um caso prático da área do cargo, com 3 ou 4 itens a abordar e 20 a 30 linhas. A correção deve pesar mais o conteúdo (macroestrutura) do que a gramática. Base: Araraquara AGP e Analista Legislativo. O edital de Cristalina precisa ser conferido para linhas e pontuação.~~ **Corrigido em 21/11/2026:** o edital diz "1 (uma) dissertação sobre tema de conhecimento geral", 20 pontos (item 5.2.1), com 20 a 30 linhas (item 5.2.8.1). Não é caso prático da área. Na nota, a macroestrutura vale 11 pontos e a norma-padrão 9 (item 5.2.7). Ver "Pesquisa BANCA-3, 21/11/2026" no fim deste arquivo.
 - **Técnico Parlamentar.** INFERÊNCIA: deve cair processo legislativo municipal em caso prático com datas e prazos de veto e sanção, como na prova de BH. A base é pequena (só BH e Cotia); falta uma prova de nível médio legislativo aberta.
 
 ## Temas de discursiva
@@ -378,3 +378,107 @@ Nenhuma está apta, porque nenhum gabarito oficial foi conferido. Ficam listadas
   - (a) liberar os links do Google Drive da página oficial "Concurso de 2017" da CMBH, que trazem o gabarito definitivo e a decisão de recursos do TL II de 2018 (nível médio legislativo);
   - (b) liberar `institutoconsulplan.org.br` para o pós-recursos de BH 2024.
 - **Sem essa liberação, encerrar a busca de gabarito definitivo até 20/12.** As Câmaras restantes (Caratinga, Poços, Mariana) não publicam o gabarito em domínio aberto ou estão bloqueadas, e o custo por rodada não compensa a um mês da prova.
+
+---
+
+# Pesquisa BANCA-3, 21/11/2026
+
+## Método
+- **Regras:** li o item 5.2 do edital (`fontes/edital-01-2026.txt`, linhas 810–926) e conferi com o texto consolidado da Retificação I (`fontes/retificacao-I-ocr.txt`, linhas 1103–1246).
+- **Temas:** fiz cerca de 30 buscas e aberturas (13 WebSearch e 17 WebFetch), só com essas duas ferramentas. Não contornei bloqueios e não montei URLs. Registrei o tema e os dados da proposta sem copiar os textos motivadores.
+
+## Regras da discursiva de Cristalina
+
+A Retificação I **não mudou nada no item 5.2**. Ela só alterou o requisito do Analista de RH (item 1.2), incluiu conteúdos no Anexo I e mandou consolidar o edital (itens 1 a 3 da retificação, linhas 9–52). O item 5.2 consolidado traz o mesmo texto do original. As diferenças são só falhas da leitura automática (OCR), como "5.2.18" no lugar de 5.2.16 e a coluna "Candidatos Negros" do 5.2.2 sem números.
+
+| Regra | O que diz o edital | Item |
+|---|---|---|
+| Composição | **1 dissertação sobre tema de conhecimento geral, 20 pontos.** É a mesma para os três Analistas (Contabilidade, RH e TI). Tem caráter eliminatório e classificatório e só existe para o nível superior. | 5.2.1 |
+| Quando | No mesmo turno da objetiva. Os Analistas fazem a prova à **tarde** (portões fecham às 14h), em 20/12/2026, com **4 horas** no total para objetiva e discursiva. | 5.2.1.1; 6.1; 6.1.1 "b" |
+| Quem é corrigido | Só quem foi aprovado na objetiva (mínimo de 50%, item 5.1.4) e ficou até a **20ª posição** na ampla concorrência, **5ª** entre pessoas com deficiência ou **10ª** entre candidatos negros. Notas empatadas na posição limite seguem os critérios do item 8.3. Não há remanejamento entre listas. | 5.2.2; 5.2.3; 5.2.4 |
+| Quem não é corrigido | Fica **eliminado**, sem classificação. | 5.2.6 |
+| Macroestrutura (11 pts) | Conhecimento e compreensão do conteúdo, ou seja, adequação ao tema e ao gênero: **4,00**. Desenvolvimento da argumentação, com introdução, desenvolvimento e conclusão: **4,00**. Coerência e progressão textual: **3,00**. | 5.2.7 |
+| Norma-padrão (9 pts, por desconto) | Estruturação sintática (truncamento, justaposição, coesão): **0,50 por erro**, até **2,00**. Morfossintaxe (concordância, regência, colocação pronominal, conectores, paralelismo, vocabulário, registro): **0,25 por erro**, até **3,00**. Desvios (acentuação, ortografia, translineação, maiúsculas, pontuação): **0,25 por erro**, até **4,00**. **Total: 20 pontos.** | 5.2.7 |
+| Citar lei | Só citar o artigo ou copiar o texto da lei, por si só, não garante ponto. | 5.2.7.1 |
+| Erro repetido | O mesmo erro de ortografia conta uma vez só. | 5.2.7.2 |
+| Nota mínima | **50% dos 20 pontos, ou seja, 10 pontos.** Abaixo disso o candidato é reprovado e, como a prova é eliminatória, sai do concurso. | 5.2.8 (com 5.2.1) |
+| Linhas | **De 20 a 30 linhas.** | 5.2.8.1 |
+| Texto fora do lugar ou além do limite | O trecho escrito fora do local apropriado ou depois da 30ª linha é **desconsiderado**. | 5.2.8.2 |
+| O que conta como linha | Qualquer linha com uma palavra ou sílaba. | 5.2.8.3 |
+| Menos de 20 linhas | **Nota 0.** | 5.2.9 |
+| Como escrever | À mão, em letra legível, com caneta esferográfica de corpo transparente e tinta azul ou preta. | 5.2.10 |
+| Casos de nota zero | Não atender ao conteúdo avaliado (fugir do tema); não haver texto; letra ilegível; usar outro meio que não o do 5.2.10; identificação em local indevido; menos de 20 linhas; não seguir as orientações de transcrição. | 5.2.11; 5.2.9; 5.2.15 |
+| Casos de eliminação | Nome, inscrição ou assinatura fora do campo indicado, que leva à anulação da prova; rasura ou adulteração na identificação das páginas; nota abaixo de 50%; prova não corrigida pelo corte do 5.2.2. | 5.2.13.1; 5.2.15; 5.2.8; 5.2.6 |
+| Folha válida | Só a Folha de Texto Definitivo vale. O rascunho no caderno não é corrigido. | 5.2.12.1 |
+| Consulta | **Proibida a consulta a qualquer fonte, inclusive à legislação.** | 5.2.14 |
+| Título | O item 5.2 não fala em título: não o exige nem o proíbe. | 5.2 (ausência) |
+| Peso na nota final | A classificação final é a soma da objetiva com a discursiva. | 8.2 |
+
+**Conta:** a objetiva vale 60 pontos e a discursiva 20, num total de 80. Logo, a dissertação é **25% da nota final**. Na própria dissertação, a norma-padrão pesa 9 dos 20 pontos, ou **45%**.
+
+## Temas de dissertação geral (Consulplan 2023–2026)
+
+Recorte: Instituto Consulplan, Câmaras, Prefeituras e órgãos municipais. Na coluna de linhas e pontos, "n/i" quer dizer que a página aberta não informa o dado.
+
+| Tema (recorte) | Órgão / cargo / ano | Motivadores | Linhas / pontos / título | Link |
+|---|---|---|---|---|
+| "O impacto do racismo na sociedade e as ações afirmativas de combate às práticas que o constituem" | Câmara de Mariana/MG. Arquivista, Contador e Assessor de Imprensa, todos de nível superior, turno da tarde, Tipo 1. É o mesmo tema do Corregedor Legislativo já registrado. 2025 | Sim, 3: cenas do filme *Estrelas além do tempo*, o caso Rocky Myers (Anistia Internacional) e a Marcha de 1963 (Brasil de Fato) | 20–30 linhas / 30 pts. O caderno do Contador **não exige título**. | [Arquivista](https://arquivos.qconcursos.com/prova/arquivo_prova/132711/instituto-consulplan-2025-camara-de-mariana-mg-arquivista-prova.pdf) · [Contador](https://arquivos.qconcursos.com/prova/arquivo_prova/132710/instituto-consulplan-2025-camara-de-mariana-mg-contador-prova.pdf) · [Assessor de Imprensa](https://arquivos.qconcursos.com/prova/arquivo_prova/132715/instituto-consulplan-2025-camara-de-mariana-mg-assessor-de-imprensa-prova.pdf) |
+| "Consciência ambiental e poluição real, possibilidades para um futuro sustentável" | **Câmara de Itumbiara/GO.** Analista de Controle Interno e Contador do Legislativo, de nível superior, turno da manhã, Tipo 1. Prova em 07/12/2025 | Sim, 4: uma charge, ONU News (conferência sobre plásticos), PNUMA (poluição plástica) e Agência Brasil de 17/10/2025 (microplásticos) | 20–30 linhas / 30 pts / título n/i | [Analista de Controle Interno](https://arquivos.qconcursos.com/prova/arquivo_prova/144657/instituto-consulplan-2025-camara-de-itumbiara-go-analista-de-controle-interno-prova.pdf) · [Contador](https://arquivos.qconcursos.com/prova/arquivo_prova/151177/instituto-consulplan-2025-camara-de-itumbiara-go-contador-legislativo-prova.pdf) · [Edital](https://arquivos.qconcursos.com/regulamento/arquivo/94211/camara-de-itumbiara-go-2025-edital-n-1-edital.pdf) |
+| "O consumo excessivo de ultraprocessados como desafio para a promoção da saúde" | Prefeitura de Viana/ES, nível superior do quadro geral (Edital 001/2025), turno da manhã. Prova em 08/02/2026 | Sim. O padrão de resposta cita os textos, mas não os reproduz. | 20–30 linhas / 30 pts (itens 5.2.1 e 5.2.9.1 do edital 001; o item 5.2.1.1 fala em "tema da atualidade") / título n/i | [Padrão de resposta (viana.es.gov.br)](https://viana.es.gov.br/uploads/documento/20260406145639-concurso-edital-001-2025-padrao-de-resposta-prova-dis.pdf) · [Edital 001](https://viana.es.gov.br/uploads/documento/20251126105135-concurso-edital-001-2025.pdf) |
+| "Os desafios para a preservação ambiental em meio à cultura do descarte" | Prefeitura de Viana/ES, nível superior do quadro geral, turno da tarde. Prova em 08/02/2026 | Sim (idem) | 20–30 linhas / 30 pts / título n/i | idem |
+| "Desafios para a permanência de alunos com deficiência na escola" | Prefeitura de Viana/ES, Magistério de nível superior, turno da manhã. Prova em 08/02/2026 | Sim (não reproduzidos) | n/i (não abri o edital do magistério) | [Padrão de resposta (viana.es.gov.br)](https://viana.es.gov.br/uploads/documento/20260406145746-concurso-edital-001-2025-padrao-de-resposta-prova-dis.pdf) |
+| "A importância da educação antirracista para o fortalecimento da identidade de estudantes negros" | Prefeitura de Viana/ES, Magistério de nível superior, turno da tarde. Prova em 08/02/2026 | Sim (não reproduzidos) | n/i | idem |
+| Medidas necessárias diante do avanço da inteligência artificial | Prefeitura de São João Nepomuceno/MG, Advogado, nível superior. 2024 | Sim, 3: trecho de livro sobre IA e responsabilidade civil, artigo do Conjur (2024) sobre regulação e charge sobre fake news | 30 linhas / pts n/i / título n/i | [voceconcursado 443255](https://voceconcursado.com.br/questoes-discursivas/443255/?sqd_layout=novo) |
+| A preservação e a importância da ética diante do estabelecimento da inteligência artificial | PRODABEL (empresa municipal de BH), Analista, nível superior. 2024 | Sim, 3: Migalhas (2023), Agência Brasil (2023) e uma imagem | 30 linhas / pts n/i / título n/i | [voceconcursado 443173](https://voceconcursado.com.br/questoes-discursivas/443173/?sqd_layout=novo) |
+| "A escola do futuro e o futuro da escola" (IA, currículo, educação coletiva) | Prefeitura de Uberlândia/MG, Professor. 2025 | Sim, 3: Exame, SciELO e frase de António Nóvoa | 30 linhas na página. O edital prevê 20–30 linhas, 30 pts e mínimo de 60% (itens 5.2.7, 5.2.9 e 5.2.9.1). | [voceconcursado 531887](https://voceconcursado.com.br/questoes-discursivas/531887/?sqd_layout=novo) · [Edital](https://arquivos.qconcursos.com/regulamento/arquivo/92883/prefeitura-de-uberlandia-mg-2025-edital-n-1-edital.pdf) |
+| Continuar as discussões e promover práticas inclusivas de acessibilidade na escola | Prefeitura de Uberlândia/MG, Analista Pedagógico, nível superior. 2025 | Sim, 3: Revista Educação Pública, Nova Escola e uma imagem | idem | [voceconcursado 531885](https://voceconcursado.com.br/questoes-discursivas/531885/?sqd_layout=novo) |
+| A importância do domínio da linguagem para adequação aos ambientes em que estamos inseridos | Prefeitura de São João Nepomuceno/MG, Escriturário, **nível médio**. 2024 | Sim, 3: g1 sobre "internetês", trecho de Celso Cunha e uma tirinha | 30 linhas / pts n/i | [voceconcursado 443252](https://voceconcursado.com.br/questoes-discursivas/443252/?sqd_layout=novo) |
+| "Insegurança alimentar, enfrentamentos e possibilidades: um mundo em alerta" (agronegócio, crise climática, desperdício) | Câmara de Belo Horizonte/MG, Técnico Legislativo II, **nível médio**. 2024 | Não conferido | Não conferido | [Padrão de resposta (cmbh.mg.gov.br)](https://cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/06/padrao_de_resposta_-_discursiva_todos_os_cargos.pdf) |
+| *Fora do recorte municipal:* proteção à propriedade intelectual como direito fundamental | TJ-RO, Técnico Judiciário. 2025 | Sim, 3: Migalhas, DW/UOL e Agência Senado | 30 linhas | [voceconcursado 531846](https://voceconcursado.com.br/questoes-discursivas/531846/?sqd_layout=novo) |
+
+**Totais:**
+- São **12 temas municipais com link**. Dez são de nível superior e dois de nível médio (São João Nepomuceno, Escriturário, e CMBH, TL II).
+- Oito são de **tema geral em sentido estrito**: Mariana, Itumbiara, os dois de Viana do quadro geral, os dois de IA (São João Nepomuceno e PRODABEL), a linguagem (São João Nepomuceno) e a insegurança alimentar (CMBH). **Seis** deles são de nível superior.
+- Os outros quatro são temas sociais com recorte escolar, aplicados a cargos da Educação: Viana Magistério (2) e Uberlândia (2).
+- A tabela de "Temas de discursiva" de 17/11 continua valendo para os temas **técnicos**: Araraquara, Poços e BH. Esses não servem de modelo para Cristalina.
+
+**Conferência de Mariana:** o tema de racismo e ações afirmativas registrado em 17/11 está **confirmado**. Abri três cadernos do mesmo turno da tarde e todos trazem o mesmo tema, as mesmas regras de 20–30 linhas e 30 pontos e os mesmos três motivadores. Não consegui reabrir o caderno do próprio Corregedor (ver abaixo).
+
+## Inferências
+- **INFERÊNCIA: em Cristalina, os três Analistas devem receber o mesmo tema.** O tema não terá nada de RH, contabilidade ou TI. Base: o item 5.2.1 dá a mesma composição para os três, e os três fazem a prova no mesmo turno (item 6.1). Em Mariana, quatro cargos da tarde tiveram o mesmo tema; em Itumbiara, dois cargos da manhã também.
+- **INFERÊNCIA: a proposta deve trazer de 3 a 4 textos motivadores**, entre notícia (Agência Brasil, ONU, g1), artigo e uma charge, tirinha ou imagem. O tema deve vir como frase nominal com recorte de "desafios", "importância", "medidas" ou "possibilidades". Base: todos os temas acima cujo formato foi conferido.
+- **INFERÊNCIA: os motivadores costumam ser recentes, de até uns 2 meses antes da prova.** Base: em Itumbiara, a notícia da Agência Brasil é de 17/10/2025 e a prova foi em 07/12/2025; em Mariana, as fontes foram acessadas em abril de 2025. Por isso, notícias de out–nov/2026 merecem atenção.
+- **INFERÊNCIA: a grade de Cristalina segue o modelo "macro com pontos fixos + micro com desconto"**, como Uberlândia e Viana, e não o de faixas de Itumbiara e Mariana. Base: comparação do item 5.2.7 de Cristalina com os editais de Uberlândia e Itumbiara e com os cadernos de Mariana. Consequências práticas:
+  - Com 0,50 por erro, **4 erros de estrutura sintática já zeram esse item**, que vale 2 pontos.
+  - A gramática responde por 45% da nota.
+- **INFERÊNCIA: é melhor não pôr título.** Base: o edital de Cristalina não pede título, e o caderno de Mariana, da mesma banca, diz que não é exigido. Se houver título, a linha dele provavelmente conta como linha escrita (item 5.2.8.3), mas isso não está confirmado.
+- **INFERÊNCIA: num tema geral, citar lei só ajuda como apoio a um argumento** (por exemplo, a Lei 10.639/2003 ou a Lei Brasileira de Inclusão). Base: item 5.2.7.1 e o padrão de Viana Magistério, que lista a Lei 10.639 só como aspecto "desejável".
+- **INFERÊNCIA: em 2025–2026 a Consulplan deu preferência a temas socioambientais e de direitos.** Os grupos que se repetem são meio ambiente (2), IA e tecnologia (3), igualdade racial (2), inclusão de pessoas com deficiência (2) e saúde e alimentação (2). Base: a tabela acima. A amostra é pequena (12 temas), e não achei proposta de 2023.
+
+## Não consegui abrir
+- **Caderno do Corregedor Legislativo de Mariana 2025** (`arquivos.qconcursos.com/.../132714/...corregedor-legislativo-prova.pdf`): a permissão não foi respondida a tempo. Conferi o tema pelos outros três cadernos do mesmo turno.
+- **Edital 002/2025 de Viana (Magistério):** não abri. Linhas e pontos do magistério ficaram sem conferência. O arquivo do padrão de resposta do magistério tem "edital-001" no nome, mas, segundo o [Ache Concursos](https://www.acheconcursos.com.br/noticias/prefeitura-viana-es-aplica-provas-487-vagas-consultar-local-87607), o magistério é o edital 02. Isso não foi conferido.
+- **Caderno de Técnico Legislativo II da CMBH 2024:** não reabri nesta rodada. Os motivadores e as linhas da redação ficaram sem conferência.
+- **Cadernos de Uberlândia** (qconcursos 141127 e 141129): não abri. Usei as páginas do voceconcursado, que não informam pontos nem título.
+- **Blog do CEISC sobre a redação da Consulplan:** cita TJM-MG 2021 e Câmara de Parauapebas 2022, mas os temas estão só em imagem. Além disso, ficam fora da janela 2023–2026. [link](https://ceisc.com.br/blog/post/prova-de-redacao-da-banca-instituto-consulplan-o-que-voce-precisa-saber-para-se-preparar)
+- **Propostas de 2023:** nenhuma busca devolveu proposta de dissertação geral da Consulplan aplicada em 2023.
+- **Site do Instituto Consulplan:** não tentei, porque segue sem permissão desde 18/11.
+
+## Recomendação para DISC-1
+
+Seis eixos de tema prováveis para treinar dissertação de 20 a 30 linhas, com 3 ou 4 motivadores e sem título:
+
+1. **Meio ambiente e sustentabilidade:** lixo, plástico, cultura do descarte, crise climática e uso da água.
+   - Por quê: é o tema da prova da Consulplan mais próxima de Cristalina (Câmara de Itumbiara/GO, dez/2025) e também saiu em Viana. INFERÊNCIA extra: Cristalina é polo do agronegócio e da irrigação, o que torna plausível um recorte sobre água, agro e clima, como o da insegurança alimentar em BH.
+2. **Tecnologia e inteligência artificial:** ética, regulação, trabalho, dependência tecnológica e desinformação.
+   - Por quê: aparece em 3 de 12 temas (São João Nepomuceno, PRODABEL e Uberlândia). É o grupo mais frequente.
+3. **Igualdade racial, racismo e ações afirmativas.**
+   - Por quê: saiu em Mariana 2025 (Câmara, nível superior) e em Viana 2026. O próprio edital de Cristalina tem reserva de vagas e heteroidentificação.
+4. **Inclusão e acessibilidade da pessoa com deficiência:** barreiras físicas e atitudinais, permanência e mercado de trabalho.
+   - Por quê: saiu duas vezes (Viana e Uberlândia), embora com recorte escolar. Para o Analista de RH, pode-se treinar o recorte "inclusão no trabalho".
+5. **Saúde pública e alimentação:** ultraprocessados, insegurança alimentar, desperdício e saúde mental.
+   - Por quê: saiu em Viana (superior, 2026) e na CMBH (2024). É tema recorrente na agenda pública.
+6. **Linguagem, comunicação e cidadania:** desinformação e fake news, uso adequado da linguagem e participação.
+   - Por quê: a base é mais fraca. Há o tema da linguagem do Escriturário de São João Nepomuceno e as charges e textos sobre fake news e desinformação em São João Nepomuceno (Advogado) e na PRODABEL. Serve para cobrir o tipo "linguagem e sociedade" que a banca já usou.
+
+**Prioridade de treino:** eixos 1 e 2 primeiro, depois 3 e 4, e por último 5 e 6. Em toda redação corrigida, contar os erros pela grade do item 5.2.7: estrutura sintática a 0,50 por erro e os demais a 0,25. Treinar com notícias de out–nov/2026.
