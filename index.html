@@ -4850,16 +4850,25 @@ function _dataBR(d){ var p=d.split('-'); var dt=new Date(d+'T12:00:00'); return 
 function verCronograma(){
   var c=_cronoConc(); if(!c||!c.plano) return;
   var hoje=TODAY(), ov=document.getElementById('crono-ov');
+  // redesenho (ex.: marcou uma tarefa com a tela aberta): mantém a pasta aberta e a posição da rolagem
+  var redesenho=ov.style.display==='block', pasta=ov.querySelector('.crono-atras'), aberta=!!(pasta&&pasta.open), rolagem=ov.scrollTop;
   var html='<div class="rs-box"><div class="rs-top"><button class="btn btn-ghost btn-sm" onclick="fecharCronograma()">← Voltar</button>'
-    +'<div style="flex:1"><div class="rs-tit">📅 Cronograma completo</div><div class="rs-mat">'+escLei(c.plano.descricao||'')+'</div></div></div><div class="rs-corpo">';
-  var sem='';
-  c.plano.dias.forEach(function(dia){
+    +'<div style="flex:1"><div class="rs-tit">📅 Cronograma completo</div><div class="rs-mat" id="crono-resumo"></div></div></div><div class="rs-corpo">';
+  // dias que já passaram ficam recolhidos; a tela abre em hoje
+  var dias=c.plano.dias.slice().sort(function(a,b){return a.d<b.d?-1:a.d>b.d?1:0;});
+  var sem='', passados=dias.filter(function(d){return d.d<hoje;}).length, feitas=0, total=0;
+  dias.forEach(function(dia, k){
+    if(k===0 && passados) html+='<details class="crono-atras"'+(aberta?' open':'')+'><summary>📁 '+passados+' dia(s) anteriores — toque para ver</summary>';
     if(dia.semana && dia.semana!==sem){ sem=dia.semana; html+='<div class="rs-h3" style="margin-top:18px">'+escLei(sem)+'</div>'; }
     var n=dia.t.filter(function(t,i){return _feito(c,dia.d,i);}).length;
+    dia.t.forEach(function(t,i){ if(!t.extra && dia.d>=hoje){ total++; if(_feito(c,dia.d,i)) feitas++; } });
     html+='<div class="crono-bloco'+(dia.d===hoje?' hoje':'')+'" id="cd-'+dia.d+'"><div class="crono-dia">'+_dataBR(dia.d)+(dia.d===hoje?' · HOJE':'')+' — '+escLei(dia.titulo||'')+' <span class="ct-min">'+n+'/'+dia.t.length+'</span></div>'
       +dia.t.map(function(t,i){ return _tarefaHtml(c,dia.d,t,i); }).join('')+'</div>';
+    if(passados && k===passados-1) html+='</details>';
   });
   ov.innerHTML=html+'</div></div>'; ov.style.display='block'; document.body.style.overflow='hidden';
+  var rs=document.getElementById('crono-resumo'); if(rs) rs.textContent='De hoje até a prova: '+feitas+'/'+total+' tarefas feitas';
+  if(redesenho){ ov.scrollTop=rolagem; return; }
   var el=document.getElementById('cd-'+hoje); if(el) setTimeout(function(){ el.scrollIntoView({block:'start'}); },30);
 }
 function fecharCronograma(){ var ov=document.getElementById('crono-ov'); if(ov){ ov.style.display='none'; ov.innerHTML=''; } document.body.style.overflow=''; }
