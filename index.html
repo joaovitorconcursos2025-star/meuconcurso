@@ -981,6 +981,7 @@ u{text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:
         <div class="res-item"><div class="res-val" style="color:var(--red)" id="res-erros">0</div><div class="res-lbl">Erros</div></div>
         <div class="res-item"><div class="res-val" style="color:var(--blue)" id="res-liq">0</div><div class="res-lbl">Líquido</div></div>
       </div>
+      <div id="res-resumo" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:10px"></div>
       <div style="display:flex;gap:10px;justify-content:center">
         <button class="btn btn-primary" onclick="startSession()">Nova Sessão</button>
         <button class="btn btn-ghost" onclick="goTo('dashboard',nbBtn('dashboard'))">Dashboard</button>
@@ -2398,6 +2399,17 @@ function showResultado() {
   document.getElementById('res-erros').textContent=erros;
   document.getElementById('res-liq').textContent=corr-erros;
   if(session.mode==='somente_erros') _autoMarcarErros(session.qs, corr+erros);
+  var rr=document.getElementById('res-resumo'), html='';
+  if(rr && session.resumo){
+    var _t=topicos.find(function(t){return t.id===session.resumo[0];});
+    var _s=_t&&session.resumo[1]?(_t.subtopicos||[]).find(function(s){return s.id===session.resumo[1];}):null;
+    if(_t){
+      var _v=_vizinhosResumo(_t,_s);
+      html='<button class="btn btn-ghost" onclick="abrirResumo('+_argsResumo(session.resumo)+')">📘 Rever este resumo</button>'
+        +(_v.prox?'<button class="btn btn-primary" onclick="abrirResumo('+_argsResumo(_v.prox)+')">Próximo resumo →</button>':'');
+    }
+  }
+  if(rr) rr.innerHTML=html;
   session=null;
   renderDash(); // atualiza IA e plano do dia
   renderPlanoDia(); // garante atualização do plano
@@ -4730,12 +4742,7 @@ function abrirResumo(topId, subId){
   var mat=materias.find(function(m){return m.id===top.materiaId;});
   var qs=questionsDoConcurso().filter(function(q){ return q.topico===top.id && (!sub || q.subtopico===sub.id); });
   var ls=leisDoTopico(top.id);
-  // irmãos (para "próximo")
-  var irmaos=[];
-  if(sub){ (top.subtopicos||[]).forEach(function(s){ if(s.resumo) irmaos.push([top.id,s.id]); }); }
-  else { topicos.filter(function(t){return t.concursoId===top.concursoId&&t.materiaId===top.materiaId&&t.resumo;}).forEach(function(t){ irmaos.push([t.id,null]); }); }
-  var pos=irmaos.findIndex(function(x){return x[0]===top.id&&x[1]===(sub?sub.id:null);});
-  var prox=pos>=0&&pos<irmaos.length-1?irmaos[pos+1]:null;
+  var viz=_vizinhosResumo(top, sub);
   var ov=document.getElementById('resumo-ov');
   ov.innerHTML='<div class="rs-box">'
     +'<div class="rs-top"><button class="btn btn-ghost btn-sm" onclick="fecharResumo()">← Voltar</button>'
@@ -4743,12 +4750,30 @@ function abrirResumo(topId, subId){
     +'<div class="rs-tit">📘 '+escLei(sub?sub.nome:top.nome)+'</div>'+(sub?'<div class="rs-mat">'+escLei(top.nome)+'</div>':'')+'</div></div>'
     +'<div class="rs-corpo" id="rs-corpo">'+mdParaHtml(txt)+'</div>'
     +'<div class="rs-acoes">'
-      +(qs.length?'<button class="btn btn-primary" onclick="fecharResumo();iniciarPorTopico(\''+top.id+'\''+(sub?',\''+sub.id+'\'':'')+')">🎯 Fazer as '+qs.length+' questões</button>':'')
+      +(qs.length?'<button class="btn btn-primary" onclick="fazerQuestoesDoResumo(\''+top.id+'\','+(sub?'\''+sub.id+'\'':'null')+')">🎯 '+(qs.length===1?'Fazer a questão':'Fazer as '+qs.length+' questões')+'</button>':'')
       +(ls.length?'<button class="btn btn-ghost" onclick="fecharResumo();abrirLeiDoTopico(\''+top.id+'\')">📜 Ler a lei</button>':'')
-      +(prox?'<button class="btn btn-ghost" onclick="abrirResumo(\''+prox[0]+'\','+(prox[1]?'\''+prox[1]+'\'':'null')+')">Próximo resumo →</button>':'')
+      +(viz.ant?'<button class="btn btn-ghost" onclick="abrirResumo('+_argsResumo(viz.ant)+')">← Resumo anterior</button>':'')
+      +(viz.prox?'<button class="btn btn-ghost" onclick="abrirResumo('+_argsResumo(viz.prox)+')">Próximo resumo →</button>':'')
     +'</div></div>';
   ov.style.display='block'; ov.scrollTop=0;
   document.body.style.overflow='hidden';
+}
+// Resumo anterior/próximo: entre os subtópicos do tópico, ou entre os tópicos da matéria
+function _vizinhosResumo(top, sub){
+  var irmaos=[];
+  if(sub){ (top.subtopicos||[]).forEach(function(s){ if(s.resumo) irmaos.push([top.id,s.id]); }); }
+  else { topicos.filter(function(t){return t.concursoId===top.concursoId&&t.materiaId===top.materiaId&&t.resumo;}).forEach(function(t){ irmaos.push([t.id,null]); }); }
+  var pos=irmaos.findIndex(function(x){return x[0]===top.id&&x[1]===(sub?sub.id:null);});
+  return { ant: pos>0?irmaos[pos-1]:null, prox: pos>=0&&pos<irmaos.length-1?irmaos[pos+1]:null };
+}
+function _argsResumo(x){ return '\''+x[0]+'\','+(x[1]?'\''+x[1]+'\'':'null'); }
+// "Fazer as questões" do resumo: abre a sessão direto e, no fim, oferece voltar ao resumo ou seguir para o próximo
+function fazerQuestoesDoResumo(topId, subId){
+  var qs=questionsDoConcurso().filter(function(q){ return q.topico===topId && (!subId || q.subtopico===subId); });
+  if(!qs.length){ toast('Este resumo ainda não tem questões.'); return; }
+  fecharResumo();
+  abrirSessao(qs,'resumo');
+  session.resumo=[topId, subId||null];
 }
 function fecharResumo(){ var ov=document.getElementById('resumo-ov'); if(ov){ ov.style.display='none'; ov.innerHTML=''; } document.body.style.overflow=''; }
 
