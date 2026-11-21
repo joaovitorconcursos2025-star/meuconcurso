@@ -1732,6 +1732,33 @@ function _autoMarcarCronograma(q){
   }catch(e){ console.error('[cronograma auto]', e); }
 }
 
+// Tarefa "🔴 erros" do cronograma: terminar uma sessão de erros (Revisar tudo ou modo Somente Erros)
+// com pelo menos min(5, tamanho) respondidas nela marca uma. Hoje tem preferência; senão a atrasada mais antiga.
+function _autoMarcarErros(qs, resp){
+  try{
+    if(!qs||!qs.length) return;
+    var hoje=TODAY();
+    if(!(resp >= Math.min(5, qs.length))) return;   // resp = respondidas NESTA sessão (abrir e encerrar sem responder não conta)
+    var c=concursos.find(function(x){return x.id===qs[0].concursoId;});
+    if(!c||!c.plano||!(c.plano.dias||[]).length) return;
+    var feito=c.planoFeito=c.planoFeito||{}, alvo=null;
+    c.plano.dias.forEach(function(d){
+      if(d.d>hoje) return;
+      (d.t||[]).forEach(function(t,i){
+        if(t.tipo!=='erros') return;
+        var f=(feito[d.d]||[])[i];
+        if(f||f===0) return;                                    // já feita, ou desmarcada à mão
+        if(d.d===hoje){ if(!alvo||alvo.d!==hoje) alvo={d:d.d,i:i,t:t}; }
+        else if(!alvo) alvo={d:d.d,i:i,t:t};
+      });
+    });
+    if(!alvo) return;
+    var a=(feito[alvo.d]||[]).slice(); a[alvo.i]='auto:'+hoje; feito[alvo.d]=a;
+    save();
+    if(typeof toast==='function') toast('✅ Cronograma: tarefa marcada ('+String(alvo.t.txt||'').slice(0,50)+')');
+  }catch(e){ console.error('[cronograma erros]', e); }
+}
+
 function aplicarRevisao(q, resultado) {
   var hoje = TODAY();
   if(!q.vezesRespondida && q.primeiraResp==null) q.primeiraResp = resultado==='acerto'?1:0;   // 1ª tentativa (usada no 📈 Minhas chances)
@@ -2370,6 +2397,7 @@ function showResultado() {
   document.getElementById('res-corr').textContent=corr;
   document.getElementById('res-erros').textContent=erros;
   document.getElementById('res-liq').textContent=corr-erros;
+  if(session.mode==='somente_erros') _autoMarcarErros(session.qs, corr+erros);
   session=null;
   renderDash(); // atualiza IA e plano do dia
   renderPlanoDia(); // garante atualização do plano
