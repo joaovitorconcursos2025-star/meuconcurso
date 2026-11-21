@@ -2,9 +2,22 @@
   "prova": "2026-12-20",
   "atualizado": "2026-11-21",
   "regras": {
-    "max_questoes_por_noite": 40,
-    "um_pacote_por_noite_por_frente": true,
-    "max_questoes_bacen_por_noite": 15
+    "min_questoes_por_materia_por_noite": 20,
+    "materias_objetivas": [
+      "Língua Portuguesa",
+      "Raciocínio Lógico Matemático",
+      "Informática Básica",
+      "Direito Administrativo e Constitucional",
+      "Legislação Específica",
+      "Conhecimentos do Cargo · Analista de RH",
+      "Conhecimentos do Cargo · Técnico Parlamentar"
+    ],
+    "max_questoes_bacen_por_noite": 15,
+    "pacotes_por_noite": {
+      "cristalina": "1 por matéria objetiva (skill esteira-questoes-edital)",
+      "bacen": "1 (um por cargo só na rodada do edital)"
+    },
+    "qualidade_antes_da_meta": true
   },
   "banco_atual": {
     "legislacao_especifica": {
@@ -276,6 +289,34 @@
   },
   "fila": [
     {
+      "id": "ESTEIRA-1",
+      "prioridade": 1,
+      "papel": "pesquisador → elaborador → revisor → engenheiro",
+      "frente": "cristalina",
+      "tarefa": "Toda rodada: seguir equipe/skills/esteira-questoes-edital/SKILL.md em TODAS as matérias objetivas, mínimo 20 questões por matéria. Tópico de cada matéria: acerto < 50% no último relatório do mentor fura a fila; senão, o de menos questões no app. A lista 'topicos' abaixo é a ordem sugerida para Português, Raciocínio Lógico e Direito.",
+      "topicos": [
+        "Língua Portuguesa › Pontuação (rodada de 21/11 feita na sessão com o João; completar até 10)",
+        "Língua Portuguesa › Compreensão e interpretação de textos",
+        "Língua Portuguesa › Concordância verbal e nominal",
+        "Língua Portuguesa › Crase",
+        "Língua Portuguesa › Regência verbal e nominal",
+        "Raciocínio Lógico Matemático › Princípio da regressão ou reversão",
+        "Língua Portuguesa › Sintaxe da oração e do período",
+        "Língua Portuguesa › Coesão e coerência",
+        "Língua Portuguesa › Emprego das classes de palavras",
+        "Direito Administrativo e Constitucional › CF: organização do Estado",
+        "Raciocínio Lógico Matemático › Regra de três simples e composta",
+        "Raciocínio Lógico Matemático › Razões especiais",
+        "Língua Portuguesa › Significação das palavras",
+        "Língua Portuguesa › Figuras de linguagem",
+        "Língua Portuguesa › Tipologia e gênero textual",
+        "Língua Portuguesa › Semântica e estilística",
+        "Raciocínio Lógico Matemático › Sequências lógicas (números, letras, figuras)",
+        "Raciocínio Lógico Matemático › Lógica dedutiva, argumentativa e quantitativa"
+      ],
+      "status": "em andamento"
+    },
+    {
       "id": "PLANO-1",
       "prioridade": 1,
       "papel": "engenheiro_app",
@@ -286,7 +327,7 @@
       "id": "LE-1",
       "prioridade": 9,
       "papel": "elaborador",
-      "tarefa": "Legislação Específica: +30 questões por noite até chegar a 60 da Lei Orgânica, 50 do Regimento Interno e 40 do Estatuto. Cobrir capítulos ainda sem questão antes de repetir artigo. Priorizar: Câmara e processo legislativo (LO arts. 18-56), Prefeito (57-66), servidores (83), Mesa/Comissões/reuniões/votação (RI), provimento, estágio probatório (20-A a 20-Y), vantagens, férias, licenças e regime disciplinar (Estatuto).",
+      "tarefa": "Legislação Específica: mínimo 20 questões por noite (dentro da Esteira, mantendo o confere.py) até chegar a 60 da Lei Orgânica, 50 do Regimento Interno e 40 do Estatuto. Cobrir capítulos ainda sem questão antes de repetir artigo. Priorizar: Câmara e processo legislativo (LO arts. 18-56), Prefeito (57-66), servidores (83), Mesa/Comissões/reuniões/votação (RI), provimento, estágio probatório (20-A a 20-Y), vantagens, férias, licenças e regime disciplinar (Estatuto).",
       "status": "concluída em 20/11/2026: LO 61/60, RI 52/50, Estatuto 41/40 (154 questões). Pacote cristalina-legislacao-especifica-20261120. Não usar LO 25, LO 41/42, RI 124, RI 193, RI 28/31, ADT art. 2º. Reserva para revisão futura: RI 214, RI 152, LO 96 (concorrência x Lei 14.133)."
     },
     {
@@ -322,7 +363,7 @@
       "prioridade": 2,
       "papel": "analista_banca",
       "tarefa": "Coletar questões REAIS da Consulplan por tópico do edital (com órgão, cargo, ano e link da prova/gabarito oficial), começando por Conhecimentos do Cargo de RH e do Técnico Parlamentar. Só entram com gabarito oficial conferido.",
-      "status": "19/11: gabarito oficial pós-recursos de Cotia 2024 (Assistente de Serviço de Pessoal) achado no site da Câmara; Q35 D, Q36 C, Q37 E (numeração do caderno Branco, cor do caderno inferida, falta confirmar). Araraquara e Mariana sem gabarito oficial acessível: encerrar como inviável salvo liberação do site da Consulplan. Pendente: confirmar cor do caderno de Cotia e mapear Q31-34 e Q38-50. | 20/11: BH 2024 Técnico Legislativo II (Tipo 2 Verde) — caderno e gabarito PRELIMINAR no site da Câmara de BH; Q36-60 mapeadas (11 de processo legislativo/LO), não aptas (sem definitivo). Caratinga (robots), Poços de Caldas (sem permissão), Drive de BH 2017 bloqueado. Recomendação: encerrar a busca de gabarito definitivo até 20/12 salvo liberação do site da Consulplan."
+      "status": "substituída por ESTEIRA-1 em 21/11/2026"
     },
     {
       "id": "DISC-1",
@@ -371,6 +412,7 @@
     }
   ],
   "pacotes_publicados": [
+    "cristalina-portugues-pontuacao-20261121",
     "cristalina-legislacao-especifica-v1",
     "cristalina-legislacao-especifica-20261117",
     "cristalina-legislacao-especifica-20261118",

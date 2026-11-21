@@ -22,9 +22,9 @@ Concurso: Edital nº 1/2026, Instituto Consulplan, prova em 20/12/2026 (Técnico
 - Só entra no app o que está no conteúdo programático do edital (conferir em `equipe/fontes/edital-01-2026.txt` e na Retificação I).
 - Lei municipal: só o texto de `equipe/fontes`. Nada de memória, nada de versão antiga da internet. O Estatuto cobrado é a Lei 1.207/94.
 - Toda questão de lei tem `base` (lei, artigo, trecho literal) e passa no `confere.py` (lei municipal; lei federal: ver Frente 2). Reprovada não entra; não se "ajusta o trecho" para passar.
-- Questão real de prova só entra com banca, órgão, cargo, ano e gabarito oficial conferido. Inédita é marcada como "Inédita · padrão Consulplan" (Bacen: ver Frente 2).
+- Questão real de prova só entra com banca, órgão, cargo, ano e gabarito oficial conferido. Inédita é marcada como "Inédita · padrão Consulplan"; a gêmea da Esteira, feita a partir de prova real com link, como "Inédita · gêmea de prova Consulplan" (Bacen: ver Frente 2).
 - 4 alternativas (A a D), uma correta, gabarito distribuído. (Frente Bacen: 5 alternativas — ver Frente 2.)
-- Um pacote novo por rodada **e por frente**, com id novo (`cristalina-<assunto>-AAAAMMDD`; Bacen: `bcb-<auditor|tecnico>-<assunto>-AAAAMMDD`). Nunca reaproveitar id. Não incluir `plano` no pacote, salvo na tarefa APP-1.
+- Pacotes por rodada: Cristalina 1 por matéria objetiva (Esteira), Bacen 1 — cada um com id novo (`cristalina-<assunto>-AAAAMMDD`; Bacen: `bcb-<auditor|tecnico>-<assunto>-AAAAMMDD`). Nunca reaproveitar id. Não incluir `plano` no pacote, salvo na tarefa APP-1.
 - Tópicos e matérias casam pelo nome exato já existente no app; nome diferente duplica.
 - Antes do push: JSON válido, `checa_scripts.py index.html` sem erro, simulação de `aplicarPacote` duas vezes sem duplicar.
 - Não apagar nem reescrever conteúdo que o João já tem. Não mexer em Firebase, senhas ou regras.
@@ -32,17 +32,21 @@ Concurso: Edital nº 1/2026, Instituto Consulplan, prova em 20/12/2026 (Técnico
 
 ## Rodada padrão
 1. Comandante lê `estado.json`, `diario.md` e `banca.md`.
-2. Distribuidor emite as ordens da noite (no máximo um pacote de conteúdo e uma tarefa de pesquisa **por frente**; na frente Bacen, um pacote por cargo só na rodada do edital; a frente Cristalina é feita primeiro).
+2. Distribuidor emite as ordens da noite (frente Cristalina: **um pacote por matéria objetiva, mínimo 20 questões cada, pela skill da Esteira**; demais frentes: no máximo um pacote e uma tarefa de pesquisa; na frente Bacen, um pacote por cargo só na rodada do edital; a frente Cristalina é feita primeiro).
 3. Analista de banca e Elaborador trabalham em paralelo.
 4. Revisor confere. O que for reprovado volta uma vez ao Elaborador; se reprovar de novo, sai do pacote.
 5. Engenheiro monta, testa e publica.
 6. Comandante atualiza `estado.json` e acrescenta ao topo de `diario.md`: data, o que entrou no app, o que foi barrado e por quê, o que a pesquisa de banca achou, e a recomendação de estudo para o dia.
 
+## Esteira de questões do edital · desde 21/11/2026 (pedido do João)
+Toda rodada segue a skill **`equipe/skills/esteira-questoes-edital/SKILL.md`** (leia inteira antes de começar): pesquisa de provas reais da Consulplan → questões gêmeas → revisor às cegas → `confere_esteira.py` → um pacote por matéria.
+**Meta: no mínimo 20 questões por matéria objetiva por rodada** (Português, Raciocínio Lógico, Informática, Direito Adm. e Constitucional, Legislação Específica, Cargo · Analista de RH, Cargo · Técnico Parlamentar). Qualidade vem antes da meta: o que for barrado sai e é completado na rodada seguinte.
+
 ## Frente 2 — Banco Central (Auditor e Técnico) · desde 19/11/2026
 O João também vai fazer o concurso do Bacen. Situação em 19/11/2026: banca **FGV** contratada em 18/11; edital previsto até **30/12/2026**; prova em 2027; 100 vagas de **Auditor** (antigo Analista, nível superior) e 50 de **Técnico** (nível médio).
 No app já existem os concursos `Banco Central — Auditor` e `Banco Central — Técnico` (pacotes `bcb-auditor-v1` e `bcb-tecnico-v1` em `conteudo.json`), montados como **previsão** a partir do edital de 2024 (Cebraspe) e do padrão FGV.
 
-**Prioridade:** até 20/12/2026 Cristalina vem sempre primeiro; o Bacen usa o que sobrar da rodada (no máximo `regras.max_questoes_bacen_por_noite` questões, contadas dentro de `max_questoes_por_noite`). Depois de 20/12 o Bacen vira a frente principal.
+**Prioridade:** até 20/12/2026 Cristalina vem sempre primeiro; o Bacen usa o que sobrar da rodada (no máximo `regras.max_questoes_bacen_por_noite` questões, só depois de as matérias de Cristalina terem as suas 20). Depois de 20/12 o Bacen vira a frente principal.
 
 **Regras próprias desta frente (as demais regras gerais continuam valendo):**
 - **5 alternativas (A a E)**, uma correta, gabarito distribuído. Inédita é marcada `"Inédita · padrão FGV (previsão BCB 2026)"`.
