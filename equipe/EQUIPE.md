@@ -42,6 +42,16 @@ Concurso: Edital nº 1/2026, Instituto Consulplan, prova em 20/12/2026 (Técnico
 Toda rodada segue a skill **`equipe/skills/esteira-questoes-edital/SKILL.md`** (leia inteira antes de começar): pesquisa de provas reais da Consulplan → questões gêmeas → revisor às cegas → `confere_esteira.py` → um pacote por matéria.
 **Meta: no mínimo 20 questões por matéria objetiva por rodada** (Português, Raciocínio Lógico, Informática, Direito Adm. e Constitucional, Legislação Específica, Cargo · Analista de RH, Cargo · Técnico Parlamentar). Qualidade vem antes da meta: o que for barrado sai e é completado na rodada seguinte.
 
+## Tópicos do edital · regra do João (22/11/2026)
+Toda pesquisa e toda questão nascem de **um item literal do conteúdo programático** (Anexo I, conferido na Retificação I, que não mudou estas matérias). A ordem de serviço cita o item com as palavras do edital; o Analista pesquisa provas da Consulplan sobre esse item; o Revisor veta questão que não caiba nele.
+- **Língua Portuguesa** (difere por cargo):
+  - Comum aos dois cargos (prioridade): concordância verbal e nominal; regência verbal e nominal; crase; pontuação; classes de palavras; sintaxe da oração e do período (termos da oração, período composto, classificação das orações); significação das palavras; interpretação de texto.
+  - Só Técnico Parlamentar (Quadro II): fonologia (encontros vocálicos, dígrafos, ortoépia, divisão silábica, prosódia, acentuação, ortografia); estrutura e formação das palavras.
+  - Só Analista de RH (Quadro III): denotação e conotação; figuras; coesão e coerência; tipologia e gênero textual; semântica e estilística.
+- **Raciocínio Lógico Matemático** (igual nos dois): regressão ou reversão; lógica dedutiva, argumentativa e quantitativa; lógica matemática qualitativa; sequências (números, letras, figuras); regra de três simples e composta; razões especiais; análise combinatória e probabilidade; PA e PG; conjuntos (pertinência, inclusão, igualdade, operações); geometria plana e espacial; trigonometria; conjuntos numéricos; equações e inequações de 1º e 2º grau; funções de 1º e 2º grau; geometria analítica; matrizes, determinantes e sistemas lineares; polinômios.
+- **Informática Básica** (igual nos dois): Windows; Word, Excel e PowerPoint (Microsoft 365); redes, Internet e intranet; navegadores **Edge, Firefox e Chrome**; sítios de busca; redes sociais; organização de arquivos, pastas e programas; segurança (malware, antivírus, firewall, anti-spyware). Nada de LibreOffice, Linux ou outro navegador.
+- Fora do edital (não fazer): conhecimentos gerais, LibreOffice, Linux, navegadores não listados. Em caso de dúvida se um assunto cabe no item, não faz e registra no diário.
+
 ## Frente 2 — Banco Central (Auditor e Técnico) · desde 19/11/2026
 O João também vai fazer o concurso do Bacen. Situação em 19/11/2026: banca **FGV** contratada em 18/11; edital previsto até **30/12/2026**; prova em 2027; 100 vagas de **Auditor** (antigo Analista, nível superior) e 50 de **Técnico** (nível médio).
 No app já existem os concursos `Banco Central — Auditor` e `Banco Central — Técnico` (pacotes `bcb-auditor-v1` e `bcb-tecnico-v1` em `conteudo.json`), montados como **previsão** a partir do edital de 2024 (Cebraspe) e do padrão FGV.
