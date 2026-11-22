@@ -40,7 +40,7 @@ Concurso: Edital nº 1/2026, Instituto Consulplan, prova em 20/12/2026 (Técnico
 
 ## Esteira de questões do edital · desde 21/11/2026 (pedido do João)
 Toda rodada segue a skill **`equipe/skills/esteira-questoes-edital/SKILL.md`** (leia inteira antes de começar): pesquisa de provas reais da Consulplan → questões gêmeas → revisor às cegas → `confere_esteira.py` → um pacote por matéria.
-**Meta: no mínimo 20 questões por matéria objetiva por rodada** (Português, Raciocínio Lógico, Informática, Direito Adm. e Constitucional, Legislação Específica, Cargo · Analista de RH, Cargo · Técnico Parlamentar). Qualidade vem antes da meta: o que for barrado sai e é completado na rodada seguinte.
+**Meta (reforçada pelo João em 22/11): TODAS as 7 matérias toda noite, no mínimo 20 questões cada; o que faltar numa noite é compensado na seguinte** (Português, Raciocínio Lógico, Informática, Direito Adm. e Constitucional, Legislação Específica, Cargo · Analista de RH, Cargo · Técnico Parlamentar). Qualidade vem antes da meta: o que for barrado sai e é completado na rodada seguinte.
 
 ## Tópicos do edital · regra do João (22/11/2026)
 Toda pesquisa e toda questão nascem de **um item literal do conteúdo programático** (Anexo I, conferido na Retificação I, que não mudou estas matérias). A ordem de serviço cita o item com as palavras do edital; o Analista pesquisa provas da Consulplan sobre esse item; o Revisor veta questão que não caiba nele.

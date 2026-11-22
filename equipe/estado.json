@@ -14,10 +14,11 @@
     ],
     "max_questoes_bacen_por_noite": 15,
     "pacotes_por_noite": {
-      "cristalina": "obrigatórios toda noite (pedido do João 22/11): Língua Portuguesa, Raciocínio Lógico Matemático e Informática Básica, 20 questões cada pela Esteira; extra se der: Leg. Específica, Direito ou Cargo",
+      "cristalina": "TODAS as 7 matérias objetivas toda noite, mínimo 20 questões cada, pela Esteira (pedido do João 22/11); falta de uma noite é compensada na seguinte",
       "bacen": "1 (um por cargo só na rodada do edital)"
     },
-    "qualidade_antes_da_meta": true
+    "qualidade_antes_da_meta": true,
+    "faltas_a_compensar": {}
   },
   "banco_atual": {
     "legislacao_especifica": {
