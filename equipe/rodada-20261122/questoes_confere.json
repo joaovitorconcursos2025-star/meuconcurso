@@ -1,0 +1,1574 @@
+[
+ {
+  "id": "le22-01",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Carlos, servidor aposentado por invalidez do Município de Cristalina, teve deferida a sua reversão ao serviço ativo, e o ato foi publicado. Considerando o caso, segundo a Lei 1.207/94, o prazo para Carlos entrar em exercício é de",
+  "options": [
+   "5 (cinco) dias, contados da data da posse.",
+   "5 (cinco) dias, contados da data da publicação do ato.",
+   "10 (dez) dias, contados da data da publicação do ato.",
+   "30 (trinta) dias, contados da data da inspeção médica que atestou sua capacidade."
+  ],
+  "correct": 1,
+  "explanation": "Gabarito B. O art. 13, § 1º, fixa em 5 (cinco) dias o prazo para entrar em exercício, contados da data da posse; mas o art. 14 diz: 'Nos casos de reintegração, reversão e aproveitamento, o prazo de que trata o § 1º do artigo anterior será contado da data da publicação do ato'. A erra porque usa o termo inicial da regra geral (posse), afastado pelo art. 14 na reversão. C erra o número de dias (são 5, não 10). D inventa prazo e termo inicial (inspeção médica) que a lei não prevê para o exercício. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 13",
+    "É de 5 (cinco) dias o prazo para o servidor entrar em exercício, contados da data da posse"
+   ],
+   [
+    "est",
+    "Art. 14",
+    "Nos casos de reintegração, reversão e aproveitamento, o prazo de que trata o § 1º do artigo anterior será contado da data da publicação do ato"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 13",
+    "10 (dez)"
+   ],
+   [
+    "est",
+    "Art. 14",
+    "10 (dez)"
+   ],
+   [
+    "est",
+    "Art. 13",
+    "30 (trinta)"
+   ],
+   [
+    "est",
+    "Art. 14",
+    "inspeção médica"
+   ]
+  ]
+ },
+ {
+  "id": "le22-02",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Sobre a reversão, segundo a Lei 1.207/94, analise as afirmativas a seguir.\nI. Será tornada sem efeito a reversão e cassada a aposentadoria do servidor que, dentro do prazo legal, não entrar no exercício do cargo para o qual foi revertido, salvo motivo de força maior devidamente comprovado.\nII. A reversão dá direito à contagem do tempo em que o servidor esteve aposentado para todos os efeitos legais.\nIII. Não se dará reversão ao servidor que contar 70 (setenta) anos de idade.\nEstá correto o que se afirma em",
+  "options": [
+   "I, apenas.",
+   "I e II, apenas.",
+   "I e III, apenas.",
+   "II e III, apenas."
+  ],
+  "correct": 2,
+  "explanation": "Gabarito C. I está correta (art. 24: 'Será tornada sem efeito a reversão e cassada a aposentadoria do servidor que, dentro do prazo legal, não entrar no exercício do cargo para o qual haja sido revertido, salvo motivo de força maior, devidamente comprovado'). III está correta (art. 25: 'Não se dará reversão ao servidor que contar 70 (setenta) anos de idade'). II está errada: o art. 26 só admite a contagem do tempo de aposentadoria 'exclusivamente para nova aposentadoria', não para todos os efeitos. Por isso A (omite III), B (inclui II) e D (inclui II e omite I) erram. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 24",
+    "Será tornada sem efeito a reversão e cassada a aposentadoria do servidor que, dentro do prazo legal, não entrar no exercício do cargo para o qual haja sido revertido, salvo motivo de força maior, devidamente comprovado"
+   ],
+   [
+    "est",
+    "Art. 25",
+    "Não se dará reversão ao servidor que contar 70 (setenta) anos de idade"
+   ],
+   [
+    "est",
+    "Art. 26",
+    "exclusivamente para nova aposentadoria"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 26",
+    "todos os efeitos"
+   ]
+  ]
+ },
+ {
+  "id": "le22-03",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Segundo a Lei 1.207/94, a abertura de vaga ocorrerá na data",
+  "options": [
+   "da publicação da lei que criar o cargo ou do ato que formalizar qualquer das hipóteses de vacância previstas na lei.",
+   "do efetivo afastamento do servidor, ainda que o ato de vacância seja publicado posteriormente.",
+   "da homologação do concurso público destinado ao preenchimento do cargo.",
+   "em que se completarem 30 (trinta) dias da publicação do ato de vacância."
+  ],
+  "correct": 0,
+  "explanation": "Gabarito A. Art. 35: 'A abertura de vaga ocorrerá na data da publicação da lei que criar o cargo ou do ato que formalizar qualquer das hipóteses previstas no artigo 33' (exoneração, demissão, readaptação, recondução, aposentadoria, falecimento e promoção). B troca a publicação pelo afastamento de fato, que a lei não usa. C liga a vaga à homologação do concurso, o que não está no artigo. D cria um prazo de 30 dias inexistente: a vaga se abre na própria data da publicação. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 35",
+    "A abertura de vaga ocorrerá na data da publicação da lei que criar o cargo ou do ato que formalizar qualquer das hipóteses previstas no artigo 33"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 35",
+    "afastamento"
+   ],
+   [
+    "est",
+    "Art. 35",
+    "homologação"
+   ],
+   [
+    "est",
+    "Art. 35",
+    "30 (trinta)"
+   ]
+  ]
+ },
+ {
+  "id": "le22-04",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "A respeito da cessão de servidor para ter exercício em outro órgão ou entidade, segundo a Lei 1.207/94, assinale a afirmativa correta.",
+  "options": [
+   "A cessão somente é admitida para órgãos e entidades do próprio Município de Cristalina.",
+   "O servidor poderá ser cedido para atender a interesse particular, desde que sem prejuízo do serviço.",
+   "Na cessão para cumprimento de convênio, a cedência será sempre com ônus para o Município.",
+   "Na cessão para exercício de função de confiança, a cedência será sem ônus para o Município."
+  ],
+  "correct": 3,
+  "explanation": "Gabarito D. Art. 119, parágrafo único: 'Na hipótese do inciso I deste artigo, a cedência será sem ônus para o Município' — o inciso I é o exercício de função de confiança. A erra: o caput permite cessão a órgãos ou entidades 'dos Poderes da União, dos Estados e dos Municípios'. B erra: as hipóteses são só três (função de confiança, casos previstos em leis específicas e cumprimento de convênio); interesse particular não está entre elas. C erra: nos demais casos o ônus será 'conforme dispuser a Lei ou Convênio', e não sempre do Município. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 119",
+    "O servidor poderá ser cedido para ter exercício em outro órgão ou entidade dos Poderes da União, dos Estados e dos Municípios"
+   ],
+   [
+    "est",
+    "Art. 119",
+    "Na hipótese do inciso I deste artigo, a cedência será sem ônus para o Município e, nos demais casos, conforme dispuser a Lei ou Convênio"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 119",
+    "interesse particular"
+   ],
+   [
+    "est",
+    "Art. 119",
+    "com ônus"
+   ],
+   [
+    "est",
+    "Art. 119",
+    "somente"
+   ]
+  ]
+ },
+ {
+  "id": "le22-05",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Mariana, servidora da Câmara Municipal de Cristalina, foi exonerada a pedido no mês de agosto. Considerando o caso, segundo a Lei 1.207/94, quanto à gratificação natalina, Mariana",
+  "options": [
+   "receberá a gratificação proporcionalmente aos meses de efetivo exercício, calculada sobre a remuneração do mês da exoneração.",
+   "receberá a gratificação proporcional, calculada sobre a média das remunerações percebidas no ano.",
+   "não terá direito à gratificação, que é devida apenas ao servidor em exercício no mês de dezembro.",
+   "receberá a gratificação integral, paga até o dia 20 (vinte) de dezembro, calculada sobre a remuneração do mês da exoneração."
+  ],
+  "correct": 0,
+  "explanation": "Gabarito A. Art. 82: 'O servidor exonerado perceberá a sua gratificação natalina, proporcionalmente aos meses de efetivo exercício, calculada sobre a remuneração do mês da exoneração'. B troca a base de cálculo (não é média anual). C nega um direito que o art. 82 garante ao exonerado. D mistura a data de pagamento da regra geral (art. 81: 'até o dia 20 (vinte) do mês de dezembro') com valor integral, mas para o exonerado o valor é proporcional. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 82",
+    "O servidor exonerado perceberá a sua gratificação natalina, proporcionalmente aos meses de efetivo exercício, calculada sobre a remuneração do mês da exoneração"
+   ],
+   [
+    "est",
+    "Art. 81",
+    "A gratificação natalina será paga até o dia 20 (vinte) do mês de dezembro de cada ano"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 82",
+    "média"
+   ],
+   [
+    "est",
+    "Art. 82",
+    "integral"
+   ]
+  ]
+ },
+ {
+  "id": "le22-06",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Sobre os adicionais de periculosidade e de penosidade, segundo a Lei 1.207/94, assinale a afirmativa correta.",
+  "options": [
+   "São, respectivamente, de dez por cento e de vinte por cento, e não podem ser acumulados.",
+   "São, respectivamente, de vinte por cento e de dez por cento, e podem ser acumulados entre si, mas não com o de insalubridade.",
+   "São, respectivamente, de vinte por cento e de dez por cento, e não são acumuláveis com o de insalubridade nem entre si, cabendo ao servidor optar por um deles.",
+   "São, respectivamente, de quinze por cento e de cinco por cento, cabendo à Administração escolher qual deles será pago."
+  ],
+  "correct": 2,
+  "explanation": "Gabarito C. Art. 87: 'O adicional de periculosidade e penosidade serão respectivamente de vinte por cento e dez por cento'. Art. 88: 'Os adicionais de penosidade, insalubridade e periculosidade não são acumuláveis, cabendo ao servidor optar por um deles'. A inverte os percentuais. B admite acumulação entre periculosidade e penosidade, vedada pelo art. 88. D erra os percentuais (quinze e cinco por cento) e transfere a escolha para a Administração, quando a opção é do servidor. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 87",
+    "O adicional de periculosidade e penosidade serão respectivamente de vinte por cento e dez por cento"
+   ],
+   [
+    "est",
+    "Art. 88",
+    "Os adicionais de penosidade, insalubridade e periculosidade não são acumuláveis, cabendo ao servidor optar por um deles"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 87",
+    "quinze"
+   ],
+   [
+    "est",
+    "Art. 87",
+    "cinco"
+   ],
+   [
+    "est",
+    "Art. 88",
+    "Administração"
+   ]
+  ]
+ },
+ {
+  "id": "le22-07",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Segundo a Lei 1.207/94, NÃO perde o direito a férias o servidor que, no curso do período aquisitivo, tiver gozado",
+  "options": [
+   "licença para tratar de interesse particular por 2 (dois) meses.",
+   "licença para tratamento de saúde por 7 (sete) meses, ainda que descontínuos.",
+   "licença por motivo de doença em pessoa da família por 4 (quatro) meses.",
+   "licença por acidente em serviço por 8 (oito) meses consecutivos."
+  ],
+  "correct": 2,
+  "explanation": "Gabarito C. Art. 100: 'Não terá direito a férias o servidor que, no curso do período aquisitivo, tiver gozado licença para tratar de interesse particular, por qualquer prazo, tratamento de saúde, por acidente em serviço ou por motivo de doença em pessoa da família, por mais de 6 (seis) meses, embora descontínuos'. Em C a licença por doença em pessoa da família durou 4 meses, abaixo do limite de 6, e não tira as férias. A perde: a licença para interesse particular tira as férias 'por qualquer prazo'. B e D perdem: tratamento de saúde e acidente em serviço passaram de 6 meses (e os descontínuos também contam). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 100",
+    "Não terá direito a férias o servidor que, no curso do período aquisitivo, tiver gozado licença para tratar de interesse particular, por qualquer prazo, tratamento de saúde, por acidente em serviço ou por motivo de doença em pessoa da família, por mais de 6 (seis) meses, embora descontínuos"
+   ]
+  ],
+  "ausentes": []
+ },
+ {
+  "id": "le22-08",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Acerca das férias, segundo a Lei 1.207/94, assinale V para as afirmativas verdadeiras e F para as falsas.\n( ) É obrigatória a concessão e o gozo das férias, em um só período, nos 12 (doze) meses subsequentes à data em que o servidor tiver adquirido o direito.\n( ) As férias poderão ser interrompidas a pedido do próprio servidor.\n( ) Vencido o prazo sem que a Administração tenha concedido as férias, incumbe ao servidor, no prazo de 10 (dez) dias, requerer o gozo, sob pena de perda desse direito.\n( ) Recebido o requerimento, a autoridade responsável terá 30 (trinta) dias para despachar.\nA sequência está correta em",
+  "options": [
+   "V, V, F, F.",
+   "V, F, V, F.",
+   "F, F, V, V.",
+   "V, F, V, V."
+  ],
+  "correct": 1,
+  "explanation": "Gabarito B. 1ª V: art. 101, caput. 2ª F: o parágrafo único do art. 101 diz que 'As férias somente poderão ser interrompidas por motivo de calamidade pública, comoção interna ou por motivo de superior interesse público'; não há interrupção a pedido do servidor. 3ª V: art. 103, caput (10 dias, sob pena de perda). 4ª F: o § 1º do art. 103 dá à autoridade 15 (quinze) dias para despachar, marcando o gozo dentro dos sessenta dias seguintes. Logo, V, F, V, F. A erra a 2ª e a 3ª; C erra a 1ª e a 4ª; D erra a 4ª. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 101",
+    "É obrigatória a concessão e gozo das férias, em um só período, nos 12 (doze) meses subsequentes à data em que o servidor tiver adquirido o direito"
+   ],
+   [
+    "est",
+    "Art. 101",
+    "As férias somente poderão ser interrompidas por motivo de calamidade pública, comoção interna ou por motivo de superior interesse público"
+   ],
+   [
+    "est",
+    "Art. 103",
+    "incumbe ao servidor, no prazo de 10 (dez) dias, requerer o gozo das mesmas, sob pena de perda desse direito"
+   ],
+   [
+    "est",
+    "Art. 103",
+    "a autoridade responsável terá de despachar no prazo de 15 (quinze) dias"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 101",
+    "a pedido"
+   ],
+   [
+    "est",
+    "Art. 103",
+    "30 (trinta)"
+   ]
+  ]
+ },
+ {
+  "id": "le22-09",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Sobre a remuneração das férias, segundo a Lei 1.207/94, assinale a afirmativa INCORRETA.",
+  "options": [
+   "O servidor em férias perceberá a remuneração integral, acrescida de um adicional correspondente a 1/3 (um terço) daquela remuneração.",
+   "Os adicionais não percebidos ininterruptamente durante todo o período aquisitivo serão computados proporcionalmente aos meses de sua ocorrência, observados os valores atuais.",
+   "O pagamento da remuneração das férias, por solicitação do servidor, será feito dentro dos 5 (cinco) dias anteriores ao início do gozo.",
+   "O valor de função gratificada não percebido ininterruptamente durante todo o período aquisitivo será computado sempre integralmente, independentemente dos meses de sua ocorrência."
+  ],
+  "correct": 3,
+  "explanation": "Gabarito D. D é a incorreta: o § 1º do art. 105 diz que 'Os adicionais, as gratificações e o valor de função gratificada não percebidos ininterruptamente durante todo o período aquisitivo, serão computados proporcionalmente aos meses de sua ocorrência, observados os valores atuais'. A função gratificada recebida só em parte do período entra, portanto, de forma proporcional, e não integral. Estão corretas: A (art. 105, caput, adicional de 1/3), B (art. 105, § 1º, adicionais proporcionais, observados os valores atuais) e C (art. 105, § 2º, cinco dias anteriores ao início do gozo). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 105",
+    "O servidor em férias perceberá a remuneração integral, acrescida de um adicional correspondente a 1/3 (um terço) daquela remuneração"
+   ],
+   [
+    "est",
+    "Art. 105",
+    "Os adicionais, as gratificações e o valor de função gratificada não percebidos ininterruptamente durante todo o período aquisitivo, serão computados proporcionalmente aos meses de sua ocorrência, observados os valores atuais"
+   ],
+   [
+    "est",
+    "Art. 105",
+    "será feito dentro dos 5 (cinco) dias anteriores ao início do gozo"
+   ]
+  ],
+  "ausentes": []
+ },
+ {
+  "id": "le22-10",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Pedro, ocupante de cargo efetivo no Município de Cristalina, decidiu concorrer ao cargo de deputado estadual. Considerando o caso, segundo a Lei 1.207/94, Pedro",
+  "options": [
+   "terá direito à licença, assegurada a remuneração do cargo efetivo, a partir do registro da candidatura junto à Justiça Eleitoral até 5 (cinco) dias após a realização do pleito.",
+   "terá direito à licença, sem remuneração, a partir do registro da candidatura junto à Justiça Eleitoral até 5 (cinco) dias após a realização do pleito.",
+   "terá direito à licença remunerada desde a escolha em convenção partidária até 10 (dez) dias após a realização do pleito.",
+   "não terá direito à licença, pois ela só é assegurada a quem concorre a cargo eletivo municipal."
+  ],
+  "correct": 0,
+  "explanation": "Gabarito A. Art. 110: o servidor ocupante de cargo efetivo ou de função gratificada 'terá direito a licença para concorrer a cargo eletivo municipal, estadual ou federal, assegurada a remuneração do seu cargo efetivo, a partir do registro da candidatura junto à Justiça Eleitoral, até 5 (cinco) dias após a realização do pleito'. B nega a remuneração assegurada. C troca o termo inicial (convenção) e o final (10 dias). D restringe a licença ao cargo municipal, mas o artigo inclui o estadual e o federal. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 110",
+    "terá direito a licença para concorrer a cargo eletivo municipal, estadual ou federal, assegurada a remuneração do seu cargo efetivo, a partir do registro da candidatura junto à Justiça Eleitoral, até 5 (cinco) dias após a realização do pleito"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 110",
+    "sem remuneração"
+   ],
+   [
+    "est",
+    "Art. 110",
+    "convenção"
+   ],
+   [
+    "est",
+    "Art. 110",
+    "10 (dez)"
+   ]
+  ]
+ },
+ {
+  "id": "le22-11",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Segundo a Lei 1.207/94, suspendem a contagem do tempo de serviço para efeito de apuração do decênio da licença-prêmio as situações a seguir, EXCETO:",
+  "options": [
+   "licença para tratamento da própria saúde superior a 180 (cento e oitenta) dias.",
+   "licença para atividade política.",
+   "pena de suspensão, durante o período de seu cumprimento.",
+   "licença por motivo de doença em pessoa da família de 90 (noventa) dias."
+  ],
+  "correct": 3,
+  "explanation": "Gabarito D. O art. 115 só faz a licença por motivo de doença em pessoa da família suspender a contagem quando for 'superior a 120 (cento e vinte) dias' (inciso II); uma licença de 90 dias não suspende o decênio. Por isso D é a exceção. Suspendem a contagem: A (inciso I, saúde própria acima de 180 dias), B (inciso V, atividade política) e C (inciso VI, suspensão durante o cumprimento). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 115",
+    "II – licença por motivo de doença em pessoa da família, superior a 120 (cento e vinte) dias"
+   ],
+   [
+    "est",
+    "Art. 115",
+    "I – licença para tratamento da própria saúde, superior a 180 (cento e oitenta) dias"
+   ],
+   [
+    "est",
+    "Art. 115",
+    "V – licença para atividade política"
+   ],
+   [
+    "est",
+    "Art. 115",
+    "VI – pena de suspensão, durante o período de seu cumprimento"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 115",
+    "90 (noventa)"
+   ]
+  ]
+ },
+ {
+  "id": "le22-12",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Sobre o pedido de reconsideração e o recurso, segundo a Lei 1.207/94, analise as afirmativas a seguir.\nI. O pedido de reconsideração deverá conter novos argumentos ou provas suscetíveis de reformar o despacho, a decisão ou o ato, e não poderá ser renovado.\nII. Caberá recurso ao Prefeito, como última instância administrativa, podendo ele delegar a decisão aos Secretários Municipais.\nIII. Terá caráter de recurso o pedido de reconsideração quando o prolator do despacho, do ato ou da decisão houver sido o Prefeito.\nEstá correto o que se afirma em",
+  "options": [
+   "I e II, apenas.",
+   "I e III, apenas.",
+   "II e III, apenas.",
+   "I, II e III."
+  ],
+  "correct": 1,
+  "explanation": "Gabarito B. I está correta: art. 132, caput e parágrafo único ('que não poderá ser renovado'). III está correta: art. 133, parágrafo único. II está errada: o art. 133 diz que cabe recurso ao Prefeito como última instância administrativa, 'sendo indelegável sua decisão'. Por isso A, C e D, que incluem II, erram. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 132",
+    "O pedido de reconsideração deverá conter novos argumentos ou provas suscetíveis de reformar o despacho, a decisão ou o ato"
+   ],
+   [
+    "est",
+    "Art. 132",
+    "que não poderá ser renovado"
+   ],
+   [
+    "est",
+    "Art. 133",
+    "Caberá recurso ao Prefeito, como última instância administrativa, sendo indelegável sua decisão"
+   ],
+   [
+    "est",
+    "Art. 133",
+    "Terá caráter de recurso o pedido de reconsideração quando o prolator do despacho, do ato ou da decisão houver sido o Prefeito"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 133",
+    "Secretários"
+   ]
+  ]
+ },
+ {
+  "id": "le22-13",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Segundo a Lei 1.207/94, salvo disposição legal em contrário, o direito de reclamação administrativa prescreve em",
+  "options": [
+   "5 (cinco) anos, a contar do ato ou fato do qual se originar.",
+   "2 (dois) anos, a contar do ato ou fato do qual se originar, e o pedido de reconsideração e o recurso suspendem a prescrição.",
+   "2 (dois) anos, a contar do ato ou fato do qual se originar, e o pedido de reconsideração e o recurso interrompem a prescrição.",
+   "1 (um) ano, a contar do protocolo do pedido de reconsideração."
+  ],
+  "correct": 2,
+  "explanation": "Gabarito C. Art. 135: 'O direito de reclamação administrativa prescreve, salvo disposição legal em contrário, em 2 (dois) anos, a contar do ato ou fato do qual se originar', e o § 2º: 'O pedido de reconsideração e o recurso interrompem a prescrição administrativa'. A erra o prazo (5 anos). B troca 'interrompem' por 'suspendem' — a lei fala em interrupção. D erra o prazo e o termo inicial. Lembrete: o prazo para pedir reconsideração ou recorrer é outro, de 30 dias (art. 134). Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 135",
+    "O direito de reclamação administrativa prescreve, salvo disposição legal em contrário, em 2 (dois) anos, a contar do ato ou fato do qual se originar"
+   ],
+   [
+    "est",
+    "Art. 135",
+    "O pedido de reconsideração e o recurso interrompem a prescrição administrativa"
+   ],
+   [
+    "est",
+    "Art. 134",
+    "O prazo para interposição de pedido de reconsideração, ou de recurso, é de 30 (trinta) dias"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 135",
+    "5 (cinco)"
+   ],
+   [
+    "est",
+    "Art. 135",
+    "suspend"
+   ],
+   [
+    "est",
+    "Art. 135",
+    "1 (um)"
+   ],
+   [
+    "est",
+    "Art. 135",
+    "protocolo"
+   ]
+  ]
+ },
+ {
+  "id": "le22-14",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Sobre a acumulação de cargos, segundo a Lei 1.207/94, analise as afirmativas a seguir.\nI. É vedada a acumulação remunerada de cargos públicos.\nII. As exceções à vedação são as previstas na Constituição Federal e dependem de comprovação escrita da compatibilidade de horários.\nIII. A proibição de acumular restringe-se aos cargos da Administração direta, não alcançando empresas públicas e sociedades de economia mista.\nEstá correto o que se afirma em",
+  "options": [
+   "I e II, apenas.",
+   "I e III, apenas.",
+   "II e III, apenas.",
+   "I, II e III."
+  ],
+  "correct": 0,
+  "explanation": "Gabarito A. I está correta (art. 141, caput). II está correta (§ 1º: 'Excetuam-se da regra deste artigo os casos previstos na Constituição Federal, mediante comprovação escrita da compatibilidade de horários'). III está errada: o § 2º estende a proibição 'a cargos, empregos e funções em autarquias, fundações públicas, empresas públicas, sociedade de economia mista' da União, do Distrito Federal, dos Estados, dos Territórios e dos Municípios. Por isso B, C e D, que incluem III, erram. Modelo: Câmara de Araraquara/SP · Analista em Gestão de Pessoas · 2025 — https://mapastatic.s3.amazonaws.com/67dd5c3de0fe763ab610093b/instituto-consulplan-2025-camara-de-araraquara-sp-analista-em-gestao-de-pessoas-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Analista em Gestão de Pessoas",
+   "ano": "2025",
+   "url": "https://mapastatic.s3.amazonaws.com/67dd5c3de0fe763ab610093b/instituto-consulplan-2025-camara-de-araraquara-sp-analista-em-gestao-de-pessoas-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 141",
+    "É vedada a acumulação remunerada de cargos públicos"
+   ],
+   [
+    "est",
+    "Art. 141",
+    "Excetuam-se da regra deste artigo os casos previstos na Constituição Federal, mediante comprovação escrita da compatibilidade de horários"
+   ],
+   [
+    "est",
+    "Art. 141",
+    "A proibição de acumular estende-se a cargos, empregos e funções em autarquias, fundações públicas, empresas públicas, sociedade de economia mista"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 141",
+    "Administração direta"
+   ]
+  ]
+ },
+ {
+  "id": "le22-15",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "João, servidor municipal de Cristalina, praticou simultaneamente duas infrações disciplinares, uma punível com advertência e outra com suspensão. Considerando o caso, segundo a Lei 1.207/94,",
+  "options": [
+   "aplicam-se cumulativamente as duas penas, uma para cada infração.",
+   "aplica-se apenas a pena mais branda, por ser mais favorável ao servidor.",
+   "a infração maior absorve a menor, que funciona como agravante na gradação da penalidade.",
+   "a infração menor é convertida em multa e somada à pena da infração maior."
+  ],
+  "correct": 2,
+  "explanation": "Gabarito C. Art. 150, parágrafo único: 'No caso de infrações simultâneas, a maior absorve as demais, funcionando estas como agravantes na gradação da penalidade'; e o caput proíbe aplicar 'mais de uma pena disciplinar pela mesma infração'. A erra ao somar as penas. B inverte a regra (prevalece a maior, não a mais branda). D inventa uma conversão em multa que o artigo não prevê. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 150",
+    "No caso de infrações simultâneas, a maior absorve as demais, funcionando estas como agravantes na gradação da penalidade"
+   ],
+   [
+    "est",
+    "Art. 150",
+    "Não poderá ser aplicada mais de uma pena disciplinar pela mesma infração"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 150",
+    "branda"
+   ],
+   [
+    "est",
+    "Art. 150",
+    "multa"
+   ]
+  ]
+ },
+ {
+  "id": "le22-16",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Segundo a Lei 1.207/94, será cassada a aposentadoria e a disponibilidade se ficar provado que o inativo praticou qualquer das condutas a seguir, EXCETO:",
+  "options": [
+   "praticou, na atividade, falta punível com a demissão.",
+   "exerceu atividade privada remunerada após a aposentadoria.",
+   "aceitou ilegalmente cargo ou função pública.",
+   "praticou usura, em qualquer das suas formas."
+  ],
+  "correct": 1,
+  "explanation": "Gabarito B. O art. 159 lista três hipóteses de cassação da aposentadoria e da disponibilidade: I – falta punível com demissão praticada na atividade (A); II – aceitação ilegal de cargo ou função pública (C); III – usura, em qualquer das suas formas (D). O exercício de atividade privada remunerada (B) não está entre elas, por isso é a exceção. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 159",
+    "I – praticou, na atividade, falta punível com a demissão"
+   ],
+   [
+    "est",
+    "Art. 159",
+    "II – aceitou ilegalmente cargo ou função pública"
+   ],
+   [
+    "est",
+    "Art. 159",
+    "III – praticou usura, em qualquer das suas formas"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 159",
+    "atividade privada"
+   ]
+  ]
+ },
+ {
+  "id": "le22-17",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Quanto à competência para aplicar penalidades disciplinares, segundo a Lei 1.207/94, analise as afirmativas a seguir.\nI. O ato de aplicação de penalidade é de competência do Prefeito Municipal.\nII. Poderá ser delegada aos Secretários Municipais a competência para aplicar a pena de demissão.\nIII. Poderá ser delegada aos Secretários Municipais a competência para aplicar as penas de suspensão ou advertência.\nEstá correto o que se afirma em",
+  "options": [
+   "I, apenas.",
+   "II, apenas.",
+   "I e II, apenas.",
+   "I e III, apenas."
+  ],
+  "correct": 3,
+  "explanation": "Gabarito D. Art. 161: 'O ato de aplicação de penalidade é de competência do Prefeito Municipal' (I correta). Parágrafo único: 'Poderá ser delegada competência aos Secretários Municipais para aplicação da pena de suspensão ou advertência' (III correta). A demissão não está entre as penas delegáveis, por isso II está errada. A omite III; B e C incluem II. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 161",
+    "O ato de aplicação de penalidade é de competência do Prefeito Municipal"
+   ],
+   [
+    "est",
+    "Art. 161",
+    "Poderá ser delegada competência aos Secretários Municipais para aplicação da pena de suspensão ou advertência"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 161",
+    "demissão"
+   ]
+  ]
+ },
+ {
+  "id": "le22-18",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Ana, servidora efetiva, ocupava função de confiança e sofreu a pena de destituição por falta de exação no seu desempenho. Considerando o caso, segundo a Lei 1.207/94, Ana",
+  "options": [
+   "não perderá o cargo efetivo e ficará impossibilitada de ser investida em funções dessa natureza durante 2 (dois) anos, a contar do ato de punição.",
+   "não perderá o cargo efetivo e ficará impossibilitada de ser investida em funções dessa natureza durante 5 (cinco) anos, a contar do ato de punição.",
+   "perderá também o cargo efetivo, pois a destituição de função de confiança implica demissão.",
+   "não perderá o cargo efetivo e poderá ser investida em nova função de confiança imediatamente, a critério da autoridade."
+  ],
+  "correct": 0,
+  "explanation": "Gabarito A. Art. 160, parágrafo único: 'A aplicação da penalidade deste artigo não implicará em perda do cargo efetivo'. Art. 163: a destituição 'implica na impossibilidade de ser o condenado investido em funções dessa natureza, durante o período de dois anos a contar do ato de punição'. B erra o prazo (são dois anos). C contraria o art. 160, parágrafo único. D ignora o impedimento de dois anos do art. 163. Modelo: Câmara de Caratinga/MG · Controlador Interno · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/107842/instituto-consulplan-2024-camara-municipal-de-caratinga-mg-controlador-interno-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Caratinga/MG",
+   "cargo": "Controlador Interno",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/107842/instituto-consulplan-2024-camara-municipal-de-caratinga-mg-controlador-interno-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 160",
+    "A aplicação da penalidade deste artigo não implicará em perda do cargo efetivo"
+   ],
+   [
+    "est",
+    "Art. 160",
+    "quando se verificar falta de exação no seu desempenho"
+   ],
+   [
+    "est",
+    "Art. 163",
+    "implica na impossibilidade de ser o condenado investido em funções dessa natureza, durante o período de dois anos a contar do ato de punição"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 163",
+    "cinco"
+   ],
+   [
+    "est",
+    "Art. 160",
+    "demissão"
+   ]
+  ]
+ },
+ {
+  "id": "le22-19",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Sobre a sindicância, segundo a Lei 1.207/94, assinale a afirmativa INCORRETA.",
+  "options": [
+   "As irregularidades serão apuradas por sindicância quando não houver dados suficientes para sua determinação ou para apontar o servidor faltoso.",
+   "A critério da autoridade competente, a função sindicante poderá ser atribuída a uma comissão de servidores, até o máximo de 3 (três).",
+   "O sindicante ou a comissão apresentará relatório no prazo máximo de 10 (dez) dias úteis.",
+   "De posse do relatório, a autoridade decidirá no prazo de 30 (trinta) dias, podendo apenas arquivar o processo ou instaurar processo administrativo disciplinar."
+  ],
+  "correct": 3,
+  "explanation": "Gabarito D. D é a incorreta por dois motivos: o art. 172 dá à autoridade 5 (cinco) dias úteis para decidir, e ela pode também aplicar 'penalidade de advertência ou de suspensão' (inciso I), além de instaurar PAD ou arquivar. Estão corretas: A (art. 167, I), B (art. 170, parágrafo único) e C (art. 171, prazo máximo de 10 dias úteis). Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 167",
+    "sindicância, quando não houver dados suficientes para sua determinação ou para apontar o servidor faltoso"
+   ],
+   [
+    "est",
+    "Art. 170",
+    "a função sindicante poderá ser atribuída a uma comissão de servidores, até o máximo de 3 (três)"
+   ],
+   [
+    "est",
+    "Art. 171",
+    "no prazo máximo de 10 (dez) dias úteis"
+   ],
+   [
+    "est",
+    "Art. 172",
+    "decidirá, no prazo de 5 (cinco) dias úteis"
+   ],
+   [
+    "est",
+    "Art. 172",
+    "I – pela aplicação de penalidade de advertência ou de suspensão"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 172",
+    "30 (trinta)"
+   ]
+  ]
+ },
+ {
+  "id": "le22-20",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Segundo a Lei 1.207/94, o processo administrativo disciplinar será conduzido por comissão",
+  "options": [
+   "de 3 (três) servidores efetivos, que elegerão, dentre eles, o seu presidente.",
+   "de 3 (três) servidores estáveis, designada pela autoridade competente, que indicará, dentre eles, o seu presidente.",
+   "de 5 (cinco) servidores estáveis, designada pela autoridade competente, que indicará o seu presidente.",
+   "de 3 (três) servidores estáveis, cujo secretário não poderá ser um dos seus membros."
+  ],
+  "correct": 1,
+  "explanation": "Gabarito B. Art. 173: 'O processo administrativo disciplinar será conduzido por comissão de 3 (três) servidores estáveis, designa pela autoridade competente, que indicará, dentre eles, o seu presidente'. A erra duas vezes: exige servidores estáveis (não basta serem efetivos) e o presidente é indicado pela autoridade, não eleito. C erra o número de membros. D contraria o parágrafo único, segundo o qual a designação do secretário pode 'recair em um dos seus membros'. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 173",
+    "O processo administrativo disciplinar será conduzido por comissão de 3 (três) servidores estáveis, designa pela autoridade competente, que indicará, dentre eles, o seu presidente"
+   ],
+   [
+    "est",
+    "Art. 173",
+    "podendo a designação recair em um dos seus membros"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 173",
+    "efetivos"
+   ],
+   [
+    "est",
+    "Art. 173",
+    "elege"
+   ],
+   [
+    "est",
+    "Art. 173",
+    "5 (cinco)"
+   ]
+  ]
+ },
+ {
+  "id": "le22-21",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Sobre a citação do indiciado no processo administrativo disciplinar, segundo a Lei 1.207/94, assinale a afirmativa correta.",
+  "options": [
+   "A citação será feita pessoalmente e contra-recibo, com pelo menos 24 (vinte e quatro) horas de antecedência em relação à audiência inicial.",
+   "Caso o indiciado se recuse a receber a citação, o fato deverá ser certificado à vista de, no mínimo, 3 (três) testemunhas.",
+   "Estando o indiciado ausente do Município, se conhecido o seu endereço, será citado por via postal, em carta registrada.",
+   "Achando-se o indiciado em lugar incerto e não sabido, será citado por edital, com prazo de 30 (trinta) dias."
+  ],
+  "correct": 2,
+  "explanation": "Gabarito C. Art. 180, § 2º: 'Estando o indiciado ausente do Município, se conhecido o seu endereço, será citado por via postal, em carta registrada'. A erra a antecedência (o caput exige pelo menos 48 horas). B erra o número de testemunhas (§ 1º: no mínimo 2). D erra o prazo do edital (§ 3º: 15 dias). Modelo: Câmara de Caratinga/MG · Controlador Interno · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/107842/instituto-consulplan-2024-camara-municipal-de-caratinga-mg-controlador-interno-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Caratinga/MG",
+   "cargo": "Controlador Interno",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/107842/instituto-consulplan-2024-camara-municipal-de-caratinga-mg-controlador-interno-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 180",
+    "Estando o indiciado ausente do Município, se conhecido o seu endereço, será citado por via postal, em carta registrada"
+   ],
+   [
+    "est",
+    "Art. 180",
+    "com pelo menos 48 (quarenta e oito) horas de antecedência em relação a audiência inicial"
+   ],
+   [
+    "est",
+    "Art. 180",
+    "à vista de, no mínimo, 2 (duas) testemunhas"
+   ],
+   [
+    "est",
+    "Art. 180",
+    "será citado por edital, divulgado como os demais atos oficiais do Município, com prazo de 15 (quinze) dias"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 180",
+    "24 (vinte e quatro)"
+   ],
+   [
+    "est",
+    "Art. 180",
+    "3 (três)"
+   ],
+   [
+    "est",
+    "Art. 180",
+    "30 (trinta)"
+   ]
+  ]
+ },
+ {
+  "id": "le22-22",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Em processo administrativo disciplinar instaurado no Município de Cristalina, três servidores foram indiciados. Ultimada a instrução, segundo a Lei 1.207/94, o prazo para apresentação de defesa escrita será",
+  "options": [
+   "de 10 (dez) dias para cada indiciado, contados sucessivamente.",
+   "comum, de 15 (quinze) dias.",
+   "comum, de 20 (vinte) dias.",
+   "de 30 (trinta) dias para cada indiciado, contados sucessivamente."
+  ],
+  "correct": 1,
+  "explanation": "Gabarito B. Art. 188: o indiciado será intimado para apresentar defesa escrita 'no prazo de 10 (dez) dias'; mas o parágrafo único diz: 'O prazo de defesa será comum e de 15 (quinze) dias se forem 2 (dois) ou mais os indiciados'. Com três indiciados vale o prazo comum de 15 dias. A aplica a regra de um só indiciado e ainda inventa contagem sucessiva. C e D trazem prazos que a lei não prevê. Modelo: Câmara de Caratinga/MG · Controlador Interno · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/107842/instituto-consulplan-2024-camara-municipal-de-caratinga-mg-controlador-interno-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Caratinga/MG",
+   "cargo": "Controlador Interno",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/107842/instituto-consulplan-2024-camara-municipal-de-caratinga-mg-controlador-interno-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 188",
+    "O prazo de defesa será comum e de 15 (quinze) dias se forem 2 (dois) ou mais os indiciados"
+   ],
+   [
+    "est",
+    "Art. 188",
+    "para apresentar defesa escrita, no prazo de 10 (dez) dias"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 188",
+    "sucessiv"
+   ],
+   [
+    "est",
+    "Art. 188",
+    "20 (vinte)"
+   ],
+   [
+    "est",
+    "Art. 188",
+    "30 (trinta)"
+   ]
+  ]
+ },
+ {
+  "id": "le22-23",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Roberto, servidor municipal de Cristalina, responde a processo administrativo disciplinar instaurado para apurar desvio de material, e requereu sua exoneração. Considerando o caso, segundo a Lei 1.207/94, Roberto",
+  "options": [
+   "só poderá ser exonerado a pedido após a conclusão do processo e o cumprimento da penalidade, acaso aplicada.",
+   "poderá ser exonerado a pedido de imediato, arquivando-se o processo disciplinar.",
+   "poderá ser exonerado a pedido, a juízo da autoridade competente, já que a exceção legal alcança qualquer processo disciplinar.",
+   "só poderá ser exonerado a pedido após a conclusão do processo, ficando dispensado de cumprir a penalidade que vier a ser aplicada."
+  ],
+  "correct": 0,
+  "explanation": "Gabarito A. Art. 194: 'O servidor que estiver respondendo a processo administrativo disciplinar só poderá ser exonerado a pedido, ou aposentado voluntariamente, após a conclusão do processo e o cumprimento da penalidade, acaso aplicada'. B contraria o caput. C estende indevidamente a exceção do parágrafo único, que vale apenas para o processo 'instaurado apenas para apurar o abandono de cargo' — não é o caso de Roberto. D dispensa o cumprimento da penalidade, que o caput exige. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 194",
+    "O servidor que estiver respondendo a processo administrativo disciplinar só poderá ser exonerado a pedido, ou aposentado voluntariamente, após a conclusão do processo e o cumprimento da penalidade, acaso aplicada"
+   ],
+   [
+    "est",
+    "Art. 194",
+    "Excetua-se o caso de processo administrativo instaurado apenas para apurar o abandono de cargo, quando poderá haver exoneração a pedido, a juízo da autoridade competente"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 194",
+    "arquiv"
+   ],
+   [
+    "est",
+    "Art. 194",
+    "dispensad"
+   ]
+  ]
+ },
+ {
+  "id": "le22-24",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_418",
+  "tipo": "abcd",
+  "text": "Sobre a revisão do processo administrativo disciplinar, segundo a Lei 1.207/94, analise as afirmativas a seguir.\nI. A revisão poderá ser requerida a qualquer tempo, uma única vez.\nII. A simples alegação de injustiça da penalidade constitui fundamento para a revisão do processo.\nIII. No processo revisional, o ônus da prova cabe à Administração.\nIV. As conclusões da comissão revisora serão encaminhadas à autoridade que aplicou a penalidade, dentro de 30 (trinta) dias, a qual decidirá, fundamentadamente, dentro de 10 (dez) dias.\nEstá correto o que se afirma em",
+  "options": [
+   "I e IV, apenas.",
+   "I, II e IV, apenas.",
+   "II e III, apenas.",
+   "III e IV, apenas."
+  ],
+  "correct": 0,
+  "explanation": "Gabarito A. I está correta (art. 195, caput: 'a qualquer tempo, uma única vez'). IV está correta (art. 198). II está errada: o parágrafo único do art. 195 diz que 'A simples alegação de injustiça da penalidade não constitui fundamento para revisão do processo'. III está errada: o art. 196 põe o ônus da prova no requerente. B inclui II; C traz só as erradas; D inclui III. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Estatuto dos Servidores (Lei 1.207/1994)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "est",
+    "Art. 195",
+    "A revisão do processo administrativo disciplinar poderá ser requerida a qualquer tempo, uma única vez"
+   ],
+   [
+    "est",
+    "Art. 195",
+    "A simples alegação de injustiça da penalidade não constitui fundamento para revisão do processo"
+   ],
+   [
+    "est",
+    "Art. 196",
+    "No processo revisional, o ônus da prova cabe ao requerente"
+   ],
+   [
+    "est",
+    "Art. 198",
+    "As conclusões da comissão serão encaminhadas à autoridade que aplicou a penalidade, dentro de 30 (trinta) dias, a qual decidirá, fundamentadamente, dentro de 10 (dez) dias"
+   ]
+  ],
+  "ausentes": [
+   [
+    "est",
+    "Art. 196",
+    "Administração"
+   ]
+  ]
+ },
+ {
+  "id": "le22-25",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_417",
+  "tipo": "abcd",
+  "text": "Segundo o Regimento Interno da Câmara Municipal de Cristalina, é vedado ao Vereador, desde a posse, EXCETO:",
+  "options": [
+   "exercer simultaneamente outro cargo eletivo, seja este federal, estadual ou municipal.",
+   "patrocinar causa junto ao Município na qual tenha interesse pessoal.",
+   "ser proprietário, controlador ou diretor de empresa que goze de favor decorrente de contrato com pessoa jurídica de direito público do Município.",
+   "ocupar o cargo de Secretário Municipal, desde que se licencie do mandato."
+  ],
+  "correct": 3,
+  "explanation": "Gabarito D. Art. 70, II, 'a', do Regimento: é vedado, desde a posse, ocupar cargo de que seja exonerável ad nutum na Administração do Município, 'salvo o cargo de Secretário Municipal ou Diretor equivalente, desde que se licencie do mandato'. Assim, D descreve a ressalva permitida, e não uma vedação. A (alínea 'b'), B (alínea 'd') e C (alínea 'c') são vedações desde a posse. Modelo: Câmara de Belo Horizonte/MG · Coordenador do Processo Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/108321/instituto-consulplan-2024-camara-de-belo-horizonte-mg-coordenador-do-processo-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Regimento Interno da Câmara",
+  "modelo": {
+   "orgao": "Câmara de Belo Horizonte/MG",
+   "cargo": "Coordenador do Processo Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/108321/instituto-consulplan-2024-camara-de-belo-horizonte-mg-coordenador-do-processo-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "ri",
+    "Art. 70",
+    "salvo o cargo de Secretário Municipal ou Diretor equivalente, desde que se licencie do mandato"
+   ],
+   [
+    "ri",
+    "Art. 70",
+    "exercer simultaneamente outro cargo eletivo, seja este federal, estadual ou municipal"
+   ],
+   [
+    "ri",
+    "Art. 70",
+    "patrocinar causa junto ao Município na qual tenha interesse pessoal"
+   ],
+   [
+    "ri",
+    "Art. 70",
+    "ser proprietário, controlador ou diretor de empresa que goze de favor decorrente de contrato com pessoa jurídica de direito público do Município"
+   ]
+  ],
+  "ausentes": []
+ },
+ {
+  "id": "le22-26",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_417",
+  "tipo": "abcd",
+  "text": "O Vereador Marcos sofreu condenação criminal em sentença transitada em julgado. Considerando o caso, segundo o Regimento Interno da Câmara Municipal de Cristalina, a perda do mandato",
+  "options": [
+   "será declarada de ofício pela Mesa Diretora, sem necessidade de deliberação do Plenário.",
+   "será decidida pela Câmara Municipal, por voto secreto e maioria absoluta de seus membros.",
+   "será decidida pela Câmara Municipal, por voto aberto, pelo voto favorável de no mínimo dois terços dos seus membros, mediante provocação da Mesa Diretora ou de qualquer Vereador, assegurada ampla defesa.",
+   "dependerá de decretação pela Justiça Eleitoral, à qual a Câmara deverá comunicar o fato."
+  ],
+  "correct": 2,
+  "explanation": "Gabarito C. Art. 71, VI, e § 1º: nos casos dos incisos I, II, VI e VII, 'a perda do mandato do Vereador será decidida pela Câmara Municipal, por voto aberto, pelo voto favorável à perda por no mínimo dois terços dos membros da Câmara, mediante provocação da Mesa Diretora ou de qualquer Vereador, assegurada ampla defesa'. A descreve o rito do § 2º (declaração de ofício), que vale para os incisos III, IV, V e VIII, não para a condenação criminal. B erra a forma de votação e o quórum. D confunde com o inciso V (decretação pela Justiça Eleitoral). Modelo: Câmara de Belo Horizonte/MG · Coordenador do Processo Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/108321/instituto-consulplan-2024-camara-de-belo-horizonte-mg-coordenador-do-processo-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Regimento Interno da Câmara",
+  "modelo": {
+   "orgao": "Câmara de Belo Horizonte/MG",
+   "cargo": "Coordenador do Processo Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/108321/instituto-consulplan-2024-camara-de-belo-horizonte-mg-coordenador-do-processo-legislativo-prova.pdf"
+  },
+  "base": [
+   [
+    "ri",
+    "Art. 71",
+    "VI – que sofrer condenação criminal em sentença transitada em julgado"
+   ],
+   [
+    "ri",
+    "Art. 71",
+    "Nos casos previstos nos incisos I, II, VI e VII deste artigo, a perda do mandato do Vereador será decidida pela Câmara Municipal, por voto aberto, pelo voto favorável à perda por no mínimo dois terços dos membros da Câmara, mediante provocação da Mesa Diretora ou de qualquer Vereador, assegurada ampla defesa"
+   ],
+   [
+    "ri",
+    "Art. 71",
+    "Nos casos previstos nos incisos III, IV, V e VIII, a perda do mandato do Vereador será declarada de ofício"
+   ]
+  ],
+  "ausentes": [
+   [
+    "ri",
+    "Art. 71",
+    "secreto"
+   ],
+   [
+    "ri",
+    "Art. 71",
+    "maioria absoluta"
+   ]
+  ]
+ },
+ {
+  "id": "le22-27",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_417",
+  "tipo": "abcd",
+  "text": "Acerca da destituição de membro da Mesa Diretora, segundo o Regimento Interno da Câmara Municipal de Cristalina, assinale V para as afirmativas verdadeiras e F para as falsas.\n( ) Processada a representação, o Representado será notificado para oferecer defesa no prazo de 15 (quinze) dias e arrolar testemunhas até o máximo de 3 (três).\n( ) A Comissão Especial que apreciará a representação será composta preferencialmente por membros da Mesa Diretora.\n( ) A destituição será declarada pelo Presidente da Câmara se o relatório que a propõe for aprovado por maioria absoluta dos Vereadores.\n( ) Apresentada a defesa, o Representante será notificado para confirmar ou retirar a representação, no prazo de 5 (cinco) dias.\nA sequência está correta em",
+  "options": [
+   "V, V, F, F.",
+   "V, F, F, V.",
+   "F, F, V, V.",
+   "V, F, V, V."
+  ],
+  "correct": 1,
+  "explanation": "Gabarito B. 1ª V: art. 84, § 1º (defesa em 15 dias e até 3 testemunhas). 2ª F: o § 4º diz que 'Nenhum membro da Mesa Diretora poderá participar da constituição da Comissão Especial'. 3ª F: o § 6º exige aprovação por 2/3 (dois terços) dos votos dos Vereadores, não maioria absoluta. 4ª V: art. 84, § 2º (5 dias para confirmar ou retirar). Logo, V, F, F, V. A erra a 2ª e a 4ª; C erra a 1ª e a 3ª; D erra a 3ª. Modelo: Câmara de Caratinga/MG · Controlador Interno · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/107842/instituto-consulplan-2024-camara-municipal-de-caratinga-mg-controlador-interno-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Regimento Interno da Câmara",
+  "modelo": {
+   "orgao": "Câmara de Caratinga/MG",
+   "cargo": "Controlador Interno",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/107842/instituto-consulplan-2024-camara-municipal-de-caratinga-mg-controlador-interno-prova.pdf"
+  },
+  "base": [
+   [
+    "ri",
+    "Art. 84",
+    "determinando-se a notificação daquele para oferecer defesa no prazo de 15 (quinze) dias e arrolar testemunhas até o máximo de 3 (três)"
+   ],
+   [
+    "ri",
+    "Art. 84",
+    "Nenhum membro da Mesa Diretora poderá participar da constituição da Comissão Especial, neste caso"
+   ],
+   [
+    "ri",
+    "Art. 84",
+    "sendo este aprovado por 2/3 (dois terços) dos votos dos Vereadores, o Presidente da Câmara Municipal declarará a destituição"
+   ],
+   [
+    "ri",
+    "Art. 84",
+    "confirme ou retire a representação, no prazo de 5 (cinco) dias"
+   ]
+  ],
+  "ausentes": [
+   [
+    "ri",
+    "Art. 84",
+    "maioria absoluta"
+   ],
+   [
+    "ri",
+    "Art. 84",
+    "preferencialmente"
+   ]
+  ]
+ },
+ {
+  "id": "le22-28",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_417",
+  "tipo": "abcd",
+  "text": "Segundo o Regimento Interno da Câmara Municipal de Cristalina, complete a lacuna: \"Veto é a oposição ______ do Prefeito à disposição ou a texto integral de projeto de lei aprovado pela Câmara Municipal, por considerá-lo ______ ou ______.\"",
+  "options": [
+   "tácita e imotivada / ilegal / inconveniente à Administração",
+   "formal e justificada / ilegal / contrário à Lei Orgânica",
+   "formal e facultativa / inconstitucional / contrário ao Regimento Interno",
+   "formal e justificada / inconstitucional / contrário ao interesse público"
+  ],
+  "correct": 3,
+  "explanation": "Gabarito D. Art. 104 do Regimento: 'Veto é a oposição formal e justificada do Prefeito à disposição ou a texto integral de projeto de lei aprovado pela Câmara Municipal, por considerá-lo inconstitucional, ou contrário ao interesse público'. A erra tudo: o veto não é tácito nem imotivado, e os fundamentos não são esses. B troca 'inconstitucional' por 'ilegal' e o interesse público pela Lei Orgânica. C troca 'justificada' por 'facultativa' e o interesse público pelo Regimento Interno. Modelo: Câmara de Belo Horizonte/MG · Técnico Legislativo II · 2024 — https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Regimento Interno da Câmara",
+  "modelo": {
+   "orgao": "Câmara de Belo Horizonte/MG",
+   "cargo": "Técnico Legislativo II",
+   "ano": "2024",
+   "url": "https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf"
+  },
+  "base": [
+   [
+    "ri",
+    "Art. 104",
+    "Veto é a oposição formal e justificada do Prefeito à disposição ou a texto integral de projeto de lei aprovado pela Câmara Municipal, por considerá-lo inconstitucional, ou contrário ao interesse público"
+   ]
+  ],
+  "ausentes": [
+   [
+    "ri",
+    "Art. 104",
+    "tácita"
+   ],
+   [
+    "ri",
+    "Art. 104",
+    "ilegal"
+   ],
+   [
+    "ri",
+    "Art. 104",
+    "facultativa"
+   ],
+   [
+    "ri",
+    "Art. 104",
+    "Lei Orgânica"
+   ]
+  ]
+ },
+ {
+  "id": "le22-29",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_417",
+  "tipo": "abcd",
+  "text": "Sobre as reuniões solenes e secretas, segundo o Regimento Interno da Câmara Municipal de Cristalina, analise as afirmativas a seguir.\nI. As reuniões solenes ou comemorativas serão convocadas pelo Presidente da Câmara Municipal com antecedência mínima de 24 (vinte e quatro) horas, por escrito, indicando-se a sua finalidade.\nII. Nas reuniões solenes haverá Expediente e Ordem do Dia formais, dispensada apenas a leitura da ata.\nIII. A Câmara não poderá deliberar sobre qualquer proposição em reunião secreta.\nIV. A realização de reunião secreta depende de deliberação da maioria absoluta dos membros da Câmara.\nEstá correto o que se afirma em",
+  "options": [
+   "I, II e III, apenas.",
+   "II e IV, apenas.",
+   "I e III, apenas.",
+   "I, III e IV, apenas."
+  ],
+  "correct": 2,
+  "explanation": "Gabarito C. I está correta (art. 159, caput). III está correta (art. 161). II está errada: o parágrafo único do art. 159 diz que 'Nas reuniões solenes não haverá Expediente nem Ordem do Dia formais, dispensada a leitura da ata e a verificação de quórum'. IV está errada: o art. 160 exige 'maioria qualificada de 2/3 (dois terços)'. A inclui II; B traz só as erradas; D inclui IV. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Regimento Interno da Câmara",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "ri",
+    "Art. 159",
+    "As reuniões solenes ou comemorativas serão convocadas pelo Presidente da Câmara Municipal com antecedência mínima de 24 (vinte e quatro) horas, por escrito, indicando-se a sua finalidade"
+   ],
+   [
+    "ri",
+    "Art. 159",
+    "Nas reuniões solenes não haverá Expediente nem Ordem do Dia formais, dispensada a leitura da ata e a verificação de quórum"
+   ],
+   [
+    "ri",
+    "Art. 161",
+    "A Câmara não poderá deliberar sobre qualquer proposição em reunião secreta"
+   ],
+   [
+    "ri",
+    "Art. 160",
+    "por deliberação da maioria qualificada de 2/3 (dois terços) de seus membros, poderá realizar reuniões secretas"
+   ]
+  ],
+  "ausentes": [
+   [
+    "ri",
+    "Art. 160",
+    "maioria absoluta"
+   ]
+  ]
+ },
+ {
+  "id": "le22-30",
+  "materiaRef": "mmat_37",
+  "topicoRef": "ttop_416",
+  "tipo": "abcd",
+  "text": "Segundo a Lei Orgânica de Cristalina, são tributos municipais",
+  "options": [
+   "os impostos, as taxas e as contribuições de melhoria, decorrentes de obras públicas, instituídos por lei municipal.",
+   "os impostos, as taxas e os empréstimos compulsórios, instituídos por lei municipal.",
+   "apenas os impostos e as taxas, instituídos por decreto do Prefeito.",
+   "os impostos, as taxas, as contribuições de melhoria e as contribuições sociais, instituídos por resolução da Câmara."
+  ],
+  "correct": 0,
+  "explanation": "Gabarito A. Art. 112 da Lei Orgânica: 'São tributos municipais os impostos, as taxas e as contribuições de melhorias, decorrentes de obras públicas, instituídos por lei municipal atendidos os princípios estabelecidos na Constituição Federal e as normas gerais de Direito Tributário'. B inclui empréstimos compulsórios, que o artigo não lista. C exclui a contribuição de melhoria e troca a lei por decreto. D acrescenta contribuições sociais e troca a lei por resolução. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Lei Orgânica de Cristalina",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   [
+    "lo",
+    "Art. 112",
+    "São tributos municipais os impostos, as taxas e as contribuições de melhorias, decorrentes de obras públicas, instituídos por lei municipal"
+   ]
+  ],
+  "ausentes": [
+   [
+    "lo",
+    "Art. 112",
+    "empréstimo"
+   ],
+   [
+    "lo",
+    "Art. 112",
+    "decreto"
+   ],
+   [
+    "lo",
+    "Art. 112",
+    "contribuições sociais"
+   ],
+   [
+    "lo",
+    "Art. 112",
+    "resolução"
+   ]
+  ]
+ }
+]
