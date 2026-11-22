@@ -14,7 +14,7 @@
     ],
     "max_questoes_bacen_por_noite": 15,
     "pacotes_por_noite": {
-      "cristalina": "1 por matéria objetiva (skill esteira-questoes-edital)",
+      "cristalina": "obrigatórios toda noite (pedido do João 22/11): Língua Portuguesa, Raciocínio Lógico Matemático e Informática Básica, 20 questões cada pela Esteira; extra se der: Leg. Específica, Direito ou Cargo",
       "bacen": "1 (um por cargo só na rodada do edital)"
     },
     "qualidade_antes_da_meta": true
@@ -462,8 +462,5 @@
     "cristalina-legislacao-especifica-20261120",
     "cristalina-tecnico-parlamentar-20261121",
     "cristalina-legislacao-especifica-20261122"
-  ],
-  "pendencias_joao": [
-    "22/11: a tarefa agendada limita a 1 pacote e só equipe/fontes; a Esteira (EQUIPE.md, 21/11) pede 20 por matéria. Decidir se a tarefa agendada deve ser atualizada para rodar a Esteira em todas as matérias."
   ]
 }
