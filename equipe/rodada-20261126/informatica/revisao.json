@@ -1,0 +1,35 @@
+{
+ "aprovadas": [
+  "informatica26-01",
+  "informatica26-02",
+  "informatica26-03",
+  "informatica26-04",
+  "informatica26-05",
+  "informatica26-06",
+  "informatica26-07",
+  "informatica26-08",
+  "informatica26-09",
+  "informatica26-10",
+  "informatica26-11",
+  "informatica26-12",
+  "informatica26-13",
+  "informatica26-14",
+  "informatica26-15",
+  "informatica26-16",
+  "informatica26-17",
+  "informatica26-18",
+  "informatica26-19",
+  "informatica26-20",
+  "informatica26-21",
+  "informatica26-22",
+  "informatica26-23",
+  "informatica26-24"
+ ],
+ "vetadas": {},
+ "ajustes_sugeridos": {
+  "informatica26-05": "Trocar o distrator D (Win + . ponto): no Windows 11 o painel de emojis tem uma aba de histórico da área de transferência, o que abre margem a recurso. Sugestão: Ctrl + Shift + V ou tecla Windows + C. Gabarito C se mantém.",
+  "informatica26-06": "base.url está em pt-PT (using-the-clipboard). É oficial e confirma a regra, mas, se achar a versão pt-BR, preferi-la.",
+  "informatica26-07": "A página diz que limpar em Configurações apaga 'tudo, exceto os itens afixados'; para o painel Win+V ('Limpar tudo') não detalha. Opcional: escrever em D 'A opção Limpar, em Configurações > Sistema > Área de transferência, apaga...'.",
+  "informatica26-17": "Explanation: a página cita a opção como 'Multitarefa do Sistema' no app Configurações; manter a redação 'Configurações, opção Multitarefa (Sistema)' está OK."
+ }
+}

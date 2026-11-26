@@ -1,0 +1,1333 @@
+[
+ {
+  "id": "direito26-01",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "O Município de Vale Alto tem 250.000 habitantes. De acordo com a Constituição Federal, o total da despesa do Poder Legislativo desse Município, incluídos os subsídios dos Vereadores, não poderá ultrapassar",
+  "options": [
+   "7% do somatório da receita tributária e das transferências constitucionais previstas no art. 29-A, efetivamente realizado no exercício anterior.",
+   "6% do somatório da receita tributária e das transferências constitucionais previstas no art. 29-A, efetivamente realizado no exercício anterior.",
+   "6% da receita corrente líquida do Município, estimada para o exercício em curso.",
+   "5% do somatório da receita tributária e das transferências constitucionais previstas no art. 29-A, efetivamente realizado no exercício anterior."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. O art. 29-A, II, fixa o teto de 6% para Municípios com população entre 100.000 e 300.000 habitantes, e o caput manda calcular o percentual sobre o somatório da receita tributária e das transferências dos arts. 153, § 5º, 158 e 159, 'efetivamente realizado no exercício anterior'. A erra a faixa (7% é para até 100.000 habitantes, inciso I). C acerta o percentual, mas troca a base de cálculo (não é receita corrente líquida nem o exercício em curso). D usa o percentual da faixa seguinte (5%, de 300.001 a 500.000 habitantes, inciso III). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 29-A (limite de despesa da Câmara)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "trecho": "II - 6% (seis por cento) para Municípios com população entre 100.000 (cem mil) e 300.000 (trezentos mil) habitantes"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "trecho": "efetivamente realizado no exercício anterior"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "termo": "receita corrente líquida"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "termo": "exercício em curso"
+   }
+  ]
+ },
+ {
+  "id": "direito26-02",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Um Município goiano tem 85.000 habitantes. Considerando o art. 29-A da Constituição Federal, o percentual máximo para o total da despesa do Poder Legislativo Municipal, calculado sobre a base constitucional, é de",
+  "options": [
+   "6%, porque a população do Município é superior a 50.000 habitantes.",
+   "5%, porque esse é o mesmo limite fixado para a despesa com a remuneração dos Vereadores.",
+   "7%, porque a população do Município é de até 100.000 habitantes.",
+   "4,5%, porque a população do Município é inferior a 300.000 habitantes."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 29-A, I, fixa 7% para Municípios com população de até 100.000 habitantes; 85.000 está nessa faixa. A erra: a CF não usa o corte de 50.000 habitantes no art. 29-A; 6% é para a faixa de 100.000 a 300.000 (inciso II). B confunde o limite da despesa total do Legislativo com o do art. 29, VII (remuneração dos Vereadores, até 5% da receita do Município). D usa o percentual de 4,5%, que é da faixa de 500.001 a 3.000.000 habitantes (inciso IV). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 29-A (limite de despesa da Câmara)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "trecho": "I - 7% (sete por cento) para Municípios com população de até 100.000 (cem mil) habitantes"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "termo": "50.000 (cinquenta mil)"
+   }
+  ]
+ },
+ {
+  "id": "direito26-03",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Sobre o limite de gastos da Câmara Municipal com folha de pagamento, previsto na Constituição Federal, assinale a afirmativa correta.",
+  "options": [
+   "A Câmara Municipal não gastará mais de setenta por cento da receita total do Município com folha de pagamento.",
+   "A Câmara Municipal não gastará mais de setenta por cento de sua receita com folha de pagamento, excluído o gasto com o subsídio de seus Vereadores.",
+   "A Câmara Municipal não gastará mais de sessenta por cento de sua receita com folha de pagamento, incluído o gasto com o subsídio de seus Vereadores.",
+   "A Câmara Municipal não gastará mais de setenta por cento de sua receita com folha de pagamento, incluído o gasto com o subsídio de seus Vereadores."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. O art. 29-A, § 1º, diz que a Câmara Municipal não gastará mais de 70% de sua receita com folha de pagamento, incluído o gasto com o subsídio de seus Vereadores. A erra a base: é a receita da própria Câmara, não a receita total do Município. B inverte a regra do subsídio (ele está incluído, não excluído). C troca o percentual (60%). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 29-A, § 1º (folha da Câmara)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "trecho": "A Câmara Municipal não gastará mais de setenta por cento de sua receita com folha de pagamento"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "trecho": "incluído o gasto com o subsídio de seus Vereadores"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "termo": "sessenta por cento"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "termo": "excluído"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "termo": "receita total"
+   }
+  ]
+ },
+ {
+  "id": "direito26-04",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Considerando os crimes de responsabilidade previstos no art. 29-A da Constituição Federal, analise as afirmativas a seguir.\nI. Constitui crime de responsabilidade do Prefeito Municipal efetuar repasse à Câmara que supere os limites definidos no artigo.\nII. Constitui crime de responsabilidade do Prefeito Municipal não enviar o repasse à Câmara até o dia dez de cada mês.\nIII. Constitui crime de responsabilidade do Presidente da Câmara Municipal desrespeitar o limite de gasto da Câmara com folha de pagamento.\nIV. Constitui crime de responsabilidade do Presidente da Câmara Municipal enviar o repasse a menor em relação à proporção fixada na Lei Orçamentária.\nEstá correto o que se afirma em",
+  "options": [
+   "I e III, apenas.",
+   "I, II e III, apenas.",
+   "II e IV, apenas.",
+   "III e IV, apenas."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. I está correta (art. 29-A, § 2º, I). III está correta (§ 3º: é crime do Presidente da Câmara o desrespeito ao § 1º, limite de 70% com folha). II está errada: o prazo do repasse é 'até o dia vinte de cada mês' (§ 2º, II), não dia dez. IV está errada: enviar o repasse a menor é crime do Prefeito (§ 2º, III), que é quem repassa, e não do Presidente da Câmara. Por isso B (inclui II), C (inclui II e IV) e D (inclui IV) erram. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 29-A, §§ 2º e 3º (crimes de responsabilidade)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "trecho": "I - efetuar repasse que supere os limites definidos neste artigo"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "trecho": "II - não enviar o repasse até o dia vinte de cada mês"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "trecho": "§ 3º Constitui crime de responsabilidade do Presidente da Câmara Municipal o desrespeito ao § 1º deste artigo."
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 29-A",
+    "termo": "dia dez"
+   }
+  ]
+ },
+ {
+  "id": "direito26-05",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "A União pode intervir nos Estados para assegurar a observância de certos princípios constitucionais, chamados pela doutrina de princípios sensíveis. De acordo com o art. 34, VII, da Constituição Federal, figura entre esses princípios",
+  "options": [
+   "a forma federativa de Estado.",
+   "o voto direto, secreto, universal e periódico.",
+   "a autonomia municipal.",
+   "o unicameralismo do Poder Legislativo estadual."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 34, VII, lista: a) forma republicana, sistema representativo e regime democrático; b) direitos da pessoa humana; c) autonomia municipal; d) prestação de contas da administração pública, direta e indireta; e) aplicação do mínimo exigido em ensino e saúde. A erra: a lista fala em forma republicana, não em forma federativa. B traz uma garantia do voto que não está no art. 34, VII. D não consta da lista (e não é princípio constitucional sensível). Modelo: Câmara de Cotia/SP · Procurador Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 34, VII (princípios sensíveis)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Procurador Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 34",
+    "trecho": "c) autonomia municipal;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 34",
+    "trecho": "a) forma republicana, sistema representativo e regime democrático;"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 34",
+    "termo": "federativa"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 34",
+    "termo": "voto"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 34",
+    "termo": "unicameral"
+   }
+  ]
+ },
+ {
+  "id": "direito26-06",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "De acordo com o art. 30 da Constituição Federal, compete aos Municípios, EXCETO:",
+  "options": [
+   "instituir e arrecadar os tributos de sua competência, bem como aplicar suas rendas, sem prejuízo da obrigatoriedade de prestar contas e publicar balancetes nos prazos fixados em lei.",
+   "manter, com a cooperação técnica e financeira da União e do Estado, programas de educação básica e de ensino superior.",
+   "promover a proteção do patrimônio histórico-cultural local, observada a legislação e a ação fiscalizadora federal e estadual.",
+   "prestar, com a cooperação técnica e financeira da União e do Estado, serviços de atendimento à saúde da população."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. O art. 30, VI, atribui ao Município manter, com a cooperação técnica e financeira da União e do Estado, programas de 'educação infantil e de ensino fundamental', e não de educação básica e ensino superior. As demais alternativas reproduzem competências do art. 30: A (inciso III), C (inciso IX) e D (inciso VII). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 30 (competências do Município)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "trecho": "programas de educação infantil e de ensino fundamental"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "trecho": "VII - prestar, com a cooperação técnica e financeira da União e do Estado, serviços de atendimento à saúde da população"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "termo": "ensino superior"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "termo": "educação básica"
+   }
+  ]
+ },
+ {
+  "id": "direito26-07",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Considerando as competências que a Constituição Federal atribui aos Municípios, assinale a alternativa que NÃO corresponde a uma competência municipal.",
+  "options": [
+   "Legislar sobre assuntos de interesse local.",
+   "Suplementar a legislação federal e a estadual no que couber.",
+   "Promover, no que couber, adequado ordenamento territorial, mediante planejamento e controle do uso, do parcelamento e da ocupação do solo urbano.",
+   "Criar, incorporar, fundir e desmembrar Municípios por lei municipal, observada a legislação estadual."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. O Município cria, organiza e suprime distritos (art. 30, IV), mas a criação, a incorporação, a fusão e o desmembramento de Municípios 'far-se-ão por lei estadual' (art. 18, § 4º), com plebiscito e Estudos de Viabilidade Municipal. A pegadinha é trocar 'distritos' por 'Municípios'. As outras alternativas são competências do art. 30: A (inciso I), B (inciso II) e C (inciso VIII). Modelo: Câmara de Araraquara/SP · Analista Legislativo · 2025 — https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 30 × art. 18, § 4º (distritos e Municípios)",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Analista Legislativo",
+   "ano": "2025",
+   "url": "https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "trecho": "IV - criar, organizar e suprimir distritos, observada a legislação estadual"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "trecho": "A criação, a incorporação, a fusão e o desmembramento de Municípios, far-se-ão por lei estadual"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "termo": "Municípios por lei municipal"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "termo": "lei municipal"
+   }
+  ]
+ },
+ {
+  "id": "direito26-08",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Uma comissão da Câmara Municipal analisa projeto que trata do transporte coletivo urbano. Segundo o art. 30 da Constituição Federal, esse serviço",
+  "options": [
+   "é serviço público de interesse local, de caráter essencial, que o Município pode organizar e prestar diretamente ou sob regime de concessão ou permissão.",
+   "é serviço de competência do Estado, cabendo ao Município apenas fiscalizar a sua prestação dentro do território municipal.",
+   "só pode ser prestado diretamente pelo Município, vedada a concessão ou a permissão a particulares.",
+   "é atividade econômica privada, sem caráter essencial, que o Município não pode organizar nem prestar."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. O art. 30, V, dá ao Município organizar e prestar, diretamente ou sob regime de concessão ou permissão, os serviços públicos de interesse local, 'incluído o de transporte coletivo, que tem caráter essencial'. B atribui o serviço ao Estado. C proíbe a concessão e a permissão, que o texto admite expressamente. D nega o caráter essencial e a competência municipal. Modelo: Câmara de Araraquara/SP · Analista Legislativo · 2025 — https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 30, V (transporte coletivo)",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Analista Legislativo",
+   "ano": "2025",
+   "url": "https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "trecho": "diretamente ou sob regime de concessão ou permissão, os serviços públicos de interesse local"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "trecho": "incluído o de transporte coletivo, que tem caráter essencial"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "termo": "fiscalizar"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "termo": "atividade econômica"
+   }
+  ]
+ },
+ {
+  "id": "direito26-09",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Uma comissão da Câmara Municipal estuda a repartição de competências para legislar sobre controle da poluição. Segundo o texto da Constituição Federal, é correto afirmar que",
+  "options": [
+   "a competência é concorrente da União, dos Estados, do Distrito Federal e dos Municípios, que legislam em pé de igualdade sobre o tema.",
+   "a competência é comum a todos os entes, o que permite a cada um legislar livremente, sem observar as normas dos demais.",
+   "compete à União, aos Estados e ao Distrito Federal legislar concorrentemente sobre o tema, cabendo ao Município suplementar a legislação federal e a estadual no que couber.",
+   "a competência para legislar sobre o tema é privativa da União, vedada a atuação legislativa de Estados e Municípios."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 24, VI, põe 'proteção do meio ambiente e controle da poluição' entre as matérias que 'compete à União, aos Estados e ao Distrito Federal legislar concorrentemente', e o art. 30, II, dá ao Município 'suplementar a legislação federal e a estadual no que couber'. A erra ao incluir os Municípios na competência concorrente: eles não estão no caput do art. 24. B confunde a competência material comum (art. 23, VI, 'proteger o meio ambiente e combater a poluição') com competência para legislar livremente. D erra: o tema não está no art. 22 (competência privativa da União). Modelo: Câmara de Araraquara/SP · Analista Legislativo · 2025 — https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · arts. 24, VI, e 30, II (competência legislativa ambiental)",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Analista Legislativo",
+   "ano": "2025",
+   "url": "https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "Compete à União, aos Estados e ao Distrito Federal legislar concorrentemente sobre"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "proteção do meio ambiente e controle da poluição"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "trecho": "II - suplementar a legislação federal e a estadual no que couber"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 23",
+    "trecho": "VI - proteger o meio ambiente e combater a poluição em qualquer de suas formas;"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "termo": "Municípios"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 22",
+    "termo": "poluição"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 23",
+    "termo": "legislar"
+   }
+  ]
+ },
+ {
+  "id": "direito26-10",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Vereadores apresentaram projeto de lei municipal que complementa, para a realidade local, normas federais e estaduais de proteção à infância e à juventude, sem contrariá-las. Segundo a Constituição Federal, o projeto",
+  "options": [
+   "é inconstitucional, pois legislar sobre proteção à infância e à juventude é competência privativa da União.",
+   "é constitucional, pois o Município pode suplementar a legislação federal e a estadual no que couber, e o tema é de legislação concorrente.",
+   "é inconstitucional, pois somente os Estados podem suplementar as normas gerais editadas pela União.",
+   "é constitucional, pois o Município exerce competência legislativa plena sobre o tema, independentemente das normas federais e estaduais."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. A proteção à infância e à juventude é matéria de legislação concorrente (art. 24, XV), e o Município pode 'suplementar a legislação federal e a estadual no que couber' (art. 30, II); o próprio enunciado informa que o projeto não contraria essas normas. A erra: o tema não está entre as matérias privativas da União (art. 22). C erra ao negar a competência suplementar do Município, prevista no art. 30, II. D erra: a competência legislativa plena, na falta de lei federal de normas gerais, é dos Estados (art. 24, § 3º), e o Município não pode ignorar as normas federais e estaduais. Modelo: Câmara de Araraquara/SP · Analista Legislativo · 2025 — https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · arts. 24, XV, e 30, II (competência suplementar)",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Analista Legislativo",
+   "ano": "2025",
+   "url": "https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "XV - proteção à infância e à juventude;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "trecho": "II - suplementar a legislação federal e a estadual no que couber"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "Inexistindo lei federal sobre normas gerais, os Estados exercerão a competência legislativa plena"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 22",
+    "termo": "infância"
+   }
+  ]
+ },
+ {
+  "id": "direito26-11",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Sobre os Estados federados, nos termos do art. 25 da Constituição Federal, assinale a afirmativa correta.",
+  "options": [
+   "Os Estados podem instituir regiões metropolitanas mediante lei ordinária, agrupando quaisquer Municípios, limítrofes ou não.",
+   "São reservadas aos Estados apenas as competências que a Constituição lhes atribui expressamente.",
+   "Os Estados organizam-se e regem-se pelas Constituições e leis que adotarem, sem dever de observar os princípios da Constituição Federal.",
+   "Cabe aos Estados explorar diretamente, ou mediante concessão, os serviços locais de gás canalizado, vedada a edição de medida provisória para a sua regulamentação."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. É o texto do art. 25, § 2º. A erra duas vezes: as regiões metropolitanas exigem lei complementar e agrupamento de municípios limítrofes (§ 3º). B inverte o § 1º: são reservadas aos Estados as competências que não lhes sejam vedadas (competência remanescente), e não só as expressas. C contraria o caput, que exige a observância dos princípios da Constituição Federal. Modelo: Câmara de Cotia/SP · Procurador Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 25 (Estados)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Procurador Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 25",
+    "trecho": "Cabe aos Estados explorar diretamente, ou mediante concessão, os serviços locais de gás canalizado"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 25",
+    "trecho": "vedada a edição de medida provisória para a sua regulamentação"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 25",
+    "trecho": "§ 1º São reservadas aos Estados as competências que não lhes sejam vedadas por esta Constituição."
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 25",
+    "termo": "lei ordinária"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 25",
+    "termo": "expressamente"
+   }
+  ]
+ },
+ {
+  "id": "direito26-12",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "De acordo com a Constituição Federal, assinale a afirmativa correta sobre a organização político-administrativa e os Municípios.",
+  "options": [
+   "A organização político-administrativa da República compreende a União, os Estados, o Distrito Federal e os Municípios, todos autônomos.",
+   "Compete aos Municípios legislar sobre jazidas, minas e outros recursos minerais situados em seu território, por se tratar de assunto de interesse local.",
+   "A União pode intervir diretamente em Município localizado em Estado-membro quando a dívida fundada deixar de ser paga por três anos consecutivos.",
+   "Os Territórios Federais integram os Estados de origem, e sua criação é regulada por lei ordinária federal."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. É o texto do art. 18, caput. B erra: legislar sobre jazidas, minas, outros recursos minerais e metalurgia é competência privativa da União (art. 22, XII). C erra duas vezes: quem intervém em Município situado em Estado é o Estado (a União só intervém nos Municípios localizados em Território Federal), e o prazo da dívida fundada é de dois anos consecutivos (art. 35, I). D erra: os Territórios Federais integram a União, e sua criação é regulada em lei complementar (art. 18, § 2º). Modelo: Câmara de Cotia/SP · Procurador Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · arts. 18, 22 e 35 (Federação e Municípios)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Procurador Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "trecho": "compreende a União, os Estados, o Distrito Federal e os Municípios, todos autônomos"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 22",
+    "trecho": "XII - jazidas, minas, outros recursos minerais e metalurgia;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 35",
+    "trecho": "I - deixar de ser paga, sem motivo de força maior, por dois anos consecutivos, a dívida fundada;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "trecho": "§ 2º Os Territórios Federais integram a União"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 35",
+    "termo": "três anos"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "termo": "lei ordinária"
+   }
+  ]
+ },
+ {
+  "id": "direito26-13",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Quanto à repartição de competências na Constituição Federal, assinale a alternativa correta.",
+  "options": [
+   "Legislar sobre direito urbanístico é competência privativa da União.",
+   "Fomentar a produção agropecuária e organizar o abastecimento alimentar é competência comum da União, dos Estados, do Distrito Federal e dos Municípios.",
+   "Legislar sobre trânsito e transporte é competência concorrente da União, dos Estados e do Distrito Federal.",
+   "Legislar sobre custas dos serviços forenses é competência comum da União, dos Estados, do Distrito Federal e dos Municípios."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. O art. 23, VIII, põe entre as competências comuns 'fomentar a produção agropecuária e organizar o abastecimento alimentar'. A erra: direito urbanístico é de legislação concorrente (art. 24, I). C erra: trânsito e transporte são de competência privativa da União (art. 22, XI). D erra: custas dos serviços forenses são de legislação concorrente da União, dos Estados e do DF (art. 24, IV), e não competência comum. Modelo: Câmara de Araraquara/SP · Analista Legislativo · 2025 — https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · arts. 22, 23 e 24 (repartição de competências)",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Analista Legislativo",
+   "ano": "2025",
+   "url": "https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 23",
+    "trecho": "VIII - fomentar a produção agropecuária e organizar o abastecimento alimentar;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "I - direito tributário, financeiro, penitenciário, econômico e urbanístico;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 22",
+    "trecho": "XI - trânsito e transporte;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "IV - custas dos serviços forenses;"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 22",
+    "termo": "urbanístico"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 23",
+    "termo": "custas"
+   }
+  ]
+ },
+ {
+  "id": "direito26-14",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Sobre a competência legislativa concorrente prevista no art. 24 da Constituição Federal, assinale a afirmativa INCORRETA.",
+  "options": [
+   "No âmbito da legislação concorrente, a competência da União limita-se a estabelecer normas gerais.",
+   "A competência da União para legislar sobre normas gerais não exclui a competência suplementar dos Estados.",
+   "Inexistindo lei federal sobre normas gerais, os Estados exercerão a competência legislativa plena, para atender a suas peculiaridades.",
+   "A superveniência de lei federal sobre normas gerais revoga a lei estadual, no que lhe for contrário."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. O art. 24, § 4º, diz que a superveniência de lei federal sobre normas gerais 'suspende a eficácia' da lei estadual no que lhe for contrário; não a revoga. A, B e C reproduzem os §§ 1º, 2º e 3º do art. 24. Modelo: Câmara de Araraquara/SP · Analista Legislativo · 2025 — https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 24, §§ 1º a 4º (competência concorrente)",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Analista Legislativo",
+   "ano": "2025",
+   "url": "https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "§ 4º A superveniência de lei federal sobre normas gerais suspende a eficácia da lei estadual, no que lhe for contrário."
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "§ 1º No âmbito da legislação concorrente, a competência da União limitar-se-á a estabelecer normas gerais."
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "termo": "revoga"
+   }
+  ]
+ },
+ {
+  "id": "direito26-15",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Nos termos da Constituição Federal, compete privativamente à União legislar sobre",
+  "options": [
+   "orçamento.",
+   "previdência social, proteção e defesa da saúde.",
+   "proteção e tratamento de dados pessoais.",
+   "proteção ao patrimônio histórico, cultural, artístico, turístico e paisagístico."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 22, XXX (incluído pela EC nº 115/2022), atribui à União a competência privativa para legislar sobre proteção e tratamento de dados pessoais. As demais são matérias de legislação concorrente da União, dos Estados e do DF: orçamento (art. 24, II), previdência social, proteção e defesa da saúde (art. 24, XII) e proteção ao patrimônio histórico, cultural, artístico, turístico e paisagístico (art. 24, VII). Cuidado: 'seguridade social' é privativa (art. 22, XXIII), mas 'previdência social' está no art. 24. Modelo: Câmara de Cotia/SP · Procurador Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 22 (competência privativa da União)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Procurador Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 22",
+    "trecho": "XXX - proteção e tratamento de dados pessoais."
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "XII - previdência social, proteção e defesa da saúde;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 24",
+    "trecho": "II - orçamento;"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 22",
+    "termo": "orçamento"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 22",
+    "termo": "previdência"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 22",
+    "termo": "patrimônio histórico"
+   }
+  ]
+ },
+ {
+  "id": "direito26-16",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Moradores de um distrito querem que ele se desmembre do Município a que pertence e se torne um novo Município. Segundo o art. 18, § 4º, da Constituição Federal, o desmembramento far-se-á por",
+  "options": [
+   "lei estadual, dentro do período determinado por lei complementar federal, e dependerá de plebiscito às populações dos Municípios envolvidos, após divulgação dos Estudos de Viabilidade Municipal.",
+   "lei municipal, aprovada pela Câmara do Município de origem, e dependerá de referendo apenas da população do distrito interessado.",
+   "lei federal, e dependerá de plebiscito apenas da população do distrito, dispensados os Estudos de Viabilidade Municipal.",
+   "lei estadual, a qualquer tempo, e dependerá de referendo às populações dos Municípios envolvidos, após estudos elaborados pela Assembleia Legislativa."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. O art. 18, § 4º, exige lei estadual, dentro do período determinado por lei complementar federal, consulta prévia por plebiscito às populações dos Municípios envolvidos e divulgação prévia dos Estudos de Viabilidade Municipal. B erra o tipo de lei (municipal) e a consulta (referendo, só do distrito). C erra o tipo de lei (federal), restringe o plebiscito ao distrito e dispensa os estudos. D erra o momento ('a qualquer tempo'), troca plebiscito por referendo e inventa estudos da Assembleia. Lembre: criar e suprimir distritos é do Município (art. 30, IV); criar Municípios, não. Modelo: Câmara de Araraquara/SP · Analista Legislativo · 2025 — https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 18, § 4º (criação e desmembramento de Municípios)",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Analista Legislativo",
+   "ano": "2025",
+   "url": "https://mapastatic.s3.amazonaws.com/67dd6273cae3b88aea0858c3/instituto-consulplan-2025-camara-de-araraquara-sp-analista-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "trecho": "far-se-ão por lei estadual, dentro do período determinado por Lei Complementar Federal"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "trecho": "mediante plebiscito, às populações dos Municípios envolvidos"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "trecho": "após divulgação dos Estudos de Viabilidade Municipal"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "termo": "referendo"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "termo": "lei municipal"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 18",
+    "termo": "a qualquer tempo"
+   }
+  ]
+ },
+ {
+  "id": "direito26-17",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Sobre a eleição e a posse do Prefeito e do Vice-Prefeito, segundo o art. 29 da Constituição Federal, assinale a afirmativa correta.",
+  "options": [
+   "O mandato do Prefeito, do Vice-Prefeito e dos Vereadores é de cinco anos, mediante pleito direto realizado em todo o País.",
+   "As regras de segundo turno do art. 77 aplicam-se à eleição do Prefeito nos Municípios com mais de cem mil eleitores.",
+   "A posse do Prefeito e do Vice-Prefeito ocorre no dia 1º de janeiro do ano subsequente ao da eleição.",
+   "A eleição do Prefeito e do Vice-Prefeito realiza-se no primeiro domingo de novembro do ano anterior ao término do mandato."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 29, III, fixa a posse do Prefeito e do Vice-Prefeito 'no dia 1º de janeiro do ano subseqüente ao da eleição'. A erra a duração do mandato (quatro anos, inciso I). B erra o número: as regras do art. 77 valem para Municípios com mais de duzentos mil eleitores (inciso II). D erra o mês: a eleição é no primeiro domingo de outubro (inciso II). Modelo: Câmara de Cotia/SP · Procurador Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 29, I a III (eleição e posse)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Procurador Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "III - posse do Prefeito e do Vice-Prefeito no dia 1º de janeiro do ano subseqüente ao da eleição"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "no caso de Municípios com mais de duzentos mil eleitores"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "para mandato de quatro anos"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "termo": "cinco anos"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "termo": "cem mil eleitores"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "termo": "novembro"
+   }
+  ]
+ },
+ {
+  "id": "direito26-18",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Sobre os Vereadores e o Prefeito, de acordo com o art. 29 da Constituição Federal, assinale a afirmativa correta.",
+  "options": [
+   "Os Vereadores são invioláveis por suas opiniões, palavras e votos no exercício do mandato, em todo o território nacional.",
+   "Os Vereadores são invioláveis por suas opiniões, palavras e votos no exercício do mandato e na circunscrição do Município.",
+   "O Prefeito será julgado pela Câmara Municipal nos crimes comuns que praticar.",
+   "As proibições e incompatibilidades dos Vereadores são livremente definidas pela Lei Orgânica, sem relação com as regras dos membros do Congresso Nacional."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. O art. 29, VIII, garante a inviolabilidade dos Vereadores por suas opiniões, palavras e votos no exercício do mandato 'e na circunscrição do Município'. A estende a garantia a todo o território nacional, o que a CF não faz. C erra: o Prefeito é julgado perante o Tribunal de Justiça (inciso X). D erra: as proibições e incompatibilidades são similares, no que couber, às dos membros do Congresso Nacional e da Assembleia Legislativa (inciso IX). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 29, VIII a X (Vereador e Prefeito)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "no exercício do mandato e na circunscrição do Município"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "X - julgamento do Prefeito perante o Tribunal de Justiça;"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "termo": "território nacional"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "termo": "livremente"
+   }
+  ]
+ },
+ {
+  "id": "direito26-19",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Um Município tem 62.000 habitantes. De acordo com o art. 29, IV, da Constituição Federal, o limite máximo de Vereadores para a composição da sua Câmara Municipal é de",
+  "options": [
+   "15 (quinze) Vereadores.",
+   "13 (treze) Vereadores.",
+   "17 (dezessete) Vereadores.",
+   "11 (onze) Vereadores."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. O art. 29, IV, d, fixa o limite máximo de 15 Vereadores para Municípios de mais de 50.000 e até 80.000 habitantes; 62.000 está nessa faixa. 13 é o limite da faixa anterior (mais de 30.000 até 50.000, alínea c); 17 é o da faixa seguinte (mais de 80.000 até 120.000, alínea e); 11 é o da faixa de mais de 15.000 até 30.000 (alínea b). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 29, IV (número de Vereadores)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "d) 15 (quinze) Vereadores, nos Municípios de mais de 50.000 (cinquenta mil) habitantes e de até 80.000 (oitenta mil)"
+   }
+  ]
+ },
+ {
+  "id": "direito26-20",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Em um Município com 70.000 habitantes, a Câmara Municipal vai fixar o subsídio dos Vereadores. Conforme o art. 29, VI, da Constituição Federal, o subsídio",
+  "options": [
+   "será fixado por lei de iniciativa do Prefeito, no limite máximo de 40% do subsídio dos Deputados Estaduais.",
+   "será fixado pela Câmara em cada legislatura para a subsequente, no limite máximo de 30% do subsídio dos Deputados Estaduais.",
+   "será fixado pela Câmara na própria legislatura, com efeitos imediatos, no limite máximo de 50% do subsídio dos Deputados Estaduais.",
+   "será fixado pela Câmara em cada legislatura para a subsequente, no limite máximo de 40% do subsídio dos Deputados Estaduais."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. O art. 29, VI, manda a Câmara fixar o subsídio dos Vereadores 'em cada legislatura para a subseqüente', e a alínea c limita o subsídio a 40% do subsídio dos Deputados Estaduais em Municípios de 50.001 a 100.000 habitantes. A erra a iniciativa: é a Câmara que fixa (a lei de iniciativa da Câmara do inciso V trata do subsídio do Prefeito, do Vice e dos Secretários). B usa o limite de 30%, que é da faixa de 10.001 a 50.000 habitantes. C erra o momento (não vale para a mesma legislatura) e usa os 50% da faixa de 100.001 a 300.000 habitantes. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 29, VI (subsídio dos Vereadores)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "o subsídio dos Vereadores será fixado pelas respectivas Câmaras Municipais em cada legislatura para a subseqüente"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "o subsídio máximo dos Vereadores corresponderá a quarenta por cento do subsídio dos Deputados Estaduais"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "termo": "iniciativa do Prefeito"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "termo": "própria legislatura"
+   }
+  ]
+ },
+ {
+  "id": "direito26-21",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "De acordo com o art. 19 da Constituição Federal, é vedado à União, aos Estados, ao Distrito Federal e aos Municípios",
+  "options": [
+   "colaborar com entidades religiosas em atividade de interesse público, na forma da lei.",
+   "criar, organizar e suprimir distritos, observada a legislação estadual.",
+   "recusar fé aos documentos públicos.",
+   "instituir, por lei complementar, regiões metropolitanas formadas por municípios limítrofes."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 19, II, veda a todos os entes 'recusar fé aos documentos públicos'. A está ressalvada pelo próprio art. 19, I: é permitida, na forma da lei, a colaboração de interesse público. B é competência do Município (art. 30, IV), não vedação. D é competência dos Estados (art. 25, § 3º), não vedação. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 19 (vedações aos entes federados)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 19",
+    "trecho": "II - recusar fé aos documentos públicos;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 19",
+    "trecho": "ressalvada, na forma da lei, a colaboração de interesse público"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 30",
+    "trecho": "IV - criar, organizar e suprimir distritos, observada a legislação estadual"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 25",
+    "trecho": "mediante lei complementar, instituir regiões metropolitanas"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 19",
+    "termo": "distritos"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 19",
+    "termo": "regiões metropolitanas"
+   }
+  ]
+ },
+ {
+  "id": "direito26-22",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Considerando o art. 29 da Constituição Federal, analise as afirmativas a seguir.\nI. O total da despesa com a remuneração dos Vereadores não poderá ultrapassar o montante de cinco por cento da receita do Município.\nII. O Prefeito é julgado perante o Tribunal de Justiça.\nIII. Os subsídios do Prefeito, do Vice-Prefeito e dos Secretários Municipais são fixados por lei de iniciativa do Prefeito.\nIV. A iniciativa popular de projetos de lei de interesse específico do Município, da cidade ou de bairros exige a manifestação de, pelo menos, cinco por cento do eleitorado.\nEstá correto o que se afirma em",
+  "options": [
+   "I e II, apenas.",
+   "I, II e IV, apenas.",
+   "II, III e IV, apenas.",
+   "I, III e IV, apenas."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. I está correta (art. 29, VII). II está correta (art. 29, X). IV está correta (art. 29, XIII: pelo menos cinco por cento do eleitorado). III está errada: os subsídios do Prefeito, do Vice-Prefeito e dos Secretários Municipais são fixados por lei de iniciativa da Câmara Municipal (art. 29, V). Por isso A (omite IV), C (inclui III e omite I) e D (inclui III e omite II) erram. Modelo: Câmara de Cotia/SP · Procurador Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 29 (Município: preceitos)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Procurador Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "não poderá ultrapassar o montante de cinco por cento da receita do Município"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "X - julgamento do Prefeito perante o Tribunal de Justiça;"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "Secretários Municipais fixados por lei de iniciativa da Câmara Municipal"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "trecho": "através de manifestação de, pelo menos, cinco por cento do eleitorado"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 29",
+    "termo": "iniciativa do Prefeito"
+   }
+  ]
+ },
+ {
+  "id": "direito26-23",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Segundo o art. 35 da Constituição Federal, o Estado poderá intervir em seus Municípios nas hipóteses a seguir, EXCETO quando",
+  "options": [
+   "deixar de ser paga, sem motivo de força maior, por dois anos consecutivos, a dívida fundada.",
+   "não forem prestadas contas devidas, na forma da lei.",
+   "o Tribunal de Justiça der provimento a representação para assegurar a observância de princípios indicados na Constituição Estadual.",
+   "não tiver sido aplicado o mínimo exigido da receita municipal em assistência social e em cultura."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. O art. 35, III, trata da falta de aplicação do mínimo exigido da receita municipal 'na manutenção e desenvolvimento do ensino e nas ações e serviços públicos de saúde', e não em assistência social e cultura. A, B e C reproduzem os incisos I, II e IV do art. 35. Modelo: Câmara de Cotia/SP · Procurador Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 35 (intervenção do Estado no Município)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Procurador Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 35",
+    "trecho": "III - não tiver sido aplicado o mínimo exigido da receita municipal na manutenção e desenvolvimento do ensino"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 35",
+    "trecho": "II - não forem prestadas contas devidas, na forma da lei;"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 35",
+    "termo": "assistência social"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 35",
+    "termo": "cultura"
+   }
+  ]
+ },
+ {
+  "id": "direito26-24",
+  "materiaRef": "mmat_36",
+  "topicoRef": "ttop_406",
+  "tipo": "abcd",
+  "text": "Sobre o procedimento da intervenção, de acordo com o art. 36 da Constituição Federal, assinale a afirmativa correta.",
+  "options": [
+   "O decreto de intervenção será submetido à apreciação do Congresso Nacional ou da Assembleia Legislativa do Estado no prazo de vinte e quatro horas.",
+   "O decreto de intervenção será submetido à apreciação do Congresso Nacional ou da Assembleia Legislativa do Estado no prazo de quarenta e oito horas.",
+   "Se a coação for exercida contra o Poder Judiciário, a intervenção dependerá de requisição do Superior Tribunal de Justiça.",
+   "Cessados os motivos da intervenção, as autoridades afastadas de seus cargos não poderão a eles retornar."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. O art. 36, § 1º, manda submeter o decreto de intervenção à apreciação do Congresso Nacional ou da Assembleia Legislativa 'no prazo de vinte e quatro horas'. B erra o prazo (48 horas). C erra o tribunal: no caso do art. 34, IV, com coação contra o Judiciário, a requisição é do Supremo Tribunal Federal (art. 36, I). D contraria o § 4º: cessados os motivos, as autoridades afastadas voltam aos cargos, salvo impedimento legal. Modelo: Câmara de Cotia/SP · Procurador Legislativo · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "CF · art. 36 (decretação da intervenção)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Procurador Legislativo",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123193/instituto-consulplan-2024-camara-de-cotia-sp-procurador-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 36",
+    "trecho": "no prazo de vinte e quatro horas"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 36",
+    "trecho": "de requisição do Supremo Tribunal Federal, se a coação for exercida contra o Poder Judiciário"
+   },
+   {
+    "tipo": "lei",
+    "lei": "cf",
+    "artigo": "Art. 36",
+    "trecho": "as autoridades afastadas de seus cargos a estes voltarão, salvo impedimento legal"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "cf",
+    "artigo": "Art. 36",
+    "termo": "quarenta e oito"
+   },
+   {
+    "lei": "cf",
+    "artigo": "Art. 36",
+    "termo": "Superior Tribunal de Justiça, se a coação"
+   }
+  ]
+ }
+]

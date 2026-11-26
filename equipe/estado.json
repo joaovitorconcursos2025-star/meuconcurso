@@ -1,6 +1,6 @@
 {
   "prova": "2026-12-20",
-  "atualizado": "2026-11-22",
+  "atualizado": "2026-11-26",
   "regras": {
     "min_questoes_por_materia_por_noite": 20,
     "materias_objetivas": [
@@ -23,7 +23,7 @@
   "banco_atual": {
     "legislacao_especifica": {
       "lei_organica": 62,
-      "regimento_interno": 57,
+      "regimento_interno": 81,
       "estatuto": 64
     },
     "artigos_ja_cobertos": {
@@ -159,7 +159,36 @@
         "84",
         "104",
         "159",
-        "161"
+        "161",
+        "5",
+        "7",
+        "18",
+        "20",
+        "21",
+        "22",
+        "25",
+        "26",
+        "27",
+        "68",
+        "69",
+        "73",
+        "77",
+        "78",
+        "80",
+        "82",
+        "87",
+        "141",
+        "142",
+        "145",
+        "146",
+        "148",
+        "152",
+        "153",
+        "167",
+        "170",
+        "206",
+        "214",
+        "215"
       ],
       "est": [
         "6",
@@ -326,6 +355,21 @@
         "RI 99 §1º VIII",
         "RI 202"
       ]
+    },
+    "esteira_por_topico_20261126": {
+      "Língua Portuguesa › Concordância verbal e nominal (ttop_374)": "3 → 27",
+      "Raciocínio Lógico › Princípio da regressão ou reversão (ttop_378)": "3 → 27",
+      "Informática › Windows (ttop_395)": "3 → 27",
+      "Direito › CF: organização do Estado (ttop_406)": "4 → 28",
+      "Legislação Específica › Regimento Interno (ttop_417)": "57 → 81",
+      "Analista de RH › 7 · Lei de Responsabilidade Fiscal (ttop_425)": "4 → 28",
+      "Técnico Parlamentar › 1 · Direito Administrativo (tp1), processo administrativo": "21 → 45"
+    },
+    "fontes_federais": {
+      "cf": "arts. 18, 19, 22, 23, 24, 25, 29, 29-A, 30, 34, 35, 36 (faltam 20, 21, 26-28, 31 (EC 139/2026), 32, 33, 37-41, 169)",
+      "lc101": "arts. 18-23 (falta 2º RCL, 59, 65)",
+      "l9784": "arts. 2º, 11-15, 17-20, 50, 53-57, 59, 63, 64",
+      "obs": "redigidos e conferidos contra o Planalto via WebFetch (proxy bloqueia download); revisor confirma cada trecho no Planalto"
     }
   },
   "fila": [
@@ -355,7 +399,15 @@
         "Raciocínio Lógico Matemático › Sequências lógicas (números, letras, figuras)",
         "Raciocínio Lógico Matemático › Lógica dedutiva, argumentativa e quantitativa"
       ],
-      "status": "em andamento · 22/11: rotina noturna limitada a 1 pacote; feito Legislação Específica (+29 gêmeas). Pesquisa de Concordância pronta em equipe/banca/portugues-concordancia.md (13 questões reais com gabarito) para a próxima rodada de Português."
+      "status": "em andamento · 26/11: 7 matérias, 168 questões (24 por matéria), nenhuma falta a compensar. Próximos itens sugeridos: Português › Compreensão e interpretação (3) ou Crase; RLM › Regra de três (2); Informática › outro item com 3 (Word/Excel); Direito › Licitações 14.133 (3); Leg. Específica › Lei Orgânica (62); RH › item de gestão de pessoas com menos questões (ver BANCA-RH); TP › tp3 Rotinas (12) se houver fonte oficial, senão item 4 Redação Oficial (Manual da PR)."
+    },
+    {
+      "id": "BANCA-RH",
+      "prioridade": 1,
+      "papel": "analista_banca",
+      "frente": "cristalina",
+      "tarefa": "Pedido do João (26/11): mapear, item por item do Quadro III (Conhecimentos do Cargo · Analista de RH), o que a Consulplan mais cobra, com link da prova e gabarito quando houver (Araraquara 2025 AGP, Cotia 2024 ASP e outras). Gravar equipe/banca/rh-mapa-itens.md e usar para escolher os itens de RH das próximas rodadas, começando pelos de gestão de pessoas.",
+      "status": "pendente · fazer na próxima rodada junto com o pacote de RH"
     },
     {
       "id": "PLANO-1",
@@ -433,7 +485,7 @@
       "papel": "analista_banca",
       "frente": "bacen",
       "tarefa": "Toda rodada, conferir se o edital do Bacen 2026 (FGV) foi publicado: bcb.gov.br (Acesso à informação > Concursos) e conhecimento.fgv.br. Se saiu: salvar o texto em equipe/fontes/bacen-edital-2026.txt, registrar no diário (data da prova, matérias, nº de questões e pesos de Auditor e Técnico, áreas do Auditor) e, na mesma rodada, montar o pacote bcb-<cargo>-edital-AAAAMMDD com as matérias/tópicos oficiais e concurso.dataProva preenchida; tópicos da previsão que ficaram fora do edital vão em removerTopicos (só saem se não tiverem questão). Não apagar questões do João.",
-      "status": "pendente · checado em 22/11: edital ainda não publicado (FGV contratada 19/11; prazo até 30/12)."
+      "status": "pendente · checado em 26/11: edital ainda não publicado (contrato FGV 18/11; prazo 30/12/2026 ou 03/01/2027; 100 Auditor, 50 Técnico, 20 Procurador em edital separado). Detalhes em equipe/rodada-20261126/bacen-checagem.md."
     },
     {
       "id": "BCB-1",
@@ -462,6 +514,13 @@
     "bcb-auditor-v1",
     "cristalina-legislacao-especifica-20261120",
     "cristalina-tecnico-parlamentar-20261121",
-    "cristalina-legislacao-especifica-20261122"
+    "cristalina-legislacao-especifica-20261122",
+    "cristalina-portugues-20261126",
+    "cristalina-raciocinio-logico-20261126",
+    "cristalina-informatica-20261126",
+    "cristalina-direito-20261126",
+    "cristalina-legislacao-especifica-20261126",
+    "cristalina-rh-20261126",
+    "cristalina-tecnico-parlamentar-20261126"
   ]
 }

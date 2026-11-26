@@ -1,0 +1,34 @@
+{
+ "aprovadas": [
+  "direito26-01",
+  "direito26-02",
+  "direito26-03",
+  "direito26-04",
+  "direito26-05",
+  "direito26-06",
+  "direito26-07",
+  "direito26-08",
+  "direito26-09",
+  "direito26-10",
+  "direito26-11",
+  "direito26-12",
+  "direito26-13",
+  "direito26-14",
+  "direito26-15",
+  "direito26-16",
+  "direito26-17",
+  "direito26-18",
+  "direito26-19",
+  "direito26-20",
+  "direito26-21",
+  "direito26-22",
+  "direito26-23",
+  "direito26-24"
+ ],
+ "vetadas": {},
+ "ajustes_sugeridos": {
+  "direito26-21": "O modelo (Cotia ASP) não traz questão do art. 19; o arquivo de banca diz 'sem modelo real nesta rodada'. Vale trocar por um modelo mais próximo ou deixar claro que o modelo é só de formato.",
+  "direito26-19": "O modelo (Cotia ASP Q47) é sobre o art. 29-A e serve só como formato de faixa. Aceitável, mas a ligação é fraca (o mesmo vale para a 20).",
+  "direito26-01": "Opcional: o caput vigente (EC 109/2021) também inclui 'os demais gastos com pessoal inativo e pensionistas'. O enunciado não está errado, mas pode citar isso para ficar completo."
+ }
+}

@@ -1,0 +1,37 @@
+# Revisor · rlm · Fase 1 (às cegas)
+- rlm26-01: D. x·(1/3)^4=40 → x=3240. Única.
+- rlm26-02: A. x/16−30=0 → 480. Única.
+- rlm26-03: C. x·3/4·3/5·1/2=9x/40=9 → 40 (faixa 40–49). Única.
+- rlm26-04: C. x·1/2·2/3·1/2=x/6=8 → 48. Única.
+- rlm26-05: B. x·3/4·2/3=x/2=1200 → 2400. Única.
+- rlm26-06: C. 192+96+48+24+12=372. Única. (Mais "regressão em PG" que reversão de operações, mas aceitável.)
+- rlm26-07: B. 4º=5 → 3º=20 → 2º=80 → 1º=320. Única.
+- rlm26-08: C. R2/2−5=20 → R2=50; 2x/3−10=50 → x=90. Única.
+- rlm26-09: A. (36+18)/3=18; (18+18)/3=12; (12+18)/3=10. Única.
+- rlm26-10: A. Antes da 3ª: 12/12/48; antes da 2ª: 6/42/24; antes da 1ª: 39/21/12 (soma 72). Única.
+- rlm26-11: D. x·3/4·2/3·1/2=x/4=30000 → 120000. Única.
+- rlm26-12: D. x·0,6·0,75·2/3=0,3x=180 → 600. Única.
+- rlm26-13: A. 1,08x=540 → 500. Única.
+- rlm26-14: A. Saldo +6 → entrou no 6º. Única.
+- rlm26-15: C. (2+1)·2=6; (6+1)·2=14; (14+1)·2=30. Única.
+- rlm26-16: B. 22·2=44; 44−12=32; 32·5/4=40. Única.
+- rlm26-17: A. 20·3/2=30; 30−6=24; 24·4/3=32. Única.
+- rlm26-18: B. (20+5)·2=50; 50−6=44; 44/4=11. Única.
+- rlm26-19: C (incorreta). x/8=50 → 400; 1ª sem. 200; 2ª sem. saem 50 (não 100); restam 150. Só C falsa.
+- rlm26-20: D (incorreta). 250→150 (após 2º saque)→100 (após 1º)→75 inicial. A, B, C verdadeiras; D falsa. Única.
+- rlm26-21: D (3). 40→80→70→105. I V, II V, III F (saíram 40), IV V (35+40=75). 3 corretas.
+- rlm26-22: B (2). 30→40 (lanche 10)→80 (livro 40)→100. I V, II F, III V. 2 corretas.
+- rlm26-23: B. 70/5=14; 14−8=6; 6·3=18. Única.
+- rlm26-24: D (3). 0,99x=990 → 1000. I V, II V, III F, IV V (1100·0,1=110). 3 corretas.
+
+# Fase 2 (conferência)
+- Gabarito às cegas x questoes.json: 24/24 coincidentes. Nenhuma correção no revisor.json.
+- Conferidor: "24 questões · reprovadas 0 · gabarito A-D [6, 6, 6, 6]".
+- (a) Todas com uma única alternativa correta; enunciados inequívocos (frações sempre explicitadas "do restante"/"do que havia"; "metade do que restou" etc.). Respostas inteiras e coerentes (pessoas, processos, artigos, livros).
+- (b) Todas as bases recalculadas à mão e conferem: 3240, 480, 40, 48, 2400, 372, 320, 90, 10, 39, 120000, 600, 500, 6, 30, 40, 32, 11, 100 (19: valor da afirmativa falsa), 200 (20: valor da afirmativa falsa), 3, 2, 18, 3. Truque 0**((x-y)**2): 21 → 1+1+0+1=3 (alt. D "3"); 22 → 1+0+1=2 (alt. B "2"); 24 → 1+1+0+1=3 (alt. D "3"). Valores intermediários são exatos em ponto flutuante (9900/9, 11000/11, 70*3/2), sem risco de 0**(epsilon).
+- Distratores conferidos: todos correspondem ao erro descrito na explanation (ex.: 01: 40·(3/2)^4=202,5; 05: 1200÷5/12=2880; 15: 2→5→11→23; 17: (60−6)·4/3=72). Nenhuma afirmação falsa nas explanations.
+- (c) Todas cabem em "Princípio da Regressão ou Reversão" (06 e 07 são cadeia/PG com volta do último ao primeiro, padrão Vermelho Novo Q14 do arquivo de banca).
+- (d) Os modelo.url estão listados no arquivo de banca, MAS o arquivo declara que nenhum gabarito oficial foi conferido e que esses modelos não devem ser usados antes dessa conferência; Patrocínio é página do Estude Grátis, não caderno. Registrado como pendência de PACOTE em revisao.json (não é defeito de questão).
+- (e) Nenhuma explanation cita "gabarito oficial".
+- Ajustes opcionais: 19 (base), 21 (acervo/estante), 20 (semelhança com "dobra e perde 10" existente).
+- Resultado: 24 aprovadas, 0 vetadas.

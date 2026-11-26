@@ -1,0 +1,242 @@
+[
+ {
+  "id": "portugues26-01",
+  "text": "Assinale a alternativa em que a concordância verbal está INCORRETA, de acordo com a norma-padrão.",
+  "options": [
+   "Vai fazer dois anos que a sede da Câmara foi reformada.",
+   "Cerca de quarenta moradores assinaram o abaixo-assinado.",
+   "Faziam meses que o projeto aguardava parecer da comissão.",
+   "Nenhum dos vereadores faltou à sessão extraordinária."
+  ]
+ },
+ {
+  "id": "portugues26-02",
+  "text": "NÃO há erro de concordância em:",
+  "options": [
+   "Haviam servidores interessados na capacitação.",
+   "Devem haver outras vagas no próximo edital.",
+   "Concluído as etapas, o resultado foi homologado.",
+   "Encerradas as inscrições, a comissão divulgou a lista dos candidatos."
+  ]
+ },
+ {
+  "id": "portugues26-03",
+  "text": "Considere a frase: \"Há pendências no cadastro de alguns servidores.\" Caso a forma verbal \"Há\" seja substituída por uma forma do verbo \"existir\", no mesmo tempo, é correto afirmar que",
+  "options": [
+   "não haverá outra alteração (\"Existe pendências\"), pois \"existir\", como \"haver\", é verbo impessoal.",
+   "o verbo deverá ir ao plural (\"Existem pendências\"), pois \"pendências\" passa a ser o sujeito da oração.",
+   "o verbo deverá ir ao plural (\"Existem pendências\"), pois concorda com \"servidores\", termo plural mais próximo.",
+   "a troca é impossível, pois \"existir\" não pode substituir \"haver\" com esse sentido."
+  ]
+ },
+ {
+  "id": "portugues26-04",
+  "text": "Quanto à concordância verbal, assinale a frase INCORRETA segundo a norma-padrão.",
+  "options": [
+   "Enviaram-se ao Executivo uma cópia das atas da comissão.",
+   "Publicou-se ontem a relação dos aprovados no concurso.",
+   "Arquivaram-se os processos já julgados pela comissão.",
+   "Trata-se de questões que dependem de parecer jurídico."
+  ]
+ },
+ {
+  "id": "portugues26-05",
+  "text": "Na frase \"Divulgaram-se, na semana passada, os novos horários de atendimento ao público.\", a forma verbal \"Divulgaram-se\" está no plural porque",
+  "options": [
+   "o sujeito é indeterminado, e o pronome \"se\" exige o verbo na 3ª pessoa do plural.",
+   "o verbo é impessoal e, por isso, pode ficar no singular ou no plural.",
+   "o \"se\" é pronome apassivador, e o verbo concorda com o sujeito paciente \"os novos horários de atendimento ao público\".",
+   "há sujeito composto, formado pelos núcleos \"horários\" e \"atendimento\"."
+  ]
+ },
+ {
+  "id": "portugues26-06",
+  "text": "Em \"O presidente da comissão e a relatora têm acompanhado de perto a tramitação do projeto.\", o emprego da forma \"têm\" justifica-se porque",
+  "options": [
+   "o verbo concorda com \"relatora\", núcleo mais próximo dele.",
+   "o sujeito é composto, com dois núcleos ligados por \"e\" e anteposto ao verbo, o que exige o plural.",
+   "o acento apenas diferencia \"têm\" de \"tem\", e as duas formas seriam igualmente aceitas na frase.",
+   "o verbo concorda com o objeto \"a tramitação do projeto\"."
+  ]
+ },
+ {
+  "id": "portugues26-07",
+  "text": "Considere a frase: \"A revisão do plano de cargos foi um dos temas debatidos pelos servidores.\" Assinale a reescrita que mantém a correção gramatical e o sentido original.",
+  "options": [
+   "Um dos temas debatidos pelos servidores foram a revisão do plano de cargos.",
+   "Os servidores debateu, entre outros temas, a revisão do plano de cargos.",
+   "A revisão do plano de cargos estiveram entre os temas debatidos pelos servidores.",
+   "Um dos temas debatidos pelos servidores foi a revisão do plano de cargos."
+  ]
+ },
+ {
+  "id": "portugues26-08",
+  "text": "Considere a frase: \"Ainda estão pendentes, na comissão, duas questões que requerem análise técnica.\" Assinale a reescrita que respeita a norma-padrão e preserva o sentido original.",
+  "options": [
+   "Na comissão, duas questões que requerem análise técnica ainda estão pendentes.",
+   "Ainda está pendente, na comissão, duas questões que requerem análise técnica.",
+   "Na comissão, duas questões que requerem análise técnica já estão resolvidas.",
+   "Ainda estão pendentes, na comissão, duas questões que requer análise técnica."
+  ]
+ },
+ {
+  "id": "portugues26-09",
+  "text": "Assinale a alternativa em que a concordância nominal está de acordo com a norma-padrão.",
+  "options": [
+   "A servidora chegou meia atrasada à reunião.",
+   "A sessão começou ao meio-dia e meia.",
+   "Os documentos estavam meios rasgados.",
+   "O setor comprou meio dúzia de pastas."
+  ]
+ },
+ {
+  "id": "portugues26-10",
+  "text": "Está de acordo com a norma-padrão, quanto à concordância nominal, a frase:",
+  "options": [
+   "Há bastante processos aguardando despacho.",
+   "As servidoras ficaram bastantes satisfeitas com o curso.",
+   "Tivemos bastante reuniões nesta semana.",
+   "Os vereadores apresentaram bastantes emendas ao projeto."
+  ]
+ },
+ {
+  "id": "portugues26-11",
+  "text": "Assinale a alternativa em que há ERRO de concordância nominal.",
+  "options": [
+   "Seguem anexas ao ofício as planilhas de custos.",
+   "Vão inclusos no envelope os comprovantes de residência.",
+   "Os candidatos convocados estão quite com as obrigações eleitorais.",
+   "Encaminho, em anexo, as certidões solicitadas."
+  ]
+ },
+ {
+  "id": "portugues26-12",
+  "text": "Considere o trecho: \"Muito poucas pessoas compareceram à audiência, embora o tema fosse muito importante para as famílias do bairro.\" Sobre a concordância no trecho, é correto afirmar que",
+  "options": [
+   "nas duas ocorrências, \"muito\" é advérbio, intensifica \"poucas\" e \"importante\" e, por isso, não varia.",
+   "\"Muito\", na primeira ocorrência, deveria ir para o feminino plural (\"Muitas poucas pessoas\"), concordando com \"pessoas\".",
+   "\"muito\", na segunda ocorrência, deveria concordar com \"famílias\", ficando \"muitas importante\".",
+   "a forma \"compareceram\" deveria estar no singular, concordando com \"audiência\"."
+  ]
+ },
+ {
+  "id": "portugues26-13",
+  "text": "Assinale a alternativa INCORRETA quanto à concordância com os pronomes de tratamento, segundo a norma-padrão.",
+  "options": [
+   "Senhor Prefeito, Vossa Excelência será informado da decisão assim que o parecer for votado.",
+   "Senhora Presidente, Vossa Excelência sabeis que o prazo termina amanhã.",
+   "Senhor Diretor, Vossa Senhoria poderá enviar seus comentários até sexta-feira.",
+   "Sua Excelência, o Governador, comparecerá à solenidade de posse."
+  ]
+ },
+ {
+  "id": "portugues26-14",
+  "text": "Assinale a frase em que a concordância verbal NÃO respeita a norma-padrão.",
+  "options": [
+   "Cerca de vinte servidores aderiram ao programa de capacitação.",
+   "Nenhum dos projetos apresentados recebeu parecer contrário.",
+   "Cerca de trinta pessoas acompanhou a votação pelas galerias.",
+   "Nenhuma das comissões permanentes se reuniu na semana passada."
+  ]
+ },
+ {
+  "id": "portugues26-15",
+  "text": "Considere o trecho: \"Os relatórios elaborados pela comissão foram entregues à todos os vereadores, que assistiram a apresentação com bastante atenção.\" As duas infrações à norma-padrão presentes no trecho são de",
+  "options": [
+   "concordância nominal e crase.",
+   "concordância verbal e regência verbal.",
+   "concordância verbal e concordância nominal.",
+   "crase e regência verbal."
+  ]
+ },
+ {
+  "id": "portugues26-16",
+  "text": "A frase \"O documento foi encaminhado à comissão permanente.\" foi passada para o plural. Assinale a versão que respeita a norma-padrão.",
+  "options": [
+   "Os documentos foram encaminhados às comissões permanentes.",
+   "O documento foi encaminhado à comissões permanentes.",
+   "O documento foi encaminhado às comissões permanente.",
+   "Os documentos foi encaminhado às comissões permanentes."
+  ]
+ },
+ {
+  "id": "portugues26-17",
+  "text": "Moradores enviaram comentários ao site da Câmara. Assinale o comentário escrito com total correção gramatical.",
+  "options": [
+   "Os moradores do bairro reclamou da falta de iluminação nas ruas próximas da escola.",
+   "As reivindicações dos moradores, que foram entregues à vereadores, ainda não teve resposta.",
+   "Os moradores do bairro reclamaram, com razão, da falta de iluminação nas ruas próximas à escola.",
+   "Os pedidos dos moradores foram levados à comissão, que se comprometeu a responder à eles até sexta."
+  ]
+ },
+ {
+  "id": "portugues26-18",
+  "text": "Considere a frase: \"Há registro de cheias no rio desde o século XIX.\" Assinale a alteração que mantém a correção quanto à concordância.",
+  "options": [
+   "Houveram registros de cheias no rio desde o século XIX.",
+   "Havia registros de cheias no rio desde o século XIX.",
+   "Existe registros de cheias no rio desde o século XIX.",
+   "Podem haver registros de cheias no rio desde o século XIX."
+  ]
+ },
+ {
+  "id": "portugues26-19",
+  "text": "Assinale a alternativa que apresenta ERRO de concordância verbal.",
+  "options": [
+   "Reformaram-se as salas das comissões durante o recesso.",
+   "Alugou-se um imóvel para o arquivo da Câmara.",
+   "Necessita-se de técnicos para a manutenção dos equipamentos.",
+   "Discutiu-se, na reunião, as propostas de emenda ao regimento."
+  ]
+ },
+ {
+  "id": "portugues26-20",
+  "text": "Em \"O acesso aos documentos do arquivo histórico foi ampliado no último ano.\", a locução verbal \"foi ampliado\" está no singular porque",
+  "options": [
+   "concorda com o núcleo do sujeito, \"acesso\", e não com o termo preposicionado \"aos documentos do arquivo histórico\".",
+   "concorda com \"arquivo histórico\", termo mais próximo do verbo.",
+   "o sujeito é indeterminado, o que exige a 3ª pessoa do singular.",
+   "a voz passiva analítica exige o verbo sempre no singular."
+  ]
+ },
+ {
+  "id": "portugues26-21",
+  "text": "Analise as frases a seguir quanto à concordância verbal.\nI. Eu e a chefe do setor assinaremos o termo de posse.\nII. Fomos nós que organizou a audiência pública.\nIII. Faltam apenas duas assinaturas para o projeto ser protocolado.\nEstá de acordo com a norma-padrão o que se apresenta em",
+  "options": [
+   "I, apenas.",
+   "I e II, apenas.",
+   "I e III, apenas.",
+   "II e III, apenas."
+  ]
+ },
+ {
+  "id": "portugues26-22",
+  "text": "NÃO há erro de concordância verbal em:",
+  "options": [
+   "Fazem três semanas que se aguardam os pareceres.",
+   "Faz três semanas que se aguardam os pareceres.",
+   "Faz três semanas que se aguarda os pareceres.",
+   "Fazem três semanas que se aguarda os pareceres."
+  ]
+ },
+ {
+  "id": "portugues26-23",
+  "text": "Assinale a alternativa em que a concordância nominal está correta.",
+  "options": [
+   "As passagens custaram caras para a delegação da Câmara.",
+   "\"Muito obrigado\", disse a vereadora aos presentes.",
+   "Elas mesmo conferiram as listas de presença.",
+   "Os uniformes novos estão mais baratos que os do ano passado."
+  ]
+ },
+ {
+  "id": "portugues26-24",
+  "text": "Analise as frases a seguir.\nI. Vai haver novas nomeações no próximo semestre.\nII. Concluídos os trabalhos, a comissão encerrou a reunião.\nIII. Começou ontem as inscrições para o curso de oratória.\nIV. Vossa Senhoria deveis apresentar o requerimento até sexta-feira.\nEstão de acordo com a norma-padrão quanto à concordância apenas",
+  "options": [
+   "I e II.",
+   "I, II e III.",
+   "II e IV.",
+   "I, III e IV."
+  ]
+ }
+]

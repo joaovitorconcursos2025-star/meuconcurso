@@ -1,0 +1,92 @@
+LEI COMPLEMENTAR Nº 101, DE 4 DE MAIO DE 2000 (Lei de Responsabilidade Fiscal) — texto compilado (vigente)
+Fonte: https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm
+Data de captura: 26/11/2026
+Dispositivos gravados: arts. 18, 19, 20, 21, 22 e 23 (só redação vigente; riscados omitidos; notas de redação no fim da linha).
+Método: o WebFetch não transcreve a página e o proxy recusa o download do Planalto. Cada artigo foi redigido e conferido contra o Planalto
+em duas leituras: (1) comparação dispositivo a dispositivo com lista de divergências; (2) citações literais curtas (até ~100 caracteres)
+pedidas sem fornecer o rascunho, mais contagem de incisos e parágrafos. Ordinais: o Planalto mistura "º" e "o" (ex.: "§ 2o do art. 18");
+onde a conferência mostrou "o", ele foi mantido. Ao escolher trecho literal para o conferidor, evite trechos com ordinais.
+NÃO gravado: art. 2º (RCL), não conferido por limite de esforço. Arts. 59 e 65 não pedidos nesta rodada.
+
+Art. 18. Para os efeitos desta Lei Complementar, entende-se como despesa total com pessoal: o somatório dos gastos do ente da Federação com os ativos, os inativos e os pensionistas, relativos a mandatos eletivos, cargos, funções ou empregos, civis, militares e de membros de Poder, com quaisquer espécies remuneratórias, tais como vencimentos e vantagens, fixas e variáveis, subsídios, proventos da aposentadoria, reformas e pensões, inclusive adicionais, gratificações, horas extras e vantagens pessoais de qualquer natureza, bem como encargos sociais e contribuições recolhidas pelo ente às entidades de previdência.
+§ 1º Os valores dos contratos de terceirização de mão-de-obra que se referem à substituição de servidores e empregados públicos serão contabilizados como "Outras Despesas de Pessoal".
+§ 2º A despesa total com pessoal será apurada somando-se a realizada no mês em referência com as dos 11 (onze) imediatamente anteriores, adotando-se o regime de competência, independentemente de empenho. (Redação dada pela Lei Complementar nº 178, de 2021)
+§ 3º Para a apuração da despesa total com pessoal, será observada a remuneração bruta do servidor, sem qualquer dedução ou retenção, ressalvada a redução para atendimento ao disposto no art. 37, inciso XI, da Constituição Federal. (Incluído pela Lei Complementar nº 178, de 2021)
+Art. 19. Para os fins do disposto no caput do art. 169 da Constituição, a despesa total com pessoal, em cada período de apuração e em cada ente da Federação, não poderá exceder os percentuais da receita corrente líquida, a seguir discriminados:
+I - União: 50% (cinqüenta por cento);
+II - Estados: 60% (sessenta por cento);
+III - Municípios: 60% (sessenta por cento);
+§ 1º Na verificação do atendimento dos limites definidos neste artigo, não serão computadas as despesas:
+I - de indenização por demissão de servidores ou empregados;
+II - relativas a incentivos à demissão voluntária;
+III - derivadas da aplicação do disposto no inciso II do § 6º do art. 57 da Constituição;
+IV - decorrentes de decisão judicial e da competência de período anterior ao da apuração a que se refere o § 2o do art. 18;
+V - com pessoal, do Distrito Federal e dos Estados do Amapá e Roraima, custeadas com recursos transferidos pela União na forma dos incisos XIII e XIV do art. 21 da Constituição e do art. 31 da Emenda Constitucional no 19;
+VI - com inativos e pensionistas, ainda que pagas por intermédio de unidade gestora única ou fundo previsto no art. 249 da Constituição Federal, quanto à parcela custeada por recursos provenientes: (Redação dada pela Lei Complementar nº 178, de 2021)
+a) da arrecadação de contribuições dos segurados;
+b) da compensação financeira de que trata o § 9º do art. 201 da Constituição;
+c) de transferências destinadas a promover o equilíbrio atuarial do regime de previdência, na forma definida pelo órgão do Poder Executivo federal responsável pela orientação, pela supervisão e pelo acompanhamento dos regimes próprios de previdência social dos servidores públicos.
+§ 2o Observado o disposto no inciso IV do § 1o, as despesas com pessoal decorrentes de sentenças judiciais serão incluídas no limite do respectivo Poder ou órgão referido no art. 20.
+§ 3º Na verificação do atendimento dos limites definidos neste artigo, é vedada a dedução da parcela custeada com recursos aportados para a cobertura do déficit financeiro dos regimes de previdência. (Incluído pela Lei Complementar nº 178, de 2021)
+Art. 20. A repartição dos limites globais do art. 19 não poderá exceder os seguintes percentuais:
+I - na esfera federal:
+a) 2,5% (dois inteiros e cinco décimos por cento) para o Legislativo, incluído o Tribunal de Contas da União;
+b) 6% (seis por cento) para o Judiciário;
+c) 40,9% (quarenta inteiros e nove décimos por cento) para o Executivo, destacando-se 3% (três por cento) para as despesas com pessoal decorrentes do que dispõem os incisos XIII e XIV do art. 21 da Constituição e o art. 31 da Emenda Constitucional no 19, repartidos de forma proporcional à média das despesas relativas a cada um destes dispositivos, em percentual da receita corrente líquida, verificadas nos três exercícios financeiros imediatamente anteriores ao da publicação desta Lei Complementar; (Vide Decreto nº 3.917, de 2001)
+d) 0,6% (seis décimos por cento) para o Ministério Público da União;
+II - na esfera estadual:
+a) 3% (três por cento) para o Legislativo, incluído o Tribunal de Contas do Estado;
+b) 6% (seis por cento) para o Judiciário;
+c) 49% (quarenta e nove por cento) para o Executivo;
+d) 2% (dois por cento) para o Ministério Público dos Estados;
+III - na esfera municipal:
+a) 6% (seis por cento) para o Legislativo, incluído o Tribunal de Contas do Município, quando houver;
+b) 54% (cinqüenta e quatro por cento) para o Executivo.
+§ 1º Nos Poderes Legislativo e Judiciário de cada esfera, os limites serão repartidos entre seus órgãos de forma proporcional à média das despesas com pessoal, em percentual da receita corrente líquida, verificadas nos três exercícios financeiros imediatamente anteriores ao da publicação desta Lei Complementar.
+§ 2º Para efeito deste artigo entende-se como órgão:
+I - o Ministério Público;
+II - no Poder Legislativo:
+a) Federal, as respectivas Casas e o Tribunal de Contas da União;
+b) Estadual, a Assembléia Legislativa e os Tribunais de Contas;
+c) do Distrito Federal, a Câmara Legislativa e o Tribunal de Contas do Distrito Federal;
+d) Municipal, a Câmara de Vereadores e o Tribunal de Contas do Município, quando houver;
+III - no Poder Judiciário:
+a) Federal, os tribunais referidos no art. 92 da Constituição;
+b) Estadual, o Tribunal de Justiça e outros, quando houver.
+§ 3º Os limites para as despesas com pessoal do Poder Judiciário, a cargo da União por força do inciso XIII do art. 21 da Constituição, serão estabelecidos mediante aplicação da regra do § 1º.
+§ 4º Nos Estados em que houver Tribunal de Contas dos Municípios, os percentuais definidos nas alíneas a e c do inciso II do caput serão, respectivamente, acrescidos e reduzidos em 0,4% (quatro décimos por cento).
+§ 5º Para os fins previstos no art. 168 da Constituição, a entrega dos recursos financeiros correspondentes à despesa total com pessoal por Poder e órgão será a resultante da aplicação dos percentuais definidos neste artigo, ou aqueles fixados na lei de diretrizes orçamentárias.
+§ 6º (VETADO)
+§ 7º Os Poderes e órgãos referidos neste artigo deverão apurar, de forma segregada para aplicação dos limites de que trata este artigo, a integralidade das despesas com pessoal dos respectivos servidores inativos e pensionistas, mesmo que o custeio dessas despesas esteja a cargo de outro Poder ou órgão. (Incluído pela Lei Complementar nº 178, de 2021)
+Art. 21. É nulo de pleno direito: (Redação dada pela Lei Complementar nº 173, de 2020)
+I - o ato que provoque aumento da despesa com pessoal e não atenda: (Incluído pela Lei Complementar nº 173, de 2020)
+a) às exigências dos arts. 16 e 17 desta Lei Complementar e o disposto no inciso XIII do caput do art. 37 e no § 1º do art. 169 da Constituição Federal; e (Incluído pela Lei Complementar nº 173, de 2020)
+b) ao limite legal de comprometimento aplicado às despesas com pessoal inativo; (Incluído pela Lei Complementar nº 173, de 2020)
+II - o ato de que resulte aumento da despesa com pessoal nos 180 (cento e oitenta) dias anteriores ao final do mandato do titular de Poder ou órgão referido no art. 20; (Redação dada pela Lei Complementar nº 173, de 2020)
+III - o ato de que resulte aumento da despesa com pessoal que preveja parcelas a serem implementadas em períodos posteriores ao final do mandato do titular de Poder ou órgão referido no art. 20; (Incluído pela Lei Complementar nº 173, de 2020)
+IV - a aprovação, a edição ou a sanção, por Chefe do Poder Executivo, por Presidente e demais membros da Mesa ou órgão decisório equivalente do Poder Legislativo, por Presidente de Tribunal do Poder Judiciário e pelo Chefe do Ministério Público, da União e dos Estados, de norma legal contendo plano de alteração, reajuste e reestruturação de carreiras do setor público, ou a edição de ato, por esses agentes, para nomeação de aprovados em concurso público, quando: (Incluído pela Lei Complementar nº 173, de 2020)
+a) resultar em aumento da despesa com pessoal nos 180 (cento e oitenta) dias anteriores ao final do mandato do titular do Poder Executivo; ou (Incluído pela Lei Complementar nº 173, de 2020)
+b) resultar em aumento da despesa com pessoal que preveja parcelas a serem implementadas em períodos posteriores ao final do mandato do titular do Poder Executivo. (Incluído pela Lei Complementar nº 173, de 2020)
+§ 1º As restrições de que tratam os incisos II, III e IV: (Incluído pela Lei Complementar nº 173, de 2020)
+I - devem ser aplicadas inclusive durante o período de recondução ou reeleição para o cargo de titular do Poder ou órgão autônomo; e (Incluído pela Lei Complementar nº 173, de 2020)
+II - aplicam-se somente aos titulares ocupantes de cargo eletivo dos Poderes referidos no art. 20. (Incluído pela Lei Complementar nº 173, de 2020)
+§ 2º Para fins do disposto neste artigo, serão considerados atos de nomeação ou de provimento de cargo público aqueles referidos no § 1º do art. 169 da Constituição Federal ou aqueles que, de qualquer modo, acarretem a criação ou o aumento de despesa obrigatória. (Incluído pela Lei Complementar nº 173, de 2020)
+Art. 22. A verificação do cumprimento dos limites estabelecidos nos arts. 19 e 20 será realizada ao final de cada quadrimestre.
+Parágrafo único. Se a despesa total com pessoal exceder a 95% (noventa e cinco por cento) do limite, são vedados ao Poder ou órgão referido no art. 20 que houver incorrido no excesso:
+I - concessão de vantagem, aumento, reajuste ou adequação de remuneração a qualquer título, salvo os derivados de sentença judicial ou de determinação legal ou contratual, ressalvada a revisão prevista no inciso X do art. 37 da Constituição;
+II - criação de cargo, emprego ou função;
+III - alteração de estrutura de carreira que implique aumento de despesa;
+IV - provimento de cargo público, admissão ou contratação de pessoal a qualquer título, ressalvada a reposição decorrente de aposentadoria ou falecimento de servidores das áreas de educação, saúde e segurança;
+V - contratação de hora extra, salvo no caso do disposto no inciso II do § 6o do art. 57 da Constituição e as situações previstas na lei de diretrizes orçamentárias.
+Art. 23. Se a despesa total com pessoal, do Poder ou órgão referido no art. 20, ultrapassar os limites definidos no mesmo artigo, sem prejuízo das medidas previstas no art. 22, o percentual excedente terá de ser eliminado nos dois quadrimestres seguintes, sendo pelo menos um terço no primeiro, adotando-se, entre outras, as providências previstas nos §§ 3º e 4o do art. 169 da Constituição.
+§ 1º No caso do inciso I do § 3º do art. 169 da Constituição, o objetivo poderá ser alcançado tanto pela extinção de cargos e funções quanto pela redução dos valores a eles atribuídos. (Vide ADI 2238)
+§ 2o É facultada a redução temporária da jornada de trabalho com adequação dos vencimentos à nova carga horária. (Vide ADI 2238)
+§ 3º Não alcançada a redução no prazo estabelecido e enquanto perdurar o excesso, o Poder ou órgão referido no art. 20 não poderá: (Redação dada pela Lei Complementar nº 178, de 2021)
+I - receber transferências voluntárias;
+II - obter garantia, direta ou indireta, de outro ente;
+III - contratar operações de crédito, ressalvadas as destinadas ao pagamento da dívida mobiliária e as que visem à redução das despesas com pessoal.
+§ 4º As restrições do § 3o aplicam-se imediatamente se a despesa total com pessoal exceder o limite no primeiro quadrimestre do último ano do mandato dos titulares de Poder ou órgão referidos no art. 20.
+§ 5º As restrições previstas no § 3º deste artigo não se aplicam ao Município em caso de queda de receita real superior a 10% (dez por cento), em comparação ao correspondente quadrimestre do exercício financeiro anterior, devido a: (Incluído pela Lei Complementar nº 164, de 2018)
+I - diminuição das transferências recebidas do Fundo de Participação dos Municípios decorrente de concessão de isenções tributárias pela União; e (Incluído pela Lei Complementar nº 164, de 2018)
+II - diminuição das receitas recebidas de royalties e participações especiais. (Incluído pela Lei Complementar nº 164, de 2018)
+§ 6º O disposto no § 5º deste artigo só se aplica caso a despesa total com pessoal do quadrimestre vigente não ultrapasse o limite percentual previsto no art. 19 desta Lei Complementar, considerada, para este cálculo, a receita corrente líquida do quadrimestre correspondente do ano anterior atualizada monetariamente. (Incluído pela Lei Complementar nº 164, de 2018)

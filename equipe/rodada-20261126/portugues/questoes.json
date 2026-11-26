@@ -1,0 +1,830 @@
+[
+ {
+  "id": "portugues26-01",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Assinale a alternativa em que a concordância verbal está INCORRETA, de acordo com a norma-padrão.",
+  "options": [
+   "Vai fazer dois anos que a sede da Câmara foi reformada.",
+   "Cerca de quarenta moradores assinaram o abaixo-assinado.",
+   "Faziam meses que o projeto aguardava parecer da comissão.",
+   "Nenhum dos vereadores faltou à sessão extraordinária."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O verbo \"fazer\", quando indica tempo decorrido, é impessoal: não tem sujeito e fica na 3ª pessoa do singular, inclusive o verbo auxiliar da locução. A está correta: o auxiliar de \"fazer\" impessoal também fica no singular (\"Vai fazer\"). B está correta: com \"cerca de\" + numeral, o verbo concorda com o substantivo plural (\"moradores assinaram\"). C é a frase errada: \"fazer\" indicando tempo decorrido é impessoal e fica na 3ª pessoa do singular (\"Fazia meses\"); \"meses\" é complemento, não sujeito. D está correta: o núcleo do sujeito é o pronome \"nenhum\", singular, e o verbo fica no singular. Modelo: Câmara Municipal de Belo Horizonte/MG · Técnico Legislativo II · 2024 — https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: \"fazer\" impessoal",
+  "modelo": {
+   "orgao": "Câmara Municipal de Belo Horizonte/MG",
+   "cargo": "Técnico Legislativo II",
+   "ano": "2024",
+   "url": "https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Fazer\" indicando tempo decorrido é impessoal e fica na 3ª pessoa do singular, o que se estende ao auxiliar da locução (\"Vai fazer dois anos\"); com \"cerca de\" + numeral o verbo concorda com o substantivo; \"nenhum\" como núcleo leva o verbo ao singular."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-02",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "NÃO há erro de concordância em:",
+  "options": [
+   "Haviam servidores interessados na capacitação.",
+   "Devem haver outras vagas no próximo edital.",
+   "Concluído as etapas, o resultado foi homologado.",
+   "Encerradas as inscrições, a comissão divulgou a lista dos candidatos."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. \"Haver\" com sentido de existir é impessoal (singular, inclusive o auxiliar), e o particípio de oração reduzida concorda em gênero e número com o substantivo a que se refere. A erra: \"haver\" no sentido de existir é impessoal e fica no singular (\"Havia servidores\"). B erra: o auxiliar de \"haver\" impessoal também fica no singular (\"Deve haver outras vagas\"). C erra: o particípio deve concordar com \"as etapas\" (\"Concluídas as etapas\"). D está correta: na oração reduzida de particípio, o particípio concorda com o substantivo a que se refere (\"Encerradas as inscrições\"), e \"a comissão divulgou\" está no singular. Modelo: Câmara de Araraquara/SP · Técnico em Informática · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/128240/instituto-consulplan-2025-camara-de-araraquara-sp-tecnico-em-informatica-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: \"haver\" impessoal e particípio",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Técnico em Informática",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/128240/instituto-consulplan-2025-camara-de-araraquara-sp-tecnico-em-informatica-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Haver\" no sentido de existir é impessoal e fica na 3ª pessoa do singular, e o auxiliar da locução acompanha essa impessoalidade (\"deve haver\"); o particípio da oração reduzida concorda com o substantivo a que se refere (\"Encerradas as inscrições\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-03",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Considere a frase: \"Há pendências no cadastro de alguns servidores.\" Caso a forma verbal \"Há\" seja substituída por uma forma do verbo \"existir\", no mesmo tempo, é correto afirmar que",
+  "options": [
+   "não haverá outra alteração (\"Existe pendências\"), pois \"existir\", como \"haver\", é verbo impessoal.",
+   "o verbo deverá ir ao plural (\"Existem pendências\"), pois \"pendências\" passa a ser o sujeito da oração.",
+   "o verbo deverá ir ao plural (\"Existem pendências\"), pois concorda com \"servidores\", termo plural mais próximo.",
+   "a troca é impossível, pois \"existir\" não pode substituir \"haver\" com esse sentido."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Na troca de \"haver\" (impessoal) por \"existir\" (pessoal), o termo que era objeto direto passa a ser sujeito, e o verbo concorda com ele: \"Existem pendências\". A erra: \"existir\" é verbo pessoal e concorda com o sujeito \"pendências\"; impessoal é só \"haver\" nesse sentido. C chega à forma certa pelo motivo errado: o verbo concorda com o sujeito \"pendências\", não com \"servidores\", que é parte do adjunto \"no cadastro de alguns servidores\". D erra: \"haver\" está no sentido de existir, e a troca é possível desde que se faça a concordância. Modelo: Câmara de Araraquara/SP · Agente Administrativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/128239/instituto-consulplan-2025-camara-de-araraquara-sp-agente-administrativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: troca de \"haver\" por \"existir\"",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Agente Administrativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/128239/instituto-consulplan-2025-camara-de-araraquara-sp-agente-administrativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Haver\" no sentido de existir é impessoal (o termo seguinte é objeto direto); \"existir\" é verbo pessoal, tem sujeito e concorda com ele: \"Há pendências\" → \"Existem pendências\"."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-04",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Quanto à concordância verbal, assinale a frase INCORRETA segundo a norma-padrão.",
+  "options": [
+   "Enviaram-se ao Executivo uma cópia das atas da comissão.",
+   "Publicou-se ontem a relação dos aprovados no concurso.",
+   "Arquivaram-se os processos já julgados pela comissão.",
+   "Trata-se de questões que dependem de parecer jurídico."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Com verbo transitivo direto + \"se\" (voz passiva sintética), o verbo concorda com o sujeito paciente; com verbo transitivo indireto + \"se\" (índice de indeterminação do sujeito), o verbo fica no singular. A é a frase errada: com o \"se\" apassivador o verbo concorda com o sujeito paciente, que é singular (\"uma cópia das atas\"): \"Enviou-se ao Executivo uma cópia\"; o plural foi atraído por \"atas\". B está correta: sujeito paciente singular (\"a relação dos aprovados\"), verbo no singular. C está correta: sujeito paciente plural (\"os processos\"), verbo no plural. D está correta: \"tratar-se de\" é transitivo indireto; o \"se\" indetermina o sujeito e o verbo fica no singular. Modelo: Câmara de Araraquara/SP · Agente Administrativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/128239/instituto-consulplan-2025-camara-de-araraquara-sp-agente-administrativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: \"se\" apassivador",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Agente Administrativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/128239/instituto-consulplan-2025-camara-de-araraquara-sp-agente-administrativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "Na voz passiva sintética (verbo transitivo direto + \"se\"), o verbo concorda com o sujeito paciente; com verbo transitivo indireto + \"se\" (índice de indeterminação do sujeito), o verbo fica na 3ª pessoa do singular."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-05",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Na frase \"Divulgaram-se, na semana passada, os novos horários de atendimento ao público.\", a forma verbal \"Divulgaram-se\" está no plural porque",
+  "options": [
+   "o sujeito é indeterminado, e o pronome \"se\" exige o verbo na 3ª pessoa do plural.",
+   "o verbo é impessoal e, por isso, pode ficar no singular ou no plural.",
+   "o \"se\" é pronome apassivador, e o verbo concorda com o sujeito paciente \"os novos horários de atendimento ao público\".",
+   "há sujeito composto, formado pelos núcleos \"horários\" e \"atendimento\"."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Com verbo transitivo direto, o \"se\" é pronome apassivador (voz passiva sintética) e o verbo concorda com o sujeito paciente, mesmo posposto: \"Divulgaram-se os horários\" = \"Os horários foram divulgados\". A erra: o sujeito não é indeterminado (o verbo é transitivo direto e há sujeito paciente); além disso, com \"se\" indeterminador o verbo fica no singular. B erra: o verbo não é impessoal, tem sujeito, e a concordância com ele é obrigatória. D erra: \"de atendimento ao público\" é adjunto de \"horários\"; o sujeito é simples, de núcleo \"horários\". Modelo: Câmara Municipal de Belo Horizonte/MG · Publicitário · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/108324/instituto-consulplan-2024-camara-de-belo-horizonte-mg-publicitario-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: voz passiva sintética",
+  "modelo": {
+   "orgao": "Câmara Municipal de Belo Horizonte/MG",
+   "cargo": "Publicitário",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/108324/instituto-consulplan-2024-camara-de-belo-horizonte-mg-publicitario-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "Na voz passiva sintética (verbo transitivo direto + pronome apassivador \"se\"), o verbo concorda com o sujeito paciente, ainda que posposto: \"Divulgaram-se os horários\" equivale a \"Os horários foram divulgados\"."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-06",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Em \"O presidente da comissão e a relatora têm acompanhado de perto a tramitação do projeto.\", o emprego da forma \"têm\" justifica-se porque",
+  "options": [
+   "o verbo concorda com \"relatora\", núcleo mais próximo dele.",
+   "o sujeito é composto, com dois núcleos ligados por \"e\" e anteposto ao verbo, o que exige o plural.",
+   "o acento apenas diferencia \"têm\" de \"tem\", e as duas formas seriam igualmente aceitas na frase.",
+   "o verbo concorda com o objeto \"a tramitação do projeto\"."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Sujeito composto anteposto ao verbo leva o verbo ao plural; o acento em \"têm\" marca a 3ª pessoa do plural de \"ter\". A erra: se concordasse com \"relatora\" ficaria no singular (\"tem\"); o sujeito composto anteposto leva o verbo ao plural. C erra: o acento marca o plural; \"tem\" (singular) não concordaria com o sujeito composto. D erra: o verbo concorda com o sujeito, não com o objeto, que aliás é singular. Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: sujeito composto",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "Sujeito composto anteposto ao verbo leva o verbo ao plural (\"O presidente e a relatora têm acompanhado\"); \"têm\", com acento, é a 3ª pessoa do plural do presente de \"ter\"."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-07",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Considere a frase: \"A revisão do plano de cargos foi um dos temas debatidos pelos servidores.\" Assinale a reescrita que mantém a correção gramatical e o sentido original.",
+  "options": [
+   "Um dos temas debatidos pelos servidores foram a revisão do plano de cargos.",
+   "Os servidores debateu, entre outros temas, a revisão do plano de cargos.",
+   "A revisão do plano de cargos estiveram entre os temas debatidos pelos servidores.",
+   "Um dos temas debatidos pelos servidores foi a revisão do plano de cargos."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Em \"um dos + substantivo plural\" na função de sujeito, o núcleo é \"um\", e o verbo da oração fica no singular. A erra: o verbo foi atraído por \"temas\", mas o núcleo do sujeito é \"Um\". B erra: o sujeito \"Os servidores\" exige \"debateram\". C erra: o sujeito \"A revisão\" é singular e exige \"esteve\". D está correta: o núcleo do sujeito é \"Um\", singular, e o verbo fica no singular; o sentido é o mesmo. Modelo: Câmara de Cotia/SP · Agente Contábil · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123195/instituto-consulplan-2024-camara-de-cotia-sp-agente-contabil-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: \"um dos\"",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Agente Contábil",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123195/instituto-consulplan-2024-camara-de-cotia-sp-agente-contabil-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "O verbo concorda com o núcleo do sujeito, e não com o termo preposicionado que o acompanha: em \"Um dos temas ... foi\", o núcleo é o numeral \"um\", singular."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-08",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Considere a frase: \"Ainda estão pendentes, na comissão, duas questões que requerem análise técnica.\" Assinale a reescrita que respeita a norma-padrão e preserva o sentido original.",
+  "options": [
+   "Na comissão, duas questões que requerem análise técnica ainda estão pendentes.",
+   "Ainda está pendente, na comissão, duas questões que requerem análise técnica.",
+   "Na comissão, duas questões que requerem análise técnica já estão resolvidas.",
+   "Ainda estão pendentes, na comissão, duas questões que requer análise técnica."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. O verbo concorda com o sujeito simples mesmo quando ele vem depois do verbo; o verbo da oração adjetiva introduzida por \"que\" concorda com o antecedente do pronome relativo. A está correta: o sujeito \"duas questões\" foi anteposto, os verbos seguem no plural e o sentido é o mesmo. B erra a concordância: o sujeito simples posposto \"duas questões\" exige o plural \"estão pendentes\". C tem a concordância certa, mas muda o sentido: \"pendentes\" vira \"resolvidas\". D erra a concordância: o \"que\" retoma \"questões\", e o verbo da oração adjetiva fica no plural (\"requerem\"). Modelo: Câmara de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: sujeito simples posposto",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "O verbo concorda em número com o núcleo do sujeito simples, esteja ele antes ou depois do verbo; na oração adjetiva, o verbo concorda com o antecedente do relativo \"que\" (\"questões que requerem\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-09",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Assinale a alternativa em que a concordância nominal está de acordo com a norma-padrão.",
+  "options": [
+   "A servidora chegou meia atrasada à reunião.",
+   "A sessão começou ao meio-dia e meia.",
+   "Os documentos estavam meios rasgados.",
+   "O setor comprou meio dúzia de pastas."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. \"Meio\" é advérbio (invariável) quando modifica adjetivo (\"meio atrasada\"); é numeral (variável) quando acompanha substantivo (\"meia dúzia\", \"meio-dia e meia [hora]\"). A erra: \"meio\" antes de adjetivo é advérbio (= um pouco) e não varia: \"meio atrasada\". B está correta: \"meia\" é numeral que concorda com \"hora\" subentendida (meio-dia e meia hora). C erra: \"meio\" advérbio não varia: \"meio rasgados\". D erra: \"meio\" numeral concorda com o substantivo feminino: \"meia dúzia\". Modelo: Câmara Municipal de Belo Horizonte/MG · Técnico Legislativo II · 2024 — https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância nominal: \"meio\"",
+  "modelo": {
+   "orgao": "Câmara Municipal de Belo Horizonte/MG",
+   "cargo": "Técnico Legislativo II",
+   "ano": "2024",
+   "url": "https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Meio\" como advérbio (= um tanto) é invariável (\"meio atrasada\"); como numeral (= metade) concorda com o substantivo, expresso ou subentendido (\"meia dúzia\", \"meio-dia e meia\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-10",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Está de acordo com a norma-padrão, quanto à concordância nominal, a frase:",
+  "options": [
+   "Há bastante processos aguardando despacho.",
+   "As servidoras ficaram bastantes satisfeitas com o curso.",
+   "Tivemos bastante reuniões nesta semana.",
+   "Os vereadores apresentaram bastantes emendas ao projeto."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. \"Bastante\" que acompanha substantivo varia (\"bastantes emendas\"); \"bastante\" que modifica adjetivo, verbo ou advérbio é advérbio e não varia (\"bastante satisfeitas\"). A erra: antes do substantivo plural \"processos\", \"bastante\" varia: \"bastantes processos\". B erra: antes de adjetivo, \"bastante\" é advérbio (= muito) e não varia: \"bastante satisfeitas\". C erra: \"bastante\" acompanha o substantivo plural \"reuniões\" e deve variar: \"bastantes reuniões\". D está correta: antes de substantivo, \"bastante\" é pronome indefinido/adjetivo (= muitas, suficientes) e concorda com ele. Modelo: Câmara Municipal de Belo Horizonte/MG · Técnico Legislativo II · 2024 — https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância nominal: \"bastante\"",
+  "modelo": {
+   "orgao": "Câmara Municipal de Belo Horizonte/MG",
+   "cargo": "Técnico Legislativo II",
+   "ano": "2024",
+   "url": "https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Bastante\" junto de substantivo é pronome indefinido/adjetivo e concorda com ele (\"bastantes emendas\"); modificando adjetivo, verbo ou advérbio, é advérbio e fica invariável (\"bastante satisfeitas\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-11",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Assinale a alternativa em que há ERRO de concordância nominal.",
+  "options": [
+   "Seguem anexas ao ofício as planilhas de custos.",
+   "Vão inclusos no envelope os comprovantes de residência.",
+   "Os candidatos convocados estão quite com as obrigações eleitorais.",
+   "Encaminho, em anexo, as certidões solicitadas."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. \"Anexo\", \"incluso\" e \"quite\" são adjetivos e concordam com o substantivo a que se referem; a locução \"em anexo\" é invariável. A está correta: \"anexo\" é adjetivo e concorda com \"as planilhas\". B está correta: \"incluso\" é adjetivo e concorda com \"os comprovantes\". C é a frase errada: \"quite\" é adjetivo e concorda com o sujeito plural: \"estão quites\". D está correta: a locução \"em anexo\" é invariável. Modelo: Câmara Municipal de Belo Horizonte/MG · Técnico Legislativo II · 2024 — https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância nominal: anexo, incluso, quite",
+  "modelo": {
+   "orgao": "Câmara Municipal de Belo Horizonte/MG",
+   "cargo": "Técnico Legislativo II",
+   "ano": "2024",
+   "url": "https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Anexo\", \"incluso\" e \"quite\" são adjetivos e concordam em gênero e número com o substantivo a que se referem (\"seguem anexas as planilhas\", \"estão quites\"); a locução adverbial \"em anexo\" não varia."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-12",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Considere o trecho: \"Muito poucas pessoas compareceram à audiência, embora o tema fosse muito importante para as famílias do bairro.\" Sobre a concordância no trecho, é correto afirmar que",
+  "options": [
+   "nas duas ocorrências, \"muito\" é advérbio, intensifica \"poucas\" e \"importante\" e, por isso, não varia.",
+   "\"Muito\", na primeira ocorrência, deveria ir para o feminino plural (\"Muitas poucas pessoas\"), concordando com \"pessoas\".",
+   "\"muito\", na segunda ocorrência, deveria concordar com \"famílias\", ficando \"muitas importante\".",
+   "a forma \"compareceram\" deveria estar no singular, concordando com \"audiência\"."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. \"Muito\" que modifica adjetivo, advérbio ou outro pronome indefinido (\"poucas\") é advérbio e fica invariável; só varia quando acompanha substantivo (\"muitas pessoas\"). B erra: \"muito\" intensifica o pronome \"poucas\"; é advérbio e fica invariável. C erra: \"muito\" intensifica o adjetivo \"importante\"; é advérbio e não varia. D erra: o verbo concorda com o sujeito \"pessoas\" (plural); \"à audiência\" é complemento. Modelo: Câmara Municipal de Belo Horizonte/MG · Técnico Legislativo II · 2024 — https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância nominal: \"muito\" advérbio",
+  "modelo": {
+   "orgao": "Câmara Municipal de Belo Horizonte/MG",
+   "cargo": "Técnico Legislativo II",
+   "ano": "2024",
+   "url": "https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Muito\" que intensifica adjetivo, advérbio ou pronome indefinido (\"muito poucas\", \"muito importante\") é advérbio e invariável; só varia como pronome indefinido junto de substantivo (\"muitas pessoas\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-13",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Assinale a alternativa INCORRETA quanto à concordância com os pronomes de tratamento, segundo a norma-padrão.",
+  "options": [
+   "Senhor Prefeito, Vossa Excelência será informado da decisão assim que o parecer for votado.",
+   "Senhora Presidente, Vossa Excelência sabeis que o prazo termina amanhã.",
+   "Senhor Diretor, Vossa Senhoria poderá enviar seus comentários até sexta-feira.",
+   "Sua Excelência, o Governador, comparecerá à solenidade de posse."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Os pronomes de tratamento, embora se refiram à 2ª pessoa (com quem se fala), levam o verbo e os possessivos para a 3ª pessoa; os adjetivos concordam com o sexo da pessoa a que se referem. A está correta: verbo na 3ª pessoa e adjetivo/particípio no gênero da pessoa a quem se fala (homem → \"informado\"). B é a frase errada: com pronome de tratamento o verbo vai para a 3ª pessoa: \"Vossa Excelência sabe\". C está correta: verbo na 3ª pessoa (\"poderá\") e possessivo de 3ª pessoa (\"seus\"). D está correta: \"Sua Excelência\" (pessoa de quem se fala) com verbo na 3ª pessoa. Modelo: Câmara Municipal de Belo Horizonte/MG · Técnico Legislativo II · 2024 — https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância com pronomes de tratamento",
+  "modelo": {
+   "orgao": "Câmara Municipal de Belo Horizonte/MG",
+   "cargo": "Técnico Legislativo II",
+   "ano": "2024",
+   "url": "https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Manual de Redação da Presidência da República, 3ª ed. (2018), item \"Concordância com os pronomes de tratamento\"",
+    "url": "https://www4.planalto.gov.br/centrodeestudos/assuntos/manual-de-redacao-da-presidencia-da-republica/manual-de-redacao.pdf",
+    "regra": "Os pronomes de tratamento levam o verbo e os pronomes possessivos para a 3ª pessoa (\"Vossa Senhoria nomeará seu substituto\"), embora se refiram à pessoa com quem se fala; os adjetivos concordam com o sexo da pessoa, não com o substantivo que compõe a locução."
+   },
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "Pronomes de tratamento (Vossa Excelência, Vossa Senhoria) exigem verbo e possessivo na 3ª pessoa."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-14",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Assinale a frase em que a concordância verbal NÃO respeita a norma-padrão.",
+  "options": [
+   "Cerca de vinte servidores aderiram ao programa de capacitação.",
+   "Nenhum dos projetos apresentados recebeu parecer contrário.",
+   "Cerca de trinta pessoas acompanhou a votação pelas galerias.",
+   "Nenhuma das comissões permanentes se reuniu na semana passada."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. \"Cerca de\" é locução que indica aproximação e não altera a concordância: o verbo concorda com o substantivo plural que acompanha o numeral. Com \"nenhum(a) de + plural\", o núcleo do sujeito é \"nenhum(a)\", e o verbo fica no singular. A está correta: verbo no plural concordando com \"servidores\". B está correta: o núcleo \"nenhum\" é singular, e o verbo fica no singular. C é a frase errada: com \"cerca de\" + numeral, o verbo concorda com o substantivo plural: \"Cerca de trinta pessoas acompanharam\". D está correta: o núcleo \"nenhuma\" é singular. Modelo: Câmara Municipal de Belo Horizonte/MG · Técnico Legislativo II · 2024 — https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: \"cerca de\" e \"nenhum\"",
+  "modelo": {
+   "orgao": "Câmara Municipal de Belo Horizonte/MG",
+   "cargo": "Técnico Legislativo II",
+   "ano": "2024",
+   "url": "https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "Expressões de aproximação (\"cerca de\", \"perto de\") + numeral não alteram a concordância: o verbo concorda com o substantivo (\"Cerca de trinta pessoas acompanharam\"); com \"nenhum de + plural\", o verbo concorda com o núcleo \"nenhum\", no singular."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-15",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Considere o trecho: \"Os relatórios elaborados pela comissão foram entregues à todos os vereadores, que assistiram a apresentação com bastante atenção.\" As duas infrações à norma-padrão presentes no trecho são de",
+  "options": [
+   "concordância nominal e crase.",
+   "concordância verbal e regência verbal.",
+   "concordância verbal e concordância nominal.",
+   "crase e regência verbal."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. A concordância do trecho está correta. Os erros estão na crase antes de pronome indefinido masculino (\"à todos\") e na regência de \"assistir\" no sentido de presenciar, que é transitivo indireto (\"assistiram à apresentação\"). A erra: não há erro de concordância nominal; \"elaborados\" concorda com \"relatórios\", e \"bastante\", junto do substantivo singular \"atenção\", está no singular. B erra: \"foram entregues\" concorda com \"Os relatórios\" e \"assistiram\" concorda com \"vereadores\", antecedente de \"que\". C erra: a concordância do trecho está toda correta; os desvios são de crase e regência. D está correta: há crase indevida antes do pronome indefinido \"todos\" (masculino plural) e \"assistir\", no sentido de ver/presenciar, rege a preposição \"a\" (\"assistiram à apresentação\"). Modelo: Câmara de Mariana/MG · Auditor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132724/instituto-consulplan-2025-camara-de-mariana-mg-auditor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância × crase e regência (identificação de desvios)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Auditor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132724/instituto-consulplan-2025-camara-de-mariana-mg-auditor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "Não ocorre crase antes de palavra masculina nem de pronome indefinido como \"todos\"; \"assistir\", no sentido de ver ou presenciar, é transitivo indireto e pede a preposição \"a\" (\"assistir à apresentação\"); o adjetivo e o verbo do trecho concordam com seus núcleos."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-16",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "A frase \"O documento foi encaminhado à comissão permanente.\" foi passada para o plural. Assinale a versão que respeita a norma-padrão.",
+  "options": [
+   "Os documentos foram encaminhados às comissões permanentes.",
+   "O documento foi encaminhado à comissões permanentes.",
+   "O documento foi encaminhado às comissões permanente.",
+   "Os documentos foi encaminhado às comissões permanentes."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Na passagem ao plural, todos os determinantes e o adjetivo acompanham o substantivo (o \"a\" da crase é artigo e também concorda: \"às comissões\"), e o verbo e o particípio da voz passiva concordam com o sujeito. A está correta: verbo, particípio, artigo + preposição e adjetivo concordam no plural. B erra: o artigo contido na crase deve concordar com \"comissões\": \"às comissões\". C erra: o adjetivo deve concordar com \"comissões\": \"permanentes\". D erra: o sujeito \"Os documentos\" exige \"foram encaminhados\". Modelo: Prefeitura de Nova Iguaçu/RJ · Analista de Controle Interno de Projetos · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/128836/instituto-consulplan-2025-prefeitura-de-nova-iguacu-rj-analista-de-controle-interno-de-projetos-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância nominal e verbal na passagem ao plural",
+  "modelo": {
+   "orgao": "Prefeitura de Nova Iguaçu/RJ",
+   "cargo": "Analista de Controle Interno de Projetos",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/128836/instituto-consulplan-2025-prefeitura-de-nova-iguacu-rj-analista-de-controle-interno-de-projetos-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "Artigo e adjetivo concordam em gênero e número com o substantivo; na crase, o artigo contido também concorda (\"às comissões\"); na voz passiva analítica, verbo e particípio concordam com o sujeito (\"Os documentos foram encaminhados\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-17",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Moradores enviaram comentários ao site da Câmara. Assinale o comentário escrito com total correção gramatical.",
+  "options": [
+   "Os moradores do bairro reclamou da falta de iluminação nas ruas próximas da escola.",
+   "As reivindicações dos moradores, que foram entregues à vereadores, ainda não teve resposta.",
+   "Os moradores do bairro reclamaram, com razão, da falta de iluminação nas ruas próximas à escola.",
+   "Os pedidos dos moradores foram levados à comissão, que se comprometeu a responder à eles até sexta."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O verbo concorda com o núcleo do sujeito, o adjetivo com o substantivo; e não há crase antes de palavra masculina ou de pronome pessoal. A erra a concordância verbal: o sujeito \"Os moradores\" exige \"reclamaram\". B erra a crase (não há artigo feminino singular antes de \"vereadores\") e a concordância (\"As reivindicações ... tiveram\"). C está correta: \"reclamaram\" concorda com \"Os moradores\", \"próximas\" concorda com \"ruas\", e \"próximas à escola\" tem crase (próximo a + a escola). D tem a concordância certa, mas erra a crase: não há crase antes do pronome pessoal \"eles\". Modelo: Prefeitura de Nova Iguaçu/RJ · Analista de Controle Interno de Projetos · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/128836/instituto-consulplan-2025-prefeitura-de-nova-iguacu-rj-analista-de-controle-interno-de-projetos-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância × crase (correção gramatical)",
+  "modelo": {
+   "orgao": "Prefeitura de Nova Iguaçu/RJ",
+   "cargo": "Analista de Controle Interno de Projetos",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/128836/instituto-consulplan-2025-prefeitura-de-nova-iguacu-rj-analista-de-controle-interno-de-projetos-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "O verbo concorda com o núcleo do sujeito e o adjetivo com o substantivo a que se refere; a crase exige preposição \"a\" + artigo feminino \"a\", por isso não ocorre antes de palavra masculina plural (\"vereadores\") nem de pronome pessoal (\"eles\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-18",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Considere a frase: \"Há registro de cheias no rio desde o século XIX.\" Assinale a alteração que mantém a correção quanto à concordância.",
+  "options": [
+   "Houveram registros de cheias no rio desde o século XIX.",
+   "Havia registros de cheias no rio desde o século XIX.",
+   "Existe registros de cheias no rio desde o século XIX.",
+   "Podem haver registros de cheias no rio desde o século XIX."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. \"Haver\" no sentido de existir é impessoal em qualquer tempo e transmite a impessoalidade ao auxiliar; \"existir\" é pessoal e concorda com o sujeito. A erra: \"haver\" impessoal não vai ao plural (\"Houve registros\"). B está correta: \"haver\" (= existir) continua impessoal, no singular, mesmo com o objeto no plural. C erra: \"existir\" é pessoal e concorda com o sujeito \"registros\" (\"Existem registros\"). D erra: o auxiliar de \"haver\" impessoal fica no singular (\"Pode haver registros\"). Modelo: Câmara de Cotia/SP · Agente Contábil · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123195/instituto-consulplan-2024-camara-de-cotia-sp-agente-contabil-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: \"haver\" impessoal (reescrita)",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Agente Contábil",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123195/instituto-consulplan-2024-camara-de-cotia-sp-agente-contabil-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Haver\" no sentido de existir é impessoal em qualquer tempo e transmite a impessoalidade ao auxiliar (\"pode haver\"); \"existir\" é pessoal e concorda com o sujeito (\"existem registros\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-19",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Assinale a alternativa que apresenta ERRO de concordância verbal.",
+  "options": [
+   "Reformaram-se as salas das comissões durante o recesso.",
+   "Alugou-se um imóvel para o arquivo da Câmara.",
+   "Necessita-se de técnicos para a manutenção dos equipamentos.",
+   "Discutiu-se, na reunião, as propostas de emenda ao regimento."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Verbo transitivo direto + \"se\" = voz passiva sintética: o verbo concorda com o sujeito paciente. Verbo transitivo indireto + \"se\" = sujeito indeterminado: verbo no singular. A está correta: sujeito paciente plural (\"as salas\"), verbo no plural. B está correta: sujeito paciente singular (\"um imóvel\"), verbo no singular. C está correta: \"necessitar de\" é transitivo indireto; o \"se\" indetermina o sujeito e o verbo fica no singular. D é a frase errada: \"discutir\" é transitivo direto, o \"se\" é apassivador e o verbo concorda com o sujeito paciente plural: \"Discutiram-se as propostas\". Modelo: Câmara de Araraquara/SP · Agente Administrativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/128239/instituto-consulplan-2025-camara-de-araraquara-sp-agente-administrativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: \"se\" apassivador × indeterminador",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Agente Administrativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/128239/instituto-consulplan-2025-camara-de-araraquara-sp-agente-administrativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "Na voz passiva sintética (verbo transitivo direto + \"se\"), o verbo concorda com o sujeito paciente (\"Discutiram-se as propostas\"); com verbo transitivo indireto, o \"se\" é índice de indeterminação do sujeito e o verbo fica no singular (\"Necessita-se de técnicos\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-20",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Em \"O acesso aos documentos do arquivo histórico foi ampliado no último ano.\", a locução verbal \"foi ampliado\" está no singular porque",
+  "options": [
+   "concorda com o núcleo do sujeito, \"acesso\", e não com o termo preposicionado \"aos documentos do arquivo histórico\".",
+   "concorda com \"arquivo histórico\", termo mais próximo do verbo.",
+   "o sujeito é indeterminado, o que exige a 3ª pessoa do singular.",
+   "a voz passiva analítica exige o verbo sempre no singular."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. O verbo concorda com o núcleo do sujeito; os termos preposicionados que o acompanham (\"aos documentos do arquivo histórico\") não interferem na concordância. B erra: o verbo não concorda com o termo mais próximo, e sim com o núcleo do sujeito. C erra: o sujeito é determinado e simples (\"O acesso aos documentos do arquivo histórico\"). D erra: na voz passiva analítica o verbo e o particípio concordam com o sujeito, que pode ser plural (\"Os acessos foram ampliados\"). Modelo: Câmara de Cotia/SP · Assistente de Serviço de Pessoal · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: núcleo do sujeito",
+  "modelo": {
+   "orgao": "Câmara de Cotia/SP",
+   "cargo": "Assistente de Serviço de Pessoal",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123201/instituto-consulplan-2024-camara-de-cotia-sp-assistente-de-servico-de-pessoal-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "O verbo concorda com o núcleo do sujeito (\"acesso\"), não com o termo preposicionado que o complementa nem com o termo mais próximo; na voz passiva analítica, verbo e particípio concordam com o sujeito."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-21",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Analise as frases a seguir quanto à concordância verbal.\nI. Eu e a chefe do setor assinaremos o termo de posse.\nII. Fomos nós que organizou a audiência pública.\nIII. Faltam apenas duas assinaturas para o projeto ser protocolado.\nEstá de acordo com a norma-padrão o que se apresenta em",
+  "options": [
+   "I, apenas.",
+   "I e II, apenas.",
+   "I e III, apenas.",
+   "II e III, apenas."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. I está correta: no sujeito composto com pronome de 1ª pessoa (\"Eu e a chefe\"), o verbo vai para a 1ª pessoa do plural (\"assinaremos\"). II está errada: com o relativo \"que\", o verbo concorda com o antecedente (\"nós\"): \"Fomos nós que organizamos\". III está correta: o sujeito \"duas assinaturas\", embora posposto, é plural e exige \"Faltam\". A omite a III, que está correta. B inclui a II, que está errada. D inclui a II e omite a I. Modelo: Câmara de Araraquara/SP · Técnico em Informática · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/128240/instituto-consulplan-2025-camara-de-araraquara-sp-tecnico-em-informatica-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: pessoa gramatical e sujeito posposto",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Técnico em Informática",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/128240/instituto-consulplan-2025-camara-de-araraquara-sp-tecnico-em-informatica-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "No sujeito composto em que entra a 1ª pessoa, o verbo vai para a 1ª pessoa do plural (\"Eu e a chefe assinaremos\"); com o relativo \"que\", o verbo concorda com o antecedente (\"nós que organizamos\"); o sujeito simples posposto também comanda a concordância (\"Faltam duas assinaturas\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-22",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "NÃO há erro de concordância verbal em:",
+  "options": [
+   "Fazem três semanas que se aguardam os pareceres.",
+   "Faz três semanas que se aguardam os pareceres.",
+   "Faz três semanas que se aguarda os pareceres.",
+   "Fazem três semanas que se aguarda os pareceres."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. \"Fazer\" indicando tempo decorrido é impessoal e fica no singular; já o verbo transitivo direto com \"se\" apassivador concorda com o sujeito paciente. A erra: \"fazer\" indicando tempo é impessoal (\"Faz três semanas\"). B está correta: \"Faz\" (tempo) é impessoal e fica no singular, e \"aguardam-se\" concorda com o sujeito paciente \"os pareceres\". C erra: \"aguardar\" é transitivo direto, o \"se\" é apassivador e o verbo concorda com \"os pareceres\" (\"aguardam-se\"). D erra nos dois verbos: \"Fazem\" deveria ser \"Faz\", e \"aguarda\" deveria ser \"aguardam\". Modelo: Câmara de Araraquara/SP · Técnico em Informática · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/128240/instituto-consulplan-2025-camara-de-araraquara-sp-tecnico-em-informatica-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: \"fazer\" impessoal e \"se\" apassivador",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Técnico em Informática",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/128240/instituto-consulplan-2025-camara-de-araraquara-sp-tecnico-em-informatica-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Fazer\" indicando tempo decorrido é impessoal (\"Faz três semanas\"); verbo transitivo direto + \"se\" apassivador concorda com o sujeito paciente (\"aguardam-se os pareceres\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-23",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Assinale a alternativa em que a concordância nominal está correta.",
+  "options": [
+   "As passagens custaram caras para a delegação da Câmara.",
+   "\"Muito obrigado\", disse a vereadora aos presentes.",
+   "Elas mesmo conferiram as listas de presença.",
+   "Os uniformes novos estão mais baratos que os do ano passado."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. \"Caro/barato\" variam como adjetivos (junto de substantivo ou como predicativo) e ficam invariáveis como advérbios (com verbos como \"custar\", \"pagar\", \"vender\"); \"obrigado\" e \"mesmo\" (= próprio) concordam com a pessoa a que se referem. A erra: depois de verbo como \"custar\", \"caro\" é advérbio e não varia: \"custaram caro\". B erra: \"obrigado\" é adjetivo e concorda com quem fala; a vereadora deve dizer \"Muito obrigada\". C erra: \"mesmo\", reforçando o pronome (= próprias), é variável: \"Elas mesmas\". D está correta: \"baratos\" é adjetivo (predicativo) e concorda com \"Os uniformes\". Modelo: Câmara Municipal de Belo Horizonte/MG · Técnico Legislativo II · 2024 — https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância nominal: caro/barato, obrigado, mesmo",
+  "modelo": {
+   "orgao": "Câmara Municipal de Belo Horizonte/MG",
+   "cargo": "Técnico Legislativo II",
+   "ano": "2024",
+   "url": "https://www.cmbh.mg.gov.br/sites/default/files/pagina-basica/2024/04/tecnico_legislativo_ii_-_tipo_2_-_verde.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Caro\" e \"barato\" variam quando adjetivos (\"os uniformes estão mais baratos\") e não variam quando advérbios, ligados a verbos como \"custar\" (\"custaram caro\"); \"obrigado\" e \"mesmo\" (= próprio) concordam com a pessoa a que se referem (\"obrigada\", \"elas mesmas\")."
+   }
+  ]
+ },
+ {
+  "id": "portugues26-24",
+  "materiaRef": "mmat_33",
+  "topicoRef": "ttop_374",
+  "tipo": "abcd",
+  "text": "Analise as frases a seguir.\nI. Vai haver novas nomeações no próximo semestre.\nII. Concluídos os trabalhos, a comissão encerrou a reunião.\nIII. Começou ontem as inscrições para o curso de oratória.\nIV. Vossa Senhoria deveis apresentar o requerimento até sexta-feira.\nEstão de acordo com a norma-padrão quanto à concordância apenas",
+  "options": [
+   "I e II.",
+   "I, II e III.",
+   "II e IV.",
+   "I, III e IV."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. I está correta: \"haver\" (= existir) é impessoal e o auxiliar fica no singular (\"Vai haver\"). II está correta: o particípio concorda com \"os trabalhos\" (\"Concluídos\"). III está errada: o sujeito posposto \"as inscrições\" é plural (\"Começaram ontem as inscrições\"). IV está errada: pronome de tratamento leva o verbo à 3ª pessoa (\"Vossa Senhoria deve apresentar\"). B inclui a III, que está errada. C inclui a IV, errada, e omite a I, correta. D inclui a III e a IV, erradas, e omite a II, correta. Modelo: Câmara de Araraquara/SP · Técnico em Informática · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/128240/instituto-consulplan-2025-camara-de-araraquara-sp-tecnico-em-informatica-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Concordância verbal: revisão geral",
+  "modelo": {
+   "orgao": "Câmara de Araraquara/SP",
+   "cargo": "Técnico em Informática",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/128240/instituto-consulplan-2025-camara-de-araraquara-sp-tecnico-em-informatica-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Evanildo Bechara, Moderna Gramática Portuguesa (Nova Fronteira, ISBN 9788520939390), capítulo \"Concordância\" — registro da obra no catálogo da Biblioteca do STJ",
+    "url": "https://consorciobdjur.stj.jus.br/vufind/Record/1236/Details",
+    "regra": "\"Haver\" (= existir) é impessoal e transmite a impessoalidade ao auxiliar; o particípio da oração reduzida concorda com o substantivo; o sujeito simples posposto comanda a concordância do verbo."
+   },
+   {
+    "tipo": "regra",
+    "fonte": "Manual de Redação da Presidência da República, 3ª ed. (2018), item \"Concordância com os pronomes de tratamento\"",
+    "url": "https://www4.planalto.gov.br/centrodeestudos/assuntos/manual-de-redacao-da-presidencia-da-republica/manual-de-redacao.pdf",
+    "regra": "Pronomes de tratamento levam o verbo à 3ª pessoa (\"Vossa Senhoria deve apresentar\"), embora se refiram à pessoa com quem se fala."
+   }
+  ]
+ }
+]

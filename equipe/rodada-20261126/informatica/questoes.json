@@ -1,0 +1,836 @@
+[
+ {
+  "id": "informatica26-01",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Um servidor da Câmara, usando o Windows 10, precisa localizar rapidamente um documento salvo em uma pasta do computador e quer abrir o Explorador de Arquivos sem usar o mouse. Ele deve pressionar a combinação",
+  "options": [
+   "tecla Windows + R.",
+   "tecla Windows + E.",
+   "tecla Windows + X.",
+   "tecla Windows + I."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Segundo o Suporte Microsoft, Windows + E abre o Explorador de Arquivos. A erra: Windows + R abre a caixa de diálogo Executar. C erra: Windows + X abre o menu Link Rápido. D erra: Windows + I abre as Configurações. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Atalhos de teclado",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+E abre o Explorador de Arquivos; Win+R abre Executar; Win+X abre o menu Link Rápido; Win+I abre Configurações."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-02",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Com várias janelas abertas no Windows 11, uma servidora quer ver os ícones da área de trabalho e, pressionando novamente a MESMA combinação, voltar a exibir as janelas como estavam. O atalho que mostra e oculta a área de trabalho é",
+  "options": [
+   "tecla Windows + M.",
+   "Alt + F4.",
+   "tecla Windows + L.",
+   "tecla Windows + D."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Segundo o Suporte Microsoft, Windows + D serve para 'mostrar e ocultar a área de trabalho'. A erra: Windows + M apenas minimiza todas as janelas. B erra: Alt + F4 fecha a janela ativa. C erra: Windows + L bloqueia o computador. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Atalhos de teclado",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+D mostra e oculta a área de trabalho; Win+M minimiza todas as janelas; Alt+F4 fecha a janela ativa; Win+L bloqueia o computador."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-03",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Um programa travou no computador de um técnico, que usa o Windows 10. Para abrir DIRETAMENTE o Gerenciador de Tarefas e encerrar o programa, sem passar por nenhuma tela intermediária, o técnico deve usar",
+  "options": [
+   "Ctrl + Shift + Esc.",
+   "Ctrl + Alt + Del.",
+   "Alt + F4.",
+   "Ctrl + Esc."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Segundo o Suporte Microsoft, Ctrl + Shift + Esc abre o Gerenciador de Tarefas. B erra: Ctrl + Alt + Del leva à tela de segurança (de onde se pode bloquear, trocar de usuário etc.), ou seja, não abre o Gerenciador diretamente. C erra: Alt + F4 fecha a janela ativa. D erra: Ctrl + Esc abre o menu Iniciar. Modelo: Prefeitura de Divinópolis/MG · Agente de Administração · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Atalhos de teclado",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Agente de Administração",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Ctrl+Shift+Esc abre o Gerenciador de Tarefas; Ctrl+Alt+Del muda para a tela de segurança; Alt+F4 fecha a janela ativa; Ctrl+Esc abre o menu Iniciar."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-04",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "No Windows 10/11, assinale a alternativa em que o atalho de teclado está associado CORRETAMENTE à sua função.",
+  "options": [
+   "Alt + F4: mostrar ou ocultar o painel de visualização do Explorador de Arquivos.",
+   "Ctrl + Esc: abrir o Gerenciador de Tarefas.",
+   "Alt + Enter: mostrar as propriedades do item selecionado no Explorador de Arquivos.",
+   "tecla Windows + R: abrir as Configurações."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Segundo o Suporte Microsoft, no Explorador de Arquivos Alt + Enter mostra as propriedades do item selecionado. A erra: Alt + F4 fecha a janela ativa; o painel de visualização é Alt + P. B erra: Ctrl + Esc abre o menu Iniciar; o Gerenciador de Tarefas é Ctrl + Shift + Esc. D erra: Windows + R abre a caixa Executar; as Configurações são Windows + I. Modelo: Prefeitura de Divinópolis/MG · Agente de Administração · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Atalhos de teclado",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Agente de Administração",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Alt+Enter mostra as propriedades do item selecionado; Alt+P mostra/oculta o painel de visualização; Alt+F4 fecha a janela ativa; Ctrl+Esc abre o menu Iniciar; Win+R abre Executar; Win+I abre Configurações."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-05",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Ao redigir um ofício no Windows 11, um servidor copiou um parágrafo e, depois, copiou outros três trechos. Agora ele quer colar aquele PRIMEIRO parágrafo, sem precisar copiá-lo de novo. Com o recurso já ativado, o atalho que abre o histórico da área de transferência para escolher o item é",
+  "options": [
+   "Ctrl + V.",
+   "tecla Windows + Shift + S.",
+   "tecla Windows + V.",
+   "tecla Windows + I."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Segundo o Suporte Microsoft, Windows + V abre o histórico da área de transferência. A erra: Ctrl + V cola o último item da área de transferência, isto é, o último trecho copiado, e não o primeiro. B erra: Windows + Shift + S seleciona uma região da tela para captura. D erra: Windows + I abre as Configurações. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Área de transferência",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+V abre o histórico da área de transferência; Ctrl+V cola o último item da área de transferência; Win+Shift+S captura uma região da tela; Win+I abre Configurações."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-06",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Sobre o histórico da área de transferência do Windows 10/11, segundo o Suporte Microsoft, analise as afirmativas a seguir.\nI. O histórico tem um limite de 25 entradas copiadas.\nII. Todo o conteúdo do histórico é mantido quando o computador é reiniciado.\nIII. Quando o limite é atingido, os itens mais antigos são removidos automaticamente, a menos que estejam fixados.\nEstá correto o que se afirma em",
+  "options": [
+   "I, apenas.",
+   "I e III, apenas.",
+   "II e III, apenas.",
+   "I, II e III."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. I está correta: o histórico tem limite de 25 entradas copiadas. III está correta: os itens mais antigos, a menos que estejam fixados, são removidos automaticamente. II está errada: o histórico é limpo a cada reinício do PC, exceto os itens fixados. Assim, A omite III, e C e D incluem II. Modelo: CISBAF/RJ · Assistente Administrativo V · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Área de transferência",
+  "modelo": {
+   "orgao": "CISBAF/RJ",
+   "cargo": "Assistente Administrativo V",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Área de transferência no Windows",
+    "url": "https://support.microsoft.com/pt-br/windows/apps/using-the-clipboard",
+    "regra": "O histórico tem limite de 25 entradas; os itens mais antigos, salvo os fixados, são removidos automaticamente; o histórico é limpo a cada reinício do PC, exceto os itens fixados."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-07",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Considerando o histórico da área de transferência do Windows 10/11, segundo o Suporte Microsoft, assinale a afirmativa INCORRETA.",
+  "options": [
+   "Para usá-lo pela primeira vez, pressiona-se a tecla Windows + V e seleciona-se a opção para ativá-lo.",
+   "Cada item tem limite de tamanho de 4 MB.",
+   "São suportados os formatos texto, HTML e bitmap.",
+   "Ao selecionar Limpar, em Configurações > Área de transferência, são apagados todos os itens do histórico, inclusive os que foram fixados."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. D é a incorreta: a opção Limpar, em Configurações > Área de transferência (seção Limpar dados da área de transferência), apaga tudo, EXCETO os itens fixados. A está correta: na primeira vez, pressiona-se Windows + V e seleciona-se 'Ativar'. B está correta: o limite é de 4 MB por item. C está correta: são suportados texto, HTML e bitmap. Modelo: Prefeitura de Divinópolis/MG · Agente de Administração · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Área de transferência",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Agente de Administração",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Utilizar a área de transferência",
+    "url": "https://support.microsoft.com/pt-pt/windows/apps/using-the-clipboard",
+    "regra": "Ativa-se com Win+V e 'Ativar'; limite de 4 MB por item; suporta texto, HTML e bitmap; limpar apaga tudo, exceto os itens fixados."
+   },
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Área de transferência no Windows",
+    "url": "https://support.microsoft.com/pt-br/windows/apps/using-the-clipboard",
+    "regra": "Em Iniciar > Configurações > Área de transferência, seção Limpar dados da área de transferência, a opção Limpar apaga tudo, exceto os itens fixados."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-08",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "No Explorador de Arquivos do Windows 10, uma servidora selecionou o arquivo \"relatorio_final.docx\" e quer alterar o nome dele usando apenas o teclado. A tecla que renomeia o item selecionado é",
+  "options": [
+   "F2.",
+   "F5.",
+   "F3.",
+   "F11."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Segundo o Suporte Microsoft, no Explorador de Arquivos F2 renomeia o item selecionado. B erra: F5 atualiza a janela ativa. C erra: F3 procura um arquivo ou pasta. D erra: F11 maximiza ou minimiza a janela ativa. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Explorador de Arquivos",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "No Explorador de Arquivos: F2 renomeia o item selecionado; F5 atualiza a janela ativa; F3 procura arquivo ou pasta; F11 maximiza ou minimiza a janela ativa."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-09",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Um assistente administrativo está com o Explorador de Arquivos do Windows 11 aberto na pasta \"Protocolos\" e precisa criar ali uma nova pasta para os documentos de dezembro, usando um atalho de teclado. A combinação que cria uma nova pasta é",
+  "options": [
+   "Ctrl + N.",
+   "Ctrl + Shift + Esc.",
+   "Alt + Enter.",
+   "Ctrl + Shift + N."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Segundo o Suporte Microsoft, no Explorador de Arquivos Ctrl + Shift + N cria uma nova pasta. A erra: Ctrl + N não é o atalho que a Microsoft indica para criar pasta (falta o Shift). B erra: Ctrl + Shift + Esc abre o Gerenciador de Tarefas. C erra: Alt + Enter mostra as propriedades do item selecionado. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Explorador de Arquivos",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "No Explorador de Arquivos, Ctrl+Shift+N cria uma nova pasta; Ctrl+Shift+Esc abre o Gerenciador de Tarefas; Alt+Enter mostra as propriedades do item selecionado."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-10",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "No Windows 10, um usuário estava na Área de Trabalho e digitou na barra de endereços do Explorador de Arquivos o caminho C:\\Arquivo\\Contratos\\2026, abrindo diretamente essa pasta. Agora ele quer ir para a pasta \"Contratos\", que contém a pasta \"2026\". O atalho que o leva um nível acima no caminho da pasta é",
+  "options": [
+   "Alt + seta para a esquerda.",
+   "Alt + seta para a direita.",
+   "Alt + seta para cima.",
+   "Alt + D."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Segundo o Suporte Microsoft, no Explorador de Arquivos Alt + seta para cima move um nível acima no caminho da pasta. A erra: Alt + seta para a esquerda é 'Voltar', ou seja, leva ao local visitado antes (no caso, a Área de Trabalho), e não à pasta-pai. B erra: Alt + seta para a direita é 'Avançar'. D erra: Alt + D seleciona a barra de endereços. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Explorador de Arquivos",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "No Explorador de Arquivos: Alt+seta para cima sobe um nível no caminho da pasta; Alt+seta para a esquerda volta; Alt+seta para a direita avança; Alt+D seleciona a barra de endereços."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-11",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Sobre atalhos de teclado do Explorador de Arquivos do Windows 10/11, assinale a alternativa INCORRETA.",
+  "options": [
+   "F5 atualiza a janela ativa.",
+   "Alt + P mostra ou oculta o painel de detalhes.",
+   "F3 procura um arquivo ou pasta.",
+   "Ctrl + F seleciona a caixa de pesquisa."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. B é a incorreta: Alt + P mostra ou oculta o painel de VISUALIZAÇÃO; o painel de detalhes é Alt + Shift + P. A, C e D estão corretas segundo o Suporte Microsoft: F5 atualiza a janela ativa, F3 procura um arquivo ou pasta e Ctrl + F seleciona a caixa de pesquisa. Modelo: Prefeitura de Divinópolis/MG · Agente de Administração · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Explorador de Arquivos",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Agente de Administração",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "No Explorador de Arquivos: F5 atualiza a janela ativa; F3 procura arquivo ou pasta; Ctrl+F seleciona a caixa de pesquisa; Alt+P mostra/oculta o painel de visualização; Alt+Shift+P mostra/oculta o painel de detalhes."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-12",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Uma recepcionista da Câmara está com quatro programas abertos no Windows 11: o navegador, o editor de textos, a planilha e o e-mail. Para alternar entre as janelas abertas usando o teclado, ela deve usar",
+  "options": [
+   "Ctrl + Tab.",
+   "Alt + Tab.",
+   "tecla Windows + D.",
+   "Alt + seta para a direita."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Segundo o Suporte Microsoft, Alt + Tab alterna entre janelas abertas. A erra: Ctrl + Tab passa para a próxima guia (aba) dentro do programa. C erra: Windows + D mostra e oculta a área de trabalho. D erra: Alt + seta para a direita é 'Avançar'. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Atalhos de teclado",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Alt+Tab alterna entre janelas abertas; Ctrl+Tab move para a próxima guia; Win+D mostra e oculta a área de trabalho; Alt+seta para a direita avança."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-13",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Um analista usa o Windows 10 e quer separar, em uma área de trabalho virtual nova, as janelas de um processo seletivo, mantendo as demais na área de trabalho atual. O atalho que cria DIRETAMENTE outra área de trabalho virtual é",
+  "options": [
+   "tecla Windows + D.",
+   "tecla Windows + Ctrl + F4.",
+   "tecla Windows + Ctrl + D.",
+   "Ctrl + Shift + N."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Segundo o Suporte Microsoft, Windows + Ctrl + D cria outra área de trabalho virtual. A erra: Windows + D apenas mostra e oculta a área de trabalho. B erra: Windows + Ctrl + F4 fecha a área de trabalho virtual em uso. D erra: Ctrl + Shift + N cria uma nova pasta no Explorador de Arquivos. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Áreas de trabalho virtuais",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+Ctrl+D cria outra área de trabalho virtual; Win+Ctrl+F4 fecha a área de trabalho virtual em uso; Win+D mostra e oculta a área de trabalho; Ctrl+Shift+N cria nova pasta."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-14",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Sobre as áreas de trabalho virtuais no Windows 10/11, segundo o Suporte Microsoft, analise as afirmativas a seguir.\nI. A tecla Windows + Ctrl + F4 fecha a área de trabalho virtual que está em uso.\nII. A tecla Windows + Tab abre a Visão de Tarefas.\nIII. A tecla Windows + Ctrl + seta para a direita minimiza todas as janelas da área de trabalho atual.\nEstá correto o que se afirma em",
+  "options": [
+   "I, apenas.",
+   "II, apenas.",
+   "I e II, apenas.",
+   "II e III, apenas."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. I está correta: Windows + Ctrl + F4 fecha a área de trabalho virtual em uso. II está correta: Windows + Tab abre a Visão de Tarefas. III está errada: Windows + Ctrl + seta para a direita alterna para a área de trabalho virtual criada à direita; quem minimiza todas as janelas é Windows + M. Por isso A e B omitem uma correta, e D inclui III. Modelo: CISBAF/RJ · Assistente Administrativo V · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Áreas de trabalho virtuais",
+  "modelo": {
+   "orgao": "CISBAF/RJ",
+   "cargo": "Assistente Administrativo V",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+Ctrl+F4 fecha a área de trabalho virtual em uso; Win+Tab abre a Visão de tarefas; Win+Ctrl+seta direita/esquerda alterna entre as áreas de trabalho virtuais; Win+M minimiza todas as janelas."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-15",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Para comparar duas planilhas lado a lado no Windows 10, um servidor quer encaixar a janela ativa na metade esquerda da tela usando o teclado. Ele deve pressionar",
+  "options": [
+   "Alt + seta para a esquerda.",
+   "tecla Windows + seta para cima.",
+   "Ctrl + Esc.",
+   "tecla Windows + seta para a esquerda."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Segundo o Suporte Microsoft, mantendo pressionada a tecla Windows e uma seta, ajusta-se (encaixa-se) o aplicativo ativo naquele lado; Windows + seta para a esquerda ajusta a janela ao lado esquerdo da tela. A erra: Alt + seta para a esquerda é 'Voltar'. B erra: Windows + seta para cima maximiza a janela ativa. C erra: Ctrl + Esc abre o menu Iniciar. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Ajuste de janelas (Snap)",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Ajuste suas janelas",
+    "url": "https://support.microsoft.com/pt-br/windows/experience/snap-your-windows",
+    "regra": "Pressionando a tecla Windows + uma seta, encaixa-se o aplicativo ativo naquele lado da tela."
+   },
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+seta para a esquerda ajusta a janela ao lado esquerdo da tela; Win+seta para cima maximiza a janela ativa; Alt+seta para a esquerda volta; Ctrl+Esc abre o menu Iniciar."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-16",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "No Windows 11, um usuário quer escolher, pelo teclado, um dos layouts predeterminados para organizar as janelas abertas na tela (por exemplo, duas colunas ou três colunas). O atalho que abre os layouts de ajuste é",
+  "options": [
+   "tecla Windows + Z.",
+   "tecla Windows + Tab.",
+   "tecla Windows + Ctrl + D.",
+   "tecla Windows + M."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Segundo o Suporte Microsoft (página 'Ajuste suas janelas'), os layouts de ajuste oferecem layouts predeterminados para organizar as janelas abertas e são acessados passando o mouse sobre o botão maximizar ou pressionando Windows + Z. B erra: Windows + Tab abre a Visão de Tarefas. C erra: Windows + Ctrl + D cria uma área de trabalho virtual. D erra: Windows + M minimiza todas as janelas. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Ajuste de janelas (Snap)",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Ajuste suas janelas",
+    "url": "https://support.microsoft.com/pt-br/windows/experience/snap-your-windows",
+    "regra": "Os layouts de ajuste oferecem layouts predeterminados para organizar as janelas abertas; abrem-se com a tecla Windows + Z."
+   },
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+Tab abre a Visão de tarefas; Win+Ctrl+D cria outra área de trabalho virtual; Win+M minimiza todas as janelas."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-17",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Sobre o recurso de ajuste (encaixe) de janelas do Windows 11, segundo o Suporte Microsoft, assinale a afirmativa correta.",
+  "options": [
+   "Arrastar uma janela para um canto da tela a encaixa ocupando um quarto da tela.",
+   "O ajuste de janelas só pode ser feito pelo teclado; com o mouse, a janela apenas é movida.",
+   "O ajuste de janelas é ativado ou desativado exclusivamente pelo Painel de Controle, na opção Fontes.",
+   "Ao encaixar uma janela, o Assistente de Ajuste fecha automaticamente as demais janelas abertas."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. A está correta: segundo a página 'Ajuste suas janelas', arrastar uma janela para um canto a encaixa nesse quarto da tela. B erra: arrastar a janela para a borda ou o canto também a encaixa. C erra: a página indica o aplicativo Configurações (opção Multitarefa, em Sistema), não o Painel de Controle. D erra: o Assistente de Ajuste exibe miniaturas das outras janelas abertas para preencher o restante da tela; não as fecha. Modelo: CISBAF/RJ · Assistente Administrativo V · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Ajuste de janelas (Snap)",
+  "modelo": {
+   "orgao": "CISBAF/RJ",
+   "cargo": "Assistente Administrativo V",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Ajuste suas janelas",
+    "url": "https://support.microsoft.com/pt-br/windows/experience/snap-your-windows",
+    "regra": "Arrastar uma janela para um canto encaixa-a nesse quarto da tela; arrastar para a borda encaixa-a nesse lado; o Assistente de Ajuste exibe miniaturas das outras janelas abertas; o ajuste é configurado no aplicativo Configurações, na opção Multitarefa de Sistema."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-18",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Uma servidora precisa registrar, no Windows 10, uma imagem da tela INTEIRA e quer que ela já seja salva automaticamente como arquivo, na subpasta Capturas de tela da pasta Imagens. O atalho adequado é",
+  "options": [
+   "tecla Windows + Shift + S.",
+   "tecla Windows + PrtScn.",
+   "tecla Windows + V.",
+   "tecla Windows + . (ponto)."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Segundo o Suporte Microsoft, Windows + PrtScn captura a tela inteira e a salva em um arquivo na subpasta Capturas de tela da pasta Imagens. A erra: Windows + Shift + S seleciona uma REGIÃO da tela e a captura para a área de transferência (não grava arquivo automaticamente). C erra: Windows + V abre o histórico da área de transferência. D erra: Windows + . (ponto) abre o painel de emojis. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Captura de tela",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+PrtScn captura a tela inteira e salva em arquivo na subpasta Capturas de tela da pasta Imagens; Win+Shift+S captura uma região para a área de transferência; Win+V abre o histórico da área de transferência; Win+ponto abre o painel de emojis."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-19",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Um técnico parlamentar quer alterar o papel de parede e as opções de vídeo do Windows 11 e prefere abrir o aplicativo Configurações pelo teclado. A combinação correta é",
+  "options": [
+   "tecla Windows + X.",
+   "tecla Windows + R.",
+   "tecla Windows + I.",
+   "tecla Windows + L."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Segundo o Suporte Microsoft, Windows + I abre as Configurações. A erra: Windows + X abre o menu Link Rápido. B erra: Windows + R abre a caixa de diálogo Executar. D erra: Windows + L bloqueia o computador. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Atalhos de teclado",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+I abre Configurações; Win+X abre o menu Link Rápido; Win+R abre Executar; Win+L bloqueia o computador."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-20",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Na barra de tarefas do Windows 10 de uma servidora, os aplicativos fixados aparecem nesta ordem, da esquerda para a direita: Explorador de Arquivos, navegador e Calculadora. Para abrir a Calculadora pelo teclado, usando o recurso da barra de tarefas, ela deve pressionar",
+  "options": [
+   "tecla Windows + 3.",
+   "Ctrl + 3.",
+   "Alt + 3.",
+   "Ctrl + Shift + 3."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Segundo o Suporte Microsoft, tecla Windows + número abre o aplicativo fixado na barra de tarefas na posição indicada pelo número; a Calculadora é o 3º item, logo Windows + 3. B, C e D erram porque o atalho da barra de tarefas indicado pela Microsoft usa a tecla Windows com o número, e não Ctrl, Alt ou Ctrl + Shift. Modelo: Prefeitura de Divinópolis/MG · Calculista Judicial/Digitador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Barra de tarefas",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Calculista Judicial/Digitador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/121315/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-calculista-judicial-digitador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Win+número abre o aplicativo fixado na barra de tarefas na posição indicada pelo número."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-21",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Considere a situação: ao editar um texto no Windows 11, um servidor apagou um parágrafo por engano e pressionou ________ para desfazer a ação anterior. Em seguida, mudou de ideia e pressionou ________ para refazer a ação que havia sido desfeita. Assinale a alternativa que completa correta e sequencialmente as lacunas.",
+  "options": [
+   "Ctrl + Y / Ctrl + Z",
+   "Ctrl + Z / Ctrl + Y",
+   "Ctrl + X / Ctrl + V",
+   "Ctrl + Z / Ctrl + A"
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Segundo o Suporte Microsoft, Ctrl + Z desfaz a ação anterior e Ctrl + Y refaz uma ação desfeita antes com Ctrl + Z. A inverte os atalhos. C erra: Ctrl + X recorta o texto selecionado e Ctrl + V cola o último item da área de transferência. D erra na segunda lacuna: Ctrl + A seleciona todos os itens. Modelo: CISBAF/RJ · Assistente Administrativo V · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Atalhos de teclado",
+  "modelo": {
+   "orgao": "CISBAF/RJ",
+   "cargo": "Assistente Administrativo V",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Ctrl+Z desfaz a ação anterior; Ctrl+Y refaz uma ação desfeita com Ctrl+Z; Ctrl+X recorta; Ctrl+V cola o último item da área de transferência; Ctrl+A seleciona todos os itens."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-22",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "Relacione os atalhos de teclado do Windows 10/11 às suas funções.\n1. Ctrl + X\n2. Ctrl + A\n3. Ctrl + Esc\n( ) Abrir o menu Iniciar.\n( ) Selecionar todos os itens de uma janela.\n( ) Recortar o texto selecionado.\nA sequência está correta em",
+  "options": [
+   "1, 2, 3.",
+   "2, 3, 1.",
+   "3, 1, 2.",
+   "3, 2, 1."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Segundo o Suporte Microsoft: Ctrl + Esc abre o menu Iniciar (3); Ctrl + A seleciona todos os itens de uma janela (2); Ctrl + X recorta o texto selecionado (1). Sequência 3, 2, 1. As demais sequências atribuem pelo menos uma função ao atalho errado (por exemplo, A liga Ctrl + X ao menu Iniciar). Modelo: CISBAF/RJ · Assistente Administrativo V · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Atalhos de teclado",
+  "modelo": {
+   "orgao": "CISBAF/RJ",
+   "cargo": "Assistente Administrativo V",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/134752/instituto-consulplan-2025-cisbaf-rj-assistente-administrativo-v-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Ctrl+Esc abre o menu Iniciar; Ctrl+A seleciona todos os itens numa janela; Ctrl+X recorta o texto selecionado."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-23",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "No Windows 10, um servidor fechou todos os programas e, com nenhuma janela aberta e a área de trabalho em foco, pressionou Alt + F4. Segundo o Suporte Microsoft, o resultado esperado é",
+  "options": [
+   "nada acontecer, pois Alt + F4 só funciona com uma janela aberta.",
+   "o computador ser bloqueado, exigindo nova autenticação.",
+   "o Gerenciador de Tarefas ser aberto.",
+   "o sistema solicitar o encerramento (desligamento)."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Segundo o Suporte Microsoft, Alt + F4 fecha a janela ativa e, se nenhuma janela estiver aberta, solicita o encerramento. A erra por ignorar essa segunda parte da regra. B erra: bloquear é Windows + L. C erra: o Gerenciador de Tarefas abre com Ctrl + Shift + Esc. Modelo: Prefeitura de Divinópolis/MG · Agente de Administração · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Atalhos de teclado",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Agente de Administração",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "Alt+F4 fecha a janela ativa; se nenhuma janela estiver aberta, solicita o encerramento. Win+L bloqueia; Ctrl+Shift+Esc abre o Gerenciador de Tarefas."
+   }
+  ]
+ },
+ {
+  "id": "informatica26-24",
+  "materiaRef": "mmat_35",
+  "topicoRef": "ttop_395",
+  "tipo": "abcd",
+  "text": "No Explorador de Arquivos do Windows 11, um usuário quer deixar os ícones das pastas e arquivos maiores, para enxergar melhor as miniaturas das fotos. Segundo o Suporte Microsoft, ele pode alterar o tamanho e a aparência dos ícones usando",
+  "options": [
+   "Ctrl + roda do mouse.",
+   "Alt + roda do mouse.",
+   "Ctrl + Shift + E.",
+   "Alt + Shift + P."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Segundo o Suporte Microsoft, no Explorador de Arquivos Ctrl + roda do mouse altera o tamanho e a aparência dos ícones de arquivo e pasta. B erra: o modificador indicado é Ctrl, não Alt. C erra: Ctrl + Shift + E expande todas as pastas da árvore no painel de navegação. D erra: Alt + Shift + P mostra ou oculta o painel de detalhes. Modelo: Prefeitura de Divinópolis/MG · Agente de Administração · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Explorador de Arquivos",
+  "modelo": {
+   "orgao": "Prefeitura de Divinópolis/MG",
+   "cargo": "Agente de Administração",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/120461/instituto-consulplan-2024-prefeitura-de-divinopolis-mg-agente-de-administracao-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "regra",
+    "fonte": "Suporte Microsoft — Atalhos de teclado no Windows",
+    "url": "https://support.microsoft.com/pt-br/accessibility/windows/keyboard-shortcuts-in-windows",
+    "regra": "No Explorador de Arquivos: Ctrl+roda do mouse altera o tamanho e a aparência dos ícones; Ctrl+Shift+E expande todas as pastas da árvore no painel de navegação; Alt+Shift+P mostra/oculta o painel de detalhes."
+   }
+  ]
+ }
+]

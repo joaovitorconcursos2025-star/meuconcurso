@@ -1,0 +1,1086 @@
+[
+ {
+  "id": "rh26-01",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Sobre o controle da despesa total com pessoal previsto no art. 22 da Lei Complementar nº 101/2000 (LRF), assinale a afirmativa INCORRETA.",
+  "options": [
+   "Se a despesa total com pessoal exceder a 95% do limite, as vedações recaem sobre o Poder ou órgão que houver incorrido no excesso.",
+   "A verificação do cumprimento dos limites de despesa com pessoal é realizada ao final de cada semestre do exercício financeiro.",
+   "Superado o limite prudencial, fica vedada a criação de cargo, emprego ou função.",
+   "Superado o limite prudencial, a revisão geral anual da remuneração prevista no art. 37, X, da Constituição continua ressalvada."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. O art. 22, caput, manda verificar o cumprimento dos limites dos arts. 19 e 20 \"ao final de cada quadrimestre\", e não a cada semestre; por isso B é a incorreta. A está certa: o parágrafo único dirige as vedações ao Poder ou órgão \"que houver incorrido no excesso\" quando a despesa exceder 95% do limite. C está certa (par. único, II: criação de cargo, emprego ou função). D está certa (par. único, I: ressalvada a revisão do art. 37, X, da CF). Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · verificação quadrimestral (art. 22)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "será realizada ao final de cada quadrimestre"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "criação de cargo, emprego ou função"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "semestre"
+   }
+  ]
+ },
+ {
+  "id": "rh26-02",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "De acordo com a LRF, as vedações impostas ao Poder ou órgão cuja despesa total com pessoal se aproxima do limite legal (o chamado limite prudencial) passam a valer quando essa despesa exceder a",
+  "options": [
+   "80% do limite.",
+   "90% do limite.",
+   "100% do limite.",
+   "95% do limite."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Art. 22, parágrafo único: \"Se a despesa total com pessoal exceder a 95% (noventa e cinco por cento) do limite, são vedados...\". A (80%) não tem previsão na LRF. B (90%) é o limite de alerta do Tribunal de Contas (art. 59, § 1º, II), que gera apenas alerta, sem as vedações. C (100%) é o próprio limite; acima dele já se exige a recondução do art. 23, mas as vedações começam antes, nos 95%. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · limite prudencial (art. 22)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "exceder a 95% (noventa e cinco por cento) do limite"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "90%"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "80%"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "100%"
+   }
+  ]
+ },
+ {
+  "id": "rh26-03",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "No último relatório quadrimestral, a despesa total com pessoal de uma Câmara Municipal atingiu 96% do limite que a LRF lhe atribui. A Mesa Diretora pretende, então, aprovar a criação de um cargo de assessor técnico. Nessa situação, a criação do cargo",
+  "options": [
+   "está vedada, porque a Câmara excedeu 95% do limite e a LRF proíbe, nesse caso, a criação de cargo, emprego ou função.",
+   "é permitida, porque a vedação só se aplica depois que a despesa ultrapassa 100% do limite.",
+   "é permitida, desde que a despesa do novo cargo esteja prevista na lei orçamentária anual.",
+   "depende apenas de prévio alerta do Tribunal de Contas, que é condição para a incidência de qualquer vedação."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Art. 22, parágrafo único, II: excedidos 95% do limite, é vedada ao Poder ou órgão a \"criação de cargo, emprego ou função\". B confunde o limite prudencial (95%) com o limite máximo (100%). C cria uma exceção (previsão na LOA) que o artigo não traz. D erra porque o alerta do Tribunal de Contas (art. 59) não é requisito para as vedações, que decorrem diretamente da lei. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · vedações do limite prudencial",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "criação de cargo, emprego ou função"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "exceder a 95% (noventa e cinco por cento) do limite"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "orçamentária anual"
+   }
+  ]
+ },
+ {
+  "id": "rh26-04",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "A despesa total com pessoal do Poder Executivo de um Município superou 95% do limite fixado na LRF, sem alcançar 100%. O Prefeito deseja encaminhar o projeto da revisão geral anual da remuneração dos servidores. Segundo a LRF, essa medida",
+  "options": [
+   "está vedada, pois no limite prudencial é proibida qualquer alteração de remuneração.",
+   "só é admitida se decorrer de sentença judicial transitada em julgado.",
+   "é admitida, pois a revisão prevista no art. 37, X, da Constituição é ressalvada da vedação.",
+   "só poderá ser concedida depois que a despesa for reconduzida abaixo de 90% do limite."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Art. 22, parágrafo único, I: é vedada a concessão de vantagem, aumento, reajuste ou adequação de remuneração, \"salvo os derivados de sentença judicial ou de determinação legal ou contratual, ressalvada a revisão prevista no inciso X do art. 37 da Constituição\". A ignora a ressalva expressa. B reduz as exceções à sentença judicial e esquece a revisão geral anual. D inventa condição de recondução a 90%, que é o percentual de alerta (art. 59), não requisito do art. 22. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · revisão geral anual no limite prudencial",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "ressalvada a revisão prevista no inciso X do art. 37 da Constituição"
+   }
+  ]
+ },
+ {
+  "id": "rh26-05",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Um Município cuja despesa total com pessoal do Executivo excedeu 95% do limite legal analisa quatro pedidos de provimento. De acordo com a LRF, é permitido(a):",
+  "options": [
+   "a nomeação de aprovado em concurso para cargo da área administrativa que ficou vago com a exoneração a pedido do antigo ocupante.",
+   "a nomeação de aprovado em concurso para repor professor da rede municipal que se aposentou.",
+   "a contratação de pessoal por prazo determinado para reforçar a equipe de assistência social.",
+   "a nomeação de aprovados para cargos novos criados na secretaria de saúde."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Art. 22, parágrafo único, IV: é vedado o provimento de cargo público, admissão ou contratação de pessoal a qualquer título, \"ressalvada a reposição decorrente de aposentadoria ou falecimento de servidores das áreas de educação, saúde e segurança\". B cumpre os dois requisitos (aposentadoria + educação). A é reposição, mas por exoneração e fora das três áreas. C é contratação, vedada \"a qualquer título\", e assistência social não está na ressalva. D não é reposição: são cargos novos, e a própria criação de cargos estaria vedada (inciso II). Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · reposição no limite prudencial",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "ressalvada a reposição decorrente de aposentadoria ou falecimento de servidores das áreas de educação, saúde e segurança"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "assistência social"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "exoneração"
+   }
+  ]
+ },
+ {
+  "id": "rh26-06",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Superado o limite prudencial de despesa com pessoal, a LRF veda a contratação de hora extra, salvo no caso de convocação extraordinária do Congresso Nacional prevista no art. 57, § 6º, II, da Constituição e nas situações previstas na",
+  "options": [
+   "lei de diretrizes orçamentárias.",
+   "lei orçamentária anual.",
+   "lei do plano plurianual.",
+   "resolução do Tribunal de Contas competente."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Art. 22, parágrafo único, V: veda a \"contratação de hora extra, salvo no caso do disposto no inciso II do § 6º do art. 57 da Constituição e as situações previstas na lei de diretrizes orçamentárias\". A pegadinha é trocar o instrumento: B (LOA) e C (PPA) são outras leis orçamentárias que o inciso não menciona, e D atribui ao Tribunal de Contas uma competência que a LRF entrega à LDO. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · hora extra no limite prudencial",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "as situações previstas na lei de diretrizes orçamentárias"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "orçamentária anual"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "plano plurianual"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "Tribunal de Contas"
+   }
+  ]
+ },
+ {
+  "id": "rh26-07",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Se a despesa total com pessoal de um Poder ou órgão ultrapassar o limite que lhe cabe, a LRF determina que o percentual excedente seja eliminado",
+  "options": [
+   "nos três quadrimestres seguintes, sendo pelo menos metade no primeiro.",
+   "no exercício financeiro seguinte, sem fixar parcela mínima por quadrimestre.",
+   "nos dois quadrimestres seguintes, sendo pelo menos metade no último.",
+   "nos dois quadrimestres seguintes, sendo pelo menos um terço no primeiro."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Art. 23, caput: \"o percentual excedente terá de ser eliminado nos dois quadrimestres seguintes, sendo pelo menos um terço no primeiro\". A troca o número de quadrimestres (três) e a fração (metade). B troca o prazo por um exercício inteiro e retira a parcela mínima. C mantém os dois quadrimestres, mas troca a fração e o momento (metade no último). Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · recondução ao limite (art. 23)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "trecho": "eliminado nos dois quadrimestres seguintes, sendo pelo menos um terço no primeiro"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "termo": "três quadrimestres"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "termo": "metade"
+   }
+  ]
+ },
+ {
+  "id": "rh26-08",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Encerrado o prazo de recondução sem que o Poder Executivo de um Município tenha eliminado o excesso de despesa com pessoal, e enquanto esse excesso perdurar, a LRF NÃO o impede de",
+  "options": [
+   "receber transferências voluntárias.",
+   "obter garantia, direta ou indireta, de outro ente.",
+   "contratar operação de crédito destinada ao pagamento da dívida mobiliária.",
+   "contratar operação de crédito destinada à construção de uma nova sede administrativa."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Art. 23, § 3º: não alcançada a redução no prazo e enquanto perdurar o excesso, o Poder ou órgão não poderá I - receber transferências voluntárias; II - obter garantia, direta ou indireta, de outro ente; III - contratar operações de crédito, \"ressalvadas as destinadas ao pagamento da dívida mobiliária e as que visem à redução das despesas com pessoal\". Por isso só C escapa da proibição. A e B são vedações expressas (incisos I e II). D é operação de crédito comum, fora das ressalvas do inciso III. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · sanções por excesso não reconduzido",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "trecho": "ressalvadas as destinadas ao pagamento da dívida mobiliária e as que visem à redução das despesas com pessoal"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "trecho": "I - receber transferências voluntárias;"
+   }
+  ]
+ },
+ {
+  "id": "rh26-09",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Segundo a LRF, as restrições aplicáveis ao Poder ou órgão que não reconduz a despesa com pessoal ao limite (vedação de transferências voluntárias, garantias e operações de crédito) aplicam-se imediatamente, sem aguardar o prazo de recondução, se o limite for excedido no",
+  "options": [
+   "último quadrimestre do último ano do mandato dos titulares de Poder ou órgão.",
+   "primeiro quadrimestre do último ano do mandato dos titulares de Poder ou órgão.",
+   "primeiro quadrimestre do primeiro ano do mandato dos titulares de Poder ou órgão.",
+   "segundo quadrimestre de qualquer exercício do mandato dos titulares de Poder ou órgão."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Art. 23, § 4º: as restrições do § 3º \"aplicam-se imediatamente se a despesa total com pessoal exceder o limite no primeiro quadrimestre do último ano do mandato\". A troca o quadrimestre (último). C troca o ano (primeiro ano do mandato). D generaliza para qualquer exercício e muda o quadrimestre. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · excesso no último ano de mandato",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "trecho": "exceder o limite no primeiro quadrimestre do último ano do mandato"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "termo": "último quadrimestre"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "termo": "segundo quadrimestre"
+   }
+  ]
+ },
+ {
+  "id": "rh26-10",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Sobre a regra da LRF que afasta, para o Município, as restrições do art. 23, § 3º (transferências voluntárias, garantias e operações de crédito), analise as afirmativas a seguir.\nI. A regra exige queda de receita real superior a 10% em comparação ao correspondente quadrimestre do exercício financeiro anterior.\nII. Conta, para esse fim, a queda decorrente da diminuição do ICMS repassado pelo Estado ao Município.\nIII. Conta, para esse fim, a diminuição das receitas recebidas de royalties e participações especiais.\nEstá correto o que se afirma em",
+  "options": [
+   "I e III, apenas.",
+   "I e II, apenas.",
+   "II e III, apenas.",
+   "I, II e III."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Art. 23, § 5º: as restrições do § 3º não se aplicam ao Município em caso de \"queda de receita real superior a 10% (dez por cento)\", em comparação ao correspondente quadrimestre do exercício anterior, devido a I - diminuição das transferências do FPM decorrente de isenções tributárias concedidas pela União; e II - diminuição das receitas de royalties e participações especiais. I e III estão corretas. II está errada: a queda do ICMS não está entre as causas da lei, que só fala em FPM (por isenção da União) e royalties. Lembre também do § 6º: a exceção só vale se a despesa do quadrimestre vigente não ultrapassar o limite do art. 19. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · queda de receita do Município (art. 23, § 5º)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "trecho": "queda de receita real superior a 10% (dez por cento)"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "trecho": "diminuição das receitas recebidas de royalties e participações especiais"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 23",
+    "termo": "ICMS"
+   }
+  ]
+ },
+ {
+  "id": "rh26-11",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Para os fins do art. 169 da Constituição, a LRF fixa limites globais de despesa total com pessoal, em percentual da receita corrente líquida, para a União, os Estados e os Municípios, respectivamente, de",
+  "options": [
+   "50%, 50% e 60%.",
+   "60%, 60% e 50%.",
+   "50%, 60% e 60%.",
+   "50%, 49% e 54%."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Art. 19: \"I - União: 50%; II - Estados: 60%; III - Municípios: 60%\". A dá aos Estados o percentual da União. B inverte os limites da União e dos Municípios. D mistura os limites globais com a repartição do art. 20 (49% é o do Executivo estadual e 54% o do Executivo municipal), que são parcelas dos 60%, e não limites globais. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · limites globais (art. 19)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 19",
+    "trecho": "União: 50%"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 19",
+    "trecho": "III - Municípios: 60% (sessenta por cento)"
+   }
+  ]
+ },
+ {
+  "id": "rh26-12",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Na repartição do limite global da esfera municipal, a LRF reserva ao Poder Legislativo o percentual da receita corrente líquida de",
+  "options": [
+   "3%, incluído o Tribunal de Contas do Estado.",
+   "2,5%, incluído o Tribunal de Contas do Município, quando houver.",
+   "6%, excluído o Tribunal de Contas do Município, que tem limite próprio.",
+   "6%, incluído o Tribunal de Contas do Município, quando houver."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Art. 20, III, a: \"6% (seis por cento) para o Legislativo, incluído o Tribunal de Contas do Município, quando houver\"; os outros 54% ficam com o Executivo (alínea b). A traz o limite do Legislativo estadual (art. 20, II, a). B traz o do Legislativo federal (art. 20, I, a). C acerta o percentual, mas exclui o TCM, que a lei manda incluir. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · limite do Legislativo municipal",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 20",
+    "trecho": "6% (seis por cento) para o Legislativo, incluído o Tribunal de Contas do Município, quando houver"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 20",
+    "termo": "excluído"
+   }
+  ]
+ },
+ {
+  "id": "rh26-13",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "A receita corrente líquida de um Município foi apurada em R$ 80.000.000,00. Considerando apenas os percentuais da LRF, o valor da despesa total com pessoal da Câmara Municipal acima do qual passam a incidir as vedações do limite prudencial é de",
+  "options": [
+   "R$ 4.320.000,00.",
+   "R$ 4.560.000,00.",
+   "R$ 4.800.000,00.",
+   "R$ 4.104.000,00."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. O limite do Legislativo municipal é 6% da RCL (art. 20, III, a): 80.000.000 × 0,06 = R$ 4.800.000,00. O limite prudencial é 95% desse limite (art. 22, parágrafo único): 4.800.000 × 0,95 = R$ 4.560.000,00. A usa 90% (limite de alerta): 4.800.000 × 0,9. C é o limite máximo (100%), não o prudencial. D aplica 95% sobre o limite do Executivo (54%) em vez do Legislativo. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · cálculo do limite prudencial da Câmara",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "80000000*0.06*0.95"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 20",
+    "trecho": "6% (seis por cento) para o Legislativo"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "exceder a 95% (noventa e cinco por cento) do limite"
+   }
+  ]
+ },
+ {
+  "id": "rh26-14",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Por falta de candidatos aprovados, uma Câmara Municipal não conseguiu preencher cargos efetivos de recepcionista e contratou empresa que passou a fornecer trabalhadores para exercer exatamente essas funções, em substituição aos servidores. À luz da LRF, os valores desse contrato",
+  "options": [
+   "são contabilizados como \"Outras Despesas de Pessoal\" e entram no cômputo da despesa total com pessoal.",
+   "ficam fora da despesa com pessoal, por serem despesas de custeio com serviços de terceiros.",
+   "só entram na despesa com pessoal se o contrato durar mais de 12 meses.",
+   "são registrados como despesa de capital, por envolverem contratação de pessoa jurídica."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Art. 18, § 1º: os valores dos contratos de terceirização de mão de obra \"que se referem à substituição de servidores e empregados públicos\" serão contabilizados como \"Outras Despesas de Pessoal\". B é a pegadinha: tratar a substituição como simples serviço de terceiros, fora do limite. C inventa um prazo mínimo de contrato. D erra a natureza da despesa, que é corrente (pessoal), e não de capital. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · terceirização que substitui servidor (art. 18, § 1º)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "trecho": "terceirização de mão-de-obra que se referem à substituição de servidores e empregados públicos"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "termo": "capital"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "termo": "12 (doze)"
+   }
+  ]
+ },
+ {
+  "id": "rh26-15",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Conforme a LRF, a despesa total com pessoal é apurada somando-se a despesa realizada no mês em referência com a dos",
+  "options": [
+   "12 meses imediatamente anteriores, pelo regime de caixa.",
+   "11 meses imediatamente anteriores, pelo regime de caixa, considerando apenas a despesa paga.",
+   "11 meses imediatamente anteriores, pelo regime de competência, independentemente de empenho.",
+   "meses anteriores do mesmo exercício financeiro, pelo regime de competência, desde que empenhada."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Art. 18, § 2º (redação da LC 178/2021): soma-se a despesa do mês em referência com a \"dos 11 (onze) imediatamente anteriores, adotando-se o regime de competência, independentemente de empenho\". A erra o número de meses (12 + o mês de referência daria 13) e o regime. B acerta os 11 meses, mas troca competência por caixa. D limita a soma ao exercício e condiciona ao empenho, o contrário da lei. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · apuração da despesa com pessoal (art. 18, § 2º)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "trecho": "11 (onze) imediatamente anteriores, adotando-se o regime de competência, independentemente de empenho"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "termo": "regime de caixa"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "termo": "12 (doze)"
+   }
+  ]
+ },
+ {
+  "id": "rh26-16",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Para a apuração da despesa total com pessoal, a LRF determina que seja observada a remuneração",
+  "options": [
+   "líquida do servidor, depois dos descontos de imposto de renda e de contribuição previdenciária.",
+   "líquida do servidor, deduzidas apenas as consignações facultativas.",
+   "bruta do servidor, deduzidas as retenções tributárias na fonte.",
+   "bruta do servidor, sem qualquer dedução ou retenção, ressalvada a redução para atendimento do teto remuneratório do art. 37, XI, da Constituição."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Art. 18, § 3º (incluído pela LC 178/2021): \"será observada a remuneração bruta do servidor, sem qualquer dedução ou retenção, ressalvada a redução para atendimento ao disposto no art. 37, inciso XI, da Constituição Federal\" (abate-teto). A e B trocam bruta por líquida. C acerta \"bruta\", mas admite dedução das retenções, que a lei proíbe. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · remuneração bruta (art. 18, § 3º)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "trecho": "será observada a remuneração bruta do servidor, sem qualquer dedução ou retenção"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "termo": "líquida"
+   }
+  ]
+ },
+ {
+  "id": "rh26-17",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Segundo o conceito de despesa total com pessoal adotado pela LRF, essa despesa corresponde ao somatório dos gastos do ente com",
+  "options": [
+   "os servidores ativos, excluídas as horas extras e as vantagens pessoais, que têm natureza eventual.",
+   "os ativos, os inativos e os pensionistas, inclusive os encargos sociais e as contribuições recolhidas pelo ente às entidades de previdência.",
+   "os ativos e os inativos, excluídos os pensionistas, cujas despesas são de natureza previdenciária.",
+   "os ocupantes de cargos efetivos e em comissão, excluídos os mandatos eletivos e os membros de Poder."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Art. 18, caput: despesa total com pessoal é o somatório dos gastos \"com os ativos, os inativos e os pensionistas\", relativos a mandatos eletivos, cargos, funções ou empregos, civis, militares e de membros de Poder, com quaisquer espécies remuneratórias, inclusive adicionais, gratificações, horas extras e vantagens pessoais, \"bem como encargos sociais e contribuições recolhidas pelo ente às entidades de previdência\". A exclui horas extras e vantagens pessoais, que a lei inclui. C exclui os pensionistas. D exclui mandatos eletivos e membros de Poder, expressamente incluídos. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · conceito de despesa total com pessoal (art. 18)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "trecho": "com os ativos, os inativos e os pensionistas"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 18",
+    "trecho": "bem como encargos sociais e contribuições recolhidas pelo ente às entidades de previdência"
+   }
+  ]
+ },
+ {
+  "id": "rh26-18",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Na verificação do atendimento dos limites globais de despesa com pessoal, a LRF manda NÃO computar as despesas listadas a seguir, EXCETO:",
+  "options": [
+   "as decorrentes de decisão judicial relativas à competência do próprio período de apuração.",
+   "as de indenização por demissão de servidores ou empregados.",
+   "as relativas a incentivos à demissão voluntária.",
+   "as derivadas da convocação extraordinária do Congresso Nacional prevista no art. 57, § 6º, II, da Constituição."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Art. 19, § 1º: não são computadas as despesas I - de indenização por demissão; II - relativas a incentivos à demissão voluntária; III - derivadas do art. 57, § 6º, II, da CF; IV - \"decorrentes de decisão judicial e da competência de período anterior ao da apuração\". Só sai a despesa judicial de período ANTERIOR; a da competência do próprio período entra no limite (e o § 2º manda incluí-la no limite do Poder ou órgão). Por isso A é a exceção. B, C e D estão nos incisos I, II e III. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · exclusões do cômputo (art. 19, § 1º)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 19",
+    "trecho": "decorrentes de decisão judicial e da competência de período anterior ao da apuração"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 19",
+    "trecho": "de indenização por demissão de servidores ou empregados"
+   }
+  ]
+ },
+ {
+  "id": "rh26-19",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Ao verificar se o Município respeita o limite global de despesa com pessoal, o órgão de controle questiona o tratamento da parcela paga com recursos aportados para cobrir o déficit financeiro do regime próprio de previdência. Segundo a LRF, essa parcela",
+  "options": [
+   "pode ser deduzida integralmente, por ter natureza previdenciária.",
+   "pode ser deduzida, desde que a dedução esteja autorizada na lei de diretrizes orçamentárias.",
+   "não pode ser deduzida, pois a lei veda expressamente essa dedução.",
+   "pode ser deduzida até a metade do valor aportado no exercício."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Art. 19, § 3º (incluído pela LC 178/2021): \"é vedada a dedução da parcela custeada com recursos aportados para a cobertura do déficit financeiro dos regimes de previdência\". A, B e D criam hipóteses de dedução (integral, por autorização da LDO, até a metade) que a lei proíbe. Não confunda com o § 1º, VI, que exclui a parcela de inativos custeada por contribuições dos segurados, compensação financeira e transferências para equilíbrio atuarial. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · aporte para déficit do RPPS (art. 19, § 3º)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 19",
+    "trecho": "é vedada a dedução da parcela custeada com recursos aportados para a cobertura do déficit financeiro"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 19",
+    "termo": "metade"
+   }
+  ]
+ },
+ {
+  "id": "rh26-20",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Em certo Município, as aposentadorias e pensões dos ex-servidores da Câmara Municipal são custeadas com recursos do Poder Executivo. Para aplicação dos limites de despesa com pessoal por Poder, a LRF determina que essas despesas sejam",
+  "options": [
+   "computadas apenas no limite do Poder Executivo, que é quem as custeia.",
+   "excluídas de qualquer limite, por se tratar de despesa previdenciária.",
+   "repartidas igualmente entre o Executivo e a Câmara.",
+   "apuradas pela Câmara, de forma segregada e em sua integralidade, mesmo que o custeio esteja a cargo de outro Poder."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Art. 20, § 7º (incluído pela LC 178/2021): os Poderes e órgãos deverão apurar, de forma segregada, \"a integralidade das despesas com pessoal dos respectivos servidores inativos e pensionistas, mesmo que o custeio dessas despesas esteja a cargo de outro Poder ou órgão\". A é a pegadinha: imputar a despesa a quem paga. B exclui do limite uma despesa que a lei manda apurar. C inventa uma divisão igualitária. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · inativos e pensionistas por Poder (art. 20, § 7º)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 20",
+    "trecho": "mesmo que o custeio dessas despesas esteja a cargo de outro Poder ou órgão"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 20",
+    "termo": "igualmente"
+   }
+  ]
+ },
+ {
+  "id": "rh26-21",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "No segundo ano de seu mandato, o titular de um Poder municipal edita ato que concede reajuste aos servidores, dividido em parcelas, a última delas a ser implementada somente depois do fim do seu mandato. Segundo a LRF, esse ato é",
+  "options": [
+   "nulo de pleno direito, porque prevê parcelas a serem implementadas em períodos posteriores ao final do mandato.",
+   "válido, pois foi editado fora dos 180 dias anteriores ao final do mandato.",
+   "válido, desde que o reajuste tenha sido autorizado por lei específica.",
+   "anulável, cabendo ao Tribunal de Contas decidir sobre a sua manutenção."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Art. 21, III (redação da LC 173/2020): é nulo de pleno direito \"o ato de que resulte aumento da despesa com pessoal que preveja parcelas a serem implementadas em períodos posteriores ao final do mandato do titular de Poder ou órgão\". Diferentemente do inciso II, o inciso III não menciona os 180 dias anteriores ao final do mandato: basta que o ato preveja parcelas posteriores a esse final. B confunde com o inciso II (180 dias finais), que é outra hipótese. C cria uma convalidação por lei que o artigo não prevê. D troca nulidade de pleno direito por mera anulabilidade. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · parcelas após o fim do mandato (art. 21, III)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 21",
+    "trecho": "que preveja parcelas a serem implementadas em períodos posteriores ao final do mandato"
+   }
+  ]
+ },
+ {
+  "id": "rh26-22",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Sobre as restrições do art. 21, incisos II, III e IV, da LRF (atos que aumentam a despesa com pessoal no fim do mandato), analise as afirmativas a seguir.\nI. Devem ser aplicadas inclusive durante o período de recondução ou reeleição para o cargo de titular do Poder ou órgão autônomo.\nII. Aplicam-se a todos os ordenadores de despesa, ainda que sejam servidores efetivos sem mandato.\nIII. Aplicam-se somente aos titulares ocupantes de cargo eletivo dos Poderes referidos no art. 20 da LRF.\nIV. Deixam de valer quando o titular do Poder é candidato à reeleição, pois o mandato continua.\nEstá correto o que se afirma em",
+  "options": [
+   "I e II, apenas.",
+   "I e III, apenas.",
+   "II e IV, apenas.",
+   "III e IV, apenas."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Art. 21, § 1º (incluído pela LC 173/2020): as restrições dos incisos II, III e IV \"I - devem ser aplicadas inclusive durante o período de recondução ou reeleição\" e \"II - aplicam-se somente aos titulares ocupantes de cargo eletivo dos Poderes referidos no art. 20\". I e III repetem a lei. II está errada: a restrição não alcança qualquer ordenador de despesa, só os titulares eleitos. IV está errada: a reeleição não afasta as restrições; a lei diz que elas valem inclusive nesse período. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · alcance das restrições de fim de mandato",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 21",
+    "trecho": "devem ser aplicadas inclusive durante o período de recondução ou reeleição"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 21",
+    "trecho": "aplicam-se somente aos titulares ocupantes de cargo eletivo dos Poderes referidos no art. 20"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 21",
+    "termo": "ordenadores"
+   }
+  ]
+ },
+ {
+  "id": "rh26-23",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "De acordo com o art. 21, I, da LRF, é nulo de pleno direito o ato que provoque aumento da despesa com pessoal e não atenda às exigências dos arts. 16 e 17 da própria lei, ao art. 37, XIII, e ao art. 169, § 1º, da Constituição, e também",
+  "options": [
+   "à prévia homologação do ato pelo Tribunal de Contas.",
+   "ao parecer favorável do órgão de controle interno do Poder.",
+   "ao limite legal de comprometimento aplicado às despesas com pessoal inativo.",
+   "à aprovação do ato pela maioria absoluta do Poder Legislativo."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Art. 21, I (redação da LC 173/2020): é nulo o ato que provoque aumento da despesa com pessoal e não atenda: a) às exigências dos arts. 16 e 17 da LRF, ao art. 37, XIII, e ao art. 169, § 1º, da CF; e b) \"ao limite legal de comprometimento aplicado às despesas com pessoal inativo\". A, B e D inventam requisitos (homologação do Tribunal de Contas, parecer do controle interno, maioria absoluta) que não estão no artigo. Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · nulidade por falta de requisitos (art. 21, I)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 21",
+    "trecho": "ao limite legal de comprometimento aplicado às despesas com pessoal inativo"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 21",
+    "termo": "homologação"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 21",
+    "termo": "controle interno"
+   },
+   {
+    "lei": "lc101",
+    "artigo": "Art. 21",
+    "termo": "maioria absoluta"
+   }
+  ]
+ },
+ {
+  "id": "rh26-24",
+  "materiaRef": "mmat_38",
+  "topicoRef": "ttop_425",
+  "subtopicoRef": "ssub_top_425_1",
+  "tipo": "abcd",
+  "text": "Sobre a verificação dos limites e o limite prudencial de despesa com pessoal na LRF, analise as afirmativas a seguir.\nI. A verificação do cumprimento dos limites dos arts. 19 e 20 é realizada ao final de cada quadrimestre.\nII. As vedações do limite prudencial passam a valer quando a despesa total com pessoal exceder a 90% do limite.\nIII. As vedações do limite prudencial alcançam o Poder ou órgão que houver incorrido no excesso, e não todo o ente.\nIV. No limite prudencial, é vedada a alteração de estrutura de carreira que implique aumento de despesa.\nEstá correto o que se afirma em",
+  "options": [
+   "I e II, apenas.",
+   "II e III, apenas.",
+   "I, II e IV, apenas.",
+   "I, III e IV, apenas."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Art. 22: I está correta (caput: \"ao final de cada quadrimestre\"). II está errada: as vedações começam quando a despesa excede 95% do limite (parágrafo único); 90% é o limite de alerta do Tribunal de Contas (art. 59, § 1º, II). III está correta: são vedados \"ao Poder ou órgão referido no art. 20 que houver incorrido no excesso\". IV está correta (parágrafo único, III). Modelo: Câmara Municipal de Cotia/SP · Contador · 2024 — https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "superior",
+  "assunto": "LRF · verificação e limite prudencial (art. 22)",
+  "modelo": {
+   "orgao": "Câmara Municipal de Cotia/SP",
+   "cargo": "Contador",
+   "ano": "2024",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/123194/instituto-consulplan-2024-camara-de-cotia-sp-contador-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "será realizada ao final de cada quadrimestre"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "que houver incorrido no excesso"
+   },
+   {
+    "tipo": "lei",
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "trecho": "alteração de estrutura de carreira que implique aumento de despesa"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "lc101",
+    "artigo": "Art. 22",
+    "termo": "90%"
+   }
+  ]
+ }
+]

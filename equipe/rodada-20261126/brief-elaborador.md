@@ -1,0 +1,17 @@
+# Brief comum · Elaborador · rodada 26/11/2026
+Você é ELABORADOR da equipe do João (concurso Câmara Municipal de Cristalina-GO, Instituto Consulplan, prova 20/12/2026). Português do Brasil. Sem perguntas. Sem commit. Repositório: /home/claude/meuconcurso.
+
+Leia antes: equipe/skills/esteira-questoes-edital/SKILL.md; sua ordem em equipe/rodada-20261126/ordens.json (pelo slug); o arquivo de pesquisa de banca da sua matéria (equipe/banca/...); como exemplo de formato, 3 itens de equipe/rodada-20261122/questoes.json. Confira no conteudo.json as questões que JÁ existem no seu tópico (mesmo topicoRef) para não repetir enunciado nem ideia.
+
+Entregue: equipe/rodada-20261126/<slug>/questoes.json — lista de **24** questões (mínimo 20 aprovadas; as extras cobrem vetos), ids "<slug>26-01" … "<slug>26-24". Cada questão:
+{id, materiaRef, topicoRef, subtopicoRef (o da ordem, ou omita se null), tipo:"abcd", text, options[4], correct (0-3), veCorrect:1, explanation, banca:"Inédita · gêmea de prova Consulplan", ano:"2026", nivel:"medio" (ou "superior" se o item for só do Analista), assunto (curto), modelo:{orgao,cargo,ano,url}, base:[...], ausentes:[...] (opcional, só leis)}
+
+Regras:
+- TODA questão cabe no ITEM DO EDITAL da ordem (palavras do edital). Na dúvida, não faça.
+- Gêmea: mesmo assunto, formato e pegadinha de uma prova REAL da Consulplan listada no arquivo de banca, com texto 100% próprio (não copie enunciado). `modelo.url` = link da prova real que está no arquivo de banca. Se a prova-modelo não tem gabarito oficial confirmado, ela serve só de FORMATO: não diga na explanation que "o gabarito oficial" foi tal letra.
+- 4 alternativas, uma única correta, sem "todas/nenhuma das anteriores". Gabarito distribuído: 6/6/6/6 (nenhuma letra > 7). Misture formatos (direta, caso prático, EXCETO/INCORRETA, assertivas I–III/IV com alternativas combinadas).
+- `base` prova o gabarito: lei → {"tipo":"lei","lei":"<id>","artigo":"Art. 29-A","trecho":"<literal, copiado do arquivo de fonte>"} (municipal: lo/ri/est em equipe/fontes/leis.json, artigo exatamente como lá, ex.: "Art. 5º"; federal: equipe/fontes/federal/<id>.txt, trecho de no máximo ~120 caracteres, copiado do arquivo); conta → {"tipo":"conta","expr":"..."} (só aritmética; o resultado tem de ser o primeiro número da alternativa correta e de nenhuma errada); regra → {"tipo":"regra","fonte":"<obra/página oficial>","url":"https://...","regra":"<com suas palavras>"} (url oficial que o Analista abriu e listou; nada de cursinho).
+- `ausentes` (leis): para distrator que troca número/órgão, {"lei","artigo","termo"} com o termo errado que NÃO aparece no artigo.
+- explanation: "Gabarito X." + a regra/artigo + por que cada distrator erra + no fim "Modelo: <órgão> · <cargo> · <ano> — <url>".
+- Ao terminar rode: python3 equipe/ferramentas/confere_esteira.py equipe/rodada-20261126/<slug>/questoes.json <revisor falso> — crie um revisor falso temporário no scratchpad /tmp/claude-0/-home-claude-meuconcurso/f1cff680-0af2-501c-a793-2e334ac412ef/scratchpad/ com {id: correct} só para testar formato/base/duplicatas; corrija até 0 reprovadas. Apague o falso depois (não grave revisor.json na pasta da rodada). Legislação Específica: rode também confere.py (formato do confere.py: base [[lei, artigo, trecho]] — converta num arquivo temporário).
+Resposta final: até 10 linhas (nº de questões, distribuição do gabarito, formatos, artigos/regras usados, problemas).

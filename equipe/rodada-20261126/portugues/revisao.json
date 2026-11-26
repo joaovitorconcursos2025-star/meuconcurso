@@ -1,0 +1,34 @@
+{
+ "aprovadas": [
+  "portugues26-01",
+  "portugues26-02",
+  "portugues26-03",
+  "portugues26-04",
+  "portugues26-05",
+  "portugues26-06",
+  "portugues26-07",
+  "portugues26-08",
+  "portugues26-09",
+  "portugues26-10",
+  "portugues26-11",
+  "portugues26-12",
+  "portugues26-13",
+  "portugues26-14",
+  "portugues26-15",
+  "portugues26-16",
+  "portugues26-17",
+  "portugues26-18",
+  "portugues26-19",
+  "portugues26-20",
+  "portugues26-21",
+  "portugues26-22",
+  "portugues26-23",
+  "portugues26-24"
+ ],
+ "vetadas": {},
+ "ajustes_sugeridos": {
+  "portugues26-15": "A base cita o capítulo \"Concordância\" de Bechara, mas a regra que prova o gabarito é de crase (antes de \"todos\") e de regência de \"assistir\" (= presenciar). Trocar a indicação para os capítulos/seções de crase e de regência verbal da mesma obra (pode manter a mesma url do catálogo STJ) e deixar o capítulo \"Concordância\" só para a afirmação de que o trecho não tem erro de concordância.",
+  "portugues26-17": "A base cita só o capítulo \"Concordância\", mas os distratores B e D caem por crase. Acrescentar a seção de crase da mesma obra na indicação da fonte.",
+  "portugues26-16": "Opcional: na fonte, mencionar também a seção de crase (o distrator B cai pela concordância do artigo contido em \"às\")."
+ }
+}

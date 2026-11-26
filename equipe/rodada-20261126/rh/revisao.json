@@ -1,0 +1,35 @@
+{
+ "aprovadas": [
+  "rh26-01",
+  "rh26-02",
+  "rh26-03",
+  "rh26-04",
+  "rh26-05",
+  "rh26-06",
+  "rh26-07",
+  "rh26-08",
+  "rh26-09",
+  "rh26-10",
+  "rh26-12",
+  "rh26-13",
+  "rh26-15",
+  "rh26-16",
+  "rh26-17",
+  "rh26-18",
+  "rh26-19",
+  "rh26-20",
+  "rh26-21",
+  "rh26-23",
+  "rh26-24"
+ ],
+ "vetadas": {
+  "rh26-11": "Base não confirmada literalmente no Planalto: o trecho \"III - Municípios: 60% (sessenta por cento).\" termina em ponto, mas o texto vigente do Planalto traz \"III - Municípios: 60% (sessenta por cento);\" (conferido 2x por WebFetch). O lc101.txt também está errado nessa pontuação. Correção: usar o trecho \"Municípios: 60% (sessenta por cento)\" (sem a pontuação final) e corrigir o lc101.txt para \";\". O gabarito C está certo.",
+  "rh26-14": "modelo = Câmara de Mariana/MG 2025, que o arquivo de banca (equipe/banca/rh-lrf.md) lista como 'Candidata sem gabarito oficial confirmado (não usar como modelo ainda)'. Isso viola o critério da ordem ('modelo com link de prova Consulplan real e gabarito oficial conferido'). Correção: trocar o modelo, e a linha 'Modelo:' da explanation, por Cotia/SP 2024 Contador (gabarito conferido) ou conferir o gabarito de Mariana. O conteúdo e o gabarito A estão certos.",
+  "rh26-22": "Mesmo defeito da rh26-14: o modelo é Mariana/MG 2025, sem gabarito oficial conferido segundo o arquivo de banca. Correção: trocar o modelo e a linha 'Modelo:' por Cotia/SP 2024 ou conferir o gabarito de Mariana. O conteúdo e o gabarito B estão certos."
+ },
+ "ajustes_sugeridos": {
+  "rh26-13": "O enunciado diz 'a partir do qual passam a incidir'. A lei fala em 'exceder a 95%', então as vedações incidem ACIMA de R$ 4.560.000,00. Sugiro 'o valor que, se excedido, faz incidir as vedações'. Não muda o gabarito.",
+  "rh26-02": "Na explanation, a menção ao art. 59, § 1º, II (90%) foi conferida no Planalto. Os arts. 59 e 65 não estão no lc101.txt; convém gravá-los para servirem de base.",
+  "rh26-21": "A frase 'Essa nulidade não depende da data do ato' é dedução (o inciso III não fixa janela temporal). Sugiro 'o inciso III não exige que o ato seja editado nos 180 dias finais'. A frase não é falsa."
+ }
+}

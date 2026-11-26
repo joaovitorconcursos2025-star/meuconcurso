@@ -1,0 +1,1325 @@
+[
+ {
+  "id": "tp26-01",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Segundo a Lei nº 9.784/1999, que regula o processo administrativo no âmbito da Administração Pública Federal, assinale a afirmativa correta.",
+  "options": [
+   "Inexistindo competência legal específica, o processo administrativo deverá ser iniciado perante a autoridade de menor grau hierárquico para decidir.",
+   "A edição de atos de caráter normativo pode ser objeto de delegação, desde que o ato de delegação seja publicado no meio oficial.",
+   "A Administração pode anular seus atos por motivo de conveniência ou oportunidade e deve revogá-los quando eivados de vício de legalidade.",
+   "O prazo para a Administração anular atos de que decorram efeitos favoráveis aos destinatários conta-se da ciência do ato pelo interessado."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. O art. 17 dispõe que, inexistindo competência legal específica, o processo administrativo deverá ser iniciado perante a autoridade de menor grau hierárquico para decidir. B erra: a edição de atos de caráter normativo não pode ser delegada (art. 13, I), com ou sem publicação. C troca as causas: a Administração deve anular os atos com vício de legalidade e pode revogá-los por conveniência ou oportunidade (art. 53). D erra o termo inicial: os cinco anos contam-se da data em que os atos foram praticados, salvo comprovada má-fé (art. 54), e não da ciência. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 17",
+    "trecho": "o processo administrativo deverá ser iniciado perante a autoridade de menor grau hierárquico para decidir"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 13",
+    "trecho": "a edição de atos de caráter normativo"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 53",
+    "trecho": "A Administração deve anular seus próprios atos, quando eivados de vício de legalidade"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 54",
+    "trecho": "decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 17",
+    "termo": "maior grau"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 54",
+    "termo": "ciência"
+   }
+  ]
+ },
+ {
+  "id": "tp26-02",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Sobre a delegação de competência, segundo a Lei nº 9.784/1999, analise as afirmativas a seguir.\nI. Um órgão administrativo e seu titular poderão, se não houver impedimento legal, delegar parte da sua competência a outros órgãos ou titulares, ainda que estes não lhe sejam hierarquicamente subordinados.\nII. É vedada a delegação de competência dos órgãos colegiados aos respectivos presidentes.\nIII. Não podem ser objeto de delegação as matérias de competência exclusiva do órgão ou autoridade.\nEstá correto o que se afirma em",
+  "options": [
+   "I, apenas.",
+   "II, apenas.",
+   "I e III, apenas.",
+   "II e III, apenas."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. I está correta: a delegação é possível ainda que o delegado não seja hierarquicamente subordinado ao delegante (art. 12, caput). III está correta: as matérias de competência exclusiva do órgão ou autoridade não podem ser delegadas (art. 13, III). II está errada: o parágrafo único do art. 12 manda aplicar a regra da delegação justamente à delegação de competência dos órgãos colegiados aos respectivos presidentes. Assim, A omite III, e B e D incluem a afirmativa II, que é falsa. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 12",
+    "trecho": "ainda que estes não lhe sejam hierarquicamente subordinados"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 12",
+    "trecho": "aplica-se à delegação de competência dos órgãos colegiados aos respectivos presidentes"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 13",
+    "trecho": "as matérias de competência exclusiva do órgão ou autoridade"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 12",
+    "termo": "vedada"
+   }
+  ]
+ },
+ {
+  "id": "tp26-03",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "O titular de uma secretaria de ministério delegou a um coordenador parte de sua competência para assinar atos de rotina. Sobre esse ato de delegação, segundo a Lei nº 9.784/1999, é correto afirmar que",
+  "options": [
+   "dispensa publicação no meio oficial, por se tratar de ato de organização interna do órgão.",
+   "é revogável a qualquer tempo pela autoridade delegante.",
+   "as decisões adotadas pelo coordenador com base nele considerar-se-ão editadas pelo delegante.",
+   "não pode conter ressalva de exercício da atribuição delegada pela autoridade que delegou."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. O art. 14, § 2º, diz que o ato de delegação é revogável a qualquer tempo pela autoridade delegante. A erra: o ato de delegação e sua revogação deverão ser publicados no meio oficial (art. 14, caput). C inverte a regra: as decisões adotadas por delegação devem mencionar essa qualidade e consideram-se editadas pelo delegado (art. 14, § 3º), não pelo delegante. D erra: o ato de delegação pode conter ressalva de exercício da atribuição delegada (art. 14, § 1º). Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 14",
+    "trecho": "O ato de delegação é revogável a qualquer tempo pela autoridade delegante."
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 14",
+    "trecho": "O ato de delegação e sua revogação deverão ser publicados no meio oficial."
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 14",
+    "trecho": "considerar-se-ão editadas pelo delegado"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 14",
+    "trecho": "podendo conter ressalva de exercício da atribuição delegada"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 14",
+    "termo": "editadas pelo delegante"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 14",
+    "termo": "dispensa"
+   }
+  ]
+ },
+ {
+  "id": "tp26-04",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "De acordo com a Lei nº 9.784/1999, a avocação de competência",
+  "options": [
+   "é a regra geral, podendo a autoridade superior chamar para si qualquer processo sempre que julgar conveniente.",
+   "pode ser feita por tempo indeterminado, desde que o ato de avocação seja publicado no meio oficial.",
+   "admite-se em caráter excepcional, em relação à competência atribuída a órgão hierarquicamente superior.",
+   "será permitida em caráter excepcional e temporário, por motivos relevantes devidamente justificados, quanto à competência de órgão hierarquicamente inferior."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. O art. 15 permite, em caráter excepcional e por motivos relevantes devidamente justificados, a avocação temporária de competência atribuída a órgão hierarquicamente inferior. A erra: a avocação é exceção, não regra. B erra: a avocação é temporária, não por tempo indeterminado. C inverte a direção: avoca-se a competência de órgão hierarquicamente inferior, não superior. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 15",
+    "trecho": "Será permitida, em caráter excepcional e por motivos relevantes devidamente justificados"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 15",
+    "trecho": "a avocação temporária de competência atribuída a órgão hierarquicamente inferior"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 15",
+    "termo": "regra geral"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 15",
+    "termo": "indeterminado"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 15",
+    "termo": "superior"
+   }
+  ]
+ },
+ {
+  "id": "tp26-05",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Em processo administrativo que tramita em um ministério, o servidor designado para instruir o feito havia prestado depoimento como testemunha nesse mesmo processo. Segundo a Lei nº 9.784/1999, esse servidor",
+  "options": [
+   "está sob suspeição, que só afasta o servidor se for arguida pelo interessado.",
+   "está impedido e deve comunicar o fato à autoridade competente, abstendo-se de atuar.",
+   "pode atuar normalmente, pois a lei só impede a atuação de quem tenha interesse direto na matéria.",
+   "está impedido, mas, se deixar de comunicar o fato, comete mera irregularidade, sem reflexo disciplinar."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Quem tenha participado ou venha a participar como perito, testemunha ou representante está impedido (art. 18, II), e quem incorre em impedimento deve comunicar o fato à autoridade competente, abstendo-se de atuar (art. 19, caput). A erra: ter sido testemunha é impedimento, não suspeição; a suspeição (art. 20) é para amizade íntima ou inimizade notória. C erra: o art. 18 traz outras hipóteses além do interesse direto ou indireto (inciso I). D erra: a omissão do dever de comunicar o impedimento constitui falta grave, para efeitos disciplinares (art. 19, parágrafo único). Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 18",
+    "trecho": "tenha participado ou venha a participar como perito, testemunha ou representante"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 19",
+    "trecho": "deve comunicar o fato à autoridade competente, abstendo-se de atuar"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 19",
+    "trecho": "A omissão do dever de comunicar o impedimento constitui falta grave, para efeitos disciplinares"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 19",
+    "termo": "irregularidade"
+   }
+  ]
+ },
+ {
+  "id": "tp26-06",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Quanto à competência administrativa, a Lei nº 9.784/1999 estabelece que ela",
+  "options": [
+   "é irrenunciável e se exerce pelos órgãos a que foi atribuída como própria, salvo os casos de delegação e avocação legalmente admitidos.",
+   "pode ser renunciada pelo titular do órgão quando houver acúmulo de serviço que comprometa a eficiência.",
+   "pode ser transferida em definitivo a outro órgão por simples acordo entre os respectivos titulares.",
+   "é irrenunciável e não admite, em hipótese alguma, delegação ou avocação."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. É o texto do art. 11: a competência é irrenunciável e se exerce pelos órgãos administrativos a que foi atribuída como própria, salvo os casos de delegação e avocação legalmente admitidos. B erra: a competência é irrenunciável, e a lei não prevê renúncia por acúmulo de serviço (o art. 2º, parágrafo único, II, também veda a renúncia de competências, salvo autorização em lei). C erra: não há transferência definitiva por acordo; a delegação é parcial e revogável a qualquer tempo (arts. 12 e 14, § 2º). D erra ao negar a delegação e a avocação, que o próprio art. 11 admite nos casos legais. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 11",
+    "trecho": "A competência é irrenunciável e se exerce pelos órgãos administrativos a que foi atribuída como própria"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 11",
+    "trecho": "salvo os casos de delegação e avocação legalmente admitidos"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "trecho": "vedada a renúncia total ou parcial de poderes ou competências, salvo autorização em lei"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 11",
+    "termo": "acúmulo"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 11",
+    "termo": "acordo"
+   }
+  ]
+ },
+ {
+  "id": "tp26-07",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "De acordo com a Lei nº 9.784/1999, é impedido de atuar em processo administrativo o servidor ou autoridade que se enquadre nas situações a seguir, EXCETO:",
+  "options": [
+   "tenha interesse direto ou indireto na matéria.",
+   "tenha participado como perito no processo.",
+   "esteja litigando judicial ou administrativamente com o interessado.",
+   "tenha amizade íntima com algum dos interessados."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Amizade íntima não é impedimento: é hipótese de suspeição, que pode ser arguida nos termos do art. 20. As demais estão no art. 18: A, interesse direto ou indireto na matéria (inciso I); B, participação como perito, testemunha ou representante (inciso II); C, estar litigando judicial ou administrativamente com o interessado ou respectivo cônjuge ou companheiro (inciso III). Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 18",
+    "trecho": "tenha interesse direto ou indireto na matéria"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 18",
+    "trecho": "tenha participado ou venha a participar como perito, testemunha ou representante"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 18",
+    "trecho": "esteja litigando judicial ou administrativamente com o interessado"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 20",
+    "trecho": "Pode ser argüida a suspeição de autoridade ou servidor que tenha amizade íntima"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 18",
+    "termo": "amizade"
+   }
+  ]
+ },
+ {
+  "id": "tp26-08",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Segundo a Lei nº 9.784/1999, a inimizade notória entre o servidor que atua no processo administrativo e o cônjuge de um dos interessados configura hipótese de ________, que a lei estende também aos parentes e afins dos interessados até o ________ grau. Assinale a alternativa que completa correta e respectivamente as lacunas.",
+  "options": [
+   "impedimento · segundo",
+   "impedimento · terceiro",
+   "suspeição · terceiro",
+   "suspeição · quarto"
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 20 prevê que pode ser arguida a suspeição de autoridade ou servidor que tenha amizade íntima ou inimizade notória com algum dos interessados ou com os respectivos cônjuges, companheiros, parentes e afins até o terceiro grau. A e B erram a hipótese: inimizade notória é suspeição, não impedimento (as hipóteses de impedimento estão no art. 18). A ainda erra o grau (segundo). D acerta a hipótese, mas erra o grau: o limite é o terceiro, não o quarto. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 20",
+    "trecho": "amizade íntima ou inimizade notória com algum dos interessados"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 20",
+    "trecho": "parentes e afins até o terceiro grau"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 20",
+    "termo": "quarto"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 20",
+    "termo": "segundo"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 20",
+    "termo": "impedimento"
+   }
+  ]
+ },
+ {
+  "id": "tp26-09",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Considerando a Lei nº 9.784/1999, marque V para as afirmativas verdadeiras e F para as falsas.\n( ) A motivação do ato pode consistir em declaração de concordância com fundamentos de anteriores pareceres, informações, decisões ou propostas, que, nesse caso, serão parte integrante do ato.\n( ) Salvo exigência legal, a interposição de recurso administrativo independe de caução.\n( ) A motivação das decisões orais é dispensada, bastando o registro do resultado no processo.\nA sequência está correta em",
+  "options": [
+   "V, V, F.",
+   "V, F, V.",
+   "F, V, F.",
+   "F, F, V."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A (V, V, F). A primeira é verdadeira: a motivação pode consistir em declaração de concordância com fundamentos de anteriores pareceres, que passam a integrar o ato (art. 50, § 1º). A segunda é verdadeira: salvo exigência legal, a interposição de recurso administrativo independe de caução (art. 56, § 2º). A terceira é falsa: a motivação de decisões orais não é dispensada; ela constará da respectiva ata ou de termo escrito (art. 50, § 3º). As sequências B, C e D erram ao menos um desses julgamentos. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "trecho": "podendo consistir em declaração de concordância com fundamentos de anteriores pareceres"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 56",
+    "trecho": "Salvo exigência legal, a interposição de recurso administrativo independe de caução"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "trecho": "decisões orais constará da respectiva ata ou de termo escrito"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "termo": "dispensada"
+   }
+  ]
+ },
+ {
+  "id": "tp26-10",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Ao tratar do controle que a Administração exerce sobre os próprios atos, a Lei nº 9.784/1999 dispõe que a Administração",
+  "options": [
+   "pode anular seus próprios atos, quando eivados de vício de legalidade, e deve revogá-los por motivo de conveniência ou oportunidade.",
+   "deve anular seus próprios atos, quando eivados de vício de legalidade, e deve revogá-los sempre que se tornarem inconvenientes.",
+   "pode anular seus atos ilegais e pode revogá-los por conveniência ou oportunidade, independentemente de direitos adquiridos.",
+   "deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. É o texto do art. 53: a Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos. A troca os verbos: anular o ato ilegal é dever (deve), e revogar é faculdade (pode). B transforma a revogação em dever. C transforma a anulação em faculdade e ignora o respeito aos direitos adquiridos, que limita a revogação. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 53",
+    "trecho": "A Administração deve anular seus próprios atos, quando eivados de vício de legalidade"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 53",
+    "trecho": "e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 53",
+    "termo": "independentemente"
+   }
+  ]
+ },
+ {
+  "id": "tp26-11",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Um órgão federal precisa decidir centenas de requerimentos idênticos, da mesma natureza. Quanto à motivação dessas decisões, a Lei nº 9.784/1999 estabelece que",
+  "options": [
+   "cada decisão deve ter fundamentação redigida individualmente, vedado o uso de modelo padronizado.",
+   "as decisões ficam dispensadas de motivação, por se tratar de assuntos repetitivos.",
+   "pode ser utilizado meio mecânico que reproduza os fundamentos das decisões, desde que não prejudique direito ou garantia dos interessados.",
+   "o uso de meio mecânico para reproduzir os fundamentos depende de prévia autorização judicial."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 50, § 2º, autoriza, na solução de vários assuntos da mesma natureza, o uso de meio mecânico que reproduza os fundamentos das decisões, desde que não prejudique direito ou garantia dos interessados. A erra ao proibir o modelo padronizado, que a lei admite. B erra: a lei não dispensa a motivação; só permite reproduzi-la por meio mecânico. D inventa exigência de autorização judicial que a lei não faz. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "trecho": "Na solução de vários assuntos da mesma natureza, pode ser utilizado meio mecânico"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "trecho": "que reproduza os fundamentos das decisões, desde que não prejudique direito ou garantia dos interessados"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "termo": "judicial"
+   }
+  ]
+ },
+ {
+  "id": "tp26-12",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Segundo a Lei nº 9.784/1999, os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos, quando se enquadrarem nas hipóteses a seguir, EXCETO quando",
+  "options": [
+   "decidam recursos administrativos.",
+   "nomeiem servidor para cargo em comissão, de livre nomeação e exoneração.",
+   "dispensem ou declarem a inexigibilidade de processo licitatório.",
+   "importem anulação, revogação, suspensão ou convalidação de ato administrativo."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. A nomeação para cargo de livre nomeação e exoneração não está no rol do art. 50. As demais estão expressamente previstas: A, decidam recursos administrativos (inciso V); C, dispensem ou declarem a inexigibilidade de processo licitatório (inciso IV); D, importem anulação, revogação, suspensão ou convalidação de ato administrativo (inciso VIII). Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "trecho": "decidam recursos administrativos"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "trecho": "dispensem ou declarem a inexigibilidade de processo licitatório"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "trecho": "importem anulação, revogação, suspensão ou convalidação de ato administrativo"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "termo": "livre nomeação"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 50",
+    "termo": "nomeiem"
+   }
+  ]
+ },
+ {
+  "id": "tp26-13",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Segundo a Lei nº 9.784/1999, a convalidação de atos administrativos",
+  "options": [
+   "é obrigatória sempre que o ato apresentar defeito sanável, ainda que cause prejuízo a terceiros.",
+   "somente pode ser decretada pelo Poder Judiciário, mediante provocação do interessado.",
+   "alcança atos com defeitos sanáveis, pode ser feita pela própria Administração e exige que a decisão evidencie a ausência de lesão ao interesse público e de prejuízo a terceiros.",
+   "alcança atos com qualquer vício, inclusive insanável, desde que haja interesse público na sua manutenção."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 55 prevê que, em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração. A erra duas vezes: a lei diz que os atos poderão (não deverão) ser convalidados e exige ausência de prejuízo a terceiros. B erra: quem convalida é a própria Administração. D erra: só os defeitos sanáveis admitem convalidação. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 55",
+    "trecho": "os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 55",
+    "trecho": "não acarretarem lesão ao interesse público nem prejuízo a terceiros"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 55",
+    "termo": "Judiciário"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 55",
+    "termo": "insanável"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 55",
+    "termo": "obrigatória"
+   }
+  ]
+ },
+ {
+  "id": "tp26-14",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Nos termos da Lei nº 9.784/1999, a Administração Pública obedecerá, dentre outros, a princípios enumerados expressamente no caput do art. 2º. NÃO consta dessa enumeração o princípio da",
+  "options": [
+   "publicidade.",
+   "segurança jurídica.",
+   "motivação.",
+   "razoabilidade."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. O caput do art. 2º enumera legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência. A palavra publicidade não está nessa lista (a lei trata do tema no parágrafo único, V, como critério de divulgação oficial dos atos administrativos; a publicidade é princípio expresso do art. 37 da Constituição). Segurança jurídica (B), motivação (C) e razoabilidade (D) constam expressamente do caput. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "trecho": "princípios da legalidade, finalidade, motivação, razoabilidade"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "trecho": "segurança jurídica, interesse público e eficiência"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "trecho": "divulgação oficial dos atos administrativos"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "termo": "publicidade"
+   }
+  ]
+ },
+ {
+  "id": "tp26-15",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Acerca da anulação de atos administrativos de que decorram efeitos favoráveis para os destinatários, segundo a Lei nº 9.784/1999, analise as afirmativas a seguir.\nI. O direito da Administração de anulá-los decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé.\nII. Somente se considera exercido o direito de anular com a publicação da decisão final que declara a nulidade do ato.\nIII. No caso de efeitos patrimoniais contínuos, o prazo de decadência contar-se-á da percepção do primeiro pagamento.\nEstá correto o que se afirma em",
+  "options": [
+   "I, apenas.",
+   "I e III, apenas.",
+   "II e III, apenas.",
+   "I, II e III."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. I está correta (art. 54, caput: cinco anos, contados da data em que foram praticados, salvo comprovada má-fé). III está correta (art. 54, § 1º: nos efeitos patrimoniais contínuos, o prazo conta-se da percepção do primeiro pagamento). II está errada: o § 2º do art. 54 considera exercício do direito de anular qualquer medida de autoridade administrativa que importe impugnação à validade do ato, e não só a decisão final. Assim, A omite III, e C e D incluem a afirmativa II. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 54",
+    "trecho": "decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 54",
+    "trecho": "No caso de efeitos patrimoniais contínuos, o prazo de decadência contar-se-á da percepção do primeiro pagamento"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 54",
+    "trecho": "qualquer medida de autoridade administrativa que importe impugnação à validade do ato"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 54",
+    "termo": "decisão final"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 54",
+    "termo": "somente"
+   }
+  ]
+ },
+ {
+  "id": "tp26-16",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Servidor de um órgão federal teve seu requerimento indeferido pelo coordenador do setor e decidiu recorrer. De acordo com a Lei nº 9.784/1999, o recurso deverá ser dirigido",
+  "options": [
+   "diretamente à autoridade superior, que deverá decidi-lo no prazo de cinco dias.",
+   "à autoridade superior, que poderá devolvê-lo ao coordenador para reconsideração em até dez dias.",
+   "ao Poder Judiciário, uma vez que o coordenador não pode rever a própria decisão.",
+   "ao próprio coordenador, que, se não reconsiderar a decisão no prazo de cinco dias, o encaminhará à autoridade superior."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Pelo art. 56, § 1º, o recurso será dirigido à autoridade que proferiu a decisão, a qual, se não a reconsiderar no prazo de cinco dias, o encaminhará à autoridade superior. A erra o destinatário (o recurso não vai diretamente à autoridade superior) e confunde o prazo de reconsideração com prazo de decisão. B erra o destinatário e o prazo. C erra: o recurso é administrativo e quem decidiu pode reconsiderar a decisão. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 56",
+    "trecho": "O recurso será dirigido à autoridade que proferiu a decisão, a qual, se não a reconsiderar no prazo de cinco dias"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 56",
+    "termo": "diretamente"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 56",
+    "termo": "dez dias"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 56",
+    "termo": "Judiciário"
+   }
+  ]
+ },
+ {
+  "id": "tp26-17",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Segundo a Lei nº 9.784/1999, o recurso administrativo não será conhecido quando interposto nas situações a seguir, EXCETO:",
+  "options": [
+   "fora do prazo.",
+   "perante órgão incompetente.",
+   "por quem não seja legitimado.",
+   "contra decisão que tenha negado o pedido do interessado."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Recorrer de decisão que negou o pedido do interessado é a situação típica do recurso; não é causa de não conhecimento. As causas estão no art. 63: interposição fora do prazo (I, alternativa A), perante órgão incompetente (II, alternativa B), por quem não seja legitimado (III, alternativa C) e após exaurida a esfera administrativa (IV). Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "trecho": "O recurso não será conhecido quando interposto"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "trecho": "fora do prazo"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "trecho": "perante órgão incompetente"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "trecho": "por quem não seja legitimado"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "termo": "negado"
+   }
+  ]
+ },
+ {
+  "id": "tp26-18",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Conforme a Lei nº 9.784/1999, salvo disposição legal diversa, o recurso administrativo tramitará no máximo por",
+  "options": [
+   "duas instâncias administrativas.",
+   "três instâncias administrativas.",
+   "quatro instâncias administrativas.",
+   "tantas instâncias quantas forem as autoridades na linha hierárquica, até o Ministro de Estado."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. O art. 57 dispõe que o recurso administrativo tramitará no máximo por três instâncias administrativas, salvo disposição legal diversa. A (duas) e C (quatro) trocam o número. D erra ao afastar o limite de instâncias, que a lei fixa expressamente. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 57",
+    "trecho": "tramitará no máximo por três instâncias administrativas, salvo disposição legal diversa"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 57",
+    "termo": "duas"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 57",
+    "termo": "quatro"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 57",
+    "termo": "Ministro"
+   }
+  ]
+ },
+ {
+  "id": "tp26-19",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Segundo a Lei nº 9.784/1999, das decisões administrativas cabe recurso em face de razões",
+  "options": [
+   "de legalidade e de mérito.",
+   "exclusivamente de legalidade, já que o mérito administrativo é insuscetível de revisão.",
+   "exclusivamente de mérito, pois a legalidade só pode ser discutida no Poder Judiciário.",
+   "de legalidade e de mérito, condicionada a interposição, em qualquer caso, ao depósito de caução."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. O art. 56, caput, diz que das decisões administrativas cabe recurso, em face de razões de legalidade e de mérito. B e C erram ao restringir o recurso a apenas um dos fundamentos. D acerta os fundamentos, mas erra a condição: salvo exigência legal, a interposição de recurso administrativo independe de caução (art. 56, § 2º). Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 56",
+    "trecho": "Das decisões administrativas cabe recurso, em face de razões de legalidade e de mérito"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 56",
+    "trecho": "Salvo exigência legal, a interposição de recurso administrativo independe de caução"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 56",
+    "termo": "exclusivamente"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 56",
+    "termo": "depósito"
+   }
+  ]
+ },
+ {
+  "id": "tp26-20",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Salvo disposição legal específica, a Lei nº 9.784/1999 fixa o prazo para interposição do recurso administrativo e o prazo para que ele seja decidido. Esses prazos são, respectivamente, de",
+  "options": [
+   "cinco dias, contados da decisão recorrida; e trinta dias, improrrogáveis.",
+   "dez dias, contados da data da decisão; e sessenta dias, contados da interposição.",
+   "dez dias, contados a partir da ciência ou divulgação oficial da decisão recorrida; e trinta dias, a partir do recebimento dos autos, prorrogáveis por igual período ante justificativa explícita.",
+   "quinze dias, contados da ciência da decisão; e trinta dias, prorrogáveis por mais sessenta dias."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O art. 59, caput, fixa em dez dias o prazo para interpor recurso, contado a partir da ciência ou divulgação oficial da decisão recorrida; o § 1º manda decidir em no máximo trinta dias a partir do recebimento dos autos pelo órgão competente, e o § 2º permite prorrogar esse prazo por igual período, ante justificativa explícita. A erra o prazo de interposição (cinco dias é o prazo de reconsideração do art. 56, § 1º) e diz que os trinta dias são improrrogáveis. B erra o termo inicial e o prazo de decisão. D erra o prazo de interposição (quinze) e a prorrogação (é por igual período, não por sessenta dias). Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 59",
+    "trecho": "é de dez dias o prazo para interposição de recurso administrativo, contado a partir da ciência ou divulgação oficial"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 59",
+    "trecho": "deverá ser decidido no prazo máximo de trinta dias, a partir do recebimento dos autos pelo órgão competente"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 59",
+    "trecho": "poderá ser prorrogado por igual período, ante justificativa explícita"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 59",
+    "termo": "quinze"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 59",
+    "termo": "sessenta"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 59",
+    "termo": "cinco"
+   }
+  ]
+ },
+ {
+  "id": "tp26-21",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Sobre a decisão do recurso administrativo, segundo a Lei nº 9.784/1999, analise as afirmativas a seguir.\nI. O órgão competente para decidir o recurso poderá confirmar, modificar, anular ou revogar, total ou parcialmente, a decisão recorrida, se a matéria for de sua competência.\nII. Se da decisão do recurso puder decorrer gravame à situação do recorrente, este deverá ser cientificado para que formule suas alegações antes da decisão.\nIII. O não conhecimento do recurso impede a Administração de rever de ofício o ato ilegal.\nEstá correto o que se afirma em",
+  "options": [
+   "I, apenas.",
+   "I e II, apenas.",
+   "II e III, apenas.",
+   "I, II e III."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. I está correta (art. 64, caput). II está correta (art. 64, parágrafo único: havendo possível gravame, o recorrente deverá ser cientificado para que formule suas alegações antes da decisão). III está errada: o não conhecimento do recurso não impede a Administração de rever de ofício o ato ilegal, desde que não ocorrida preclusão administrativa (art. 63, § 2º). Assim, A omite II, e C e D incluem a afirmativa III. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 64",
+    "trecho": "poderá confirmar, modificar, anular ou revogar, total ou parcialmente, a decisão recorrida"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 64",
+    "trecho": "este deverá ser cientificado para que formule suas alegações antes da decisão"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "trecho": "O não conhecimento do recurso não impede a Administração de rever de ofício o ato ilegal"
+   }
+  ]
+ },
+ {
+  "id": "tp26-22",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Entre os critérios que a Lei nº 9.784/1999 manda observar nos processos administrativos, inclui-se a",
+  "options": [
+   "cobrança de despesas processuais do interessado, como forma de custear a tramitação do processo.",
+   "movimentação do processo exclusivamente por iniciativa dos interessados, vedada a atuação de ofício.",
+   "aplicação retroativa de nova interpretação da norma administrativa sempre que favorável ao interesse público.",
+   "vedação da renúncia total ou parcial de poderes ou competências, salvo autorização em lei."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. O art. 2º, parágrafo único, II, prevê o atendimento a fins de interesse geral, vedada a renúncia total ou parcial de poderes ou competências, salvo autorização em lei. A erra: o inciso XI proíbe a cobrança de despesas processuais, ressalvadas as previstas em lei. B erra: o inciso XII determina a impulsão, de ofício, do processo administrativo, sem prejuízo da atuação dos interessados. C erra: o inciso XIII veda a aplicação retroativa de nova interpretação. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "trecho": "vedada a renúncia total ou parcial de poderes ou competências, salvo autorização em lei"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "trecho": "proibição de cobrança de despesas processuais, ressalvadas as previstas em lei"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "trecho": "impulsão, de ofício, do processo administrativo, sem prejuízo da atuação dos interessados"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "trecho": "vedada aplicação retroativa de nova interpretação"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 2º",
+    "termo": "exclusivamente"
+   }
+  ]
+ },
+ {
+  "id": "tp26-23",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Uma empresa recorreu de multa aplicada por uma autarquia federal. Ao examinar o recurso, a autoridade competente concluiu que a sanção deveria ser agravada. Segundo a Lei nº 9.784/1999, essa autoridade",
+  "options": [
+   "não pode agravar a situação do recorrente, pois é vedada a reforma da decisão em prejuízo de quem recorreu.",
+   "pode agravar a sanção imediatamente, sem necessidade de ouvir o recorrente, já que ele já apresentou suas razões.",
+   "pode agravar a sanção, mas o recorrente deverá ser cientificado para que formule suas alegações antes da decisão.",
+   "só pode anular a decisão recorrida e devolver o processo à autoridade de origem, que aplicará nova sanção."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. O órgão competente pode confirmar, modificar, anular ou revogar a decisão recorrida (art. 64, caput), e, se disso puder decorrer gravame à situação do recorrente, este deverá ser cientificado para que formule suas alegações antes da decisão (art. 64, parágrafo único). A erra: a lei admite o agravamento no recurso, desde que ouvido o recorrente. B erra ao dispensar a ciência prévia exigida pelo parágrafo único. D erra ao limitar a atuação à anulação, quando o órgão também pode modificar a decisão. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 64",
+    "trecho": "poderá confirmar, modificar, anular ou revogar, total ou parcialmente, a decisão recorrida"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 64",
+    "trecho": "este deverá ser cientificado para que formule suas alegações antes da decisão"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 64",
+    "termo": "vedada"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 64",
+    "termo": "imediatamente"
+   }
+  ]
+ },
+ {
+  "id": "tp26-24",
+  "materiaRef": "mTP",
+  "topicoRef": "tp1",
+  "tipo": "abcd",
+  "text": "Um interessado, dentro do prazo, protocolou recurso administrativo perante órgão incompetente de uma autarquia federal. Diante dessa situação, a Lei nº 9.784/1999 determina que o recurso",
+  "options": [
+   "não será conhecido, devendo ser indicada ao recorrente a autoridade competente, sendo-lhe devolvido o prazo para recurso.",
+   "será conhecido e encaminhado de ofício à autoridade competente, que o decidirá sem necessidade de nova interposição.",
+   "não será conhecido, e o interessado perde definitivamente o direito de recorrer daquela decisão.",
+   "será conhecido e decidido pelo próprio órgão que o recebeu, em atenção ao princípio da eficiência."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Recurso interposto perante órgão incompetente não é conhecido (art. 63, II), mas, nessa hipótese, será indicada ao recorrente a autoridade competente, sendo-lhe devolvido o prazo para recurso (art. 63, § 1º). B erra ao dizer que o recurso é conhecido e remetido de ofício. C erra porque a lei devolve o prazo, e o interessado não perde o direito de recorrer. D erra porque o órgão incompetente não conhece nem decide o recurso. Modelo: Câmara de Mariana/MG · Corregedor Legislativo · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Processo administrativo (Lei 9.784/1999)",
+  "modelo": {
+   "orgao": "Câmara de Mariana/MG",
+   "cargo": "Corregedor Legislativo",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132714/instituto-consulplan-2025-camara-de-mariana-mg-corregedor-legislativo-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "trecho": "perante órgão incompetente"
+   },
+   {
+    "tipo": "lei",
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "trecho": "será indicada ao recorrente a autoridade competente, sendo-lhe devolvido o prazo para recurso"
+   }
+  ],
+  "ausentes": [
+   {
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "termo": "definitivamente"
+   },
+   {
+    "lei": "l9784",
+    "artigo": "Art. 63",
+    "termo": "eficiência"
+   }
+  ]
+ }
+]

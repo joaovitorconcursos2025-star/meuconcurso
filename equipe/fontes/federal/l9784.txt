@@ -1,0 +1,81 @@
+LEI Nº 9.784, DE 29 DE JANEIRO DE 1999 (Processo administrativo no âmbito da Administração Pública Federal) — texto compilado (vigente)
+Fonte: https://www.planalto.gov.br/ccivil_03/leis/l9784.htm
+Data de captura: 26/11/2026
+Dispositivos gravados: arts. 2º, 11, 12, 13, 14, 15, 17, 18, 19, 20, 50, 53, 54, 55, 56, 57, 59, 63 e 64 (só redação vigente; notas de redação no fim da linha).
+Não gravados: arts. 64-A e 64-B (não pedidos). Nenhum dispositivo pedido ficou sem conferência.
+Método: o WebFetch não transcreve a página e o proxy recusa o download do Planalto. Cada artigo foi redigido e conferido contra o Planalto
+em duas leituras: (1) comparação dispositivo a dispositivo com lista de divergências, contagem de incisos e parágrafos e citação literal
+do início (~80 caracteres) de cada inciso/parágrafo; (2) citação literal do final (~70 caracteres) dos principais dispositivos, pedida sem
+fornecer o rascunho. Correções aplicadas: travessão "–" no inciso VIII do art. 2º; nota "(Vigência)" no § 3º do art. 56.
+Ordinais: o Planalto usa "o" ("Art. 2o", "§ 1o"); aqui mantido "o" nos parágrafos e "Art. 2º" no art. 2º (o conferidor aceita ambos).
+O próprio Planalto avisa que o texto não substitui o publicado no DOU de 1.2.1999, retificado em 11.3.1999.
+
+Art. 2º A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência.
+Parágrafo único. Nos processos administrativos serão observados, entre outros, os critérios de:
+I - atuação conforme a lei e o Direito;
+II - atendimento a fins de interesse geral, vedada a renúncia total ou parcial de poderes ou competências, salvo autorização em lei;
+III - objetividade no atendimento do interesse público, vedada a promoção pessoal de agentes ou autoridades;
+IV - atuação segundo padrões éticos de probidade, decoro e boa-fé;
+V - divulgação oficial dos atos administrativos, ressalvadas as hipóteses de sigilo previstas na Constituição;
+VI - adequação entre meios e fins, vedada a imposição de obrigações, restrições e sanções em medida superior àquelas estritamente necessárias ao atendimento do interesse público;
+VII - indicação dos pressupostos de fato e de direito que determinarem a decisão;
+VIII – observância das formalidades essenciais à garantia dos direitos dos administrados;
+IX - adoção de formas simples, suficientes para propiciar adequado grau de certeza, segurança e respeito aos direitos dos administrados;
+X - garantia dos direitos à comunicação, à apresentação de alegações finais, à produção de provas e à interposição de recursos, nos processos de que possam resultar sanções e nas situações de litígio;
+XI - proibição de cobrança de despesas processuais, ressalvadas as previstas em lei;
+XII - impulsão, de ofício, do processo administrativo, sem prejuízo da atuação dos interessados;
+XIII - interpretação da norma administrativa da forma que melhor garanta o atendimento do fim público a que se dirige, vedada aplicação retroativa de nova interpretação.
+Art. 11. A competência é irrenunciável e se exerce pelos órgãos administrativos a que foi atribuída como própria, salvo os casos de delegação e avocação legalmente admitidos.
+Art. 12. Um órgão administrativo e seu titular poderão, se não houver impedimento legal, delegar parte da sua competência a outros órgãos ou titulares, ainda que estes não lhe sejam hierarquicamente subordinados, quando for conveniente, em razão de circunstâncias de índole técnica, social, econômica, jurídica ou territorial.
+Parágrafo único. O disposto no caput deste artigo aplica-se à delegação de competência dos órgãos colegiados aos respectivos presidentes.
+Art. 13. Não podem ser objeto de delegação:
+I - a edição de atos de caráter normativo;
+II - a decisão de recursos administrativos;
+III - as matérias de competência exclusiva do órgão ou autoridade.
+Art. 14. O ato de delegação e sua revogação deverão ser publicados no meio oficial.
+§ 1o O ato de delegação especificará as matérias e poderes transferidos, os limites da atuação do delegado, a duração e os objetivos da delegação e o recurso cabível, podendo conter ressalva de exercício da atribuição delegada.
+§ 2o O ato de delegação é revogável a qualquer tempo pela autoridade delegante.
+§ 3o As decisões adotadas por delegação devem mencionar explicitamente esta qualidade e considerar-se-ão editadas pelo delegado.
+Art. 15. Será permitida, em caráter excepcional e por motivos relevantes devidamente justificados, a avocação temporária de competência atribuída a órgão hierarquicamente inferior.
+Art. 17. Inexistindo competência legal específica, o processo administrativo deverá ser iniciado perante a autoridade de menor grau hierárquico para decidir.
+Art. 18. É impedido de atuar em processo administrativo o servidor ou autoridade que:
+I - tenha interesse direto ou indireto na matéria;
+II - tenha participado ou venha a participar como perito, testemunha ou representante, ou se tais situações ocorrem quanto ao cônjuge, companheiro ou parente e afins até o terceiro grau;
+III - esteja litigando judicial ou administrativamente com o interessado ou respectivo cônjuge ou companheiro.
+Art. 19. A autoridade ou servidor que incorrer em impedimento deve comunicar o fato à autoridade competente, abstendo-se de atuar.
+Parágrafo único. A omissão do dever de comunicar o impedimento constitui falta grave, para efeitos disciplinares.
+Art. 20. Pode ser argüida a suspeição de autoridade ou servidor que tenha amizade íntima ou inimizade notória com algum dos interessados ou com os respectivos cônjuges, companheiros, parentes e afins até o terceiro grau.
+Art. 50. Os atos administrativos deverão ser motivados, com indicação dos fatos e dos fundamentos jurídicos, quando:
+I - neguem, limitem ou afetem direitos ou interesses;
+II - imponham ou agravem deveres, encargos ou sanções;
+III - decidam processos administrativos de concurso ou seleção pública;
+IV - dispensem ou declarem a inexigibilidade de processo licitatório;
+V - decidam recursos administrativos;
+VI - decorram de reexame de ofício;
+VII - deixem de aplicar jurisprudência firmada sobre a questão ou discrepem de pareceres, laudos, propostas e relatórios oficiais;
+VIII - importem anulação, revogação, suspensão ou convalidação de ato administrativo.
+§ 1o A motivação deve ser explícita, clara e congruente, podendo consistir em declaração de concordância com fundamentos de anteriores pareceres, informações, decisões ou propostas, que, neste caso, serão parte integrante do ato.
+§ 2o Na solução de vários assuntos da mesma natureza, pode ser utilizado meio mecânico que reproduza os fundamentos das decisões, desde que não prejudique direito ou garantia dos interessados.
+§ 3o A motivação das decisões de órgãos colegiados e comissões ou de decisões orais constará da respectiva ata ou de termo escrito.
+Art. 53. A Administração deve anular seus próprios atos, quando eivados de vício de legalidade, e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.
+Art. 54. O direito da Administração de anular os atos administrativos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé.
+§ 1o No caso de efeitos patrimoniais contínuos, o prazo de decadência contar-se-á da percepção do primeiro pagamento.
+§ 2o Considera-se exercício do direito de anular qualquer medida de autoridade administrativa que importe impugnação à validade do ato.
+Art. 55. Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a terceiros, os atos que apresentarem defeitos sanáveis poderão ser convalidados pela própria Administração.
+Art. 56. Das decisões administrativas cabe recurso, em face de razões de legalidade e de mérito.
+§ 1o O recurso será dirigido à autoridade que proferiu a decisão, a qual, se não a reconsiderar no prazo de cinco dias, o encaminhará à autoridade superior.
+§ 2o Salvo exigência legal, a interposição de recurso administrativo independe de caução.
+§ 3o Se o recorrente alegar que a decisão administrativa contraria enunciado da súmula vinculante, caberá à autoridade prolatora da decisão impugnada, se não a reconsiderar, explicitar, antes de encaminhar o recurso à autoridade superior, as razões da aplicabilidade ou inaplicabilidade da súmula, conforme o caso. (Incluído pela Lei nº 11.417, de 2006). (Vigência)
+Art. 57. O recurso administrativo tramitará no máximo por três instâncias administrativas, salvo disposição legal diversa.
+Art. 59. Salvo disposição legal específica, é de dez dias o prazo para interposição de recurso administrativo, contado a partir da ciência ou divulgação oficial da decisão recorrida.
+§ 1o Quando a lei não fixar prazo diferente, o recurso administrativo deverá ser decidido no prazo máximo de trinta dias, a partir do recebimento dos autos pelo órgão competente.
+§ 2o O prazo mencionado no parágrafo anterior poderá ser prorrogado por igual período, ante justificativa explícita.
+Art. 63. O recurso não será conhecido quando interposto:
+I - fora do prazo;
+II - perante órgão incompetente;
+III - por quem não seja legitimado;
+IV - após exaurida a esfera administrativa.
+§ 1o Na hipótese do inciso II, será indicada ao recorrente a autoridade competente, sendo-lhe devolvido o prazo para recurso.
+§ 2o O não conhecimento do recurso não impede a Administração de rever de ofício o ato ilegal, desde que não ocorrida preclusão administrativa.
+Art. 64. O órgão competente para decidir o recurso poderá confirmar, modificar, anular ou revogar, total ou parcialmente, a decisão recorrida, se a matéria for de sua competência.
+Parágrafo único. Se da aplicação do disposto neste artigo puder decorrer gravame à situação do recorrente, este deverá ser cientificado para que formule suas alegações antes da decisão.

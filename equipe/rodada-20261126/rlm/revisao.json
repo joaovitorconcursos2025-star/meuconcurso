@@ -1,0 +1,35 @@
+{
+ "aprovadas": [
+  "rlm26-01",
+  "rlm26-02",
+  "rlm26-03",
+  "rlm26-04",
+  "rlm26-05",
+  "rlm26-06",
+  "rlm26-07",
+  "rlm26-08",
+  "rlm26-09",
+  "rlm26-10",
+  "rlm26-11",
+  "rlm26-12",
+  "rlm26-13",
+  "rlm26-14",
+  "rlm26-15",
+  "rlm26-16",
+  "rlm26-17",
+  "rlm26-18",
+  "rlm26-19",
+  "rlm26-20",
+  "rlm26-21",
+  "rlm26-22",
+  "rlm26-23",
+  "rlm26-24"
+ ],
+ "vetadas": {},
+ "ajustes_sugeridos": {
+  "rlm26-19": "Opcional: a base (50*3-50=100) calcula a saída da 3ª semana, número que aparece na alternativa falsa; fica mais clara uma base que mostre a saída real da 2ª semana (50*3*4/3-50*3 = 50) e o 100 como contraste na explanation.",
+  "rlm26-21": "Opcional: uniformizar 'acervo' e 'estante' (o enunciado usa os dois; a afirmativa I fala em 'estante'). Sem efeito no gabarito, pois não houve devolução.",
+  "rlm26-20": "Opcional: estrutura 'dobra e saca valor fixo' lembra a existente 'dobra e perde 10'; números e formato (INCORRETA) são diferentes, então não é repetição, mas vale conferir no app.",
+  "PACOTE": "criterio_aceite exige 'modelo com link de prova Consulplan real e gabarito oficial conferido'. O arquivo de banca diz que NENHUM gabarito oficial dos 3 modelos (Mariana Q14, Patrocínio do Muriaé 1102568, Vermelho Novo Q14) foi conferido e que eles estão na tabela 'não usar como modelo sem antes conferir'. Além disso, o link de Patrocínio é página do Estude Grátis (sem caderno, sem cargo, sem gabarito), não PDF de prova. As explanations NÃO afirmam 'gabarito oficial' (regra (e) ok). Antes de aplicar o pacote, alguém precisa conferir o gabarito pós-recursos de Mariana/Vermelho Novo ou o orquestrador decide aceitar a pendência; as 10 questões com modelo Patrocínio (03, 04, 05, 11, 12, 14, 15, 17, 19, 21) ficam mais frágeis nesse ponto."
+ }
+}

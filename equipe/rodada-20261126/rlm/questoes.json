@@ -1,0 +1,770 @@
+[
+ {
+  "id": "rlm26-01",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "O tesoureiro de uma associação de servidores, em quatro meses seguidos, usou a cada mês 2/3 do saldo que havia em caixa naquele momento para pagar despesas. Ao final do quarto mês, restavam R$ 40,00 em caixa. Antes do primeiro pagamento, o saldo era de",
+  "options": [
+   "R$ 202,50",
+   "R$ 1.080,00",
+   "R$ 2.160,00",
+   "R$ 3.240,00"
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Princípio da regressão: se a cada mês saem 2/3, o que FICA é 1/3. Desfazendo de trás para frente, cada mês multiplica o saldo por 3: 40 → 120 → 360 → 1.080 → 3.240. Conferindo de frente: 3.240 − 2.160 = 1.080; 1.080 − 720 = 360; 360 − 240 = 120; 120 − 80 = 40. R$ 202,50 divide por 2/3 (a fração que saiu) em vez de 1/3 (a que ficou): 40 × (3/2)⁴. R$ 1.080,00 desfaz só três meses (é o saldo antes do 2º pagamento). R$ 2.160,00 é o valor pago no 1º mês, não o saldo inicial. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "40*3**4"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-02",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Ana fez quatro compras seguidas e, em cada uma delas, gastou exatamente a metade do que tinha na carteira naquele momento. Em seguida, pagou uma tarifa de R$ 30,00, e o dinheiro da carteira acabou. Quanto Ana tinha antes da primeira compra?",
+  "options": [
+   "R$ 480,00",
+   "R$ 510,00",
+   "R$ 960,00",
+   "R$ 990,00"
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Volta: a tarifa zerou a carteira, então antes dela havia R$ 30,00. Cada compra deixou metade; desfazendo, multiplica-se por 2 quatro vezes: 30 → 60 → 120 → 240 → 480. Conferindo: 480 → 240 → 120 → 60 → 30; paga 30 e fica com zero. R$ 510,00 soma a tarifa ao valor inicial, desfazendo-a por último (fora da ordem inversa). R$ 960,00 desfaz cinco compras em vez de quatro. R$ 990,00 junta os dois erros (cinco compras e tarifa somada no fim). Modelo: Câmara Municipal de Mariana/MG · Analista de Sistema · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Analista de Sistema",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "30*2**4"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-03",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Um assessor legislativo estudou o Regimento Interno da Câmara em três semanas. Na primeira semana, leu 1/4 dos artigos; na segunda, 2/5 dos artigos que ainda faltavam; na terceira, metade dos que ainda faltavam. Restaram 9 artigos para a quarta semana. O número total de artigos do Regimento está na faixa",
+  "options": [
+   "De 10 a 19 artigos.",
+   "De 30 a 39 artigos.",
+   "De 40 a 49 artigos.",
+   "De 60 a 69 artigos."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. As frações são do que ainda faltava (do restante), não do total. Volta: antes da 3ª semana faltavam 9 × 2 = 18; esses 18 são os 3/5 que ficaram após a 2ª semana, então antes dela faltavam 18 ÷ 3/5 = 30; esses 30 são os 3/4 que ficaram após a 1ª semana: 30 ÷ 3/4 = 40 artigos (faixa de 40 a 49). Conferindo: 40 − 10 = 30; 30 − 12 = 18; 18 − 9 = 9. A faixa de 10 a 19 é de quem para em 18 (só desfaz a 3ª semana). A de 30 a 39 é de quem para em 30 (esquece a 1ª semana). A de 60 a 69 é de quem divide por 2/5 (fração lida) em vez de 3/5 (fração que ficou): 18 ÷ 2/5 = 45 e 45 ÷ 3/4 = 60. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "9*2*5/3*4/3"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-04",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Um setor de protocolo recebeu um lote de processos. No primeiro dia, analisou metade deles; no segundo, 1/3 dos que restavam; no terceiro, metade dos que ainda restavam. Ao final do terceiro dia, 8 processos aguardavam análise. Quantos processos havia no lote?",
+  "options": [
+   "24 processos.",
+   "32 processos.",
+   "48 processos.",
+   "96 processos."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Volta: antes do 3º dia havia 8 × 2 = 16; no 2º dia saiu 1/3 e ficaram 2/3, logo antes dele havia 16 ÷ 2/3 = 24; no 1º dia ficou metade, logo havia 24 × 2 = 48. Conferindo: 48 → 24 → 16 → 8. 96 multiplica por 3 (fração que saiu) em vez de dividir por 2/3 (fração que ficou): 8 × 2 × 3 × 2. 24 para antes de desfazer o 1º dia. 32 pula a etapa do 2º dia (8 × 2 × 2). Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "8*2*3/2*2"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-05",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Um servidor recebeu um abono. Gastou 1/4 do valor com a matrícula de um curso e, em seguida, 1/3 do que restou com material didático, ficando ainda com R$ 1.200,00. O valor do abono era de",
+  "options": [
+   "R$ 1.800,00",
+   "R$ 2.400,00",
+   "R$ 2.880,00",
+   "R$ 4.800,00"
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. O 1/3 é do RESTANTE. Volta: os R$ 1.200,00 são os 2/3 que sobraram depois do material, então antes havia 1.200 ÷ 2/3 = 1.800; esses 1.800 são os 3/4 que sobraram depois da matrícula: 1.800 ÷ 3/4 = 2.400. Conferindo: 2.400 − 600 = 1.800; 1.800 − 600 = 1.200. R$ 2.880,00 é o erro de tratar as duas frações como do total (1 − 1/4 − 1/3 = 5/12; 1.200 ÷ 5/12 = 2.880). R$ 1.800,00 para na primeira etapa da volta. R$ 4.800,00 multiplica por 3 (fração que saiu) em vez de dividir por 2/3: 1.200 × 3 ÷ 3/4. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "1200*3/2*4/3"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-06",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Num arquivo, cinco gavetas foram preenchidas assim: a segunda gaveta recebeu metade dos processos da primeira; a terceira, metade dos da segunda; e assim por diante, até a quinta, que recebeu 12 processos. Quantos processos foram guardados, ao todo, nas cinco gavetas?",
+  "options": [
+   "180 processos.",
+   "192 processos.",
+   "372 processos.",
+   "384 processos."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Volta, da última gaveta para a primeira (cada anterior tem o dobro): 12 → 24 → 48 → 96 → 192. A pergunta é o TOTAL: 192 + 96 + 48 + 24 + 12 = 372. 192 é só a primeira gaveta (faz a volta e esquece de somar). 180 soma só as quatro últimas (12 + 24 + 48 + 96), esquecendo a primeira. 384 dobra mais uma vez (uma etapa a mais na volta). Modelo: Prefeitura de Vermelho Novo/MG · Técnico em Informática · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/136756/instituto-consulplan-2025-prefeitura-de-vermelho-novo-mg-tecnico-em-informatica-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Prefeitura de Vermelho Novo/MG",
+   "cargo": "Técnico em Informática",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/136756/instituto-consulplan-2025-prefeitura-de-vermelho-novo-mg-tecnico-em-informatica-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "12*(1+2+4+8+16)"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-07",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Um lote de resmas foi distribuído em cadeia por quatro setores: cada setor ficou com uma parte e repassou ao setor seguinte exatamente 1/4 do que tinha recebido. O quarto setor recebeu 5 resmas. Quantas resmas recebeu o primeiro setor?",
+  "options": [
+   "80 resmas.",
+   "320 resmas.",
+   "425 resmas.",
+   "1.280 resmas."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Cada repasse divide por 4; desfazendo, multiplica-se por 4 do 4º setor até o 1º: 5 → 20 → 80 → 320. São três repasses (do 1º para o 2º, do 2º para o 3º e do 3º para o 4º), não quatro. 1.280 multiplica por 4 quatro vezes (etapa a mais). 80 é o que recebeu o 2º setor. 425 é a soma do que os quatro receberam (5 + 20 + 80 + 320), mas a pergunta é só o primeiro. Modelo: Prefeitura de Vermelho Novo/MG · Técnico em Informática · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/136756/instituto-consulplan-2025-prefeitura-de-vermelho-novo-mg-tecnico-em-informatica-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Prefeitura de Vermelho Novo/MG",
+   "cargo": "Técnico em Informática",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/136756/instituto-consulplan-2025-prefeitura-de-vermelho-novo-mg-tecnico-em-informatica-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "5*4**3"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-08",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Paulo gastou 1/3 do que tinha e mais R$ 10,00 numa loja. Depois, gastou metade do que lhe restou e mais R$ 5,00 numa farmácia, ficando com R$ 20,00. Quanto Paulo tinha inicialmente?",
+  "options": [
+   "R$ 50,00",
+   "R$ 60,00",
+   "R$ 90,00",
+   "R$ 180,00"
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Na volta, desfazem-se as operações na ordem inversa: em cada gasto, primeiro o valor fixo, depois a fração. Farmácia: 20 + 5 = 25; 25 × 2 = 50. Loja: 50 + 10 = 60; 60 são os 2/3 que sobraram, então 60 ÷ 2/3 = 90. Conferindo: 90 − 30 − 10 = 50; 50 − 25 − 5 = 20. R$ 50,00 é o que Paulo tinha ao sair da loja (desfaz só a farmácia). R$ 60,00 para antes de desfazer a fração da loja. R$ 180,00 multiplica 60 por 3 (fração que saiu) em vez de dividir por 2/3. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "((20+5)*2+10)*3/2"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-09",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Num jogo de estratégia, a cada rodada a pontuação de um jogador é triplicada e, em seguida, ele perde 18 pontos de penalidade. Depois de três rodadas, ele terminou com 36 pontos. Com quantos pontos ele começou?",
+  "options": [
+   "10 pontos.",
+   "12 pontos.",
+   "18 pontos.",
+   "54 pontos."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Operações inversas na ordem inversa: soma-se a penalidade e divide-se por 3, três vezes. (36 + 18) ÷ 3 = 18; (18 + 18) ÷ 3 = 12; (12 + 18) ÷ 3 = 10. Conferindo: 10 → 30 − 18 = 12 → 36 − 18 = 18 → 54 − 18 = 36. As demais são valores intermediários da volta: 54 só desfaz a última penalidade; 18 desfaz uma rodada inteira; 12 desfaz duas rodadas. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "(((36+18)/3+18)/3+18)/3"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-10",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Três amigos, Ari, Bia e Caio, jogaram três partidas de cartas. Em cada partida, o perdedor paga a cada um dos outros dois uma quantia igual à que cada um deles tem no momento (ou seja, dobra o dinheiro de cada um). Ari perdeu a primeira partida, Bia a segunda e Caio a terceira. Ao final, cada um ficou com R$ 24,00. Quanto Ari tinha no início?",
+  "options": [
+   "R$ 39,00",
+   "R$ 42,00",
+   "R$ 48,00",
+   "R$ 72,00"
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Volta, da última partida para a primeira (o total é sempre 72). Antes da 3ª (Caio perdeu e dobrou Ari e Bia): Ari 12, Bia 12, Caio 24 + 12 + 12 = 48. Antes da 2ª (Bia perdeu e dobrou Ari e Caio): Ari 6, Caio 24, Bia 12 + 6 + 24 = 42. Antes da 1ª (Ari perdeu e dobrou Bia e Caio): Bia 21, Caio 12, Ari 6 + 21 + 12 = 39. Conferindo de frente: (39, 21, 12) → (6, 42, 24) → (12, 12, 48) → (24, 24, 24). R$ 42,00 é o que Bia tinha antes da 2ª partida. R$ 48,00 é o que Caio tinha antes da 3ª. R$ 72,00 é o total dos três, não a quantia de Ari. Modelo: Câmara Municipal de Mariana/MG · Analista de Sistema · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Analista de Sistema",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "6+42/2+24/2"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-11",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Uma herança foi dividida entre quatro irmãos na seguinte ordem: o primeiro recebeu 1/4 do total; o segundo, 1/3 do que restou; o terceiro, metade do que restou depois disso; o quarto ficou com o saldo, de R$ 30.000,00. O valor total da herança era de",
+  "options": [
+   "R$ 30.000,00",
+   "R$ 60.000,00",
+   "R$ 90.000,00",
+   "R$ 120.000,00"
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Volta: antes do terceiro havia 30.000 × 2 = 60.000; esses são os 2/3 que sobraram após o segundo: 60.000 ÷ 2/3 = 90.000; esses são os 3/4 que sobraram após o primeiro: 90.000 ÷ 3/4 = 120.000. Conferindo: 120.000 − 30.000 = 90.000; 90.000 − 30.000 = 60.000; 60.000 − 30.000 = 30.000 (cada irmão recebeu R$ 30.000,00). R$ 30.000,00 é a parte de cada irmão, não o total. R$ 60.000,00 e R$ 90.000,00 param em etapas intermediárias da volta. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "30000*2*3/2*4/3"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-12",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Do estoque de papel de uma Câmara saíram, em sequência: 40% das resmas para a Secretaria; depois, 25% das resmas restantes para o Plenário; por fim, 1/3 das que ainda restavam para o Arquivo. Sobraram 180 resmas. Quantas resmas havia no estoque antes das saídas?",
+  "options": [
+   "270 resmas.",
+   "360 resmas.",
+   "450 resmas.",
+   "600 resmas."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Volta com as frações que FICARAM: depois do Arquivo ficaram 2/3, então antes havia 180 ÷ 2/3 = 270; depois do Plenário ficaram 75%, então antes havia 270 ÷ 0,75 = 360; depois da Secretaria ficaram 60%, então o estoque era 360 ÷ 0,6 = 600. Conferindo: 600 − 240 = 360; 360 − 90 = 270; 270 − 90 = 180. 270 e 360 param em etapas intermediárias da volta. 450 pula a etapa do Plenário (270 ÷ 0,6). Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "180*3/2/0.75/0.6"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-13",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "O preço de uma cadeira de escritório sofreu um aumento de 20% e, um mês depois, um desconto de 10% sobre o novo preço, passando a custar R$ 540,00. Antes do aumento, a cadeira custava",
+  "options": [
+   "R$ 500,00",
+   "R$ 583,20",
+   "R$ 600,00",
+   "R$ 648,00"
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Para voltar, divide-se pelos fatores, na ordem inversa: desfaz o desconto (÷ 0,9) e depois o aumento (÷ 1,2): 540 ÷ 0,9 = 600; 600 ÷ 1,2 = 500. Conferindo: 500 × 1,2 = 600; 600 × 0,9 = 540. R$ 600,00 desfaz só o desconto. R$ 648,00 aplica o aumento sobre 540 (540 × 1,2) em vez de desfazê-lo. R$ 583,20 repete as operações de frente sobre 540 (540 × 1,2 × 0,9) em vez de usar as inversas. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "540/0.9/1.2"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-14",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Um visitante entrou no elevador do edifício-sede de uma Câmara Municipal. O elevador subiu 7 andares, desceu 4, subiu 9, desceu 6 e parou no 12º andar. Em que andar o visitante entrou?",
+  "options": [
+   "6º andar.",
+   "9º andar.",
+   "18º andar.",
+   "22º andar."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Volta com a operação inversa de cada movimento, do último para o primeiro: 12 + 6 = 18 (desfaz a descida de 6); 18 − 9 = 9 (desfaz a subida de 9); 9 + 4 = 13; 13 − 7 = 6. Conferindo: 6 + 7 − 4 + 9 − 6 = 12. 9 para no meio da volta. 18 soma ao 12º o saldo líquido do percurso (7 − 4 + 9 − 6 = +6), quando deveria subtraí-lo. 22 desfaz só as descidas (12 + 6 + 4) e esquece as subidas. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "12+6-9+4-7"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-15",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Numa recepção, havia uma cesta de brindes. A primeira pessoa pegou metade dos brindes e mais 1; a segunda pegou metade do que restou e mais 1; a terceira pegou metade do que restou e mais 1. Sobraram 2 brindes. Quantos brindes havia na cesta?",
+  "options": [
+   "14 brindes.",
+   "23 brindes.",
+   "30 brindes.",
+   "62 brindes."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Se alguém pega metade e mais 1, sobra metade menos 1. Para voltar: soma 1 e multiplica por 2, três vezes: (2 + 1) × 2 = 6; (6 + 1) × 2 = 14; (14 + 1) × 2 = 30. Conferindo: 30 − 16 = 14; 14 − 8 = 6; 6 − 4 = 2. 14 desfaz só duas pessoas. 23 inverte a ordem das inversas (multiplica por 2 e depois soma 1: (2 × 2 + 1) = 5; 11; 23). 62 desfaz uma pessoa a mais ((30 + 1) × 2). Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "(((2+1)*2+1)*2+1)*2"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-16",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "O tanque de um veículo oficial começou o dia com certa quantidade de combustível. Na primeira viagem, foi consumido 1/5 do que havia; depois, o motorista abasteceu 12 litros; na segunda viagem, foi consumida metade do que havia no tanque, restando 22 litros. Quantos litros havia no tanque no início do dia?",
+  "options": [
+   "32 litros.",
+   "40 litros.",
+   "44 litros.",
+   "55 litros."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Volta: antes da 2ª viagem havia 22 × 2 = 44; antes do abastecimento, 44 − 12 = 32; esses 32 são os 4/5 que sobraram da 1ª viagem: 32 ÷ 4/5 = 40. Conferindo: 40 − 8 = 32; 32 + 12 = 44; 44 − 22 = 22. 44 e 32 param em etapas intermediárias. 55 esquece de desfazer o abastecimento (44 ÷ 4/5). Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "(22*2-12)*5/4"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-17",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "No quadro de servidores de um setor de recursos humanos, 1/4 dos servidores se aposentou; em seguida, 6 novos servidores foram nomeados; depois, 1/3 do quadro então existente foi transferido para outro órgão, restando 20 servidores. Quantos servidores havia no quadro antes das aposentadorias?",
+  "options": [
+   "32 servidores.",
+   "40 servidores.",
+   "48 servidores.",
+   "72 servidores."
+  ],
+  "correct": 0,
+  "veCorrect": 1,
+  "explanation": "Gabarito A. Volta: depois da transferência ficaram 2/3, então antes havia 20 ÷ 2/3 = 30; antes das nomeações, 30 − 6 = 24; esses 24 são os 3/4 que ficaram após as aposentadorias: 24 ÷ 3/4 = 32. Conferindo: 32 − 8 = 24; 24 + 6 = 30; 30 − 10 = 20. 40 esquece de desfazer as nomeações (30 ÷ 3/4). 48 soma 6 em vez de subtrair ((30 + 6) ÷ 3/4). 72 multiplica por 3 (fração que saiu) em vez de dividir por 2/3: (20 × 3 − 6) ÷ 3/4. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "(20*3/2-6)*4/3"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-18",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Pensei em um número. Multipliquei-o por 4, somei 6 ao resultado, dividi tudo por 2 e, por fim, subtraí 5, obtendo 20. O número em que pensei é",
+  "options": [
+   "6.",
+   "11.",
+   "14.",
+   "25."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Operações inversas na ordem inversa: 20 + 5 = 25; 25 × 2 = 50; 50 − 6 = 44; 44 ÷ 4 = 11. Conferindo: 11 × 4 = 44; 44 + 6 = 50; 50 ÷ 2 = 25; 25 − 5 = 20. 25 para na primeira etapa da volta. 14 soma 6 em vez de subtrair ((50 + 6) ÷ 4). 6 subtrai 5 em vez de somar ((20 − 5) × 2 − 6 = 24; 24 ÷ 4 = 6). Modelo: Câmara Municipal de Mariana/MG · Analista de Sistema · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Analista de Sistema",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "((20+5)*2-6)/4"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-19",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "O almoxarifado de uma Câmara tinha um estoque de envelopes. Na primeira semana, saiu metade do estoque; na segunda, 1/4 dos envelopes restantes; na terceira, 2/3 dos que ainda restavam. Sobraram 50 envelopes. Sobre essa situação, assinale a afirmativa INCORRETA.",
+  "options": [
+   "400 envelopes formavam o estoque inicial.",
+   "200 envelopes saíram na primeira semana.",
+   "100 envelopes saíram na segunda semana.",
+   "150 envelopes restavam ao final da segunda semana."
+  ],
+  "correct": 2,
+  "veCorrect": 1,
+  "explanation": "Gabarito C. Volta: na 3ª semana saíram 2/3 e ficou 1/3, então antes havia 50 × 3 = 150; na 2ª ficaram 3/4, então antes havia 150 ÷ 3/4 = 200; na 1ª ficou metade, então o estoque era 400. Saídas: 1ª semana, 200; 2ª semana, 200 − 150 = 50; 3ª semana, 150 − 50 = 100 (é essa a conta da base). A afirmativa incorreta é a que diz que 100 envelopes saíram na SEGUNDA semana: 100 é a saída da terceira; na segunda saíram 50. As demais estão corretas: estoque inicial de 400, saída de 200 na 1ª semana e 150 envelopes ao fim da 2ª. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "50*3-50"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-20",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Um servidor fez uma aplicação que, a cada mês, dobrava de valor; ao fim de cada mês, logo após a dobra, ele sacava R$ 50,00. Depois de três meses (e três saques), o saldo era de R$ 250,00. Assinale a afirmativa INCORRETA.",
+  "options": [
+   "R$ 75,00 era o valor inicial aplicado.",
+   "R$ 100,00 era o saldo após o saque do 1º mês.",
+   "R$ 150,00 era o saldo após o saque do 2º mês.",
+   "R$ 200,00 era o saldo após o saque do 2º mês."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Volta: (250 + 50) ÷ 2 = 150 (saldo após o saque do 2º mês); (150 + 50) ÷ 2 = 100 (após o saque do 1º mês); (100 + 50) ÷ 2 = 75 (valor inicial). Conferindo: 75 → 150 − 50 = 100 → 200 − 50 = 150 → 300 − 50 = 250. A afirmativa incorreta é a de R$ 200,00: esse foi o saldo do 2º mês logo após a dobra e ANTES do saque (150 + 50 = 200, conta da base); após o saque, o saldo era R$ 150,00. As outras três afirmativas estão corretas. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "(250+50)/2+50"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-21",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "A biblioteca de uma Câmara emprestou 1/3 dos livros do acervo; em seguida, recebeu uma doação de 10 livros; depois, emprestou metade dos livros que havia no acervo, restando 40 livros (nenhum livro foi devolvido no período). Analise as afirmativas.\nI. Antes dos empréstimos, havia 105 livros no acervo.\nII. Após o primeiro empréstimo, restaram 70 livros.\nIII. No segundo empréstimo, saíram 50 livros.\nIV. Ao todo, foram emprestados 75 livros.\nQuantas afirmativas estão corretas?",
+  "options": [
+   "0 (nenhuma).",
+   "1 (uma).",
+   "2 (duas).",
+   "3 (três)."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Volta: antes do 2º empréstimo havia 40 × 2 = 80; antes da doação, 80 − 10 = 70; esses 70 são os 2/3 que ficaram, então o acervo era 70 ÷ 2/3 = 105. I correta (105). II correta (70). III incorreta: no 2º empréstimo saíram 80 − 40 = 40 livros, não 50. IV correta: 35 + 40 = 75 emprestados (ou 105 + 10 − 40 = 75). São 3 afirmativas corretas; quem marca 2 rejeita uma das corretas, e quem marca 0 ou 1 erra a volta logo no início. A base da conta soma 1 para cada afirmativa cujo valor coincide com a volta (0 elevado a 0 = 1) e 0 para a errada. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "0**(((40*2-10)*3/2-105)**2)+0**((40*2-10-70)**2)+0**((40*2-40-50)**2)+0**(((40*2-10)*3/2+10-40-75)**2)"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-22",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Lia saiu de casa com certa quantia. Pagou R$ 20,00 de passagem; depois, gastou metade do que restou na compra de um livro; por fim, gastou 1/4 do que ainda tinha com um lanche, voltando para casa com R$ 30,00. Analise as afirmativas.\nI. Lia saiu de casa com R$ 100,00.\nII. O livro custou R$ 50,00.\nIII. O lanche custou R$ 10,00.\nQuantas afirmativas estão corretas?",
+  "options": [
+   "1 (uma).",
+   "2 (duas).",
+   "3 (três).",
+   "Nenhuma delas."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Volta: depois do lanche ficaram 3/4, então antes havia 30 ÷ 3/4 = 40; antes do livro, 40 × 2 = 80; antes da passagem, 80 + 20 = 100. I correta (R$ 100,00). II incorreta: o livro custou metade de 80, ou seja, R$ 40,00 (R$ 50,00 seria metade de 100, aplicando a fração antes de descontar a passagem). III correta: 1/4 de 40 = R$ 10,00. Portanto, 2 afirmativas corretas; 3 aceita a II, e 1 ou nenhuma rejeita afirmativas que a volta confirma. A base da conta soma 1 para cada afirmativa cujo valor coincide com a volta (0 elevado a 0 = 1) e 0 para a errada. Modelo: Câmara Municipal de Mariana/MG · Analista de Sistema · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Analista de Sistema",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "0**((((30*4/3)*2+20)-100)**2)+0**(((30*4/3)-50)**2)+0**(((30*4/3)-30-10)**2)"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-23",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Uma servidora montou numa planilha uma sequência de fórmulas: o valor digitado na primeira célula é dividido por 3; ao resultado somam-se 8; e o novo resultado é multiplicado por 5. Na última célula apareceu 70. Qual valor foi digitado na primeira célula?",
+  "options": [
+   "6.",
+   "18.",
+   "42.",
+   "66."
+  ],
+  "correct": 1,
+  "veCorrect": 1,
+  "explanation": "Gabarito B. Inversas na ordem inversa: 70 ÷ 5 = 14; 14 − 8 = 6; 6 × 3 = 18. Conferindo: 18 ÷ 3 = 6; 6 + 8 = 14; 14 × 5 = 70. 6 para antes de desfazer a divisão por 3. 42 esquece de desfazer a soma de 8 (14 × 3). 66 soma 8 em vez de subtrair ((14 + 8) × 3). Modelo: Câmara Municipal de Mariana/MG · Analista de Sistema · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Analista de Sistema",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132713/instituto-consulplan-2025-camara-de-mariana-mg-analista-de-sistema-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "(70/5-8)*3"
+   }
+  ]
+ },
+ {
+  "id": "rlm26-24",
+  "materiaRef": "mmat_34",
+  "topicoRef": "ttop_378",
+  "tipo": "abcd",
+  "text": "Um fundo de reserva rendeu 10% em um mês e, no mês seguinte, teve perda de 10% sobre o saldo do mês anterior, terminando com R$ 990,00. Analise as afirmativas.\nI. O saldo inicial era de R$ 1.000,00.\nII. Ao fim do primeiro mês, o saldo era de R$ 1.100,00.\nIII. Como um ganho de 10% e uma perda de 10% se anulam, o saldo inicial era de R$ 990,00.\nIV. A perda do segundo mês foi de R$ 110,00.\nQuantas afirmativas estão corretas?",
+  "options": [
+   "0 (nenhuma).",
+   "1 (uma).",
+   "2 (duas).",
+   "3 (três)."
+  ],
+  "correct": 3,
+  "veCorrect": 1,
+  "explanation": "Gabarito D. Volta: a perda deixou 90%, então antes dela havia 990 ÷ 0,9 = 1.100; o ganho multiplicou por 1,1, então o saldo inicial era 1.100 ÷ 1,1 = 1.000. I correta. II correta (1.100). IV correta: a perda foi 10% de 1.100 = R$ 110,00. III incorreta: ganho e perda de mesma taxa não se anulam, porque incidem sobre bases diferentes (1.000 × 1,1 × 0,9 = 990). São 3 afirmativas corretas; quem marca 2 rejeita uma das corretas, e quem aceita a III fica com valores contraditórios. A base da conta soma 1 para cada afirmativa cujo valor coincide com a volta (0 elevado a 0 = 1) e 0 para a errada. Modelo: Câmara Municipal de Mariana/MG · Advogado · 2025 — https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf",
+  "banca": "Inédita · gêmea de prova Consulplan",
+  "ano": "2026",
+  "nivel": "medio",
+  "assunto": "Princípio da regressão ou reversão",
+  "modelo": {
+   "orgao": "Câmara Municipal de Mariana/MG",
+   "cargo": "Advogado",
+   "ano": "2025",
+   "url": "https://arquivos.qconcursos.com/prova/arquivo_prova/132709/instituto-consulplan-2025-camara-de-mariana-mg-advogado-prova.pdf"
+  },
+  "base": [
+   {
+    "tipo": "conta",
+    "expr": "0**((990*10/9*10/11-1000)**2)+0**((990*10/9-1100)**2)+0**((990*10/9*10/11-990)**2)+0**((990*10/9/10-110)**2)"
+   }
+  ]
+ }
+]

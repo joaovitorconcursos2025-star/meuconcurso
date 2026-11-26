@@ -63,3 +63,53 @@
 - A notícia do fiibrasil sobre o gabarito de Caratinga não traz o gabarito: o link aponta para página em branco.
 - A primeira tentativa de abrir os PDFs de Cotia ASP e de BH TL II (endereços tirados de banca.md) foi recusada por falta de procedência. Os dois abriram depois, quando apareceram na busca.
 - O caderno do **BH Técnico Legislativo II Tipo 1 (Branca)** não apareceu na busca. Usei o Tipo 2 (Verde), conferido com a coluna Tipo 2 do gabarito pós-recursos.
+
+## Complemento 26/11/2026
+Cerca de 24 buscas/aberturas nesta rodada. Só abri links que vieram da busca. Os enunciados estão parafraseados.
+
+### (1) Questões novas com gabarito oficial: nenhuma confirmada
+- **Itajubá 2024:** o gabarito não apareceu em nenhuma busca, nem por nome de arquivo nem em sites de notícia. A página do Estratégia ("gabaritos divulgados") redireciona para concursos.estrategia.com, e a abertura foi **bloqueada** (pedido de permissão sem resposta). A página de provas do PCI lista um "gabarito.pdf", mas só libera o arquivo depois de uma verificação em JavaScript. A página do concurso no site da Consulplan também foi **bloqueada** (pedido de permissão sem resposta).
+- **Patrocínio do Muriaé 2025:** a notícia do fiibrasil só diz que o gabarito "será divulgado" e não tem link. Nenhum gabarito apareceu na busca.
+- **Caratinga 2024:** só os cadernos aparecem na busca (Controlador, Assist. Comunicação, Analista Jurídico, Oficial de Redação). Nenhum gabarito.
+- **Pouso Alegre 2023 · Procurador · Q4 (Tipo 1 Branca, A–D):** abri o caderno de novo. O comando pede a alteração que mantém a correção de concordância. A troca "Há registro" por "Havia registros" está correta, porque *haver* = existir é impessoal. As outras três têm erro: a B põe o verbo pronominal no singular com sujeito plural implícito; a C usa "Houveram batalhas"; a D tem "Dizimou-se as sociedades" e ainda "à efeitos". **Resolução pela regra: A.** **Inferência:** não há gabarito oficial. A questão fica na tabela de candidatas e não serve de modelo com letra. O formato e as pegadinhas podem inspirar os moldes, sempre conferidos pela regra.
+- Também abri a **Câm. Itumbiara/GO 2025 · Procurador do Legislativo** ([caderno](https://arquivos.qconcursos.com/prova/arquivo_prova/144656/instituto-consulplan-2025-camara-de-itumbiara-go-procurador-do-legislativo-prova.pdf), Tipo 1, **4 alternativas A–D**, Goiás). Fato: as Q1–Q5 de Português **não** têm concordância. A Q4 é de regência de "ajudar". Serve para mostrar que a Consulplan usa 4 alternativas nas Câmaras de GO. O gabarito não apareceu.
+- Câm. Piraquara/PR 2025: só apareceram notícias, nenhum caderno.
+
+### (2) Conferência da Q3 de Nova Iguaçu 2025 (#12): NÃO conferida
+O caderno ([link](https://arquivos.qconcursos.com/prova/arquivo_prova/128836/instituto-consulplan-2025-prefeitura-de-nova-iguacu-rj-analista-de-controle-interno-de-projetos-prova.pdf)) foi **bloqueado** nesta rodada. A permissão de abertura não foi respondida porque o link não tinha aparecido na busca de hoje. Tentei duas alternativas. A página de questões do Qconcursos deu erro do site. A do Gran Questões só mostra a capa da prova, sem o texto. **Decisão:** a #12 continua **"não usar como modelo"** até alguém ler o PDF e confirmar se a alternativa D tem sujeito composto com verbo no singular. A #13 (Q5) não é afetada.
+
+### (3) 24 moldes para o Elaborador (4 alternativas A–D, como em Cristalina e Itumbiara)
+Modelo = questão real confirmada da tabela acima, pelo nº (#). Inspiração = candidata sem gabarito: serve só como formato, e a letra tem de sair da regra.
+
+| # | Formato | Regra / pegadinha | Modelo |
+|---|---|---|---|
+| 1 | lista de 4 frases, concordância INCORRETA | "fazer" de tempo no plural ("faziam dez anos") | #6 BH TL II Q20 |
+| 2 | "NÃO há erro de concordância verbal em" | "haviam" = existir × "havia"; particípio reduzido | #11 Araraquara TI Q8 |
+| 3 | "é correto afirmar" sobre trocar haver → existir | o verbo vai ao plural; distrator diz que "existir" é impessoal | #10 Araraquara AgAdm Q20 |
+| 4 | INCORRETA | "se" apassivador no plural com sujeito singular ("vendem-se uma lista") | #9 Araraquara AgAdm Q19 |
+| 5 | justificativa do plural | "se" apassivador + sujeito plural posposto; distratores "sujeito indeterminado" e "verbo impessoal" | #3 BH Publicitário Q9 |
+| 6 | justificativa do plural | sujeito composto com "e" → plural; distrator "concorda com o mais próximo" | #1 Cotia ASP Q6 |
+| 7 | reescrita correta | "uma das … que": distrator "uma das discussões **são**" | #2 Cotia Ag. Contábil Q6 |
+| 8 | reescrita com norma-padrão + mesmo sentido | sujeito plural posposto ("estão … questões"); alternativa com gramática certa e sentido trocado | #7 Mariana Advogado Q1 |
+| 9 | "concordância nominal correta em" | "meio" advérbio invariável ("meio cansada") × "meia" | #5 BH TL II Q18 |
+| 10 | "concordância nominal correta em" | "bastante" adjetivo varia diante de substantivo ("bastantes processos") | #5 BH TL II Q18 |
+| 11 | "concordância nominal correta em" | "anexo/incluso" variam ("seguem anexas as cópias") | #5 BH TL II Q18 |
+| 12 | afirmativa correta sobre trecho | "muito" advérbio antes de adjetivo/pronome não varia | #4 BH TL II Q16 |
+| 13 | INCORRETA | pronome de tratamento com verbo/possessivo na 2ª pessoa ("Vossa Excelência sabeis") | #6 BH TL II Q20 |
+| 14 | INCORRETA | "cerca de" + numeral → plural; "nenhum" singular | #6 BH TL II Q20 |
+| 15 | "as duas infrações do trecho são" | trecho sem erro de concordância; os erros são de crase e regência (isca) | #8 Mariana Auditor Q8 |
+| 16 | reescrita com adequação gramatical | erro de número escondido na crase ("à" + substantivo plural) | #13 Nova Iguaçu Q5 |
+| 17 | "comentário com correção gramatical" | concordância certa + crase errada na mesma alternativa | #13 Nova Iguaçu Q5 (não usar a #12) |
+| 18 | lista: "a alteração que mantém a correção" | "Há registro" → "Havia registros" certo; "Houveram batalhas" errado | inspiração: Pouso Alegre Procurador Q4; molde de formato: #2 |
+| 19 | lista INCORRETA | voz passiva pronominal com sujeito plural ("Dizimou-se as sociedades") | #9 + inspiração Pouso Alegre Q4 (D) |
+| 20 | justificativa | verbo concorda com o núcleo, não com o complemento preposicionado ("O acesso aos documentos **foi**") | #1 (formato) · inspiração Patrocínio do Muriaé Q7 |
+| 21 | correta em | partitivo "a maioria dos servidores votou/votaram" (os dois aceitos); distrator diz que só o plural vale | #5 (formato) · inspiração Caratinga Q3 |
+| 22 | INCORRETA | "fazer" de tempo × "se" apassivador na mesma lista | #11 · inspiração Itajubá Q8 |
+| 23 | afirmativa sobre trecho | "o mesmo" ligado ao substantivo varia × invariável em expressão adverbial | #4 (formato) · inspiração Itajubá Q7 |
+| 24 | assertivas I–IV ("estão corretas apenas") | "quem" + 3ª pessoa; "a maioria" + singular; particípio feminino; "ir + gerúndio" | #11 (regras) · inspiração Pouso Alegre Com. Social Q9 |
+
+Distribuição sugerida pela ordem: sujeito composto, posposto e "uma das" (6, 7, 8, 20, 21) · haver/fazer (1, 2, 3, 22, 18) · "se" apassivador (4, 5, 19) · palavras variáveis e invariáveis (9, 10, 11, 12, 23) · pronome de tratamento (13, 14) · isca crase/regência (15, 16, 17). Pelo menos 6 no formato lista INCORRETA ou "NÃO há erro": 1, 2, 4, 13, 14, 19, 22.
+
+### Bloqueios desta rodada
+- Bloqueados por permissão sem resposta: concursos.estrategia.com/portal/concurso-camara-de-itajuba/amp/, a página do concurso de Itajubá no site da Consulplan e o caderno de Nova Iguaçu ACI Projetos (128836).
+- O Qconcursos (página de questões de Nova Iguaçu) deu erro do site. O PCI exige verificação em JavaScript para baixar o gabarito.

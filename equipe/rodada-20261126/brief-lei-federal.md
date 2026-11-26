@@ -1,0 +1,6 @@
+# Tarefa extra · texto de lei federal (Planalto)
+O conferidor (equipe/ferramentas/confere_esteira.py, leia a função artigo()) procura em equipe/fontes/federal/<id>.txt a linha que COMEÇA com "Art. N" e corta até a próxima linha que começa com "Art.". Crie a pasta se não existir.
+- Copie do Planalto (URL da ordem) o texto VIGENTE dos artigos pedidos, LITERAL (palavra por palavra, com incisos, parágrafos e alíneas), sem redações revogadas/riscadas e sem notas "(Redação dada pela...)" — pode deixar essas notas entre parênteses no fim da linha, nunca no meio da frase.
+- Cada artigo começa em linha nova com "Art. 18." / "Art. 29-A." / "Art. 1º" exatamente como no Planalto. Cabeçalho no topo: título da norma, URL e data de captura (26/11/2026), sem linhas começando com "Art.".
+- WebFetch resume páginas: peça explicitamente "transcreva literalmente, sem resumir, os artigos X a Y" e faça em blocos pequenos. Confira cada artigo numa SEGUNDA leitura (outra chamada ao Planalto ou à versão do Senado/Câmara: www.senado.leg.br / www2.camara.leg.br, se aparecer na busca). Artigo em que as duas leituras divergirem e você não conseguir resolver: NÃO grave; liste no fim da resposta.
+- Se o Planalto não abrir de jeito nenhum, registre e grave só o que conseguiu conferir.

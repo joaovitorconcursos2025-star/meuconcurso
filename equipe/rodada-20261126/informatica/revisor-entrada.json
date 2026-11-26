@@ -1,0 +1,242 @@
+[
+ {
+  "id": "informatica26-01",
+  "text": "Um servidor da Câmara, usando o Windows 10, precisa localizar rapidamente um documento salvo em uma pasta do computador e quer abrir o Explorador de Arquivos sem usar o mouse. Ele deve pressionar a combinação",
+  "options": [
+   "tecla Windows + R.",
+   "tecla Windows + E.",
+   "tecla Windows + X.",
+   "tecla Windows + I."
+  ]
+ },
+ {
+  "id": "informatica26-02",
+  "text": "Com várias janelas abertas no Windows 11, uma servidora quer ver os ícones da área de trabalho e, pressionando novamente a MESMA combinação, voltar a exibir as janelas como estavam. O atalho que mostra e oculta a área de trabalho é",
+  "options": [
+   "tecla Windows + M.",
+   "Alt + F4.",
+   "tecla Windows + L.",
+   "tecla Windows + D."
+  ]
+ },
+ {
+  "id": "informatica26-03",
+  "text": "Um programa travou no computador de um técnico, que usa o Windows 10. Para abrir DIRETAMENTE o Gerenciador de Tarefas e encerrar o programa, sem passar por nenhuma tela intermediária, o técnico deve usar",
+  "options": [
+   "Ctrl + Shift + Esc.",
+   "Ctrl + Alt + Del.",
+   "Alt + F4.",
+   "Ctrl + Esc."
+  ]
+ },
+ {
+  "id": "informatica26-04",
+  "text": "No Windows 10/11, assinale a alternativa em que o atalho de teclado está associado CORRETAMENTE à sua função.",
+  "options": [
+   "Alt + F4: mostrar ou ocultar o painel de visualização do Explorador de Arquivos.",
+   "Ctrl + Esc: abrir o Gerenciador de Tarefas.",
+   "Alt + Enter: mostrar as propriedades do item selecionado no Explorador de Arquivos.",
+   "tecla Windows + R: abrir as Configurações."
+  ]
+ },
+ {
+  "id": "informatica26-05",
+  "text": "Ao redigir um ofício no Windows 11, um servidor copiou um parágrafo e, depois, copiou outros três trechos. Agora ele quer colar aquele PRIMEIRO parágrafo, sem precisar copiá-lo de novo. Com o recurso já ativado, o atalho que abre o histórico da área de transferência para escolher o item é",
+  "options": [
+   "Ctrl + V.",
+   "tecla Windows + Shift + S.",
+   "tecla Windows + V.",
+   "tecla Windows + . (ponto)."
+  ]
+ },
+ {
+  "id": "informatica26-06",
+  "text": "Sobre o histórico da área de transferência do Windows 10/11, segundo o Suporte Microsoft, analise as afirmativas a seguir.\nI. O histórico tem um limite de 25 entradas copiadas.\nII. Todo o conteúdo do histórico é mantido quando o computador é reiniciado.\nIII. Quando o limite é atingido, os itens mais antigos são removidos automaticamente, a menos que estejam fixados.\nEstá correto o que se afirma em",
+  "options": [
+   "I, apenas.",
+   "I e III, apenas.",
+   "II e III, apenas.",
+   "I, II e III."
+  ]
+ },
+ {
+  "id": "informatica26-07",
+  "text": "Considerando o histórico da área de transferência do Windows 10/11, segundo o Suporte Microsoft, assinale a afirmativa INCORRETA.",
+  "options": [
+   "Para usá-lo pela primeira vez, pressiona-se a tecla Windows + V e seleciona-se a opção para ativá-lo.",
+   "Cada item tem limite de tamanho de 4 MB.",
+   "São suportados os formatos texto, HTML e bitmap.",
+   "A opção de limpar o histórico apaga todos os itens, inclusive os que foram fixados."
+  ]
+ },
+ {
+  "id": "informatica26-08",
+  "text": "No Explorador de Arquivos do Windows 10, uma servidora selecionou o arquivo \"relatorio_final.docx\" e quer alterar o nome dele usando apenas o teclado. A tecla que renomeia o item selecionado é",
+  "options": [
+   "F2.",
+   "F5.",
+   "F3.",
+   "F11."
+  ]
+ },
+ {
+  "id": "informatica26-09",
+  "text": "Um assistente administrativo está com o Explorador de Arquivos do Windows 11 aberto na pasta \"Protocolos\" e precisa criar ali uma nova pasta para os documentos de dezembro, usando um atalho de teclado. A combinação que cria uma nova pasta é",
+  "options": [
+   "Ctrl + N.",
+   "Ctrl + Shift + Esc.",
+   "Alt + Enter.",
+   "Ctrl + Shift + N."
+  ]
+ },
+ {
+  "id": "informatica26-10",
+  "text": "No Windows 10, um usuário estava na Área de Trabalho e digitou na barra de endereços do Explorador de Arquivos o caminho C:\\Arquivo\\Contratos\\2026, abrindo diretamente essa pasta. Agora ele quer ir para a pasta \"Contratos\", que contém a pasta \"2026\". O atalho que o leva um nível acima no caminho da pasta é",
+  "options": [
+   "Alt + seta para a esquerda.",
+   "Alt + seta para a direita.",
+   "Alt + seta para cima.",
+   "Alt + D."
+  ]
+ },
+ {
+  "id": "informatica26-11",
+  "text": "Sobre atalhos de teclado do Explorador de Arquivos do Windows 10/11, assinale a alternativa INCORRETA.",
+  "options": [
+   "F5 atualiza a janela ativa.",
+   "Alt + P mostra ou oculta o painel de detalhes.",
+   "F3 procura um arquivo ou pasta.",
+   "Ctrl + F seleciona a caixa de pesquisa."
+  ]
+ },
+ {
+  "id": "informatica26-12",
+  "text": "Uma recepcionista da Câmara está com quatro programas abertos no Windows 11: o navegador, o editor de textos, a planilha e o e-mail. Para alternar entre as janelas abertas usando o teclado, ela deve usar",
+  "options": [
+   "Ctrl + Tab.",
+   "Alt + Tab.",
+   "tecla Windows + D.",
+   "Alt + seta para a direita."
+  ]
+ },
+ {
+  "id": "informatica26-13",
+  "text": "Um analista usa o Windows 10 e quer separar, em uma área de trabalho virtual nova, as janelas de um processo seletivo, mantendo as demais na área de trabalho atual. O atalho que cria DIRETAMENTE outra área de trabalho virtual é",
+  "options": [
+   "tecla Windows + D.",
+   "tecla Windows + Ctrl + F4.",
+   "tecla Windows + Ctrl + D.",
+   "Ctrl + Shift + N."
+  ]
+ },
+ {
+  "id": "informatica26-14",
+  "text": "Sobre as áreas de trabalho virtuais no Windows 10/11, segundo o Suporte Microsoft, analise as afirmativas a seguir.\nI. A tecla Windows + Ctrl + F4 fecha a área de trabalho virtual que está em uso.\nII. A tecla Windows + Tab abre a Visão de Tarefas.\nIII. A tecla Windows + Ctrl + seta para a direita minimiza todas as janelas da área de trabalho atual.\nEstá correto o que se afirma em",
+  "options": [
+   "I, apenas.",
+   "II, apenas.",
+   "I e II, apenas.",
+   "II e III, apenas."
+  ]
+ },
+ {
+  "id": "informatica26-15",
+  "text": "Para comparar duas planilhas lado a lado no Windows 10, um servidor quer encaixar a janela ativa na metade esquerda da tela usando o teclado. Ele deve pressionar",
+  "options": [
+   "Alt + seta para a esquerda.",
+   "tecla Windows + seta para cima.",
+   "Ctrl + Esc.",
+   "tecla Windows + seta para a esquerda."
+  ]
+ },
+ {
+  "id": "informatica26-16",
+  "text": "No Windows 11, um usuário quer escolher, pelo teclado, um dos layouts predeterminados para organizar as janelas abertas na tela (por exemplo, duas colunas ou três colunas). O atalho que abre os layouts de ajuste é",
+  "options": [
+   "tecla Windows + Z.",
+   "tecla Windows + Tab.",
+   "tecla Windows + Ctrl + D.",
+   "tecla Windows + M."
+  ]
+ },
+ {
+  "id": "informatica26-17",
+  "text": "Sobre o recurso de ajuste (encaixe) de janelas do Windows 11, segundo o Suporte Microsoft, assinale a afirmativa correta.",
+  "options": [
+   "Arrastar uma janela para um canto da tela a encaixa ocupando um quarto da tela.",
+   "O ajuste de janelas só pode ser feito pelo teclado; com o mouse, a janela apenas é movida.",
+   "O ajuste de janelas é ativado ou desativado exclusivamente pelo Painel de Controle, na opção Fontes.",
+   "Ao encaixar uma janela, o Assistente de Ajuste fecha automaticamente as demais janelas abertas."
+  ]
+ },
+ {
+  "id": "informatica26-18",
+  "text": "Uma servidora precisa registrar, no Windows 10, uma imagem da tela INTEIRA e quer que ela já seja salva automaticamente como arquivo, na subpasta Capturas de tela da pasta Imagens. O atalho adequado é",
+  "options": [
+   "tecla Windows + Shift + S.",
+   "tecla Windows + PrtScn.",
+   "tecla Windows + V.",
+   "tecla Windows + . (ponto)."
+  ]
+ },
+ {
+  "id": "informatica26-19",
+  "text": "Um técnico parlamentar quer alterar o papel de parede e as opções de vídeo do Windows 11 e prefere abrir o aplicativo Configurações pelo teclado. A combinação correta é",
+  "options": [
+   "tecla Windows + X.",
+   "tecla Windows + R.",
+   "tecla Windows + I.",
+   "tecla Windows + L."
+  ]
+ },
+ {
+  "id": "informatica26-20",
+  "text": "Na barra de tarefas do Windows 10 de uma servidora, os aplicativos fixados aparecem nesta ordem, da esquerda para a direita: Explorador de Arquivos, navegador e Calculadora. Para abrir a Calculadora pelo teclado, usando o recurso da barra de tarefas, ela deve pressionar",
+  "options": [
+   "tecla Windows + 3.",
+   "Ctrl + 3.",
+   "Alt + 3.",
+   "Ctrl + Shift + 3."
+  ]
+ },
+ {
+  "id": "informatica26-21",
+  "text": "Considere a situação: ao editar um texto no Windows 11, um servidor apagou um parágrafo por engano e pressionou ________ para desfazer a ação anterior. Em seguida, mudou de ideia e pressionou ________ para refazer a ação que havia sido desfeita. Assinale a alternativa que completa correta e sequencialmente as lacunas.",
+  "options": [
+   "Ctrl + Y / Ctrl + Z",
+   "Ctrl + Z / Ctrl + Y",
+   "Ctrl + X / Ctrl + V",
+   "Ctrl + Z / Ctrl + A"
+  ]
+ },
+ {
+  "id": "informatica26-22",
+  "text": "Relacione os atalhos de teclado do Windows 10/11 às suas funções.\n1. Ctrl + X\n2. Ctrl + A\n3. Ctrl + Esc\n( ) Abrir o menu Iniciar.\n( ) Selecionar todos os itens de uma janela.\n( ) Recortar o texto selecionado.\nA sequência está correta em",
+  "options": [
+   "1, 2, 3.",
+   "2, 3, 1.",
+   "3, 1, 2.",
+   "3, 2, 1."
+  ]
+ },
+ {
+  "id": "informatica26-23",
+  "text": "No Windows 10, um servidor fechou todos os programas e, com nenhuma janela aberta e a área de trabalho em foco, pressionou Alt + F4. Segundo o Suporte Microsoft, o resultado esperado é",
+  "options": [
+   "nada acontecer, pois Alt + F4 só funciona com uma janela aberta.",
+   "o computador ser bloqueado, exigindo nova autenticação.",
+   "o Gerenciador de Tarefas ser aberto.",
+   "o sistema solicitar o encerramento (desligamento)."
+  ]
+ },
+ {
+  "id": "informatica26-24",
+  "text": "No Explorador de Arquivos do Windows 11, um usuário quer deixar os ícones das pastas e arquivos maiores, para enxergar melhor as miniaturas das fotos. Segundo o Suporte Microsoft, ele pode alterar o tamanho e a aparência dos ícones usando",
+  "options": [
+   "Ctrl + roda do mouse.",
+   "Alt + roda do mouse.",
+   "Ctrl + Shift + E.",
+   "Alt + Shift + P."
+  ]
+ }
+]

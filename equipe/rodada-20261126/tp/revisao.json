@@ -1,0 +1,36 @@
+{
+ "aprovadas": [
+  "tp26-01",
+  "tp26-02",
+  "tp26-03",
+  "tp26-04",
+  "tp26-05",
+  "tp26-06",
+  "tp26-07",
+  "tp26-08",
+  "tp26-09",
+  "tp26-10",
+  "tp26-11",
+  "tp26-12",
+  "tp26-13",
+  "tp26-14",
+  "tp26-15",
+  "tp26-16",
+  "tp26-17",
+  "tp26-18",
+  "tp26-19",
+  "tp26-20",
+  "tp26-21",
+  "tp26-22",
+  "tp26-23",
+  "tp26-24"
+ ],
+ "vetadas": {},
+ "ajustes_sugeridos": {
+  "_geral_subtopicoRef": "PENDÊNCIA DE ACEITE (não é defeito de conteúdo): nenhuma questão tem o campo subtopicoRef, que a ordem exige por questão. Pela ordem: tp1_3 para tp26-01 a 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 22 (arts. 2º, 11-20, 50, 53-55); tp1_4 para tp26-16 a 21, 23, 24 (arts. 56-64). Incluir antes do pacote.",
+  "_geral_modelo": "PENDÊNCIA DE ACEITE: todas usam modelo Câm. Mariana/MG 2025 · Corregedor Legislativo (prova Consulplan real, listada no arquivo de banca), mas o próprio arquivo de banca diz que o gabarito pós-recursos dessa prova NÃO foi conferido e que o link só deveria ir para `modelo` depois dessa conferência; o criterio_aceite da ordem pede 'gabarito oficial conferido'. As explanations não alegam 'gabarito oficial' (ok no item e). Conferir o gabarito de Mariana antes de publicar, ou registrar a ressalva.",
+  "_geral_casos": "A ordem pedia casos práticos na Câmara; as questões usam ministério/autarquia federal. Isso é correto para não sugerir aplicação obrigatória da Lei 9.784 ao Município (nenhuma questão afirma isso). Manter.",
+  "tp26-12": "Opcional: na explanation, acrescentar que o inciso I ('neguem, limitem ou afetem direitos ou interesses') não alcança a nomeação para cargo em comissão, pois não há direito subjetivo ao cargo de livre nomeação e exoneração — antecipa a dúvida do aluno.",
+  "tp26-21": "A afirmativa II parafraseia o p.ú. do art. 64 ('Se da decisão do recurso puder decorrer gravame' em vez de 'Se da aplicação do disposto neste artigo puder decorrer gravame'); sentido idêntico, ok."
+ }
+}

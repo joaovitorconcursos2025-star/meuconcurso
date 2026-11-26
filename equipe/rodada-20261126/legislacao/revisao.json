@@ -1,0 +1,37 @@
+{
+ "aprovadas": [
+  "legislacao26-01",
+  "legislacao26-02",
+  "legislacao26-03",
+  "legislacao26-04",
+  "legislacao26-05",
+  "legislacao26-06",
+  "legislacao26-07",
+  "legislacao26-08",
+  "legislacao26-09",
+  "legislacao26-10",
+  "legislacao26-11",
+  "legislacao26-12",
+  "legislacao26-13",
+  "legislacao26-14",
+  "legislacao26-15",
+  "legislacao26-16",
+  "legislacao26-17",
+  "legislacao26-18",
+  "legislacao26-19",
+  "legislacao26-20",
+  "legislacao26-21",
+  "legislacao26-22",
+  "legislacao26-23",
+  "legislacao26-24"
+ ],
+ "vetadas": {},
+ "ajustes_sugeridos": {
+  "legislacao26-01": "Opcional: no item I, acrescentar 'e pelos demais presentes que assim o desejarem', para reproduzir o art. 5º por inteiro e evitar recurso por item incompleto (o gabarito não muda).",
+  "legislacao26-03": "Aplicado na segunda leitura: alternativa A trocada pelo art. 18, IX (literal; compatível com LO 35, XIII). Nada mais.",
+  "legislacao26-22": "Opcional: a LO, art. 66, XIV, também fixa 15 dias e prevê prorrogação 'a seu pedido e por prazo determinado' (sem citar o Plenário); o RI, art. 206, § 3º, detalha (mesmo período, aprovação do Plenário). Não há contradição, mas vale citar a LO na explanation para o aluno não estranhar.",
+  "legislacao26-17": "Nenhum ajuste necessário; art. 139 aparece só como apoio (artigo-alvo 145/146), conforme a regra. Número de 15 Vereadores confere com a LO, art. 18.",
+  "legislacao26-11": "Nenhum ajuste necessário; art. 74 aparece só como apoio (artigo-alvo 77).",
+  "legislacao26-07": "Segunda leitura: alternativa B trocada por RI art. 20, VII (= LO art. 35, VIII), sem conflito com a LO; veto levantado. Observação sem efeito no gabarito: o art. 216 do RI fala em ordem mantida pela 'Presidência e Secretaria Geral' (órgão administrativo, não o Secretário da Mesa)."
+ }
+}
