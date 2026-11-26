@@ -567,6 +567,9 @@ label{font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bot
 .edital-mat-stats{font-size:11px;color:var(--muted);font-family:var(--fm);}
 .edital-mat-arrow{color:var(--muted);transition:transform .2s;font-size:12px;}
 .edital-mat-arrow.open{transform:rotate(90deg);}
+.edital-mat-prog{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;flex-shrink:0;}
+.edital-mat-prog-pct{font-weight:800;font-size:15px;color:var(--blue);font-family:var(--fm);}
+.edital-mat-prog-sub{font-size:10px;color:var(--muted);font-family:var(--fm);white-space:nowrap;}
 .edital-mat-bar{height:4px;background:var(--bg3);}
 .edital-mat-bar-fill{height:100%;background:var(--blue);transition:width .5s;}
 
@@ -3870,12 +3873,19 @@ function renderEdital() {
     var totalMat=qsMat.length;
     var acertosMat=qsMat.reduce((a,q)=>a+(q.vezesAcertada||0),0);
     var pctMat=totalMat>0?Math.round((qsMat.filter(q=>q.status==='acerto').length/totalMat)*100):0;
+    var respMat=qsMat.filter(q=>q.status&&q.status!=='nova').length;
+    var pctRespMat=totalMat>0?Math.round(respMat/totalMat*100):0;
+    var pctAcResp=respMat>0?Math.round(qsMat.filter(q=>q.status==='acerto').length/respMat*100):0;
 
     html+=`<div class="edital-materia" id="emat-${mi}">
       <div class="edital-mat-header" onclick="toggleMatEdital(${mi})">
         <div class="edital-mat-icon">${mat.icon||'📚'}</div>
         <div class="edital-mat-name">${mat.name}</div>
         <div class="edital-mat-stats">${tops.length} tópico(s) · ${totalMat} questões · ${pctMat}% acerto</div>
+        <div class="edital-mat-prog" title="Barra = questões que você acertou ÷ total da matéria (${totalMat}). Respondidas: ${respMat} de ${totalMat} (${pctRespMat}%). Acerto nas respondidas: ${respMat>0?pctAcResp+'%':'—'}.">
+          <span class="edital-mat-prog-pct">${pctMat}%</span>
+          <span class="edital-mat-prog-sub">${respMat}/${totalMat} feitas${respMat>0?' · '+pctAcResp+'% acerto':''}</span>
+        </div>
         <div class="edital-mat-arrow" id="arrow-mat-${mi}">▶</div>
       </div>
       <div class="edital-mat-bar"><div class="edital-mat-bar-fill" style="width:${pctMat}%"></div></div>
